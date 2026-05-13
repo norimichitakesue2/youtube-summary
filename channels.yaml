@@ -1,0 +1,70 @@
+# 監視対象YouTubeチャンネルのリスト
+#
+# 新しいチャンネルを追加するには、下記の形式で - 始まりのブロックを足すだけ：
+#
+#   - name: 表示名（自由）
+#     channel_id: UCxxxxxxxxxxxxxxxxxxxxxx  ← YouTubeのchannel ID（UCで始まる）
+#     tags: [任意, タグ]                     ← レポートでの絞り込み用（任意）
+#     enabled: true                          ← falseにすると一時停止
+#
+# channel_id の調べ方：
+#   1. チャンネルのページを開く（https://www.youtube.com/@xxxxx）
+#   2. ページのソースを表示して "channelId" で検索、またはブラウザURLが
+#      /channel/UCxxxx 形式ならその UCxxxx の部分
+#   3. もしくは scripts/find_channel_id.py "チャンネル名" で検索可能
+
+channels:
+  - name: サンゾーGAMES
+    channel_id: UCTnmCbMtBLO1IJ6iwRPkySg
+    tags: [ロマサガRS, 攻略全般]
+    enabled: true
+
+  - name: つむつむちゃんねる●ゲーム考察専門
+    channel_id: UCNZslKXryDOOEZz7C5aW1TQ
+    tags: [ロマサガRS, 性能考察, ランキング]
+    enabled: true
+
+  - name: タマゴローRS
+    channel_id: UCB1MBbdhhBGxxyX9I_3eLUg
+    tags: [ロマサガRS, レイド, ガチャ, 速報]
+    enabled: true
+
+  - name: あっきゃんGAMES
+    channel_id: UCVWjF9UkqPAgr4myD6L91QA
+    tags: [ロマサガRS, 初心者向け, 攻略解説, ショート]
+    enabled: true
+
+  - name: ジュラのサガちゃんねる
+    channel_id: UCttGAXHA-hoLEVqsXoMVqXQ
+    tags: [ロマサガRS, ガチャ, ランキング]
+    enabled: true
+
+  - name: RS 周回チャンネル
+    channel_id: UCv41cxF-vvrbJTjX3u4r2QQ
+    tags: [ロマサガRS, 周回, レイド編成]
+    enabled: true
+
+  - name: もんでる
+    channel_id: UCSQQQENHsSigOcawOR2Pl4A
+    tags: [ロマサガRS, ライブ配信, 攻略実況]
+    enabled: true
+
+  - name: あんずもん
+    channel_id: UCBC_Fpd3wW-2kjYXVbQJ2hQ
+    tags: [ロマサガRS, ライブ配信, コミュニティ]
+    enabled: true
+
+  - name: tyamu
+    channel_id: UCdH4Ijk0D4FFJFRYrUFNzDQ
+    tags: [ロマサガRS, 性能確認, 早見表]
+    enabled: true
+
+  - name: 明星ch
+    channel_id: UCIzvPxpqEhy_HxidniB_3ow
+    tags: [ロマサガRS, ショート, 混合チャンネル]
+    enabled: true
+
+  - name: くんちゃんねる
+    channel_id: UChLJCB4jXvr1Zi0WT-a4ReQ
+    tags: [ロマサガRS, ショート, ガチャ]
+    enabled: true

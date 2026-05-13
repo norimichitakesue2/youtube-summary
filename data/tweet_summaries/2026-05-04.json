@@ -1,0 +1,120 @@
+{
+  "date": "2026-05-04",
+  "n_tweets": 125,
+  "summary_3lines": "公式はみどりの日企画とGW期間ホームBGM第2弾を告知。\nアレフガルド全制圧完了でドラクエコラボ全レイドが解放、ドラゴン討伐ミッションが盛り上がる。\nプレイヤー側はコラボガチャ報告（ムクチャー49連目・ノエル・ロックブーケ天井突破）と井戸・制圧戦の周回が中心。",
+  "key_topics": [
+    "公式: みどりの日キャンペーン（ドラゴン討伐ミッション、5/9まで）",
+    "公式: GW期間ホームBGM企画 第2弾（四魔貴族バトル2 / Romancing SaGa 3）",
+    "ドラクエタクトコラボ: アレフガルド全制圧完了でレイドボス全解放",
+    "ドラクエタクトコラボガチャ: ムクチャー / ノエル / ロックブーケ / アルベルト",
+    "井戸イベント周回（一の井戸/エクスドリーム井戸スコア競争）",
+    "制圧戦・記憶再戦・雷窟全種制覇などの高難度コンテンツ攻略",
+    "魂アビ・継承の編成研究（カタリナ/ノエル/ピサロ皇帝 AJ抜き編成など）"
+  ],
+  "positive_themes": [
+    "コラボキャラ（ノエル・ロックブーケ・ムクチャー）の入手報告と喜びの声",
+    "ドラクエ世界観のコラボ演出やイラスト評価が好評",
+    "GW期間のホームBGM企画やみどりの日のミッションなど季節イベントの楽しさ",
+    "雷窟全種制覇など高難度コンテンツのクリア達成報告",
+    "井戸スコア攻略の試行錯誤コミュニティが活発"
+  ],
+  "negative_themes": [
+    "コラボガチャの天井走り報告（49連／215連／天井突破など長期戦）",
+    "魂アビ厳選で「シリーズ違いのEXF」「ゴミ過ぎて載せる価値なし」など渋さへの不満",
+    "ジュエル消費が大きいガチャ環境への嘆き（残ジュエル4382・嘆かわしい等）",
+    "井戸イベントから「降りた」プレイヤーの存在（疲弊感）"
+  ],
+  "hot_tweets": [
+    {
+      "tweet_id": "official_midorinohi",
+      "url": "https://x.com/romasaga_rs",
+      "author_handle": "romasaga_rs",
+      "author_name": "ロマサガRS公式",
+      "text": "本日は #みどりの日 皆さんは、ミッション「ドラゴンを1体討伐」を既にクリアできましたか？ 現在アレフガルド全制圧完了に伴い、すべてのレイドボスに挑戦できます。5/9(土)までに「ドラゴンクエストタクトコラボ記念ミッション」を全てクリアを目指しましょう。",
+      "likes": 247,
+      "retweets": 44,
+      "replies": 0
+    },
+    {
+      "tweet_id": "official_bgm2",
+      "url": "https://x.com/romasaga_rs",
+      "author_handle": "romasaga_rs",
+      "author_name": "ロマサガRS公式",
+      "text": "＼GW期間のホームBGM（2曲目）／ 本日5/4(月) 12:00〜のBGMはこちら！ 四魔貴族バトル2 Romancing SaGa 3 Original Soundtrack -Remaster-",
+      "likes": 101,
+      "retweets": 22,
+      "replies": 0
+    },
+    {
+      "tweet_id": "user_seven7_ido",
+      "url": "https://x.com/seven7_rs",
+      "author_handle": "seven7_rs",
+      "author_name": "seven7",
+      "text": "週始め！？は井戸から、、試行錯誤してなんとかここまでは #ロマサガRS",
+      "likes": 56,
+      "retweets": 0,
+      "replies": 0
+    },
+    {
+      "tweet_id": "user_asu_meteor",
+      "url": "https://x.com/Asu_Hiyama02",
+      "author_handle": "Asu_Hiyama02",
+      "author_name": "Asu",
+      "text": "特に意味もなく集めてるミーティアピースが19500個を超えました #ロマサガRS",
+      "likes": 45,
+      "retweets": 0,
+      "replies": 0
+    },
+    {
+      "tweet_id": "user_rs6_mukuchar",
+      "url": "https://x.com/RS_6_6_3104",
+      "author_handle": "RS_6_6_3104",
+      "author_name": "RS_6_6",
+      "text": "ルビィちゃん！何が好き？チョコミントよりもあ・な・た 49連目にしてやっと出たムクチャー 残ジュエル4,382嘆かわしい #ロマサガRS",
+      "likes": 42,
+      "retweets": 0,
+      "replies": 0
+    },
+    {
+      "tweet_id": "user_tumutumu_aj_nuki",
+      "url": "https://x.com/tumutumuCHN",
+      "author_handle": "tumutumuCHN",
+      "author_name": "tumutumu",
+      "text": "カタリナ、ノエル、ピサロ皇帝 AJ抜き編成、ゴリ押し！防御軽減率が低いカタリナとノエルを編成と継承で調整 邪毒対策と防御まわりを解決。ノエルの高難度の使用感の質問が多かったので今日動画出します！ #ロマサガRS",
+      "likes": 28,
+      "retweets": 0,
+      "replies": 0
+    },
+    {
+      "tweet_id": "user_kelvip_routine",
+      "url": "https://x.com/kelvip_game",
+      "author_handle": "kelvip_game",
+      "author_name": "kelvip",
+      "text": "今日はこのパーティー中心で周回したいと思います 2:52＋13秒周回。最速ではないけれど育成目的には十分。あとは裏能力解放9段のやつがたくさん欲しい。ドラクエコラボガチャ引いて、新たに育成するのもいい #ロマサガRS",
+      "likes": 15,
+      "retweets": 0,
+      "replies": 0
+    },
+    {
+      "tweet_id": "user_paul_tenjo",
+      "url": "https://x.com/paul6_6ii",
+      "author_handle": "paul6_6ii",
+      "author_name": "paul",
+      "text": "せっかくのコラボなのでアルベルト編ガチャも引くことに。ロックブーケを狙いつつ、イラスト的にロトアルベルトも欲しいので10連で回したところ、かみばかり出る\"かみガチャ\"で、天井突破。単発に切り替えて215回目にロックブーケをお迎え&交換でアルベルト #ロマサガRS",
+      "likes": 4,
+      "retweets": 0,
+      "replies": 0
+    },
+    {
+      "tweet_id": "user_oll_raikutsu",
+      "url": "https://x.com/oll_hiro",
+      "author_handle": "oll_hiro",
+      "author_name": "oll",
+      "text": "雷窟、全種制覇終わりました。ネックだったのはSSG。意外にもUSやIS/ESは止まらず行けました。今度は許可証、大事に取っておくよー #ロマサガRS",
+      "likes": 5,
+      "retweets": 0,
+      "replies": 0
+    }
+  ],
+  "summarized_at": "2026-05-04T01:55:00Z"
+}

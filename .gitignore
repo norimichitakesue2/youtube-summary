@@ -1,0 +1,16 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+data/transcripts/
+data/pending_summaries/
+data/x_state.json
+data/x_browser_profile/
+data/x_browser_profile.bak_chromium/
+data/x_browser_profile.bak*/
+data/tweets/
+data/x_fetch.log
+data/diag/
+.DS_Store
+*.log
+node_modules/

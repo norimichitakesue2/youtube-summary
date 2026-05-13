@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Xツイートサマリ 2026-04-26 〜 2026-04-26</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #1e293b;
+    --panel-2: #273449;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --accent: #1da1f2;
+    --pos: #34d399;
+    --neg: #f87171;
+    --topic: #fbbf24;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  header {
+    padding: 32px 48px;
+    background: linear-gradient(135deg, #0c4a6e 0%, #164e63 100%);
+    border-bottom: 1px solid #334155;
+  }
+  header h1 { margin: 0 0 8px; font-size: 28px; }
+  header .meta { color: #cbd5e1; font-size: 14px; }
+  main { padding: 32px 48px; max-width: 1100px; margin: 0 auto; }
+  .summary-stats {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .stat {
+    background: var(--panel);
+    padding: 16px 24px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 180px;
+  }
+  .stat .num { font-size: 28px; font-weight: 700; color: var(--accent); }
+  .stat .label { font-size: 13px; color: var(--muted); margin-top: 4px; }
+  .day { margin-bottom: 40px; }
+  .day h2 {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .day h2 .count {
+    font-size: 13px;
+    font-weight: normal;
+    color: var(--muted);
+  }
+  .day-summary {
+    background: var(--panel);
+    padding: 18px 22px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    border-left: 4px solid var(--accent);
+    white-space: pre-wrap;
+    color: #cbd5e1;
+  }
+  .pos-neg-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  @media (max-width: 700px) { .pos-neg-grid { grid-template-columns: 1fr; } }
+  .pos, .neg {
+    background: var(--panel-2);
+    border-radius: 8px;
+    padding: 12px 16px;
+  }
+  .pos { border-left: 3px solid var(--pos); }
+  .neg { border-left: 3px solid var(--neg); }
+  .pos .label, .neg .label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .pos .label { color: var(--pos); }
+  .neg .label { color: var(--neg); }
+  .pos ul, .neg ul { margin: 0; padding-left: 18px; }
+  .topics { margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .topic {
+    background: rgba(251, 191, 36, 0.15);
+    color: var(--topic);
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+  }
+  .hot-tweets-label {
+    color: var(--muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+  .tweet {
+    background: var(--panel);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 8px;
+    border-left: 3px solid var(--accent);
+    font-size: 14px;
+  }
+  .tweet .author {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-size: 13px;
+  }
+  .tweet .text { color: #cbd5e1; white-space: pre-wrap; word-break: break-word; }
+  .tweet .stats {
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 6px;
+  }
+  .tweet a { color: var(--accent); text-decoration: none; }
+  .tweet a:hover { text-decoration: underline; }
+  .empty-note { color: var(--muted); font-size: 13px; font-style: italic; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    padding: 24px;
+    border-top: 1px solid #334155;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Xツイートサマリ</h1>
+  <div class="meta">対象期間: 2026-04-26 〜 2026-04-26（1日間） / 生成日時: 2026-04-25 19:03</div>
+</header>
+<main>
+  <div class="summary-stats">
+    <div class="stat"><div class="num">119</div><div class="label">ツイート総数</div></div>
+    <div class="stat"><div class="num">1</div><div class="label">対象日数</div></div>
+    <div class="stat"><div class="num">7</div><div class="label">ポジ要素（合計）</div></div>
+    <div class="stat"><div class="num">7</div><div class="label">ネガ要素（合計）</div></div>
+  </div>
+  
+<section class="day">
+  <h2>2026-04-26<span class="count">119 ツイート</span></h2>
+  <div class="day-summary">ドラクエタクトコラボの制圧戦が60%到達、報酬「ロトのしるし」配布で歓喜の声多数。<br>ピサロ最終皇帝男・アルベルト等のコラボキャラ性能が話題、螺旋回廊550階の活躍報告も。<br>ガチャの渋さや練磨素材消化の手間など運営対応への不満も一定数存在。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ロトのしるし入手で歓喜の声多数（制圧戦60%報酬）</li><li>ピサロ最終皇帝男の火力が圧倒的に強いと評価</li><li>アルベルトが螺旋550階で活躍、嬉しい報告複数</li><li>コラボキャラ全体的に強くて編成幅が広がる</li><li>サガEB発売日の感謝ジュエル配布が好評</li><li>コラボスタイル「ロトベルト」のかっこよさを称賛</li><li>公式の予告演出（ロトのしるしカウントダウン）が盛り上げ上手</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>今回のコラボガチャは渋すぎ、90〜100連でも厳しい声</li><li>天井交換でピサロ帝を取らざるを得なかった失望感</li><li>最新の螺旋回廊が勝ち方分からないという報告</li><li>練磨素材2000万超で消化に何時間もかかる仕様への不満</li><li>単発引きが最近悪く感じる、ジュエル不足の悲鳴</li><li>視聴メダル広告のホラー演出が怖くてやめてほしい要望</li><li>装飾品に練磨がない仕様への戸惑い</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ドラクエタクトコラボ</span><span class="topic">制圧戦60%・ロトのしるし</span><span class="topic">螺旋回廊550階</span><span class="topic">ピサロ最終皇帝男</span><span class="topic">サガEB発売日記念ジュエル</span><span class="topic">無尽塔39-42階</span><span class="topic">5体目レイドボス予告</span><span class="topic">記憶再戦</span></div>
+  <div class="hot-tweets-label">注目ツイート TOP5</div>
+<div class="tweet">
+  <div class="author">@Asu_Hiyama02 <span style="color:#94a3b8;font-weight:normal">あす＠ミーティア推し</span></div>
+  <div class="text">このドラゴンでもいいのか<br>#ロマサガRS</div>
+  <div class="stats">♥ 40 ／ ↻ 0 ／ 💬 0 ・ <a href="https://x.com/Asu_Hiyama02/status/2048013130677293384" target="_blank" rel="noopener">原文</a></div>
+</div>
+
+<div class="tweet">
+  <div class="author">@xiworiwpkdu277 <span style="color:#94a3b8;font-weight:normal">シフォン</span></div>
+  <div class="text">#ロマサガRS<br>視聴メダルの広告で、たまにこの動画が流れてくるのですが、びっくりして怖いのでやめてくれませんか公式さま</div>
+  <div class="stats">♥ 36 ／ ↻ 0 ／ 💬 0 ・ <a href="https://x.com/xiworiwpkdu277/status/2048017410100486242" target="_blank" rel="noopener">原文</a></div>
+</div>
+
+<div class="tweet">
+  <div class="author">@2027xxxxxx <span style="color:#94a3b8;font-weight:normal">2027</span></div>
+  <div class="text">キリのいい７０００になりました(⁠ ⁠╹⁠▽⁠╹⁠ ⁠)<br>１年で大体１０００位ずつ上がってますね</div>
+  <div class="stats">♥ 30 ／ ↻ 0 ／ 💬 0 ・ <a href="https://x.com/2027xxxxxx/status/2048029127098396846" target="_blank" rel="noopener">原文</a></div>
+</div>
+
+<div class="tweet">
+  <div class="author">@saga_feh_sammy <span style="color:#94a3b8;font-weight:normal">紫ベル</span></div>
+  <div class="text">60％…大分進んできましたね<br>端末触れなかった私は、未だに記憶再戦でゴーレムと戦ってる事になっている<br>これって報酬や魂アビ閃きとかどういう仕様になっているのか？</div>
+  <div class="stats">♥ 25 ／ ↻ 0 ／ 💬 0 ・ <a href="https://x.com/saga_feh_sammy/status/2048051417861210466" target="_blank" rel="noopener">原文</a></div>
+</div>
+
+<div class="tweet">
+  <div class="author">@amatsuka_rin <span style="color:#94a3b8;font-weight:normal">ファイブスター</span></div>
+  <div class="text">オワタ<br>ドラクエコラボのめがみが欲しいです<br>#ロマサガRS</div>
+  <div class="stats">♥ 25 ／ ↻ 0 ／ 💬 0 ・ <a href="https://x.com/amatsuka_rin/status/2048014888673652757" target="_blank" rel="noopener">原文</a></div>
+</div>
+
+</section>
+
+</main>
+<footer>generated by youtube-summary (X module)</footer>
+</body>
+</html>

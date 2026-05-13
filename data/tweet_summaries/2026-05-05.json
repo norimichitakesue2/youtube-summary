@@ -1,0 +1,133 @@
+{
+  "date": "2026-05-05",
+  "n_tweets": 121,
+  "summary_3lines": "公式はGW期間ホームBGM第2弾（四魔貴族バトル2 / RS3）を告知。\nドラクエタクトコラボのガチャ報告とノエル/ムクチャー/ドレアム入手の喜びが多数。\nこどもの日も制圧戦・井戸・記憶再戦の周回が中心、関門武器Lv.25完成報告も目立つ。",
+  "key_topics": [
+    "公式: GW期間ホームBGM企画 第2弾（四魔貴族バトル2 / Romancing SaGa 3 OST）",
+    "ドラクエタクトコラボ: ガチャ報告（ノエル / ムクチャー / ドレアム / フォルミナ）",
+    "井戸イベント（アサシンボス）: 攻略試行錯誤・ランキング戦",
+    "制圧戦の終盤: 関門武器（有翼式ガトリングカノン Lv.25）完成報告",
+    "魂アビ閃き活動: カタリナ / ノエル / かみゾーマ「背水の遺志」など",
+    "螺旋550クリア・記憶再戦・雷窟攻略などの高難易度報告",
+    "こどもの日フレーバー（柏餅・子どもの日ネタ画像）",
+    "累計ログイン報告（2610〜2708日台、長期勢の節目報告）"
+  ],
+  "positive_themes": [
+    "ドラクエコラボキャラ（ノエル・ムクチャー・ドレアム等）の入手報告と喜びの声",
+    "魂アビ閃き（カタリナ・ノエル等）達成の喜び、新しい技や錬成の発見が楽しいという声",
+    "関門武器Lv.25完成・螺旋550クリア・雷窟複数作品でクリアなど高難易度の手応え",
+    "コラボキャラのみでセフェルマルカー撃破など縛りプレイ達成報告",
+    "GW期間ホームBGM企画やこどもの日のミッションなど季節イベントの楽しさ",
+    "長期ログイン勢（2700日超）の節目達成と感謝のコメント"
+  ],
+  "negative_themes": [
+    "コラボガチャの天井走り（49連でムクチャー・天井突破覚悟）と残ジュエル枯渇への嘆き",
+    "魂アビの閃き厳選で『運要素・愛/魅力依存が多すぎる』という不満（記憶再戦丸1日で成果薄）",
+    "課金がかさんだ反省コメント（重課金後の無課金宣言など）",
+    "井戸最適解が分からず手詰まりの声",
+    "ロックしていないのに錬成でロックされる挙動などUI・不具合への不満"
+  ],
+  "hot_tweets": [
+    {
+      "tweet_id": "2051134722328408321",
+      "url": "https://x.com/romasaga_rs/status/2051134722328408321",
+      "author_handle": "romasaga_rs",
+      "author_name": "ロマンシング サガ リ・ユニバース公式",
+      "text": "＼GW期間のホームBGM（2曲目）／ 本日5/4(月) 12:00〜のBGMはこちら！ 四魔貴族バトル2 Romancing SaGa 3 Original Soundtrack -Remaster-。ぜひホームに遊びにきてくださいね！ #ロマサガRS",
+      "likes": 200,
+      "retweets": 37,
+      "replies": 0
+    },
+    {
+      "tweet_id": "user_sup5_katarina",
+      "url": "https://x.com/SuP5bEMmTnWd25R",
+      "author_handle": "SuP5bEMmTnWd25R",
+      "author_name": "ユーザー",
+      "text": "おっはようございます♪ カタリナ強っ おかげで育成2人ずつに。剣が2本？ いなづま+らいじん？ もろは+はかい？ 知らない技たくさん出てくる、知識が古いから見てて楽しい #ロマサガRS",
+      "likes": 45,
+      "retweets": 0,
+      "replies": 0
+    },
+    {
+      "tweet_id": "user_hiro1980_formina",
+      "url": "https://x.com/hiro1980301",
+      "author_handle": "hiro1980301",
+      "author_name": "hiro1980301",
+      "text": "皆様おはようございます。ツナノリver.DQ8狙いにガチョ10したらフォルミナさんが未所持で出ました。昨日からガトリング的な繋がりでしょうか #ロマサガRS",
+      "likes": 41,
+      "retweets": 0,
+      "replies": 0
+    },
+    {
+      "tweet_id": "user_tomoRe_lv600",
+      "url": "https://x.com/tomoRe_universe",
+      "author_handle": "tomoRe_universe",
+      "author_name": "tomoRe_universe",
+      "text": "スクショミスったので この画面で レベル600越えありがとうございます #ロマサガRS",
+      "likes": 40,
+      "retweets": 0,
+      "replies": 0
+    },
+    {
+      "tweet_id": "user_mika_reward",
+      "url": "https://x.com/mikamika_32768",
+      "author_handle": "mikamika_32768",
+      "author_name": "mikamika_32768",
+      "text": "おはようございます。この報酬はどこで集めるんだっけ？（特に魅力を感じなくなってるから無理に交換しなくてもいいかな） #ロマサガRS",
+      "likes": 37,
+      "retweets": 0,
+      "replies": 2
+    },
+    {
+      "tweet_id": "user_yuichi_dreamnoel",
+      "url": "https://x.com/yuichi_ni",
+      "author_handle": "yuichi_ni",
+      "author_name": "yuichi_ni",
+      "text": "おはようございます やっぱり我慢出来なくてガチャを引きましたが、ドレアムノエルくん来ました。課金せずに来てくれて良かった。ウィルも欲しかったけど、あと30連は回せるけど来ないと思うから我慢 #ロマサガRS",
+      "likes": 30,
+      "retweets": 0,
+      "replies": 0
+    },
+    {
+      "tweet_id": "user_marukei_kioku",
+      "url": "https://x.com/MaruKeitapu_rs",
+      "author_handle": "MaruKeitapu_rs",
+      "author_name": "MaruKeitapu_rs",
+      "text": "丸1日記憶再戦やってコレですからね。運だっていうのはわかりますけど、愛や魅力関係が多すぎるような… #ロマサガRS",
+      "likes": 22,
+      "retweets": 0,
+      "replies": 0
+    },
+    {
+      "tweet_id": "user_miri_evojapan",
+      "url": "https://x.com/miri_atsumori",
+      "author_handle": "miri_atsumori",
+      "author_name": "miri_atsumori",
+      "text": "今朝の閃き、そろそろ選手交代ですかねー。ドレアム兄様にも良いアビ欲しいしなぁ。夫のEVO Japan 2026、スト6で出場して1日目敗退でした #ロマサガRS #サガドラクエタクトコラボ",
+      "likes": 21,
+      "retweets": 0,
+      "replies": 1
+    },
+    {
+      "tweet_id": "user_noropeno_login2700",
+      "url": "https://x.com/noropenoropeno",
+      "author_handle": "noropenoropeno",
+      "author_name": "noropenoropeno",
+      "text": "おはおはおはー 今日は子どもの日ですなー 柏餅でも買いますかー ロマサガRSはログイン2700日 毎日楽しんでます！ 日数にすると7年3ヶ月ですか #ロマサガRS",
+      "likes": 17,
+      "retweets": 0,
+      "replies": 0
+    },
+    {
+      "tweet_id": "user_neko_furumi",
+      "url": "https://x.com/NekoHarchan",
+      "author_handle": "NekoHarchan",
+      "author_name": "NekoHarchan",
+      "text": "ふみとどまる 天井突破を覚悟しました笑 #ロマサガRS",
+      "likes": 15,
+      "retweets": 0,
+      "replies": 1
+    }
+  ],
+  "summarized_at": "2026-05-05T01:30:00Z"
+}

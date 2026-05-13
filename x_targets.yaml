@@ -1,0 +1,38 @@
+# X（Twitter）で追跡する対象の定義
+#
+# 追加・削除は自由。enabled: false で一時停止できる。
+#
+# accounts: 特定アカウントの最近の投稿を取得
+#   - handle はXユーザー名（@抜き）
+# hashtags: ハッシュタグ検索（#含めて記述）
+# keywords: キーワード検索（フレーズもOK）
+#
+# - 各targetには `since_hours` を上書き設定可（デフォルト24時間）
+# - lang: ja でフィルタ（不要なら削除）
+
+defaults:
+  since_hours: 24       # 何時間前までさかのぼるか
+  max_per_target: 100   # 1ターゲットあたり最大取得件数（暴走防止）
+  lang: ja              # 言語フィルタ（"ja" / "en" / "" でフィルタなし）
+
+accounts:
+  - name: ロマサガRS公式
+    handle: romasaga_rs
+    enabled: true
+
+  # 追加例：
+  # - name: 開発者X
+    # handle: dev_handle
+    # enabled: true
+
+hashtags:
+  - tag: "#ロマサガRS"
+    enabled: true
+  - tag: "#ロマンシングサガリユニバース"
+    enabled: true
+
+keywords:
+  - query: "ロマサガRS"
+    enabled: true
+  # - query: "ロマサガリユニバース"
+    # enabled: true

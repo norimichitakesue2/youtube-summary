@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>YouTube要約レポート 2026-04-21 〜 2026-04-27</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #1e293b;
+    --panel-2: #273449;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --accent: #60a5fa;
+    --pos: #34d399;
+    --neg: #f87171;
+    --topic: #fbbf24;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  header {
+    padding: 32px 48px;
+    background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
+    border-bottom: 1px solid #334155;
+  }
+  header h1 { margin: 0 0 8px; font-size: 28px; }
+  header .meta { color: #cbd5e1; font-size: 14px; }
+  main { padding: 32px 48px; max-width: 1200px; margin: 0 auto; }
+  .summary-stats {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .stat {
+    background: var(--panel);
+    padding: 16px 24px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 180px;
+  }
+  .stat .num { font-size: 28px; font-weight: 700; color: var(--accent); }
+  .stat .label { font-size: 13px; color: var(--muted); margin-top: 4px; }
+  .date-section { margin-bottom: 32px; }
+  .date-section h2 {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .date-section h2 .day-count {
+    font-size: 13px;
+    font-weight: normal;
+    color: var(--muted);
+  }
+  .video {
+    background: var(--panel);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 12px;
+    border-left: 4px solid var(--accent);
+  }
+  .video-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  .video-channel {
+    display: inline-block;
+    background: rgba(96, 165, 250, 0.18);
+    color: var(--accent);
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .video-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .video-title a { color: var(--text); text-decoration: none; }
+  .video-title a:hover { color: var(--accent); }
+  .video-date { color: var(--muted); font-size: 13px; white-space: nowrap; }
+  .video-summary {
+    color: #cbd5e1;
+    margin: 8px 0 16px;
+    white-space: pre-wrap;
+  }
+  .pos-neg-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  @media (max-width: 700px) { .pos-neg-grid { grid-template-columns: 1fr; } }
+  .pos, .neg {
+    background: var(--panel-2);
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  .pos { border-left: 3px solid var(--pos); }
+  .neg { border-left: 3px solid var(--neg); }
+  .pos .label, .neg .label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+  .pos .label { color: var(--pos); }
+  .neg .label { color: var(--neg); }
+  .pos ul, .neg ul { margin: 0; padding-left: 18px; }
+  .pos li, .neg li { margin-bottom: 2px; }
+  .topics { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .topic {
+    background: rgba(251, 191, 36, 0.15);
+    color: var(--topic);
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+  }
+  .empty-note { color: var(--muted); font-size: 13px; font-style: italic; }
+  .filter-bar {
+    background: var(--panel);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  .filter-bar .filter-label {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .filter-bar .filter-actions {
+    display: flex;
+    gap: 8px;
+  }
+  .filter-bar button {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid #334155;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .filter-bar button:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+  .filter-bar .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .filter-bar .chip {
+    background: var(--panel-2);
+    color: var(--muted);
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    transition: all 0.15s;
+  }
+  .filter-bar .chip:hover {
+    border-color: var(--accent);
+  }
+  .filter-bar .chip.active {
+    background: var(--accent);
+    color: #0f172a;
+    font-weight: 600;
+  }
+  .filter-bar .chip.x-chip {
+    border-color: #1da1f2;
+    color: #7dd3fc;
+  }
+  .filter-bar .chip.x-chip.active {
+    background: #1da1f2;
+    color: #0f172a;
+  }
+  .filter-bar .chip .count {
+    opacity: 0.7;
+    font-size: 11px;
+    margin-left: 4px;
+  }
+  .video.hidden { display: none; }
+  .date-section.hidden { display: none; }
+  .x-card.hidden { display: none; }
+  .x-card {
+    background: linear-gradient(180deg, #0c4a6e 0%, #164e63 100%);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    border-left: 4px solid #1da1f2;
+  }
+  .x-badge {
+    display: inline-block;
+    background: rgba(29, 161, 242, 0.25);
+    color: #7dd3fc;
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .x-card h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .x-card .x-summary {
+    color: #cbd5e1;
+    margin-bottom: 14px;
+    white-space: pre-wrap;
+    font-size: 14px;
+  }
+  .x-card .hot {
+    margin-top: 12px;
+  }
+  .x-card .hot-label {
+    color: #94a3b8;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+  .x-card .tweet {
+    background: rgba(15, 23, 42, 0.55);
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+  .x-card .tweet .author {
+    color: #7dd3fc;
+    font-weight: 600;
+    margin-bottom: 2px;
+    font-size: 12px;
+  }
+  .x-card .tweet a {
+    color: #7dd3fc;
+    text-decoration: none;
+    font-size: 11px;
+  }
+  .x-card .tweet .stats {
+    color: #94a3b8;
+    font-size: 11px;
+    margin-top: 4px;
+  }
+  .visible-stats {
+    display: inline-block;
+    color: var(--muted);
+    font-size: 12px;
+    margin-left: 8px;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    padding: 24px;
+    border-top: 1px solid #334155;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>YouTube要約レポート</h1>
+  <div class="meta">対象期間: 2026-04-21 〜 2026-04-27（7日間） / 生成日時: 2026-04-27 11:04</div>
+</header>
+<main>
+  <div class="summary-stats">
+    <div class="stat"><div class="num">6</div><div class="label">対象動画数</div></div>
+    <div class="stat"><div class="num">1</div><div class="label">チャンネル数</div></div>
+    <div class="stat"><div class="num">28</div><div class="label">ポジ要素（合計）</div></div>
+    <div class="stat"><div class="num">19</div><div class="label">ネガ要素（合計）</div></div>
+  </div>
+  <div class="filter-bar" id="filterBar">
+    <div class="filter-label">
+      <span>表示するYouTuberを選択 <span id="visibleStats" class="visible-stats"></span></span>
+      <div class="filter-actions">
+        <button onclick="setAll(true)">全て表示</button>
+        <button onclick="setAll(false)">全て非表示</button>
+      </div>
+    </div>
+    <div class="chips" id="chips"><span class="chip active" data-channel="つむつむちゃんねる●ゲーム考察専門">つむつむちゃんねる●ゲーム考察専門<span class="count">6</span></span>
+<span class="chip x-chip active" data-channel="X (Twitter)">X (Twitter)<span class="count">1日</span></span></div>
+  </div>
+  <section class="date-section"><h2>2026-04-26<span class="day-count">0本 ／ X 119ツイート</span></h2>
+<div class="x-card" data-channel="X (Twitter)">
+  <div><span class="x-badge">X (Twitter) ・ 119ツイート集約</span></div>
+  <h3>その日のXハイライト</h3>
+  <div class="x-summary">ドラクエタクトコラボの制圧戦が60%到達、報酬「ロトのしるし」配布で歓喜の声多数。<br>ピサロ最終皇帝男・アルベルト等のコラボキャラ性能が話題、螺旋回廊550階の活躍報告も。<br>ガチャの渋さや練磨素材消化の手間など運営対応への不満も一定数存在。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素（X）</div><ul><li>ロトのしるし入手で歓喜の声多数（制圧戦60%報酬）</li><li>ピサロ最終皇帝男の火力が圧倒的に強いと評価</li><li>アルベルトが螺旋550階で活躍、嬉しい報告複数</li><li>コラボキャラ全体的に強くて編成幅が広がる</li><li>サガEB発売日の感謝ジュエル配布が好評</li><li>コラボスタイル「ロトベルト」のかっこよさを称賛</li><li>公式の予告演出（ロトのしるしカウントダウン）が盛り上げ上手</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素（X）</div><ul><li>今回のコラボガチャは渋すぎ、90〜100連でも厳しい声</li><li>天井交換でピサロ帝を取らざるを得なかった失望感</li><li>最新の螺旋回廊が勝ち方分からないという報告</li><li>練磨素材2000万超で消化に何時間もかかる仕様への不満</li><li>単発引きが最近悪く感じる、ジュエル不足の悲鳴</li><li>視聴メダル広告のホラー演出が怖くてやめてほしい要望</li><li>装飾品に練磨がない仕様への戸惑い</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ドラクエタクトコラボ</span><span class="topic">制圧戦60%・ロトのしるし</span><span class="topic">螺旋回廊550階</span><span class="topic">ピサロ最終皇帝男</span><span class="topic">サガEB発売日記念ジュエル</span><span class="topic">無尽塔39-42階</span><span class="topic">5体目レイドボス予告</span><span class="topic">記憶再戦</span></div>
+  <div class="hot"><div class="hot-label">注目ツイート TOP3</div>
+<div class="tweet">
+  <div class="author">@Asu_Hiyama02</div>
+  <div>このドラゴンでもいいのか<br>#ロマサガRS</div>
+  <div class="stats">♥40 ↻0 💬0 ・ <a href="https://x.com/Asu_Hiyama02/status/2048013130677293384" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@xiworiwpkdu277</div>
+  <div>#ロマサガRS<br>視聴メダルの広告で、たまにこの動画が流れてくるのですが、びっくりして怖いのでやめてくれませんか公式さま</div>
+  <div class="stats">♥36 ↻0 💬0 ・ <a href="https://x.com/xiworiwpkdu277/status/2048017410100486242" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@2027xxxxxx</div>
+  <div>キリのいい７０００になりました(⁠ ⁠╹⁠▽⁠╹⁠ ⁠)<br>１年で大体１０００位ずつ上がってますね</div>
+  <div class="stats">♥30 ↻0 💬0 ・ <a href="https://x.com/2027xxxxxx/status/2048029127098396846" target="_blank" rel="noopener">原文</a></div>
+</div></div>
+</div>
+</section>
+<section class="date-section"><h2>2026-04-24<span class="day-count">2本</span></h2>
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=TViueMOwGbw" target="_blank" rel="noopener">【ロマサガRS】ゴーレムレイドMAX2分30秒台合計4パターン解説【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">ゴーレムレイドMAX2分30秒台の編成4パターンを解説。<br>ゆきだるま+リーズや最終皇帝男軸など複数編成を比較。<br>推奨はレイ姫AJサルインバートランド連星で2分29秒台。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ナイトメア継承で敵を眠らせて時短可能</li><li>AJとイシスがレイドアタックで神編成級に強い</li><li>バートランドの劣火連が高速で軽くカスト</li><li>サルインの闇の煉獄ダーマガが速攻で乾燥する</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>ゆキト+リーズ編成は課金キャラ寄りで敷居が高い</li><li>コペパン2ターン目落ちが運ゲ要素</li><li>ダークキラーは行動回数が増えすぎてかえって遅い</li><li>バフ量不足で350億届かない場面がある</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ゴーレムレイドMAX</span><span class="topic">編成4パターン</span><span class="topic">ナイトメア眠り</span><span class="topic">サルイン闇の煉獄</span><span class="topic">新速陣</span></div>
+</div>
+
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=pHuZJl-oJM8" target="_blank" rel="noopener">【ロマサガRS】最終皇帝男またまた破壊！弱点無視でレイドゴーレム2分20秒台だしてしまう【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">最終皇帝男軸でゴーレムレイドを2分20秒台に短縮。<br>ビンセント・最終皇帝男・AJ・レイ姫・イシス編成で検証。<br>連携ミスやミストエコ削りで実質2分19秒~24秒の幅。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>最終皇帝男のエクストラフォースが爆発的に伸びる</li><li>ビンセントとの相性が抜群でカスト気味に出る</li><li>ファティーマのファスト+眠らせもタイム短縮に有効</li><li>技エフェクトがかっこいい</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>成功神15戦のDTがギリギリで装備調整必須</li><li>ミストエコ無し編成だとダメージが足りない</li><li>連携が暴発するとタイムが1~2秒遅れる</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ゴーレムレイド</span><span class="topic">最終皇帝男</span><span class="topic">ビンセント</span><span class="topic">ミストエコ調整</span><span class="topic">成功神15戦</span></div>
+</div>
+</section>
+<section class="date-section"><h2>2026-04-23<span class="day-count">2本</span></h2>
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=sh5NLI3grPU" target="_blank" rel="noopener">【ロマサガRS】新キャラランキング特別番外編！リラ卒業そしてSSS評価変動の兆し【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">リラを6.7周年枠から卒業させる特別ランキング回。<br>最終皇帝男の9回行動と圧倒的シナジーをSSS化検討。<br>ロックブーケと並ぶインフレキャラとして高評価へ。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>最終皇帝男の9回行動が壊れ性能で総場効果が凄い</li><li>AJはバフ・軽減率・サブアタッカー全部優秀</li><li>ターミンはどこでも入る万能サポーター</li><li>ロックブーケと最終皇帝男のシナジーが強烈</li><li>セフェルマルカを安定して倒せる</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>リラは使用頻度が激減した</li><li>リラは突き抜けたタクトコラボ勢に押された</li><li>短期性能では継承ありの他キャラに譲る</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">最新キャラランキング</span><span class="topic">リラ卒業</span><span class="topic">最終皇帝男SSS</span><span class="topic">9回行動</span><span class="topic">マイス/アイスのドライブチェイン</span></div>
+</div>
+
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=wzvtwdQWXrU" target="_blank" rel="noopener">【ロマサガRS】最終皇帝男さん強すぎて代用編成が色々できてしまう！最強の矛盾＆トリプルカウンター【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">アイス/マイス無しでも最終皇帝男軸は最強級と検証。<br>ユリアン入りトリプルカウンターと最終皇帝女軸を紹介。<br>セフェルマルカ9~12ターン討伐で十分実用的。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ユリアンの避弾防御強化と反撃が優秀</li><li>最終皇帝女のヒールと火力スイッチが偉い</li><li>レディアントセイバーのカウンターが12億級でぶっ刺さる</li><li>皇族ボードキネス全体が高めで安定する</li><li>ノクスオーバーエンチャントで軽減率が壁レベル</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>アイス無しだとバフ量とドライブチェインが1枚減る</li><li>ファティーマやファイターアシストは火力ロスになる</li><li>若干HP維持が長期戦できつい瞬間がある</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">最終皇帝男代用編成</span><span class="topic">トリプルカウンター</span><span class="topic">最終皇帝女</span><span class="topic">ユリアン</span><span class="topic">レディアントセイバー</span></div>
+</div>
+</section>
+<section class="date-section"><h2>2026-04-22<span class="day-count">2本</span></h2>
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=NHDTLQf_Myk" target="_blank" rel="noopener">【Gジェネ】最新おすすめSSP化！ダブルオーエキスパで使用感を実況プレイ【ジージェネエターナル】</a></h3>
+  </div>
+  <div class="video-summary">ダブルオークリア勢のSSP化おすすめ機体を実況解説。<br>ダブルオーライザーとSSPロックオン中心に超火力編成。<br>レグナント・キエリア支援2回など増援戦に最適化。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ダブルオーライザーSSPの火力が壊れ性能</li><li>ロックオンSSP化で支援射程6が強い</li><li>GNアーマーのマップ兵器が35%デバフ込みで2回打てる</li><li>リボンズキャノンの射程枠が支援火力として優秀</li><li>SSP化エクシアのトランザム切ナがかっこよく強力</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>アインハインデルツのトップアップが弱い</li><li>操作ミスでエクシアを落としやすい</li><li>セルゲイ撃墜時のチャンスステップ管理がシビア</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ダブルオーエキスパ</span><span class="topic">SSP化おすすめ</span><span class="topic">ダブルオーライザー</span><span class="topic">トランザムライザー</span><span class="topic">支援攻撃追加</span></div>
+</div>
+
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=bkv6FA4ixMQ" target="_blank" rel="noopener">【ロマサガRS】個人的環境TOP編成！攻守万能★破壊と再生！シナジー爆発でセフェルマルカーが９ターンで消し飛ぶ【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">天井交換で最終皇帝男を入手し最強パーティ検証。<br>最終皇帝男AJターミンマイスアイスでセフェルマルカ攻略。<br>9ターン目で削り切る一歩手前まで到達した強編成。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>9回行動でマイス・アイスのドライブチェインがバカ盛り</li><li>レディアントセイバーのカウンターが10億超え</li><li>アイスが軽くも回復もできて切替が偉い</li><li>皇族全員ボードキネス高水準でシナジー爆発</li><li>ターミンのデコレーション3が必須級</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>防御アビリティ持ちが3枚で若干薄い</li><li>8ターン目フィニッシュには微妙に届かない</li><li>コズミックエクボの使用タイミングがシビア</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">最終皇帝男</span><span class="topic">個人的環境TOP編成</span><span class="topic">セフェルマルカー</span><span class="topic">ドライブチェイン2枚</span><span class="topic">レディアントセイバー継承</span></div>
+</div>
+</section>
+</main>
+<footer>generated by youtube-summary</footer>
+<script>
+function getActiveChannels() {
+  return new Set(
+    Array.from(document.querySelectorAll('.chip.active'))
+      .map(c => c.dataset.channel)
+  );
+}
+function applyFilter() {
+  const active = getActiveChannels();
+  // 各動画の表示/非表示
+  document.querySelectorAll('.video').forEach(v => {
+    const ch = v.dataset.channel;
+    v.classList.toggle('hidden', !active.has(ch));
+  });
+  // Xカードの表示/非表示
+  document.querySelectorAll('.x-card').forEach(v => {
+    const ch = v.dataset.channel;
+    v.classList.toggle('hidden', !active.has(ch));
+  });
+  // 日付セクションは、コンテンツが0なら非表示
+  document.querySelectorAll('.date-section').forEach(s => {
+    const visible = s.querySelectorAll('.video:not(.hidden), .x-card:not(.hidden)').length;
+    s.classList.toggle('hidden', visible === 0);
+  });
+  updateStats();
+}
+function updateStats() {
+  const totalCh = document.querySelectorAll('.chip').length;
+  const activeCh = document.querySelectorAll('.chip.active').length;
+  const visibleVideos = document.querySelectorAll('.video:not(.hidden)').length;
+  const visibleX = document.querySelectorAll('.x-card:not(.hidden)').length;
+  const visibleDays = document.querySelectorAll('.date-section:not(.hidden)').length;
+  document.getElementById('visibleStats').textContent =
+    `（${activeCh}/${totalCh} 選択中、動画${visibleVideos}本／X${visibleX}日／合計${visibleDays}日）`;
+}
+function toggleChannel(chip) {
+  chip.classList.toggle('active');
+  applyFilter();
+}
+function setAll(on) {
+  document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', on));
+  applyFilter();
+}
+document.querySelectorAll('.chip').forEach(c => {
+  c.addEventListener('click', () => toggleChannel(c));
+});
+updateStats();
+</script>
+</body>
+</html>

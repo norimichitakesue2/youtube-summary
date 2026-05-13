@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+ローカルMacで毎朝9時にXツイートを取得するためのlaunchd設定。
+
+インストール方法:
+  cp scripts/launchd/com.takesue.youtube-summary.x-fetch.plist ~/Library/LaunchAgents/
+  launchctl load ~/Library/LaunchAgents/com.takesue.youtube-summary.x-fetch.plist
+
+確認:
+  launchctl list | grep youtube-summary
+
+アンインストール:
+  launchctl unload ~/Library/LaunchAgents/com.takesue.youtube-summary.x-fetch.plist
+  rm ~/Library/LaunchAgents/com.takesue.youtube-summary.x-fetch.plist
+
+ログ:
+  /Users/takesue/youtube-summary/data/x_fetch.log
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.takesue.youtube-summary.x-fetch</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/takesue/youtube-summary/scripts/x_daily_run.sh</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/takesue/youtube-summary</string>
+
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>9</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/Users/takesue/youtube-summary/data/x_fetch.log</string>
+
+  <key>StandardErrorPath</key>
+  <string>/Users/takesue/youtube-summary/data/x_fetch.log</string>
+
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>
