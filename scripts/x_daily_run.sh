@@ -16,4 +16,7 @@ fi
 
 python3 scripts/x_fetch.py --hours 24
 
+# 自動 commit & push（変更があるときだけ／失敗しても本体は止めない）
+bash scripts/git_daily_push.sh || true
+
 echo "=== done ==="
