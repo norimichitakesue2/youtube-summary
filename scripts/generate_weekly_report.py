@@ -806,6 +806,190 @@ a:hover{text-decoration:underline}
     )
 
 
+def render_x_index() -> None:
+    """X (Twitter) 日次サマリの索引 reports/x_index.html を再生成する。
+
+    `data/tweet_summaries/*.json` を真のソースとして読み、
+    日付・ツイート数・3行サマリ・主要トピックを一覧表示する。
+    各エントリは、その日を含む combined weekly_report_<date>.html にリンクする
+    （X カードはそちらに埋め込まれている）。
+    """
+    import re
+
+    JP_WD = ["月", "火", "水", "木", "金", "土", "日"]
+
+    if not TWEET_SUMMARIES_DIR.exists():
+        return
+
+    # tweet_summaries/*.json を新しい順に読む
+    entries = []
+    for p in sorted(TWEET_SUMMARIES_DIR.glob("*.json"), reverse=True):
+        if not re.match(r"\d{4}-\d{2}-\d{2}\.json$", p.name):
+            continue
+        try:
+            with p.open("r", encoding="utf-8") as f:
+                data = json.load(f)
+        except Exception:
+            continue
+        try:
+            dt = datetime.fromisoformat(p.stem)
+        except ValueError:
+            continue
+        entries.append({"date": p.stem, "dt": dt, "data": data})
+
+    # 日次レポート（このX要約が埋め込まれている可能性が高い weekly_report_<date>.html）
+    # 「その日付以降で最も古い weekly_report」にリンクする
+    weekly_dates = []
+    pat = re.compile(r"weekly_report_(\d{4}-\d{2}-\d{2})\.html")
+    for f in REPORTS_DIR.glob("weekly_report_*.html"):
+        m = pat.match(f.name)
+        if m:
+            weekly_dates.append(m.group(1))
+    weekly_dates.sort()
+
+    def linked_report(date_str: str) -> str | None:
+        """date_str を含む最初の weekly_report ファイル名を返す。"""
+        for wd in weekly_dates:
+            # weekly_report の対象期間は (wd - 6日) 〜 wd
+            try:
+                wdt = datetime.fromisoformat(wd)
+            except ValueError:
+                continue
+            ddt = datetime.fromisoformat(date_str)
+            if (wdt - timedelta(days=6)) <= ddt <= wdt:
+                return f"weekly_report_{wd}.html"
+        return None
+
+    # 最新ハイライト
+    latest_html = ""
+    if entries:
+        latest = entries[0]
+        ld = latest["data"]
+        s3 = html.escape((ld.get("summary_3lines") or "").replace("\n", " / "))
+        wd_idx = latest["dt"].weekday()
+        link = linked_report(latest["date"]) or ""
+        latest_link_attr = f' href="{link}"' if link else ""
+        latest_html = (
+            f'<div class="latest">'
+            f'<div class="latest-label">最新（本日の更新分）</div>'
+            f'<a class="latest-link"{latest_link_attr}>'
+            f'{latest["date"]}（{JP_WD[wd_idx]}） '
+            f'<span class="range">{ld.get("n_tweets", 0)} ツイート</span>'
+            f'</a>'
+            f'<p class="latest-summary">{s3}</p>'
+            f'</div>'
+        )
+
+    # 月別グルーピング
+    by_month: dict[str, list[dict]] = defaultdict(list)
+    for e in entries:
+        by_month[e["dt"].strftime("%Y-%m")].append(e)
+    months_sorted = sorted(by_month.keys(), reverse=True)
+
+    section_parts = []
+    for ym in months_sorted:
+        items = by_month[ym]
+        if not items:
+            continue
+        y, m = ym.split("-")
+        section_parts.append(
+            f'<section class="month"><h2>📅 {y}年{int(m)}月 '
+            f'<span class="count">({len(items)}日)</span></h2><ul>'
+        )
+        for e in items:
+            wd = JP_WD[e["dt"].weekday()]
+            d = e["data"]
+            n_tw = d.get("n_tweets", 0)
+            topics = d.get("key_topics") or []
+            topics_str = ""
+            if topics:
+                topics_str = " / ".join(html.escape(str(t)) for t in topics[:3])
+                if len(topics) > 3:
+                    topics_str += f" ほか{len(topics)-3}"
+            link = linked_report(e["date"])
+            date_label = f'{e["date"]}（{wd}）'
+            if link:
+                date_html = f'<a href="{link}">{date_label}</a>'
+            else:
+                date_html = date_label
+            section_parts.append(
+                f'<li>'
+                f'<span class="date">{date_html}</span>'
+                f' <span class="count-pill">{n_tw}ツイート</span>'
+                f'{(" <span class=topics>" + topics_str + "</span>") if topics_str else ""}'
+                f'</li>'
+            )
+        section_parts.append("</ul></section>")
+
+    archive_wrap = ""
+    if section_parts:
+        archive_wrap = (
+            f'<h2 class="archive-h2">🗂 日次X要約アーカイブ</h2>'
+            f'<p class="section-desc">'
+            f'各日付の <code>data/tweet_summaries/&lt;date&gt;.json</code> をソースに、'
+            f'対応する <code>weekly_report_&lt;date&gt;.html</code> へリンクします（X カードは'
+            f'そちらに埋め込まれています）。'
+            f'</p>'
+            f'{"".join(section_parts)}'
+        )
+    else:
+        archive_wrap = (
+            '<p style="color:#94a3b8">まだ X 要約はありません。</p>'
+        )
+
+    # tweets_log.xlsx へのリンク
+    xlsx_link = ""
+    if (ROOT / "tweets_log.xlsx").exists():
+        xlsx_link = (
+            '<p class="ext-link">'
+            '📊 全期間ログ: '
+            '<a href="../tweets_log.xlsx">tweets_log.xlsx</a>'
+            '</p>'
+        )
+
+    back_link = '<p class="ext-link">← <a href="index.html">YouTube要約レポート一覧へ戻る</a></p>'
+
+    css = """body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;max-width:820px;margin:32px auto;padding:0 16px;color:#1f2937;line-height:1.6}
+h1{font-size:24px;margin-bottom:4px}
+.subtitle{color:#6b7280;font-size:14px;margin-top:0}
+a{color:#1da1f2;text-decoration:none}
+a:hover{text-decoration:underline}
+.section-desc{color:#6b7280;font-size:13px;margin:4px 0 12px}
+.section-desc code{background:#e5e7eb;padding:1px 6px;border-radius:3px;font-size:12px}
+.latest{background:linear-gradient(135deg,#e0f2fe 0%,#dbeafe 100%);padding:16px 20px;border-radius:10px;margin:20px 0 24px;border-left:4px solid #1da1f2}
+.latest-label{font-size:12px;font-weight:700;color:#0c4a6e;letter-spacing:0.05em;margin-bottom:4px}
+.latest-link{font-size:18px;font-weight:600}
+.latest-link .range{font-size:13px;font-weight:400;color:#4b5563;margin-left:6px}
+.latest-summary{font-size:13px;color:#374151;margin:8px 0 0;line-height:1.5}
+.ext-link{font-size:14px;color:#4b5563;margin:0 0 16px}
+.archive-h2{font-size:18px;margin:32px 0 4px;color:#374151;border-bottom:1px solid #e5e7eb;padding-bottom:6px}
+.month{margin-bottom:20px}
+.month h2{font-size:15px;margin:20px 0 6px;color:#4b5563;font-weight:600}
+.month h2 .count{font-size:12px;font-weight:400;color:#9ca3af;margin-left:6px}
+.month ul{list-style:none;padding-left:0;margin:0}
+.month li{padding:6px 0;font-size:13px;color:#6b7280;border-bottom:1px dashed #f1f5f9}
+.month li:last-child{border-bottom:none}
+.month li .date a{color:#1da1f2;font-weight:600}
+.count-pill{display:inline-block;background:#e0f2fe;color:#0369a1;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:600;margin-left:6px}
+.topics{display:block;color:#94a3b8;font-size:12px;margin-top:2px;margin-left:0}"""
+
+    body = (
+        f'<h1>🐦 X (Twitter) 日次サマリ一覧</h1>'
+        f'<p class="subtitle">毎日 <code>x-summary-daily</code> タスクで自動生成</p>'
+        f'{back_link}'
+        f'{latest_html}'
+        f'{xlsx_link}'
+        f'{archive_wrap}'
+    )
+
+    (REPORTS_DIR / "x_index.html").write_text(
+        f'<!DOCTYPE html>\n<html lang="ja"><head><meta charset="utf-8">'
+        f'<title>X日次サマリ一覧</title>'
+        f'<style>{css}</style></head>\n<body>{body}</body></html>',
+        encoding="utf-8",
+    )
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--days", type=int, default=7)
@@ -902,6 +1086,7 @@ def main():
     out = REPORTS_DIR / f"weekly_report_{until.strftime('%Y-%m-%d')}.html"
     out.write_text(html_out, encoding="utf-8")
     render_index()
+    render_x_index()
     print(f"レポート生成: {out}")
     print(f"  対象期間: {since.date()} 〜 {until.date()}")
     print(
