@@ -1,0 +1,41 @@
+{
+  "date": "2026-05-21",
+  "n_tweets": 107,
+  "summary_3lines": "螺旋560階「ジュエルビースト」のCAUTION/本気モード発動条件の検証報告が続出\n公式は期間限定「技・術鍛錬道場」開催を告知、お昼の追加お知らせにも注目集まる\nドラクエタクトコラボキャラ（カタリナ/ピサロ最終皇帝/ノエル）のゴリ押し攻略が主流、厄ガチャや運営圧への不満も継続",
+  "key_topics": [
+    "螺旋回廊560階「ジュエルビースト」の本気モード/CAUTIONギミック検証",
+    "期間限定イベント「技・術鍛錬道場」開催（公式お知らせ）",
+    "ドラクエタクトコラボキャラ（カタリナ/ピサロ最終皇帝/ノエル）でのゴリ押し攻略",
+    "OD回数と連携回数の関係をめぐる解析（偶数ターンOD/奇数ターン無ODなど)",
+    "ドラクエタクトコラボ当選報告",
+    "厄キャラ予想と次のお知らせ（ハニバ前ガチャ）への期待と警戒",
+    "無尽塔46-47層攻略・ジェラール［厄］確保",
+    "魂アビ獲得・閃き報告（サラ・アイシャ等）",
+    "20日5%OFFの翌日・お給料消化ムード"
+  ],
+  "positive_themes": [
+    "Joe_rsらの検証で「OD総回数/連携回数が本気モードに関与」「奇数2人OD・偶数5人ODで本気回避」など攻略法が共有され、コミュニティの解析が進んだことへの満足",
+    "ドラクエタクトコラボキャラ（カタリナのカウンター、ピサロ最終皇帝の闘気吸収、ノエルの火力）が螺旋560で大活躍し『コラボ強すぎる』と好評",
+    "鍛錬道場開催で能力値上限上げの選択肢が増え、育成派から歓迎の声",
+    "ドラクエタクトコラボ当選報告が複数（@manaromasaga, @klXC9SFguq5Rtp4 等）、ロマパス初購入で極み武器入手の嬉しい報告も"
+  ],
+  "negative_themes": [
+    "ジュエルビーストの本気モード移行/弱化解除の発動条件がノーヒントで「結局謎」「ゴリ押しでクリアしたがモヤモヤ」という不満が多数",
+    "カタリナ・ノエル・ピサロ最終皇帝等の最新コラボキャラが無い人ほど苦戦、『カタリナ難民』を自称する声",
+    "ハニバ前ガチャに対する「運営のカツアゲ圧」「次のお知らせも怖い」と警戒する空気",
+    "アプリ容量が13GBに膨張する事象や、強化書・ゴールド不足など育成リソース面のストレス"
+  ],
+  "hot_tweets": [
+    {"tweet_id": "marien0521_top", "url": "https://x.com/marien0521", "author_handle": "marien0521", "author_name": "marien0521", "text": "風船飛びました〜 今日は私の誕生日です ฅ^•ﻌ•^ฅ 投稿見ていただいてありがとうございます これからもよろしくお願いします #ドラクエタクト #ロマサガRS #ドラクエスマグロ #DQSG #誕生日", "likes": 136, "retweets": 1, "replies": 26},
+    {"tweet_id": "romasaga_rs_top", "url": "https://x.com/romasaga_rs", "author_handle": "romasaga_rs", "author_name": "ロマンシング サガ リ・ユニバース公式", "text": "期間限定イベント「技・術鍛錬道場」開催！ 鍛錬道場が開催！ 鍛えたい技・術に合ったクエストに挑戦しよう！ ▼お知らせ https://info.rs.aktsk.jp/info/detail/110802 #ロマサガRS", "likes": 132, "retweets": 14, "replies": 0},
+    {"tweet_id": "yogayoga_RS_top", "url": "https://x.com/yogayoga_RS", "author_handle": "yogayoga_RS", "author_name": "yogayoga_RS", "text": "本日で2000歳を迎えました まだまだ遊び続けます #ロマサガRS", "likes": 84, "retweets": 0, "replies": 0},
+    {"tweet_id": "SS48209827_top", "url": "https://x.com/SS48209827", "author_handle": "SS48209827", "author_name": "SS48209827", "text": "螺旋は苦労してどーにか突破デス、急にお強くなりましたねぃ…！ 無尽も寝落ちしながらぽちぽちして46層、突破なのですよー♪ #ロマサガRS", "likes": 54, "retweets": 0, "replies": 1},
+    {"tweet_id": "Tp4idit999706Ik_top", "url": "https://x.com/Tp4idit999706Ik", "author_handle": "Tp4idit999706Ik", "author_name": "Tp4idit999706Ik", "text": "しごはじのたみ グスチャレも 魂アビ能力くずしデバフで頑張った OD回数トリガーがいちばん有力だけど… 熱冷雷陽、どれか一属性でも 攻撃回数超えたら本気出されちゃったり？ この手探り感がたまらん〜 #ロマサガRS", "likes": 48, "retweets": 0, "replies": 0},
+    {"tweet_id": "manaromasaga_top", "url": "https://x.com/manaromasaga", "author_handle": "manaromasaga", "author_name": "manaromasaga", "text": "【当選】 当たった〜 ありがとうございます #ロマサガRS #ロマサガタクトコラボ", "likes": 47, "retweets": 0, "replies": 2},
+    {"tweet_id": "RS6363RS_top", "url": "https://x.com/RS6363RS", "author_handle": "RS6363RS", "author_name": "RS6363RS", "text": "ログイン2700日になりました〜 これからも楽しんでいきます♪ #ロマサガRS", "likes": 41, "retweets": 0, "replies": 0},
+    {"tweet_id": "Joe___rs_top", "url": "https://x.com/Joe___rs", "author_handle": "Joe___rs", "author_name": "Joe___rs", "text": "ジュエビ。ターン数を超える連携回数は おそらくご法度。罰行動が来る。OD連携＋野良連携＝２ 通常OD回数２０回超えると【本気モード】が来る他に、4Tで連携回数２回とか6ターンで連携回数３回だと大人しい。逆に偶数ターン終了までにターン数以上の連携回数だと怒りモードっぽい #ロマサガRS", "likes": 31, "retweets": 0, "replies": 0},
+    {"tweet_id": "Sho_hei_RS_top", "url": "https://x.com/Sho_hei_RS", "author_handle": "Sho_hei_RS", "author_name": "Sho_hei_RS", "text": "よっしゃ！560階 11ターン討伐成功 タクトコラボ、厄キャラ外して行けました。恐らくこれ以上の耐久はスタン対策出来ない限り無理だと思われ。いやーまさかアデルを使う日がまたやってくるとはねぇ あー楽しかった #ロマサガRS", "likes": 25, "retweets": 0, "replies": 0},
+    {"tweet_id": "chamoguraburu_top", "url": "https://x.com/chamoguraburu", "author_handle": "chamoguraburu", "author_name": "chamoguraburu", "text": "螺旋回廊560 推しチャレンジ成功！！ ビーバーちゃんやっぱり強いね〜 #ロマサガRS", "likes": 25, "retweets": 0, "replies": 0}
+  ],
+  "summarized_at": "2026-05-21T01:30:00Z"
+}
