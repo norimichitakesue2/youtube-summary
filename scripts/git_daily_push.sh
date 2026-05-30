@@ -34,8 +34,23 @@ git commit -m "$MSG" || {
 }
 
 # Push（失敗しても日次本体は止めない）
-if git push origin main 2>&1; then
-    echo "[git_daily_push] push 成功: $MSG"
+# .github_token があれば PAT 認証で push（Cowork sandbox からの非対話 push 用）
+TOKEN_FILE=".github_token"
+if [ -f "$TOKEN_FILE" ]; then
+    TOKEN=$(tr -d '[:space:]\r\n' < "$TOKEN_FILE")
+    REMOTE_URL=$(git remote get-url origin)
+    # https://github.com/owner/repo.git → https://x-access-token:TOKEN@github.com/owner/repo.git
+    AUTH_URL=$(printf '%s' "$REMOTE_URL" | sed "s#https://github.com/#https://x-access-token:${TOKEN}@github.com/#")
+    if git push "$AUTH_URL" HEAD:main 2>&1 | sed "s#${TOKEN}#***#g"; then
+        echo "[git_daily_push] push 成功: $MSG"
+    else
+        echo "[git_daily_push] push 失敗（次回再試行）"
+    fi
+    unset TOKEN AUTH_URL
 else
-    echo "[git_daily_push] push 失敗（次回再試行）"
+    if git push origin main 2>&1; then
+        echo "[git_daily_push] push 成功: $MSG"
+    else
+        echo "[git_daily_push] push 失敗（.github_token 未設定の可能性。次回再試行）"
+    fi
 fi
