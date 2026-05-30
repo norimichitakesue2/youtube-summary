@@ -11,6 +11,15 @@ if [ ! -d .git ]; then
     exit 0
 fi
 
+# クラッシュ等で残ったロックファイルを掃除（10分以上前のもののみ削除して
+# 同時実行を踏まないようにする）
+STALE_LOCKS=$(find .git -name "*.lock" -mmin +10 2>/dev/null)
+if [ -n "$STALE_LOCKS" ]; then
+    echo "[git_daily_push] stale lock を削除:"
+    echo "$STALE_LOCKS" | sed 's/^/  - /'
+    echo "$STALE_LOCKS" | xargs -r rm -f
+fi
+
 # 変更がなければ何もしない
 git add -A
 if git diff --cached --quiet; then
