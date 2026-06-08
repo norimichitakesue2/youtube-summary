@@ -1,0 +1,1009 @@
+{
+  "meta": {
+    "since": "2026-06-02",
+    "until": "2026-06-08",
+    "generated_at": "2026-06-08T01:14:20.772728+00:00",
+    "n_videos": 12,
+    "n_channels": 6,
+    "n_positive_points": 32,
+    "n_negative_points": 23
+  },
+  "channels": [
+    {
+      "channel": "タマゴローRS",
+      "n_videos": 4,
+      "videos": [
+        {
+          "video_id": "5iXfQ17DV4E",
+          "title": "【ロマサガRS】「天井不可避」聖王…サイヴァ…サライ…そしてこよみ!!どこまで引くかの超決戦!!　#ロマサガRS",
+          "published_at": "2026-06-04T10:22:56Z",
+          "url": "https://www.youtube.com/watch?v=5iXfQ17DV4E",
+          "summary_3lines": "聖王・サイヴァ・サライ・こよみ狙いのガチャ実況\nすり抜け連発で80連でも揃わず優勝(天井)へ\n結局天井近くまで突き進む苦しい引き",
+          "key_topics": [
+            "ガチャ実況",
+            "天井",
+            "すり抜け",
+            "聖王",
+            "こよみ"
+          ],
+          "positive_points": [],
+          "negative_points": [
+            "すり抜け連発でガチャが渋い",
+            "天井不可避の重い引き",
+            "直近ガチャに天井はきつい"
+          ]
+        },
+        {
+          "video_id": "njs4Dz1tgM8",
+          "title": "【ロマサガRS】ここで!?「7.5周年当日」のガチャネタバレキター!!本当に厄の出番なのかそれともいつもの…　#ロマサガrs",
+          "published_at": "2026-06-03T22:30:33Z",
+          "url": "https://www.youtube.com/watch?v=njs4Dz1tgM8",
+          "summary_3lines": "7.5周年当日ガチャのネタバレ・ラインナップ予想\nリアム周年祭は回避され主人公絡みは限定的\n制圧戦は17日終了、後半戦で主人公実装を予測",
+          "key_topics": [
+            "7.5周年ガチャ",
+            "ネタバレ予想",
+            "ラインナップ",
+            "主人公税",
+            "日程予想"
+          ],
+          "positive_points": [
+            "主人公だらけにならないよう配慮されている",
+            "陰属性偏重も配慮されているはず"
+          ],
+          "negative_points": [
+            "黒バラは来ないと予想",
+            "制圧戦レイドは数合わせ要員ばかり"
+          ]
+        },
+        {
+          "video_id": "dGbS1g384q8",
+          "title": "【ロマサガRS】「緊急」終了前…聖王VSこよみ比較検討会!!&ダイ・ダイ+ストライフ+シィレイ性能詳細のガチャ厳選勢ダブルヘッダー!!ガチャごとの引き方と評価を網羅　#ロマサガRS",
+          "published_at": "2026-06-03T10:19:43Z",
+          "url": "https://www.youtube.com/watch?v=dGbS1g384q8",
+          "summary_3lines": "聖王VSこよみ比較＆ダイ/ストライフ/シィレイの性能評価\nダイ(代々)と聖王は対応力が高く高評価\nシィレイは仕様が噛み合わず酷評、こよみは買い得",
+          "key_topics": [
+            "聖王評価",
+            "こよみ評価",
+            "ストライフ",
+            "シィレイ",
+            "ガチャ厳選",
+            "無人島適正"
+          ],
+          "positive_points": [
+            "ダイは攻防の底上げが得意で1人で賄える範囲が広い",
+            "聖王は無人島適正とバフデバフが唯一無二",
+            "こよみは買い得でレギュラーコンテンツで活躍",
+            "ダイの全体防御97%が強力"
+          ],
+          "negative_points": [
+            "ストライフは連打型で火力が出ず総合B",
+            "シィレイは仕様が意味不明で使い物にならないC評価",
+            "課金して買わされる側への配慮不足",
+            "こよみは替えが効くスタイル"
+          ]
+        },
+        {
+          "video_id": "3gUTEaNTQZ8",
+          "title": "【ロマサガRS】「唯一無二」引くべき無尽塔対応サライ!!その圧倒的火力と両立させる対応力　#ロマサガRS",
+          "published_at": "2026-06-02T22:36:14Z",
+          "url": "https://www.youtube.com/watch?v=3gUTEaNTQZ8",
+          "summary_3lines": "サライは全体攻撃連打が主軸の高火力アタッカー\n状態異常解除・ダメブロで無人島に高い適性\nSS特攻S評価、唯一無二の対応力を持つ優秀スタイル",
+          "key_topics": [
+            "サライ評価",
+            "無人島適正",
+            "ダメブロ",
+            "全体攻撃連打",
+            "エクストラウィーク"
+          ],
+          "positive_points": [
+            "全体攻撃を打ち続ける破壊力",
+            "状態異常解除＋ダメブロの対応力",
+            "無人島適性が非常に高い",
+            "エクストラウィーク1.75倍を自動付与",
+            "SS特攻S・総合高評価"
+          ],
+          "negative_points": [
+            "ダメブロ性能自体はあまり強くない",
+            "通常バトルでは最大数値に届かない"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "ジュラのサガちゃんねる",
+      "n_videos": 3,
+      "videos": [
+        {
+          "video_id": "IYcQykYjB5o",
+          "title": "【ロマサガRS】SSS防具超進化！進化後の性能チェック【ロマンシング サガ リユニバース】",
+          "published_at": "2026-06-05T10:37:33Z",
+          "url": "https://www.youtube.com/watch?v=IYcQykYjB5o",
+          "summary_3lines": "SSS防具超進化後の性能を全8種チェック。\nセオマントの初期BP+3とハルモニアの体制が特に優秀。\nゴールデンローブの精神上昇も状態対策で輝く可能性。",
+          "key_topics": [
+            "超進化防具",
+            "セオマント",
+            "ハルモニアスーツ",
+            "ゴールデンローブ",
+            "進化優先度"
+          ],
+          "positive_points": [
+            "セオマント初期BP+3は他で真似できない個性で周回向き",
+            "ハルモニアは体制優秀で行動順調整にも使える",
+            "ゴールデンローブ2枚なら精神30%上昇で状態対策に有効"
+          ],
+          "negative_points": [
+            "属の八巻きはアビリティが大した効果でなく微妙",
+            "マスタリーグラブやクイックシルバーは効果が限定的"
+          ]
+        },
+        {
+          "video_id": "qiw3Bakl7_s",
+          "title": "【ロマサガRS】SS3体確定！63連ガチャで当たり＆天井交換でのオススメスタイルは？【ロマンシング サガ リユニバース】",
+          "published_at": "2026-06-03T11:00:13Z",
+          "url": "https://www.youtube.com/watch?v=qiw3Bakl7_s",
+          "summary_3lines": "SS3体確定63連ガチャの当たりと天井交換おすすめ紹介。\n交換チケット対象外の白薔薇姫などが狙える点が特徴。\nマイス・ミドつのり・メロトセロイなど候補を幅広く解説。",
+          "key_topics": [
+            "63連ガチャ",
+            "天井交換",
+            "白薔薇姫",
+            "ミドつのり",
+            "幻闘場特化"
+          ],
+          "positive_points": [
+            "交換チケット対象外の白薔薇姫やマイスを入手できる",
+            "ミドつのりは継承で性能が1段引き上がり汎用性高い",
+            "幻闘場特化スタイルは腐らず便利"
+          ],
+          "negative_points": [
+            "マイスは扱いが非常に難しくBP補助が必須",
+            "正月神など周回スタイルは既存勢は無理に取らなくてよい"
+          ]
+        },
+        {
+          "video_id": "zt5YvvG0GV8",
+          "title": "【ロマサガRS】Romancing祭「サイヴァ 編」スタイル考察＆性能チェック【ロマンシング サガ リユニバース】",
+          "published_at": "2026-06-02T11:00:02Z",
+          "url": "https://www.youtube.com/watch?v=zt5YvvG0GV8",
+          "summary_3lines": "ロマンシング祭サイヴァ編のスタイル考察と性能チェック。\n裁判・サライ・大々の3キャラを評価しランク付け。\n裁判は全体への影響力が高くこの環境屈指の強さ。",
+          "key_topics": [
+            "サイヴァ編",
+            "裁判評価",
+            "サライ",
+            "大々",
+            "ランク付け"
+          ],
+          "positive_points": [
+            "裁判はエクストラフォース無条件付与で環境屈指の強さ",
+            "サライは状態異常解除で無人島適性が高い",
+            "大々は効果量が全て大で防御も火力もバランス良い"
+          ],
+          "negative_points": [
+            "サライの状態異常解除は自身生存が前提という弱点"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "あっきゃんGAMES",
+      "n_videos": 2,
+      "videos": [
+        {
+          "video_id": "HaM3VBW_aRI",
+          "title": "【ロマサガRS】7.5周年ガチャ更新前にガチャ引く！～ライブ配信/声あり～",
+          "published_at": "2026-06-06T07:09:24Z",
+          "url": "https://www.youtube.com/watch?v=HaM3VBW_aRI",
+          "summary_3lines": "あきんの7.5周年ガチャ更新前ライブ配信\n再来狙いも天井までかかる渋い引き\n新OD演出とサイバーの火力を絶賛",
+          "key_topics": [
+            "ライブ配信",
+            "7.5周年ガチャ",
+            "再来狙い",
+            "天井",
+            "レイド攻略",
+            "オーバードライブ"
+          ],
+          "positive_points": [
+            "新オーバードライブ演出がかっこいい",
+            "サイバーを入れるだけで火力が激増",
+            "引き得なガチャでレイドで使える",
+            "幻闘場は古スタイルも使える良コンテンツ"
+          ],
+          "negative_points": [
+            "天井まで引かされ渋い",
+            "シィレイが残念すぎて引く気にならない",
+            "T260Gレイドは手持ち不足で満額すら厳しい",
+            "幻闘場の更新スパンが長い"
+          ]
+        },
+        {
+          "video_id": "Kl7OcRQLsDY",
+          "title": "【ロマサガRS】7.5周年Romancing祭トゥ・クアイ編ガチャ評価 #ロマサガRS #shorts #ガチャ",
+          "published_at": "2026-06-06T04:03:36Z",
+          "url": "https://www.youtube.com/watch?v=Kl7OcRQLsDY",
+          "summary_3lines": "7.5周年Romancing祭トゥ・クアイ編のガチャ評価ショート\n字幕が音楽のみで内容の書き起こしは不可\nタイトルからガチャ評価動画と判断",
+          "key_topics": [
+            "ガチャ評価",
+            "トゥ・クアイ編",
+            "ショート動画"
+          ],
+          "positive_points": [],
+          "negative_points": []
+        }
+      ]
+    },
+    {
+      "channel": "サンゾーGAMES",
+      "n_videos": 1,
+      "videos": [
+        {
+          "video_id": "upe2mps2BV0",
+          "title": "【ロマサガRS】6月6日は7.5周年当日！全力でみんなで盛りあがろう！！【ロマンシングサガリユニバース】",
+          "published_at": "2026-06-06T14:40:21Z",
+          "url": "https://www.youtube.com/watch?v=upe2mps2BV0",
+          "summary_3lines": "三蔵の7.5周年お祝いライブ配信\n回線トラブルでカクカク続出も視聴者と盛り上がる\nリアム編でアーニャ・リアムを天井手前でコンプ",
+          "key_topics": [
+            "7.5周年",
+            "ライブ配信",
+            "ガチャ実況",
+            "リアム編",
+            "配信トラブル",
+            "アーニャ"
+          ],
+          "positive_points": [
+            "アーニャの新イラストが神がかって良い",
+            "視聴者に恵まれ盛り上がった",
+            "110連でリアム編コンプ達成"
+          ],
+          "negative_points": [
+            "配信回線が不安定でカクカク・音切れが多発",
+            "視聴者が一時2000人以上離脱",
+            "ガチャのすり抜けが多い"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "RS 周回チャンネル",
+      "n_videos": 1,
+      "videos": [
+        {
+          "video_id": "y_vxbO8pRBg",
+          "title": "【ロマサガRS】制圧 レイド T260 サラ編成 満額 2分39秒【ロマンシングサガ　リユニバース】",
+          "published_at": "2026-06-04T06:08:01Z",
+          "url": "https://www.youtube.com/watch?v=y_vxbO8pRBg",
+          "summary_3lines": "制圧レイドT260をサラ編成で満額2分39秒。\nプレイタイムを示す短尺の周回記録動画。\n編成と立ち回りの参考用クリップ。",
+          "key_topics": [
+            "制圧レイド",
+            "T260",
+            "サラ編成",
+            "満額",
+            "タイム2分39秒"
+          ],
+          "positive_points": [
+            "サラ編成で満額を2分39秒の好タイムで撃破"
+          ],
+          "negative_points": []
+        }
+      ]
+    },
+    {
+      "channel": "tyamu",
+      "n_videos": 1,
+      "videos": [
+        {
+          "video_id": "TfsIzGj-7Aw",
+          "title": "【ロマサガrs】飯綱こよみ・サイヴァ能力値早見表〜Half Anniversary〜注目のブッ壊れ性能を堪能せよ‼️",
+          "published_at": "2026-06-03T00:06:51Z",
+          "url": "https://www.youtube.com/watch?v=TfsIzGj-7Aw",
+          "summary_3lines": "7.5周年第1弾 飯綱こよみ・サイヴァの能力値早見表を公開\nこよみは1ターン目から弱点無視級の超火力\nサイヴァは置き物バフ300-400%で2体とも確保推奨",
+          "key_topics": [
+            "こよみ能力値",
+            "サイヴァ能力値",
+            "ハーフアニバ",
+            "置き物バフ",
+            "確保推奨"
+          ],
+          "positive_points": [
+            "こよみは1ターン目から弱点無視級の超火力",
+            "サイヴァは体力精神バフ300-400%の置き物性能",
+            "サイヴァは火力もデバフも持ち汎用性抜群",
+            "2体とも確保優先度が高い"
+          ],
+          "negative_points": []
+        }
+      ]
+    }
+  ],
+  "top_topics": [
+    {
+      "topic": "7.5周年ガチャ",
+      "count": 2,
+      "video_ids": [
+        "njs4Dz1tgM8",
+        "HaM3VBW_aRI"
+      ]
+    },
+    {
+      "topic": "ライブ配信",
+      "count": 2,
+      "video_ids": [
+        "HaM3VBW_aRI",
+        "upe2mps2BV0"
+      ]
+    },
+    {
+      "topic": "天井",
+      "count": 2,
+      "video_ids": [
+        "HaM3VBW_aRI",
+        "5iXfQ17DV4E"
+      ]
+    },
+    {
+      "topic": "ガチャ実況",
+      "count": 2,
+      "video_ids": [
+        "upe2mps2BV0",
+        "5iXfQ17DV4E"
+      ]
+    },
+    {
+      "topic": "無人島適正",
+      "count": 2,
+      "video_ids": [
+        "dGbS1g384q8",
+        "3gUTEaNTQZ8"
+      ]
+    },
+    {
+      "topic": "超進化防具",
+      "count": 1,
+      "video_ids": [
+        "IYcQykYjB5o"
+      ]
+    },
+    {
+      "topic": "セオマント",
+      "count": 1,
+      "video_ids": [
+        "IYcQykYjB5o"
+      ]
+    },
+    {
+      "topic": "ハルモニアスーツ",
+      "count": 1,
+      "video_ids": [
+        "IYcQykYjB5o"
+      ]
+    },
+    {
+      "topic": "ゴールデンローブ",
+      "count": 1,
+      "video_ids": [
+        "IYcQykYjB5o"
+      ]
+    },
+    {
+      "topic": "進化優先度",
+      "count": 1,
+      "video_ids": [
+        "IYcQykYjB5o"
+      ]
+    },
+    {
+      "topic": "ネタバレ予想",
+      "count": 1,
+      "video_ids": [
+        "njs4Dz1tgM8"
+      ]
+    },
+    {
+      "topic": "ラインナップ",
+      "count": 1,
+      "video_ids": [
+        "njs4Dz1tgM8"
+      ]
+    },
+    {
+      "topic": "主人公税",
+      "count": 1,
+      "video_ids": [
+        "njs4Dz1tgM8"
+      ]
+    },
+    {
+      "topic": "日程予想",
+      "count": 1,
+      "video_ids": [
+        "njs4Dz1tgM8"
+      ]
+    },
+    {
+      "topic": "サイヴァ編",
+      "count": 1,
+      "video_ids": [
+        "zt5YvvG0GV8"
+      ]
+    },
+    {
+      "topic": "裁判評価",
+      "count": 1,
+      "video_ids": [
+        "zt5YvvG0GV8"
+      ]
+    },
+    {
+      "topic": "サライ",
+      "count": 1,
+      "video_ids": [
+        "zt5YvvG0GV8"
+      ]
+    },
+    {
+      "topic": "大々",
+      "count": 1,
+      "video_ids": [
+        "zt5YvvG0GV8"
+      ]
+    },
+    {
+      "topic": "ランク付け",
+      "count": 1,
+      "video_ids": [
+        "zt5YvvG0GV8"
+      ]
+    },
+    {
+      "topic": "63連ガチャ",
+      "count": 1,
+      "video_ids": [
+        "qiw3Bakl7_s"
+      ]
+    }
+  ],
+  "positive_points": [
+    {
+      "point": "セオマント初期BP+3は他で真似できない個性で周回向き",
+      "video_id": "IYcQykYjB5o",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "ハルモニアは体制優秀で行動順調整にも使える",
+      "video_id": "IYcQykYjB5o",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "ゴールデンローブ2枚なら精神30%上昇で状態対策に有効",
+      "video_id": "IYcQykYjB5o",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "主人公だらけにならないよう配慮されている",
+      "video_id": "njs4Dz1tgM8",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "陰属性偏重も配慮されているはず",
+      "video_id": "njs4Dz1tgM8",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "裁判はエクストラフォース無条件付与で環境屈指の強さ",
+      "video_id": "zt5YvvG0GV8",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "サライは状態異常解除で無人島適性が高い",
+      "video_id": "zt5YvvG0GV8",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "大々は効果量が全て大で防御も火力もバランス良い",
+      "video_id": "zt5YvvG0GV8",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "交換チケット対象外の白薔薇姫やマイスを入手できる",
+      "video_id": "qiw3Bakl7_s",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "ミドつのりは継承で性能が1段引き上がり汎用性高い",
+      "video_id": "qiw3Bakl7_s",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "幻闘場特化スタイルは腐らず便利",
+      "video_id": "qiw3Bakl7_s",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "新オーバードライブ演出がかっこいい",
+      "video_id": "HaM3VBW_aRI",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "サイバーを入れるだけで火力が激増",
+      "video_id": "HaM3VBW_aRI",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "引き得なガチャでレイドで使える",
+      "video_id": "HaM3VBW_aRI",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "幻闘場は古スタイルも使える良コンテンツ",
+      "video_id": "HaM3VBW_aRI",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "アーニャの新イラストが神がかって良い",
+      "video_id": "upe2mps2BV0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "視聴者に恵まれ盛り上がった",
+      "video_id": "upe2mps2BV0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "110連でリアム編コンプ達成",
+      "video_id": "upe2mps2BV0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "サラ編成で満額を2分39秒の好タイムで撃破",
+      "video_id": "y_vxbO8pRBg",
+      "channel": "RS 周回チャンネル"
+    },
+    {
+      "point": "ダイは攻防の底上げが得意で1人で賄える範囲が広い",
+      "video_id": "dGbS1g384q8",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "聖王は無人島適正とバフデバフが唯一無二",
+      "video_id": "dGbS1g384q8",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "こよみは買い得でレギュラーコンテンツで活躍",
+      "video_id": "dGbS1g384q8",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ダイの全体防御97%が強力",
+      "video_id": "dGbS1g384q8",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "全体攻撃を打ち続ける破壊力",
+      "video_id": "3gUTEaNTQZ8",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "状態異常解除＋ダメブロの対応力",
+      "video_id": "3gUTEaNTQZ8",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "無人島適性が非常に高い",
+      "video_id": "3gUTEaNTQZ8",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "エクストラウィーク1.75倍を自動付与",
+      "video_id": "3gUTEaNTQZ8",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "SS特攻S・総合高評価",
+      "video_id": "3gUTEaNTQZ8",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "こよみは1ターン目から弱点無視級の超火力",
+      "video_id": "TfsIzGj-7Aw",
+      "channel": "tyamu"
+    },
+    {
+      "point": "サイヴァは体力精神バフ300-400%の置き物性能",
+      "video_id": "TfsIzGj-7Aw",
+      "channel": "tyamu"
+    },
+    {
+      "point": "サイヴァは火力もデバフも持ち汎用性抜群",
+      "video_id": "TfsIzGj-7Aw",
+      "channel": "tyamu"
+    },
+    {
+      "point": "2体とも確保優先度が高い",
+      "video_id": "TfsIzGj-7Aw",
+      "channel": "tyamu"
+    }
+  ],
+  "negative_points": [
+    {
+      "point": "属の八巻きはアビリティが大した効果でなく微妙",
+      "video_id": "IYcQykYjB5o",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "マスタリーグラブやクイックシルバーは効果が限定的",
+      "video_id": "IYcQykYjB5o",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "黒バラは来ないと予想",
+      "video_id": "njs4Dz1tgM8",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "制圧戦レイドは数合わせ要員ばかり",
+      "video_id": "njs4Dz1tgM8",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "サライの状態異常解除は自身生存が前提という弱点",
+      "video_id": "zt5YvvG0GV8",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "マイスは扱いが非常に難しくBP補助が必須",
+      "video_id": "qiw3Bakl7_s",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "正月神など周回スタイルは既存勢は無理に取らなくてよい",
+      "video_id": "qiw3Bakl7_s",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "天井まで引かされ渋い",
+      "video_id": "HaM3VBW_aRI",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "シィレイが残念すぎて引く気にならない",
+      "video_id": "HaM3VBW_aRI",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "T260Gレイドは手持ち不足で満額すら厳しい",
+      "video_id": "HaM3VBW_aRI",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "幻闘場の更新スパンが長い",
+      "video_id": "HaM3VBW_aRI",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "配信回線が不安定でカクカク・音切れが多発",
+      "video_id": "upe2mps2BV0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "視聴者が一時2000人以上離脱",
+      "video_id": "upe2mps2BV0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "ガチャのすり抜けが多い",
+      "video_id": "upe2mps2BV0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "すり抜け連発でガチャが渋い",
+      "video_id": "5iXfQ17DV4E",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "天井不可避の重い引き",
+      "video_id": "5iXfQ17DV4E",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "直近ガチャに天井はきつい",
+      "video_id": "5iXfQ17DV4E",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ストライフは連打型で火力が出ず総合B",
+      "video_id": "dGbS1g384q8",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "シィレイは仕様が意味不明で使い物にならないC評価",
+      "video_id": "dGbS1g384q8",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "課金して買わされる側への配慮不足",
+      "video_id": "dGbS1g384q8",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "こよみは替えが効くスタイル",
+      "video_id": "dGbS1g384q8",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ダメブロ性能自体はあまり強くない",
+      "video_id": "3gUTEaNTQZ8",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "通常バトルでは最大数値に届かない",
+      "video_id": "3gUTEaNTQZ8",
+      "channel": "タマゴローRS"
+    }
+  ],
+  "pick_candidates": [
+    {
+      "video_id": "HaM3VBW_aRI",
+      "title": "【ロマサガRS】7.5周年ガチャ更新前にガチャ引く！～ライブ配信/声あり～",
+      "channel": "あっきゃんGAMES",
+      "published_at": "2026-06-06T07:09:24Z",
+      "url": "https://www.youtube.com/watch?v=HaM3VBW_aRI",
+      "summary_3lines": "あきんの7.5周年ガチャ更新前ライブ配信\n再来狙いも天井までかかる渋い引き\n新OD演出とサイバーの火力を絶賛",
+      "key_topics": [
+        "ライブ配信",
+        "7.5周年ガチャ",
+        "再来狙い",
+        "天井",
+        "レイド攻略",
+        "オーバードライブ"
+      ],
+      "n_pos": 4,
+      "n_neg": 4,
+      "positive_points": [
+        "新オーバードライブ演出がかっこいい",
+        "サイバーを入れるだけで火力が激増",
+        "引き得なガチャでレイドで使える",
+        "幻闘場は古スタイルも使える良コンテンツ"
+      ],
+      "negative_points": [
+        "天井まで引かされ渋い",
+        "シィレイが残念すぎて引く気にならない",
+        "T260Gレイドは手持ち不足で満額すら厳しい",
+        "幻闘場の更新スパンが長い"
+      ]
+    },
+    {
+      "video_id": "dGbS1g384q8",
+      "title": "【ロマサガRS】「緊急」終了前…聖王VSこよみ比較検討会!!&ダイ・ダイ+ストライフ+シィレイ性能詳細のガチャ厳選勢ダブルヘッダー!!ガチャごとの引き方と評価を網羅　#ロマサガRS",
+      "channel": "タマゴローRS",
+      "published_at": "2026-06-03T10:19:43Z",
+      "url": "https://www.youtube.com/watch?v=dGbS1g384q8",
+      "summary_3lines": "聖王VSこよみ比較＆ダイ/ストライフ/シィレイの性能評価\nダイ(代々)と聖王は対応力が高く高評価\nシィレイは仕様が噛み合わず酷評、こよみは買い得",
+      "key_topics": [
+        "聖王評価",
+        "こよみ評価",
+        "ストライフ",
+        "シィレイ",
+        "ガチャ厳選",
+        "無人島適正"
+      ],
+      "n_pos": 4,
+      "n_neg": 4,
+      "positive_points": [
+        "ダイは攻防の底上げが得意で1人で賄える範囲が広い",
+        "聖王は無人島適正とバフデバフが唯一無二",
+        "こよみは買い得でレギュラーコンテンツで活躍",
+        "ダイの全体防御97%が強力"
+      ],
+      "negative_points": [
+        "ストライフは連打型で火力が出ず総合B",
+        "シィレイは仕様が意味不明で使い物にならないC評価",
+        "課金して買わされる側への配慮不足",
+        "こよみは替えが効くスタイル"
+      ]
+    },
+    {
+      "video_id": "3gUTEaNTQZ8",
+      "title": "【ロマサガRS】「唯一無二」引くべき無尽塔対応サライ!!その圧倒的火力と両立させる対応力　#ロマサガRS",
+      "channel": "タマゴローRS",
+      "published_at": "2026-06-02T22:36:14Z",
+      "url": "https://www.youtube.com/watch?v=3gUTEaNTQZ8",
+      "summary_3lines": "サライは全体攻撃連打が主軸の高火力アタッカー\n状態異常解除・ダメブロで無人島に高い適性\nSS特攻S評価、唯一無二の対応力を持つ優秀スタイル",
+      "key_topics": [
+        "サライ評価",
+        "無人島適正",
+        "ダメブロ",
+        "全体攻撃連打",
+        "エクストラウィーク"
+      ],
+      "n_pos": 5,
+      "n_neg": 2,
+      "positive_points": [
+        "全体攻撃を打ち続ける破壊力",
+        "状態異常解除＋ダメブロの対応力",
+        "無人島適性が非常に高い",
+        "エクストラウィーク1.75倍を自動付与",
+        "SS特攻S・総合高評価"
+      ],
+      "negative_points": [
+        "ダメブロ性能自体はあまり強くない",
+        "通常バトルでは最大数値に届かない"
+      ]
+    },
+    {
+      "video_id": "upe2mps2BV0",
+      "title": "【ロマサガRS】6月6日は7.5周年当日！全力でみんなで盛りあがろう！！【ロマンシングサガリユニバース】",
+      "channel": "サンゾーGAMES",
+      "published_at": "2026-06-06T14:40:21Z",
+      "url": "https://www.youtube.com/watch?v=upe2mps2BV0",
+      "summary_3lines": "三蔵の7.5周年お祝いライブ配信\n回線トラブルでカクカク続出も視聴者と盛り上がる\nリアム編でアーニャ・リアムを天井手前でコンプ",
+      "key_topics": [
+        "7.5周年",
+        "ライブ配信",
+        "ガチャ実況",
+        "リアム編",
+        "配信トラブル",
+        "アーニャ"
+      ],
+      "n_pos": 3,
+      "n_neg": 3,
+      "positive_points": [
+        "アーニャの新イラストが神がかって良い",
+        "視聴者に恵まれ盛り上がった",
+        "110連でリアム編コンプ達成"
+      ],
+      "negative_points": [
+        "配信回線が不安定でカクカク・音切れが多発",
+        "視聴者が一時2000人以上離脱",
+        "ガチャのすり抜けが多い"
+      ]
+    },
+    {
+      "video_id": "IYcQykYjB5o",
+      "title": "【ロマサガRS】SSS防具超進化！進化後の性能チェック【ロマンシング サガ リユニバース】",
+      "channel": "ジュラのサガちゃんねる",
+      "published_at": "2026-06-05T10:37:33Z",
+      "url": "https://www.youtube.com/watch?v=IYcQykYjB5o",
+      "summary_3lines": "SSS防具超進化後の性能を全8種チェック。\nセオマントの初期BP+3とハルモニアの体制が特に優秀。\nゴールデンローブの精神上昇も状態対策で輝く可能性。",
+      "key_topics": [
+        "超進化防具",
+        "セオマント",
+        "ハルモニアスーツ",
+        "ゴールデンローブ",
+        "進化優先度"
+      ],
+      "n_pos": 3,
+      "n_neg": 2,
+      "positive_points": [
+        "セオマント初期BP+3は他で真似できない個性で周回向き",
+        "ハルモニアは体制優秀で行動順調整にも使える",
+        "ゴールデンローブ2枚なら精神30%上昇で状態対策に有効"
+      ],
+      "negative_points": [
+        "属の八巻きはアビリティが大した効果でなく微妙",
+        "マスタリーグラブやクイックシルバーは効果が限定的"
+      ]
+    },
+    {
+      "video_id": "qiw3Bakl7_s",
+      "title": "【ロマサガRS】SS3体確定！63連ガチャで当たり＆天井交換でのオススメスタイルは？【ロマンシング サガ リユニバース】",
+      "channel": "ジュラのサガちゃんねる",
+      "published_at": "2026-06-03T11:00:13Z",
+      "url": "https://www.youtube.com/watch?v=qiw3Bakl7_s",
+      "summary_3lines": "SS3体確定63連ガチャの当たりと天井交換おすすめ紹介。\n交換チケット対象外の白薔薇姫などが狙える点が特徴。\nマイス・ミドつのり・メロトセロイなど候補を幅広く解説。",
+      "key_topics": [
+        "63連ガチャ",
+        "天井交換",
+        "白薔薇姫",
+        "ミドつのり",
+        "幻闘場特化"
+      ],
+      "n_pos": 3,
+      "n_neg": 2,
+      "positive_points": [
+        "交換チケット対象外の白薔薇姫やマイスを入手できる",
+        "ミドつのりは継承で性能が1段引き上がり汎用性高い",
+        "幻闘場特化スタイルは腐らず便利"
+      ],
+      "negative_points": [
+        "マイスは扱いが非常に難しくBP補助が必須",
+        "正月神など周回スタイルは既存勢は無理に取らなくてよい"
+      ]
+    },
+    {
+      "video_id": "njs4Dz1tgM8",
+      "title": "【ロマサガRS】ここで!?「7.5周年当日」のガチャネタバレキター!!本当に厄の出番なのかそれともいつもの…　#ロマサガrs",
+      "channel": "タマゴローRS",
+      "published_at": "2026-06-03T22:30:33Z",
+      "url": "https://www.youtube.com/watch?v=njs4Dz1tgM8",
+      "summary_3lines": "7.5周年当日ガチャのネタバレ・ラインナップ予想\nリアム周年祭は回避され主人公絡みは限定的\n制圧戦は17日終了、後半戦で主人公実装を予測",
+      "key_topics": [
+        "7.5周年ガチャ",
+        "ネタバレ予想",
+        "ラインナップ",
+        "主人公税",
+        "日程予想"
+      ],
+      "n_pos": 2,
+      "n_neg": 2,
+      "positive_points": [
+        "主人公だらけにならないよう配慮されている",
+        "陰属性偏重も配慮されているはず"
+      ],
+      "negative_points": [
+        "黒バラは来ないと予想",
+        "制圧戦レイドは数合わせ要員ばかり"
+      ]
+    },
+    {
+      "video_id": "zt5YvvG0GV8",
+      "title": "【ロマサガRS】Romancing祭「サイヴァ 編」スタイル考察＆性能チェック【ロマンシング サガ リユニバース】",
+      "channel": "ジュラのサガちゃんねる",
+      "published_at": "2026-06-02T11:00:02Z",
+      "url": "https://www.youtube.com/watch?v=zt5YvvG0GV8",
+      "summary_3lines": "ロマンシング祭サイヴァ編のスタイル考察と性能チェック。\n裁判・サライ・大々の3キャラを評価しランク付け。\n裁判は全体への影響力が高くこの環境屈指の強さ。",
+      "key_topics": [
+        "サイヴァ編",
+        "裁判評価",
+        "サライ",
+        "大々",
+        "ランク付け"
+      ],
+      "n_pos": 3,
+      "n_neg": 1,
+      "positive_points": [
+        "裁判はエクストラフォース無条件付与で環境屈指の強さ",
+        "サライは状態異常解除で無人島適性が高い",
+        "大々は効果量が全て大で防御も火力もバランス良い"
+      ],
+      "negative_points": [
+        "サライの状態異常解除は自身生存が前提という弱点"
+      ]
+    },
+    {
+      "video_id": "TfsIzGj-7Aw",
+      "title": "【ロマサガrs】飯綱こよみ・サイヴァ能力値早見表〜Half Anniversary〜注目のブッ壊れ性能を堪能せよ‼️",
+      "channel": "tyamu",
+      "published_at": "2026-06-03T00:06:51Z",
+      "url": "https://www.youtube.com/watch?v=TfsIzGj-7Aw",
+      "summary_3lines": "7.5周年第1弾 飯綱こよみ・サイヴァの能力値早見表を公開\nこよみは1ターン目から弱点無視級の超火力\nサイヴァは置き物バフ300-400%で2体とも確保推奨",
+      "key_topics": [
+        "こよみ能力値",
+        "サイヴァ能力値",
+        "ハーフアニバ",
+        "置き物バフ",
+        "確保推奨"
+      ],
+      "n_pos": 4,
+      "n_neg": 0,
+      "positive_points": [
+        "こよみは1ターン目から弱点無視級の超火力",
+        "サイヴァは体力精神バフ300-400%の置き物性能",
+        "サイヴァは火力もデバフも持ち汎用性抜群",
+        "2体とも確保優先度が高い"
+      ],
+      "negative_points": []
+    },
+    {
+      "video_id": "5iXfQ17DV4E",
+      "title": "【ロマサガRS】「天井不可避」聖王…サイヴァ…サライ…そしてこよみ!!どこまで引くかの超決戦!!　#ロマサガRS",
+      "channel": "タマゴローRS",
+      "published_at": "2026-06-04T10:22:56Z",
+      "url": "https://www.youtube.com/watch?v=5iXfQ17DV4E",
+      "summary_3lines": "聖王・サイヴァ・サライ・こよみ狙いのガチャ実況\nすり抜け連発で80連でも揃わず優勝(天井)へ\n結局天井近くまで突き進む苦しい引き",
+      "key_topics": [
+        "ガチャ実況",
+        "天井",
+        "すり抜け",
+        "聖王",
+        "こよみ"
+      ],
+      "n_pos": 0,
+      "n_neg": 3,
+      "positive_points": [],
+      "negative_points": [
+        "すり抜け連発でガチャが渋い",
+        "天井不可避の重い引き",
+        "直近ガチャに天井はきつい"
+      ]
+    }
+  ]
+}
