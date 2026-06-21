@@ -1,0 +1,29 @@
+{
+  "date": "2026-06-21",
+  "n_tweets": 107,
+  "summary_3lines": "公式が期間限定イベント「技・術鍛錬道場」を開催\n螺旋回廊570階の攻略報告とギミック考察が活発\nブライダル/こよみガチャ・7.5周年とFFコラボ予感が話題",
+  "key_topics": ["技・術鍛錬道場（公式イベント）", "螺旋回廊570階攻略・シグフレイギミック", "ブライダルガチャ（新郎・メリッサ）", "こよみガチャ爆死報告", "7.5周年ハーフアニバ", "ソウルピース/魂アビコンテンツ", "厄王・聖王(厄)討伐/ルミナス", "24日新ガチャ＝FFコラボ予感"],
+  "positive_themes": [
+    "ソウルピース報酬と魂コンテンツが好評、当初の不安からホッとしたとの声",
+    "螺旋回廊570階のクリア達成感とギミック攻略の盛り上がり",
+    "サイヴァ・赤いお姉さん(ラゼム)など推しキャラ入手の喜び"
+  ],
+  "negative_themes": [
+    "こよみガチャで大敗・爆死報告が多数、こよみは無理矢理超強化感との不満",
+    "ガチャ4種同時で期間が長く出費がかさむ、有償ジュエル不足の声",
+    "ボイス・モーションをもっと増やしてほしい（儲かってるんだから）との要望"
+  ],
+  "hot_tweets": [
+    {"tweet_id":"2068166953252892946","url":"https://twitter.com/romasaga_rs/status/2068166953252892946","author_handle":"romasaga_rs","author_name":"ロマンシング サガ リ・ユニバース公式","text":"期間限定イベント「技・術鍛錬道場」開催！ 鍛錬道場が開催！ 鍛えたい技・術に合ったクエストに挑戦しよう！ #ロマサガRS","likes":145,"retweets":17,"replies":3},
+    {"tweet_id":"2068349061871423591","url":"https://twitter.com/TeamSanzo/status/2068349061871423591","author_handle":"TeamSanzo","author_name":"チームサンゾー公式","text":"久々にやってきました！周回パラダイスはここだ！期間延長で激ウマ周回延長中の制圧戦を解説 #ロマサガRS #サンゾーGAMES","likes":58,"retweets":4,"replies":2},
+    {"tweet_id":"2068378384292553025","url":"https://twitter.com/Tp4idit999706Ik/status/2068378384292553025","author_handle":"Tp4idit999706Ik","author_name":"かき","text":"グスロベチャレンジ完了 2人で最前線を冒険させてもらえて何もいうことはない みたいな、物語を感じるヨ #ロマサガRS","likes":56,"retweets":0,"replies":1},
+    {"tweet_id":"2068356183380185166","url":"https://twitter.com/iX32WOYZwvk2eLo/status/2068356183380185166","author_handle":"iX32WOYZwvk2eLo","author_name":"おさかな","text":"さておやすみ前に･･･螺旋最上階は570階 一時期最上階まで上がっていたが いつの間か建設が進んでいた模様 #ロマサガRS","likes":47,"retweets":0,"replies":0},
+    {"tweet_id":"2068456979513975091","url":"https://twitter.com/romasagarika/status/2068456979513975091","author_handle":"romasagarika","author_name":"りかりか","text":"ジュエルとめっちゃ悩んだけどソウルピースに 悩む報酬が並ぶの嬉しい 魂コンテンツ正直不安でしたが、今はホッとしてます #ロマサガRS","likes":43,"retweets":0,"replies":0},
+    {"tweet_id":"2068351554932150499","url":"https://twitter.com/NekoHarchan/status/2068351554932150499","author_handle":"NekoHarchan","author_name":"ねこはーちゃん","text":"有識者の皆さま このアビは体力デバフが1回入る？ヒット数分15-20回入る？教えていただけますと幸いです #ロマサガRS","likes":43,"retweets":0,"replies":2},
+    {"tweet_id":"2068456370500936148","url":"https://twitter.com/hiro1980301/status/2068456370500936148","author_handle":"hiro1980301","author_name":"山奥暮らしのパンダ","text":"ショーケンのパワーアップを図るべく、パパテルミーをお迎えしようと、とり10したら妹がすり抜けっす、まあよし #ロマサガRS","likes":32,"retweets":0,"replies":0},
+    {"tweet_id":"2068469771025502511","url":"https://twitter.com/mn_jiro_II/status/2068469771025502511","author_handle":"mn_jiro_II","author_name":"みねじろーMk-II","text":"たまには真面目なルミナス解説 厄王討伐ダリ夫入りルミナス100%はうまく行かないのでまずは80%を目指します 禍纏は技のみ対象 #ロマサガRS","likes":27,"retweets":0,"replies":0},
+    {"tweet_id":"2068459925228171712","url":"https://twitter.com/miri_atsumori/status/2068459925228171712","author_handle":"miri_atsumori","author_name":"みり","text":"今引いてるガチャは4種類。期間が長いと結構な出費 24日から新ガチャでその前日…それはもしかしてFF #ロマサガRS","likes":23,"retweets":0,"replies":2},
+    {"tweet_id":"2068359899483123933","url":"https://twitter.com/Sho_hei_RS/status/2068359899483123933","author_handle":"Sho_hei_RS","author_name":"しょーへー","text":"こよみは引いて使わせる様に無理矢理超強化した感があってちょっとね。第一弾のサイヴァ編が当たりかな #ロマサガRS","likes":12,"retweets":0,"replies":1}
+  ],
+  "summarized_at": "2026-06-21T01:35:00Z"
+}
