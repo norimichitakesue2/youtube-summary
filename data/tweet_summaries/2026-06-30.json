@@ -1,0 +1,39 @@
+{
+  "date": "2026-06-30",
+  "n_tweets": 127,
+  "summary_3lines": "公式ジュエルチャレンジ第二弾・アンケートで配布相次ぐ\n無尽塔と雲海の雷窟の攻略・編成相談が活発\nFFRKコラボや正午お知らせの予想で盛り上がり",
+  "key_topics": [
+    "公式：プレイヤーアンケート（1,000ジュエル配布）",
+    "公式：ジュエルチャレンジ企画第二弾（6/30 20:00プレミア公開）",
+    "公式：チャレンジ①②中間発表（達成で全員に1,500ジュエル配布）",
+    "無尽塔（36層攻略・編成相談）",
+    "雲海の雷窟（SF2/US&IS/SSG攻略、タレント不足）",
+    "FFRK/FFコラボの噂・予想",
+    "黒薔薇姫ガチャ（天井・枯渇）",
+    "正午のお知らせ予想（ストーリー更新・水着ガチャ）",
+    "月末交換所・各種期限の注意喚起"
+  ],
+  "positive_themes": [
+    "公式チャレンジが早期達成し全プレイヤーに1,500ジュエル配布、運営対応が好評",
+    "アンケート協力で1,000ジュエルなど配布キャンペーンが続き手応え",
+    "推し活達成（ターミン撃破）やトゥ・クアイ入手など個別の成果報告で喜びの声",
+    "縛り編成や男子染めなど自由なやり込みを楽しむ前向きな投稿が多い"
+  ],
+  "negative_themes": [
+    "黒薔薇姫ガチャで天井・枯渇・破産の嘆き（FFコラボ前の資源不足懸念）",
+    "開催期間中ずっと無尽塔のみで暇潰し要素が乏しく「苦行」との不満",
+    "雲海の雷窟がタレント不足でクリアできないという難易度の声",
+    "ミルザ【厄】レイドを残してほしいなど期限切れへの要望"
+  ],
+  "hot_tweets": [
+    {"tweet_id": "2071520711534158300", "url": "https://x.com/romasaga_rs/status/2071520711534158300", "author_handle": "romasaga_rs", "author_name": "ロマンシング サガ リ・ユニバース公式", "text": "【プレイヤーアンケート実施中！】ロマサガRSのプレイヤーアンケートを実施中！アンケートにご協力いただいた方に、1,000ジュエルをプレゼント！", "likes": 446, "retweets": 154, "replies": 5},
+    {"tweet_id": "", "url": "https://x.com/romasaga_rs", "author_handle": "romasaga_rs", "author_name": "ロマンシング サガ リ・ユニバース公式", "text": "＼#ロマサガRS ジュエルチャレンジ企画 第二弾／ 明日6/30(火)20:00からプレミア公開", "likes": 232, "retweets": 35, "replies": 0},
+    {"tweet_id": "", "url": "https://x.com/romasaga_rs", "author_handle": "romasaga_rs", "author_name": "ロマンシング サガ リ・ユニバース公式", "text": "チャレンジ①中間発表 なんと、早くもチャレンジ①のクリア人数をすべて達成！全てのプレイヤーの皆さまに1,500ジュエルをプレゼントいたしました！（5層クリア：38,478）", "likes": 211, "retweets": 29, "replies": 0},
+    {"tweet_id": "", "url": "https://x.com/romasaga_rs", "author_handle": "romasaga_rs", "author_name": "ロマンシング サガ リ・ユニバース公式", "text": "チャレンジ②中間発表！キャンペーン終了後、全プレイヤーにおける最大クリア階層×100ジュエルをプレゼント！現在の最大クリア階層は44層！", "likes": 186, "retweets": 34, "replies": 0},
+    {"tweet_id": "", "url": "https://x.com/nayami_miryoku", "author_handle": "nayami_miryoku", "author_name": "", "text": "#ロマサガRS 天井なのはきついけど メロセロはコンプしてたからさ 黒薔薇姫、FFコラボ到来前に 圧倒的枯渇…圧倒的破産…", "likes": 45, "retweets": 0, "replies": 0},
+    {"tweet_id": "", "url": "https://x.com/sagaozzy1", "author_handle": "sagaozzy1", "author_name": "", "text": "秘宝の男編成でターミンをぶったおした！！！！！やったぜ！！！！推し活達成だ!!!!! #ロマサガRS", "likes": 29, "retweets": 0, "replies": 0},
+    {"tweet_id": "", "url": "https://x.com/ittousai11031", "author_handle": "ittousai11031", "author_name": "", "text": "SF2もクリアして残すはUS&ISとSSGの2つなんだけど圧倒的タレント不足。特にUS&IS。…こまった ちょっとかてない… #ロマサガRS #雲海の雷窟", "likes": 21, "retweets": 0, "replies": 0},
+    {"tweet_id": "", "url": "https://x.com/taneyan55", "author_handle": "taneyan55", "author_name": "", "text": "正午のお知らせで何か面白い催しでも来ないかなぁ…暇潰し要素が開催期間中ずっと無尽塔のみは苦行である…。(苦笑) #ロマサガRS", "likes": 13, "retweets": 0, "replies": 0}
+  ],
+  "summarized_at": "2026-06-30T01:30:00Z"
+}
