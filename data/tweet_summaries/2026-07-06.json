@@ -1,0 +1,37 @@
+{
+  "date": "2026-07-06",
+  "n_tweets": 104,
+  "summary_3lines": "月曜恒例の挑戦の井戸スタート、陽弱点で1ターン攻略の報告多数\nセレチケ交換期限が残り2日、副防具(サンダル/パレオ)選びの悩みも継続\n本日正午のお知らせに七夕/水着ガチャの期待、パレオのトリガー適用仕様が判明",
+  "key_topics": [
+    "挑戦の井戸(週始めランキング/陽属性弱点・1ターン攻略)",
+    "本日正午のお知らせ予告(七夕or水着ガチャ予想)",
+    "セレチケ交換(残り2日/マリー・哲人など選択に悩む)",
+    "夏限定SS副防具の選択(サンダル/パレオ/たこ焼き)",
+    "パレオ装備のトリガー適用タイミング検証(コマンド選択時から)",
+    "無尽塔30/36層メタルアルカイザー(ヨハン編成)攻略",
+    "おはガチャ・すり抜け報告(鬼八すり抜け等)",
+    "魂アビリティ・オーバークロック周回"
+  ],
+  "positive_themes": [
+    "今週の井戸は陽弱点で敵が弱め、1ターンクリアやランクイン成功の報告が多数",
+    "おはガチャでカイの神引き・ルーレット300など好調な引き",
+    "無尽塔メタルアルカイザーをヨハン編成で寝ている間に攻略できたと感謝の声",
+    "全員閃き成功やパレオのトリガー仕様(コマンド選択時から適用)判明など有益な情報共有"
+  ],
+  "negative_themes": [
+    "おはガチャで欲しくない鬼八がすり抜けるなど『すり抜け祭り』の嘆き",
+    "井戸が弱くなりすぎ・1ターンで終わり物足りないという運営調整への軽い不満",
+    "セレチケ・副防具の選択が悩ましく、期限が迫る焦りの声",
+    "リアルイベントで多忙になり無尽塔が30階止まり、341パシュりでタイトルに戻された悔しさ"
+  ],
+  "hot_tweets": [
+    {"tweet_id":"2073920380000149955","url":"https://x.com/imojirou_saigo","author_handle":"imojirou_saigo","author_name":"","text":"過ぎ去った日々は戻らない。\n決して。\n#ロマサガRS #そろそろメンズ水着ガチャよろしく","likes":66,"retweets":5,"replies":0},
+    {"tweet_id":"nao_paleo","url":"https://x.com/nao_romasaga_rs","author_handle":"nao_romasaga_rs","author_name":"","text":"ロマサガRSのバトル中トリガーは以下の順です\nバトル開始→コマンド選択→ラウンド開始→ターン開始→ターン終了\n今回のパレオは1ターン目コマンド選択時から適応されます\n魂アビなどにも","likes":55,"retweets":2,"replies":0},
+    {"tweet_id":"sagarsragas_ido","url":"https://x.com/sagarsragas","author_handle":"sagarsragas","author_name":"","text":"#ロマサガRS勢と繋がりたい\n井戸から始まる１週間\n先週は18位でした！ヴィクトールとトゥ・クアイでしたね\n今週は8位スタート 敵は弱めで優しい井戸かな","likes":44,"retweets":0,"replies":0},
+    {"tweet_id":"Albelt_ido","url":"https://x.com/Albelt_saga","author_handle":"Albelt_saga","author_name":"","text":"井戸が先週に引き続き今週も陽属性弱点であの2体の活躍がさらに加速していく\n両方持たざるものは1ターン撃破がギリギリでした\nさて今日お知らせが来ますね","likes":32,"retweets":0,"replies":0},
+    {"tweet_id":"SaGa_yukari_metal","url":"https://x.com/SaGa_yukari","author_handle":"SaGa_yukari","author_name":"","text":"【無尽塔】30層 メタルアルカイザー\n目が覚めたらクリアしてました ヨハン編成を考えた方、ありがとうございます！ #ロマサガRS","likes":32,"retweets":0,"replies":0},
+    {"tweet_id":"Treasurehunt_sele","url":"https://x.com/Treasurehunt08","author_handle":"Treasurehunt08","author_name":"","text":"セレチケ交換しました〜\n色々悩みに悩みましたが未所持で思い入れを優先しました\nマリーはケルヴィンが告白するシーンが好きで、ギュス一家には無くてはならないかなと","likes":26,"retweets":0,"replies":0},
+    {"tweet_id":"GS_oshirase","url":"https://x.com/GS808839011","author_handle":"GS808839011","author_name":"","text":"おはようございます\n今日のお昼にお知らせありそうですね\nイベントはバカンスの続きとしてガチャは水着なのか、七夕なのか 楽しみです","likes":26,"retweets":0,"replies":0}
+  ],
+  "summarized_at": "2026-07-06T01:35:00.000000+00:00"
+}
