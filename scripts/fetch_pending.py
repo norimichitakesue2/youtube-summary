@@ -112,7 +112,11 @@ def main():
     ap.add_argument("--channel", help="特定 channel_id のみ処理")
     args = ap.parse_args()
 
-    youtube = build("youtube", "v3", developerKey=get_api_key())
+    try:
+        youtube = build("youtube", "v3", developerKey=get_api_key())
+    except Exception:
+        # 一部環境では静的ディスカバリ文書が同梱されずビルドに失敗するためリモート取得にフォールバック
+        youtube = build("youtube", "v3", developerKey=get_api_key(), static_discovery=False)
     state = load_state()
     channels = load_channels()
     if args.channel:
