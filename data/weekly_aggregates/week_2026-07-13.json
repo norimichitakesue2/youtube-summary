@@ -1,0 +1,1927 @@
+{
+  "meta": {
+    "since": "2026-07-07",
+    "until": "2026-07-13",
+    "generated_at": "2026-07-13T12:20:19.481150+00:00",
+    "n_videos": 30,
+    "n_channels": 11,
+    "n_positive_points": 77,
+    "n_negative_points": 67
+  },
+  "channels": [
+    {
+      "channel": "つむつむちゃんねる●ゲーム考察専門",
+      "n_videos": 5,
+      "videos": [
+        {
+          "video_id": "YK2Ulzm05os",
+          "title": "【ロマサガRS】残り時間僅か有！4大ガチャランキング引くべき優先順位考察【ロマンシングサガリユニバース】",
+          "published_at": "2026-07-10T23:05:35Z",
+          "url": "https://www.youtube.com/watch?v=YK2Ulzm05os",
+          "summary_3lines": "4大ガチャの引くべき優先順位を1〜4位でランキング考察\n1位は気ハ＆オタマ、24ヒットの環境破壊性能で超おすすめ\n残り2日、迷っているなら引いて良いと結論",
+          "key_topics": [
+            "4大ガチャ",
+            "引くべき優先順位",
+            "気ハ",
+            "オタマ",
+            "イリス",
+            "ヒューズ"
+          ],
+          "positive_points": [
+            "気ハは24ヒットの環境破壊級アタッカーで超おすすめ",
+            "オタマは9種フォース＆無人島ほぼ必須で強力",
+            "イリスは高相性で環境を選べる優秀なサポーター",
+            "ヒューズは全体SS20ヒット＋デバフ両立で強力"
+          ],
+          "negative_points": [
+            "エミリアは必須級ではなく属性内の便利枠止まり",
+            "メイレンの1.25倍付与率は低く控えめ",
+            "タコ寺・シンディはニッチで優先度控えめ"
+          ]
+        },
+        {
+          "video_id": "6fvFo9TR0rg",
+          "title": "【ロマサガRS】こんなのおかしいですよ！メイレンさん！【ロマンシングサガリユニバース】",
+          "published_at": "2026-07-10T15:41:44Z",
+          "url": "https://www.youtube.com/watch?v=6fvFo9TR0rg",
+          "summary_3lines": "FF討伐クエストをメイレン中心の編成で攻略\n火力が出て簡単に倒しやすかった\nガチャ部分は実況せずダイジェスト気味",
+          "key_topics": [
+            "FF討伐クエスト",
+            "メイレン",
+            "皇帝戦",
+            "ガチャ"
+          ],
+          "positive_points": [
+            "メイレンで火力が出て簡単に倒せた"
+          ],
+          "negative_points": []
+        },
+        {
+          "video_id": "XPxIc30OKN4",
+          "title": "【ロマサガRS】ファイナルイグニッションかっこいい・・ロマパスエレノアの火力がやばする【ロマンシングサガリユニバース】",
+          "published_at": "2026-07-09T14:36:06Z",
+          "url": "https://www.youtube.com/watch?v=XPxIc30OKN4",
+          "summary_3lines": "ロマパスのエレノアの火力をブラスト相性で検証\nファイナルイグニッションの演出がかっこよく火力がえぐい\n手加減しても敵が溶けるほどエレノアがぶっ飛んだ性能",
+          "key_topics": [
+            "ロマパスエレノア",
+            "ファイナルイグニッション",
+            "火力検証",
+            "ブラスト相性"
+          ],
+          "positive_points": [
+            "エレノアの火力がぶっ飛び一人だけ飛び抜けている",
+            "ファイナルイグニッションの演出がかっこいい",
+            "5ターン戦なら火力として活躍でき満足"
+          ],
+          "negative_points": [
+            "軽減がなく耐久性能はない(5ターン以降向け)",
+            "火力が高すぎて手加減が必要なほど"
+          ]
+        },
+        {
+          "video_id": "fhJLBkb_DIE",
+          "title": "【ロマサガRS】15000ジュエルだと！人の夢、人の望み、人の業！！！花火イベント詳しく解説【ロマンシングサガリユニバース】",
+          "published_at": "2026-07-07T14:41:24Z",
+          "url": "https://www.youtube.com/watch?v=fhJLBkb_DIE",
+          "summary_3lines": "夏の大花火大会の交換券50枚を解説\n堅実分配で最低3500ジュエル確保を推奨\n1点賭けの超ギャンブルと危険例に注意喚起",
+          "key_topics": [
+            "花火イベント",
+            "交換券50枚",
+            "堅実分配",
+            "1点ギャンブル",
+            "注意喚起"
+          ],
+          "positive_points": [
+            "堅実分配なら確実にジュエルがもらえる",
+            "最大1万5000ジュエルの夢がある"
+          ],
+          "negative_points": [
+            "1箇所43枚は最悪51ジュエルの危険例",
+            "適当に交換するのはダメ"
+          ]
+        },
+        {
+          "video_id": "E5fnTBJ7Qz4",
+          "title": "【ロマサガRS】神速6人性能確認！注意喚起ありエミリア＆メイレン編【ロマンシングサガリユニバース】",
+          "published_at": "2026-07-07T04:01:49Z",
+          "url": "https://www.youtube.com/watch?v=E5fnTBJ7Qz4",
+          "summary_3lines": "真夏の花火は適当交換NGと注意喚起\nメイレン編・エミリア編の新6体を性能確認\nヒューズは使えるが全体的に抑えめと評価",
+          "key_topics": [
+            "花火交換注意",
+            "メイレン編性能",
+            "エミリア編性能",
+            "ヒューズ評価",
+            "導きシリーズ"
+          ],
+          "positive_points": [
+            "ヒューズは3対1回超物資で使いやすい",
+            "エミリアはぼちぼち強い",
+            "シンディは影パなら強いかも",
+            "ドールは全員10で価値がある"
+          ],
+          "negative_points": [
+            "メイレンの打の導きは使う機会が少ない",
+            "ドールはアルティメットミド君に劣る",
+            "今回のガチャは全体的に抑えめ",
+            "新キャラは必須感がなく刺さる場面限定"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "サンゾーGAMES",
+      "n_videos": 4,
+      "videos": [
+        {
+          "video_id": "UcCWR7KAmnA",
+          "title": "【ロマサガRS】緊急事態発生！遂にロマサガRSとファイナルファンタジーレコードキーパーとのコラボが開幕した！【FFRK】",
+          "published_at": "2026-07-10T10:36:38Z",
+          "url": "https://www.youtube.com/watch?v=UcCWR7KAmnA",
+          "summary_3lines": "FFRKコラボ開幕を緊急動画で大興奮リポート\nFF2半乱軍のテーマがホームBGMになり感動\nガチャなしでジュエル配布、最高のコラボと絶賛",
+          "key_topics": [
+            "FFRKコラボ",
+            "FF2半乱軍のテーマ",
+            "ホームBGM",
+            "ジュエル配布",
+            "サガラジオ"
+          ],
+          "positive_points": [
+            "FF2の名曲がRSで流れるBGM変更に大感動",
+            "ガチャなしでジュエル大量配布はただただラッキー",
+            "楽しませるためだけの最高のコラボ"
+          ],
+          "negative_points": [
+            "ガチャが1〜2キャラでもあれば嬉しかった"
+          ]
+        },
+        {
+          "video_id": "gTm0_KUFsT0",
+          "title": "【ロマサガRS】待望の新キャラの性能が実は...！エミリア編ガチャ性能チェック【ロマンシング サガ リユニバース】",
+          "published_at": "2026-07-07T23:55:04Z",
+          "url": "https://www.youtube.com/watch?v=gTm0_KUFsT0",
+          "summary_3lines": "エミリア編3体の性能を詳しくチェック\nシンディは陰属性レイドで輝く優秀な置物\nタコおじは冷続趣味枠、エミリアは打熱陽サポ",
+          "key_topics": [
+            "タコおじ性能",
+            "シンディ性能",
+            "エミリア性能",
+            "陰属性レイド",
+            "趣味ガチャ"
+          ],
+          "positive_points": [
+            "シンディはレイドで輝く優秀な置物",
+            "エミリアは打熱陽で意外と火力が出る",
+            "タコおじは冷続編成の強化に良い",
+            "エミリアのイラストは100点"
+          ],
+          "negative_points": [
+            "タコおじはデメリット持ちで刺さる場面少ない",
+            "エミリアは汎用性が限りなく低い",
+            "全体的に趣味ガチャでジュエル溜め込み期間"
+          ]
+        },
+        {
+          "video_id": "tpnVsue1c_U",
+          "title": "【ロマサガRS】オイシイ報酬を絶対に取り逃がすな！このイベントマジで要注意！！【ロマンシング サガ リユニバース】",
+          "published_at": "2026-07-07T14:46:52Z",
+          "url": "https://www.youtube.com/watch?v=tpnVsue1c_U",
+          "summary_3lines": "潜入キャンベルマリンリゾートの複雑仕様を紹介\nパスキーで部屋解放、周回場所の切替に注意\n花火大会は全賭け1.5万か均等3500かと解説",
+          "key_topics": [
+            "マリンリゾート解説",
+            "パスキー周回",
+            "スパイダー001防具",
+            "花火大会",
+            "ボス戦"
+          ],
+          "positive_points": [
+            "イベントに変化をつける姿勢が嬉しい",
+            "ボスは残弱で簡単に勝てる",
+            "均等振りで最低3500保障"
+          ],
+          "negative_points": [
+            "同じ場所を周回すると何も得られず後悔",
+            "ジュエルのドロップ率が薄そうで注意",
+            "全賭けは0の可能性が高く怖い"
+          ]
+        },
+        {
+          "video_id": "pTHzJ1pD-n0",
+          "title": "【ロマサガRS】今回1番の当たりはこの3人の中に？メイレン編ガチャ性能チェック【ロマンシング サガ リユニバース】",
+          "published_at": "2026-07-07T10:28:04Z",
+          "url": "https://www.youtube.com/watch?v=pTHzJ1pD-n0",
+          "summary_3lines": "メイレン編3体の性能をチェック\nヒューズは全体SS20と邪魔性能で今回1番\nドールとメイレンは一昔前スペックでデフレ気味",
+          "key_topics": [
+            "ヒューズ性能",
+            "ドール性能",
+            "メイレン性能",
+            "全体SS20ヒット",
+            "デバフ邪魔"
+          ],
+          "positive_points": [
+            "ヒューズは開幕/3の倍数で全体SS20と高火力",
+            "ヒューズは敵の防御/ステータスを下げる優秀な邪魔",
+            "全員10なので始めたてには強化になる"
+          ],
+          "negative_points": [
+            "ドールは継承なしミド君で今更感",
+            "メイレンは一昔前の誓い系で縛りきつい",
+            "3人ともデフレ気味の趣味ガチャ"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "明星ch",
+      "n_videos": 4,
+      "videos": [
+        {
+          "video_id": "K3fEgNELVGY",
+          "title": "【ロマサガRS】ガチャは無いよ FFRKコラボ 7月10日更新情報まとめ 【ロマンシング サガ リ・ユニバース】",
+          "published_at": "2026-07-10T06:38:44Z",
+          "url": "https://www.youtube.com/watch?v=K3fEgNELVGY",
+          "summary_3lines": "FFRKコラボ記念の7/10更新情報を確認、ガチャはなし\n討伐クエスト皇帝戦でエクスカリバー等を交換所で入手\nログボ＋ミッションで計8000ジュエル配布",
+          "key_topics": [
+            "FFRKコラボ",
+            "ガチャなし",
+            "討伐クエスト",
+            "エクスカリバー",
+            "ジュエル配布"
+          ],
+          "positive_points": [
+            "計8000ジュエルをしっかり配ってくれてありがたい",
+            "エクスカリバーFF2など限定品が交換できる"
+          ],
+          "negative_points": [
+            "エクスカリバーはロマショップに追加されない限定品で取り逃し注意"
+          ]
+        },
+        {
+          "video_id": "HdW7rUDZ_Ow",
+          "title": "【Gジェネエターナル】IFストーリーを体験！新イベント開催予告！ ＃Shorts ＃ジージェネエターナル",
+          "published_at": "2026-07-10T04:44:27Z",
+          "url": "https://www.youtube.com/watch?v=HdW7rUDZ_Ow",
+          "summary_3lines": "Gジェネ新イベントEシミュレーターUC79を予告(Shorts)\nIFストーリーで史実と異なる歴史を観測、7/16開催\nSP化チップ報酬、部隊1は出撃制限あり",
+          "key_topics": [
+            "Gジェネエターナル",
+            "IFストーリー",
+            "UC79",
+            "出撃制限",
+            "Shorts"
+          ],
+          "positive_points": [
+            "報酬にチップがもらえてありがたい",
+            "キャラ2人とも使いやすそう",
+            "タグ制で別作品ユニットにも乗せやすい"
+          ],
+          "negative_points": [
+            "部隊1の出撃制限が厳しめ"
+          ]
+        },
+        {
+          "video_id": "7-nVINBG4lQ",
+          "title": "【Gジェネエターナル】IFストーリーを体験！新イベント開催予告！ 『SDガンダムGジェネレーションエターナル』",
+          "published_at": "2026-07-10T04:40:19Z",
+          "url": "https://www.youtube.com/watch?v=7-nVINBG4lQ",
+          "summary_3lines": "Gジェネ新イベントEシミュレーターUC0079を予告\nIFストーリーで史実と異なる歴史を体験、7/16開催\n報酬にSP化チップ、キャラ2人とも使いやすそう",
+          "key_topics": [
+            "Gジェネエターナル",
+            "IFストーリー",
+            "UC0079",
+            "フルアーマーガンダム",
+            "出撃制限"
+          ],
+          "positive_points": [
+            "SP化・SSP化チップがもらえてありがたい",
+            "セイラ・ララァ2人とも使いやすそう",
+            "作品数だけ無限にイベントできそう",
+            "キャラ条件がタグ制で別作品に乗せやすい"
+          ],
+          "negative_points": [
+            "部隊1の出撃制限が厳しめ"
+          ]
+        },
+        {
+          "video_id": "mTiBvJWBVfA",
+          "title": "【ロマサガRS】無償ジュエル110連分は犠牲になりました『サガ フロンティア発売日記念 Romancing祭 メイレン編＆エミリア編』【ロマンシング サガ リ・ユニバース】",
+          "published_at": "2026-07-07T05:27:53Z",
+          "url": "https://www.youtube.com/watch?v=mTiBvJWBVfA",
+          "summary_3lines": "エミリア編を無償110連から回すも爆死\nすり抜け連発で課金しても3体止まり\nメイレンとエミリアは最低限確保で終了",
+          "key_topics": [
+            "エミリア編ガチャ",
+            "メイレン編ガチャ",
+            "無償110連",
+            "すり抜け",
+            "爆死"
+          ],
+          "positive_points": [
+            "メイレンとエミリアを確保できた",
+            "シンディを引けた"
+          ],
+          "negative_points": [
+            "110連やって何も出ず爆死",
+            "演出が弱く全く出ない",
+            "すり抜けが連発する",
+            "課金した途端すり抜け"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "タマゴローRS",
+      "n_videos": 4,
+      "videos": [
+        {
+          "video_id": "K35V4rPUpQ4",
+          "title": "【ロマサガRS】螺旋でも何でも「新テンプレ」鬼八&おたまで無尽塔40層ヴァッハ神を破壊し今回の無尽塔をゴールする　#ロマサガRS",
+          "published_at": "2026-07-10T22:30:05Z",
+          "url": "https://www.youtube.com/watch?v=K35V4rPUpQ4",
+          "summary_3lines": "無尽塔40層ヴァッハ神を鬼八＆おたま新テンプレで攻略\nターミンの治力デバフやODを駆使しギリギリ削り切る\nガチャ当日に即クリア、排水なしゴール更新",
+          "key_topics": [
+            "無尽塔40層",
+            "ヴァッハ神",
+            "鬼八",
+            "おたま",
+            "新テンプレ"
+          ],
+          "positive_points": [
+            "鬼八＆おたまの新テンプレ編成が強力",
+            "ガチャ当日に即クリアできた",
+            "排水なしゴール更新できた"
+          ],
+          "negative_points": [
+            "バッハのランダムヒットBP削りが運ゲーで厄介",
+            "サ魂デバフがないと1ターン目が厳しい"
+          ]
+        },
+        {
+          "video_id": "g0m8PPUF0eI",
+          "title": "【ロマサガRS】FFRKコラボ「こうてい」にウボァーと言わせろ!!最新編成2種&全力オート&ギミック解説!!　#ロマサガRS",
+          "published_at": "2026-07-10T11:14:50Z",
+          "url": "https://www.youtube.com/watch?v=g0m8PPUF0eI",
+          "summary_3lines": "FFRKコラボ皇帝戦の最新編成2種と全力オートを紹介\nリアム等でOD満タン維持すれば全力オートで安定\n回避と防御低下が厄介だが殴り切れる内容",
+          "key_topics": [
+            "FFRKコラボ",
+            "皇帝戦",
+            "全力オート",
+            "編成2種",
+            "OD満タン"
+          ],
+          "positive_points": [
+            "リアム等でOD満タン維持でき全力オートで安定",
+            "1ゲージ目はカウンターが有効",
+            "ギミック少なく駆け抜けられる"
+          ],
+          "negative_points": [
+            "回避によるディフレクトで防御低下が致命的",
+            "回避の時間稼ぎがしんどい",
+            "しっかり目の防御が必要"
+          ]
+        },
+        {
+          "video_id": "YGlgYV_Adig",
+          "title": "【ロマサガRS】「打無限」増幅バフ…最後の刺客！？メイレン&ただのマスコットに収まらない32連打エクストラ冷1.5倍のタコおじさん!!　#ロマサガRS",
+          "published_at": "2026-07-07T22:29:48Z",
+          "url": "https://www.youtube.com/watch?v=YGlgYV_Adig",
+          "summary_3lines": "打属性無限増幅型メイレンの性能を辛口評価\n拡張性1.25倍止まりで中途半端と指摘\nタコおじは霊編成ファンプレイ向けと結論",
+          "key_topics": [
+            "メイレン性能",
+            "タコおじ性能",
+            "無限増幅バフ",
+            "属性縛り編成",
+            "高難度評価"
+          ],
+          "positive_points": [
+            "全体バフはいつも通り強い",
+            "タコおじのエクストラ永続付与は良い",
+            "タコおじの防御75%はなかなか良い"
+          ],
+          "negative_points": [
+            "メイレンは拡張性1.25倍で強く感じない",
+            "属性縛りがただの縛りで弱い",
+            "メイレンは防御50%に下げられ不遇",
+            "タコおじは立ち上がり遅く使い所がない"
+          ]
+        },
+        {
+          "video_id": "uReGYE0hB6E",
+          "title": "【ロマサガRS】サライを凌ぐ「全体SS20連打」デバフに弱化とサポートもOKヒューズ&打熱陽エクストラ組み合わせで常時1.5倍置物に継承で1.75倍エミリアの継承汎用性!!　#ロマサガRS",
+          "published_at": "2026-07-07T04:35:11Z",
+          "url": "https://www.youtube.com/watch?v=uReGYE0hB6E",
+          "summary_3lines": "ヒューズは全体SS20連打で特攻性が高い\nエミリアはエクストラ拡張が救いの無難サポ\n2体ならヒューズ推奨と結論づける",
+          "key_topics": [
+            "ヒューズ性能",
+            "エミリア性能",
+            "全体SS20連打",
+            "エクストラ付与",
+            "継承汎用性"
+          ],
+          "positive_points": [
+            "ヒューズの2ターン全体41ヒットが強力",
+            "ヒューズは安定感がある",
+            "エミリアのエクストラ武器は強い",
+            "エミリアはデバフ/BP対策で対応力あり"
+          ],
+          "negative_points": [
+            "ヒューズはエクストラ拡張がなく連続性に難",
+            "エミリアは個人火力含め全体が無難すぎる",
+            "エミリアは根本的にそんなに強くない"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "ジュラのサガちゃんねる",
+      "n_videos": 3,
+      "videos": [
+        {
+          "video_id": "b6uc1BSgE5U",
+          "title": "【ロマサガRS】討伐クエスト「こうてい」Romancingを攻略！【ロマンシング サガ リユニバース】",
+          "published_at": "2026-07-11T01:12:08Z",
+          "url": "https://www.youtube.com/watch?v=b6uc1BSgE5U",
+          "summary_3lines": "FFRKコラボ皇帝戦ロマンシングの攻略を解説\n弱点なし・回避・エリクサー回復のギミックと対策を紹介\n難易度低めでSSS武器エクスカリバーを入手可能",
+          "key_topics": [
+            "皇帝戦",
+            "ロマンシング攻略",
+            "ブリンク回避",
+            "エリクサー回復",
+            "エクスカリバー"
+          ],
+          "positive_points": [
+            "難易度はかなり低めで挑戦しやすい",
+            "SSS武器エクスカリバーを入手できてお得",
+            "ODゲージ上昇スタイルで回避を貫ける"
+          ],
+          "negative_points": [
+            "弱点がなくエクストラフォースや余ダメ上昇が使えない",
+            "エリクサーや7連撃でHP回復されるので火力が必要"
+          ]
+        },
+        {
+          "video_id": "VvgifjGaF8E",
+          "title": "【ロマサガRS】こうていとの戦い配信【生配信】",
+          "published_at": "2026-07-10T14:12:00Z",
+          "url": "https://www.youtube.com/watch?v=VvgifjGaF8E",
+          "summary_3lines": "FFRKコラボ皇帝戦を生配信で初見攻略\nFF2のBGMを絶賛、ガチャは来ないとラジオで明言\n弱点なし＆エリクサー回復で火力押し切りが必要と検証",
+          "key_topics": [
+            "皇帝戦",
+            "生配信",
+            "FF2 BGM",
+            "弱点なし",
+            "エリクサー回復"
+          ],
+          "positive_points": [
+            "FF2のBGMがかっこよくコラボを楽しめた",
+            "ミニコラボはジュエル配布もあり助かる"
+          ],
+          "negative_points": [
+            "弱点がなくサやビンセント等ウィーク要員が使いづらい",
+            "エリクサーや連撃でHP回復され火力押し切りが必要",
+            "ガチャは来ないと明言され少し残念"
+          ]
+        },
+        {
+          "video_id": "sfa6i2-xkxs",
+          "title": "【ロマサガRS】2026年7月上旬ガチャ総まとめ！全12スタイル引くべきスタイルランキング！【ロマンシング サガ リユニバース】",
+          "published_at": "2026-07-10T10:00:12Z",
+          "url": "https://www.youtube.com/watch?v=sfa6i2-xkxs",
+          "summary_3lines": "7月上旬実装ガチャ全12スタイルをティアランク付け\nSなし、Aは気ハとヒューズで火力重視の高評価\nオタマは継承前提で強力な特別枠として紹介",
+          "key_topics": [
+            "7月上旬ガチャ",
+            "ティアランク",
+            "気ハ",
+            "ヒューズ",
+            "オタマ",
+            "全12スタイル"
+          ],
+          "positive_points": [
+            "気ハは残雷の超高火力で短期戦・レイドで活躍",
+            "ヒューズは全体火力とデバフを両立でき魅力",
+            "オタマは継承前提なら無人島等で非常に強力",
+            "Dナンバー5はザレ3属性で汎用性が高い"
+          ],
+          "negative_points": [
+            "Sランク該当なしで必須級はいない",
+            "気ハ・ヒューズはサポート要素が薄く高難易度で採用されにくい",
+            "シンディやメイレンは扱いづらく優先度低め",
+            "タコおじさんは敵の冷続火力も上げるデメリット持ち"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "tyamu",
+      "n_videos": 3,
+      "videos": [
+        {
+          "video_id": "Kmm-ItZagig",
+          "title": "【ロマサガrs】こうていとの戦い ~9ターン撃破 ~",
+          "published_at": "2026-07-10T11:48:27Z",
+          "url": "https://www.youtube.com/watch?v=Kmm-ItZagig",
+          "summary_3lines": "FFRKコラボ皇帝戦ロマンシングを9ターンで撃破\n編成はブーケ・暦み・サイバ・ターミン・最終皇帝女の5名\n各継承を紹介しつつ攻略",
+          "key_topics": [
+            "皇帝戦",
+            "ロマンシング",
+            "9ターン撃破",
+            "編成紹介",
+            "継承"
+          ],
+          "positive_points": [
+            "手持ち編成で9ターン撃破できた"
+          ],
+          "negative_points": []
+        },
+        {
+          "video_id": "iF9iPWxxe7Y",
+          "title": "【ロマサガrs】第127回シュウザーたちの井戸‼️攻略‼️〜ランキング100位を目指して〜全てお見せします♪",
+          "published_at": "2026-07-07T09:43:26Z",
+          "url": "https://www.youtube.com/watch?v=iF9iPWxxe7Y",
+          "summary_3lines": "シュウザーたちの井戸を8手クリア編成で攻略\n100位前後を狙える暦みダメージ戦法を紹介\n上位6手編成は未解明で今週も白熱と語る",
+          "key_topics": [
+            "シュウザーの井戸",
+            "8手クリア編成",
+            "ランキング100位",
+            "暦みダメージ",
+            "グスタフ継承"
+          ],
+          "positive_points": [
+            "8手運用で100位前後を狙える",
+            "今週の井戸も楽しくなってきた"
+          ],
+          "negative_points": [
+            "6手の上位編成がまだ分からない"
+          ]
+        },
+        {
+          "video_id": "hERDn-5riJ8",
+          "title": "【ロマサガrs】エミリア・シンディ・キャンベル・タコおじさん能力値早見表 ~火力サポーターがずらーりー〜エミリア編ガチャ",
+          "published_at": "2026-07-07T05:27:30Z",
+          "url": "https://www.youtube.com/watch?v=hERDn-5riJ8",
+          "summary_3lines": "サガフロ記念ガチャ3体の能力値を考察\nタコおじはマスコット、エミリアは火力サポ\nシンディは敵多数で輝くテクニカルサポ",
+          "key_topics": [
+            "タコおじ考察",
+            "エミリア考察",
+            "シンディ考察",
+            "火力サポーター",
+            "能力値早見表"
+          ],
+          "positive_points": [
+            "エミリアは火力サポーターとして強い",
+            "シンディは敵が多いほど火力が上がり強力",
+            "シンディは主軸になるポテンシャルあり"
+          ],
+          "negative_points": [
+            "タコおじは雪だるまの劣化版で汎用性厳しい",
+            "タコおじは初動が遅い",
+            "エミリアは突き抜け感が足りない",
+            "シンディはすぐ引かず様子見が良い"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "もんでる",
+      "n_videos": 2,
+      "videos": [
+        {
+          "video_id": "sj8fGEp2TxQ",
+          "title": "【ロマサガRS】無尽塔37から",
+          "published_at": "2026-07-09T17:08:04Z",
+          "url": "https://www.youtube.com/watch?v=sj8fGEp2TxQ",
+          "summary_3lines": "無尽塔37層からの攻略を生配信、エレノアも軽く育成\nピンクタイガーや雪だるま編成で試行錯誤するも苦戦\n排水を覚えないと突破は厳しいと締めくくり",
+          "key_topics": [
+            "無尽塔37層",
+            "生配信",
+            "エレノア",
+            "編成試行錯誤",
+            "収益化雑談"
+          ],
+          "positive_points": [
+            "エレノアなど新スタイルを配信外で入手できた"
+          ],
+          "negative_points": [
+            "雑魚が強すぎて火力・BPが足りず苦戦",
+            "排水を覚えないと突破は無理そう"
+          ]
+        },
+        {
+          "video_id": "rDbjbuyeeQQ",
+          "title": "【ロマサガRS】無尽塔36クリア（後半部分）　2026サガ フロンティア発売日記念ガチャ",
+          "published_at": "2026-07-07T16:02:41Z",
+          "url": "https://www.youtube.com/watch?v=rDbjbuyeeQQ",
+          "summary_3lines": "サガフロ記念ダブルガチャを引き性能を評価\nヒューズとオタマを確保、他は微妙と結論\n無尽塔36シャムマベル戦は攻略しきれず苦戦",
+          "key_topics": [
+            "サガフロ記念ガチャ",
+            "ヒューズ確保",
+            "タコおじ",
+            "無尽塔36攻略",
+            "花火番号ベット"
+          ],
+          "positive_points": [
+            "ヒューズが強く引けて大きい",
+            "オタマ(氷の剣素材)確保でライオン等クリア",
+            "均等ベットで最低3500確保"
+          ],
+          "negative_points": [
+            "ヒューズも無尽塔36では火力が足りず微妙",
+            "ガチャ全体は環境を変えるほどでない",
+            "ダブルガチャ連発しすぎ",
+            "無尽塔36をクリアできず"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "あっきゃんGAMES",
+      "n_videos": 2,
+      "videos": [
+        {
+          "video_id": "5mDjbtSjrOc",
+          "title": "【ロマサガRS】Romancing祭エミリア編ガチャ評価 #ロマサガRS #shorts #ガチャ",
+          "published_at": "2026-07-07T08:49:36Z",
+          "url": "https://www.youtube.com/watch?v=5mDjbtSjrOc",
+          "summary_3lines": "Romancing祭エミリア編のガチャ評価ショート\n字幕が音楽のみで内容は取得できず\nタイトルからガチャ性能評価と推測",
+          "key_topics": [
+            "エミリア編ガチャ",
+            "ガチャ評価",
+            "shorts"
+          ],
+          "positive_points": [],
+          "negative_points": []
+        },
+        {
+          "video_id": "crWH_S_ySRo",
+          "title": "【ロマサガRS】Romancing祭メイレン編ガチャ評価 #ロマサガRS #shorts #ガチャ",
+          "published_at": "2026-07-07T03:31:16Z",
+          "url": "https://www.youtube.com/watch?v=crWH_S_ySRo",
+          "summary_3lines": "Romancing祭メイレン編のガチャ評価ショート\n字幕が音楽のみで内容は取得できず\nタイトルからガチャ性能評価と推測",
+          "key_topics": [
+            "メイレン編ガチャ",
+            "ガチャ評価",
+            "shorts"
+          ],
+          "positive_points": [],
+          "negative_points": []
+        }
+      ]
+    },
+    {
+      "channel": "RS 周回チャンネル",
+      "n_videos": 1,
+      "videos": [
+        {
+          "video_id": "SF83kHWzXpo",
+          "title": "【ロマサガRS】理解していないと後悔案件 新イベントの進め方やキャンペーンを徹底解説します!!【ロマンシング サガ リ・ユニバース】",
+          "published_at": "2026-07-07T09:49:53Z",
+          "url": "https://www.youtube.com/watch?v=SF83kHWzXpo",
+          "summary_3lines": "潜入キャンベルマリンリゾートの進め方を解説\nパスキーで部屋解放、周回場所の切替が必須\n花火大会は全突1.5万か均等3500かと説明",
+          "key_topics": [
+            "マリンリゾートイベント",
+            "パスキー",
+            "周回注意点",
+            "花火大会",
+            "ジュエル交換"
+          ],
+          "positive_points": [
+            "全突なら1万5000ジュエルの夢",
+            "均等振りで最低3500ジュエル保障"
+          ],
+          "negative_points": [
+            "最初に記憶再戦を固定化してはダメ",
+            "同じ場所を周回すると損",
+            "パスキー5個以上は無駄になる",
+            "イベントが複雑で注意点が多い"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "くんちゃんねる",
+      "n_videos": 1,
+      "videos": [
+        {
+          "video_id": "T4fLtThfvfU",
+          "title": "【ロマサガRS】【ガチャ動画】おたまほしい【No.620】",
+          "published_at": "2026-07-10T12:51:54Z",
+          "url": "https://www.youtube.com/watch?v=T4fLtThfvfU",
+          "summary_3lines": "水着第2弾ガチャでおたま狙いのガチャ配信\nコウタ君が60連ほどで水着おたま等4体を引き当てる\n引けたら握手会開催と盛り上がる雑談ガチャ回",
+          "key_topics": [
+            "水着ガチャ",
+            "おたま",
+            "イリス",
+            "ガチャ配信",
+            "パニック買い"
+          ],
+          "positive_points": [
+            "少ない連数で水着おたま等4体を引き当てた",
+            "前回も90連でコンプできGBキャラ運が好調"
+          ],
+          "negative_points": [
+            "ターコは1万ジュエル溶かしても何も出ずパニック買いを反省"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "あんずもん",
+      "n_videos": 1,
+      "videos": [
+        {
+          "video_id": "ZjVEqGhtrwk",
+          "title": "【ロマサガRS】集いし願いを　結果にある違和感が　疑問に思う事とは",
+          "published_at": "2026-07-07T16:01:39Z",
+          "url": "https://www.youtube.com/watch?v=ZjVEqGhtrwk",
+          "summary_3lines": "星2「集いし願い」イベントの結果を報告\n連魔防具素材が多く選ばれた点に疑問\n月1の短期連魔特化イベントを運営へ提案",
+          "key_topics": [
+            "集いし願い結果",
+            "連魔防具素材",
+            "ロマパス",
+            "周回負担",
+            "運営への提案"
+          ],
+          "positive_points": [
+            "イベントが結構楽しかった",
+            "良い結果が出て嬉しい",
+            "ソウルピースやジュエルが出た"
+          ],
+          "negative_points": [
+            "連魔周回がきついという声が多い",
+            "連魔素材がなぜ多いのか疑問"
+          ]
+        }
+      ]
+    }
+  ],
+  "top_topics": [
+    {
+      "topic": "皇帝戦",
+      "count": 5,
+      "video_ids": [
+        "VvgifjGaF8E",
+        "6fvFo9TR0rg",
+        "b6uc1BSgE5U",
+        "Kmm-ItZagig",
+        "g0m8PPUF0eI"
+      ]
+    },
+    {
+      "topic": "FFRKコラボ",
+      "count": 3,
+      "video_ids": [
+        "UcCWR7KAmnA",
+        "g0m8PPUF0eI",
+        "K3fEgNELVGY"
+      ]
+    },
+    {
+      "topic": "タコおじ性能",
+      "count": 2,
+      "video_ids": [
+        "gTm0_KUFsT0",
+        "YGlgYV_Adig"
+      ]
+    },
+    {
+      "topic": "エミリア性能",
+      "count": 2,
+      "video_ids": [
+        "gTm0_KUFsT0",
+        "uReGYE0hB6E"
+      ]
+    },
+    {
+      "topic": "花火大会",
+      "count": 2,
+      "video_ids": [
+        "SF83kHWzXpo",
+        "tpnVsue1c_U"
+      ]
+    },
+    {
+      "topic": "生配信",
+      "count": 2,
+      "video_ids": [
+        "VvgifjGaF8E",
+        "sj8fGEp2TxQ"
+      ]
+    },
+    {
+      "topic": "エリクサー回復",
+      "count": 2,
+      "video_ids": [
+        "VvgifjGaF8E",
+        "b6uc1BSgE5U"
+      ]
+    },
+    {
+      "topic": "おたま",
+      "count": 2,
+      "video_ids": [
+        "T4fLtThfvfU",
+        "K35V4rPUpQ4"
+      ]
+    },
+    {
+      "topic": "イリス",
+      "count": 2,
+      "video_ids": [
+        "T4fLtThfvfU",
+        "YK2Ulzm05os"
+      ]
+    },
+    {
+      "topic": "エミリア編ガチャ",
+      "count": 2,
+      "video_ids": [
+        "mTiBvJWBVfA",
+        "5mDjbtSjrOc"
+      ]
+    },
+    {
+      "topic": "メイレン編ガチャ",
+      "count": 2,
+      "video_ids": [
+        "mTiBvJWBVfA",
+        "crWH_S_ySRo"
+      ]
+    },
+    {
+      "topic": "気ハ",
+      "count": 2,
+      "video_ids": [
+        "YK2Ulzm05os",
+        "sfa6i2-xkxs"
+      ]
+    },
+    {
+      "topic": "オタマ",
+      "count": 2,
+      "video_ids": [
+        "YK2Ulzm05os",
+        "sfa6i2-xkxs"
+      ]
+    },
+    {
+      "topic": "ヒューズ",
+      "count": 2,
+      "video_ids": [
+        "YK2Ulzm05os",
+        "sfa6i2-xkxs"
+      ]
+    },
+    {
+      "topic": "Gジェネエターナル",
+      "count": 2,
+      "video_ids": [
+        "HdW7rUDZ_Ow",
+        "7-nVINBG4lQ"
+      ]
+    },
+    {
+      "topic": "IFストーリー",
+      "count": 2,
+      "video_ids": [
+        "HdW7rUDZ_Ow",
+        "7-nVINBG4lQ"
+      ]
+    },
+    {
+      "topic": "出撃制限",
+      "count": 2,
+      "video_ids": [
+        "HdW7rUDZ_Ow",
+        "7-nVINBG4lQ"
+      ]
+    },
+    {
+      "topic": "ジュエル配布",
+      "count": 2,
+      "video_ids": [
+        "UcCWR7KAmnA",
+        "K3fEgNELVGY"
+      ]
+    },
+    {
+      "topic": "ガチャ評価",
+      "count": 2,
+      "video_ids": [
+        "crWH_S_ySRo",
+        "5mDjbtSjrOc"
+      ]
+    },
+    {
+      "topic": "shorts",
+      "count": 2,
+      "video_ids": [
+        "crWH_S_ySRo",
+        "5mDjbtSjrOc"
+      ]
+    }
+  ],
+  "positive_points": [
+    {
+      "point": "シンディはレイドで輝く優秀な置物",
+      "video_id": "gTm0_KUFsT0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "エミリアは打熱陽で意外と火力が出る",
+      "video_id": "gTm0_KUFsT0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "タコおじは冷続編成の強化に良い",
+      "video_id": "gTm0_KUFsT0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "エミリアのイラストは100点",
+      "video_id": "gTm0_KUFsT0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "ヒューズが強く引けて大きい",
+      "video_id": "rDbjbuyeeQQ",
+      "channel": "もんでる"
+    },
+    {
+      "point": "オタマ(氷の剣素材)確保でライオン等クリア",
+      "video_id": "rDbjbuyeeQQ",
+      "channel": "もんでる"
+    },
+    {
+      "point": "均等ベットで最低3500確保",
+      "video_id": "rDbjbuyeeQQ",
+      "channel": "もんでる"
+    },
+    {
+      "point": "全突なら1万5000ジュエルの夢",
+      "video_id": "SF83kHWzXpo",
+      "channel": "RS 周回チャンネル"
+    },
+    {
+      "point": "均等振りで最低3500ジュエル保障",
+      "video_id": "SF83kHWzXpo",
+      "channel": "RS 周回チャンネル"
+    },
+    {
+      "point": "FF2のBGMがかっこよくコラボを楽しめた",
+      "video_id": "VvgifjGaF8E",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "ミニコラボはジュエル配布もあり助かる",
+      "video_id": "VvgifjGaF8E",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "メイレンで火力が出て簡単に倒せた",
+      "video_id": "6fvFo9TR0rg",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "少ない連数で水着おたま等4体を引き当てた",
+      "video_id": "T4fLtThfvfU",
+      "channel": "くんちゃんねる"
+    },
+    {
+      "point": "前回も90連でコンプできGBキャラ運が好調",
+      "video_id": "T4fLtThfvfU",
+      "channel": "くんちゃんねる"
+    },
+    {
+      "point": "メイレンとエミリアを確保できた",
+      "video_id": "mTiBvJWBVfA",
+      "channel": "明星ch"
+    },
+    {
+      "point": "シンディを引けた",
+      "video_id": "mTiBvJWBVfA",
+      "channel": "明星ch"
+    },
+    {
+      "point": "気ハは24ヒットの環境破壊級アタッカーで超おすすめ",
+      "video_id": "YK2Ulzm05os",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "オタマは9種フォース＆無人島ほぼ必須で強力",
+      "video_id": "YK2Ulzm05os",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "イリスは高相性で環境を選べる優秀なサポーター",
+      "video_id": "YK2Ulzm05os",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "ヒューズは全体SS20ヒット＋デバフ両立で強力",
+      "video_id": "YK2Ulzm05os",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "イベントに変化をつける姿勢が嬉しい",
+      "video_id": "tpnVsue1c_U",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "ボスは残弱で簡単に勝てる",
+      "video_id": "tpnVsue1c_U",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "均等振りで最低3500保障",
+      "video_id": "tpnVsue1c_U",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "エミリアは火力サポーターとして強い",
+      "video_id": "hERDn-5riJ8",
+      "channel": "tyamu"
+    },
+    {
+      "point": "シンディは敵が多いほど火力が上がり強力",
+      "video_id": "hERDn-5riJ8",
+      "channel": "tyamu"
+    },
+    {
+      "point": "シンディは主軸になるポテンシャルあり",
+      "video_id": "hERDn-5riJ8",
+      "channel": "tyamu"
+    },
+    {
+      "point": "報酬にチップがもらえてありがたい",
+      "video_id": "HdW7rUDZ_Ow",
+      "channel": "明星ch"
+    },
+    {
+      "point": "キャラ2人とも使いやすそう",
+      "video_id": "HdW7rUDZ_Ow",
+      "channel": "明星ch"
+    },
+    {
+      "point": "タグ制で別作品ユニットにも乗せやすい",
+      "video_id": "HdW7rUDZ_Ow",
+      "channel": "明星ch"
+    },
+    {
+      "point": "FF2の名曲がRSで流れるBGM変更に大感動",
+      "video_id": "UcCWR7KAmnA",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "ガチャなしでジュエル大量配布はただただラッキー",
+      "video_id": "UcCWR7KAmnA",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "楽しませるためだけの最高のコラボ",
+      "video_id": "UcCWR7KAmnA",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "鬼八＆おたまの新テンプレ編成が強力",
+      "video_id": "K35V4rPUpQ4",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ガチャ当日に即クリアできた",
+      "video_id": "K35V4rPUpQ4",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "排水なしゴール更新できた",
+      "video_id": "K35V4rPUpQ4",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ヒューズは開幕/3の倍数で全体SS20と高火力",
+      "video_id": "pTHzJ1pD-n0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "ヒューズは敵の防御/ステータスを下げる優秀な邪魔",
+      "video_id": "pTHzJ1pD-n0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "全員10なので始めたてには強化になる",
+      "video_id": "pTHzJ1pD-n0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "ヒューズの2ターン全体41ヒットが強力",
+      "video_id": "uReGYE0hB6E",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ヒューズは安定感がある",
+      "video_id": "uReGYE0hB6E",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "エミリアのエクストラ武器は強い",
+      "video_id": "uReGYE0hB6E",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "エミリアはデバフ/BP対策で対応力あり",
+      "video_id": "uReGYE0hB6E",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ヒューズは3対1回超物資で使いやすい",
+      "video_id": "E5fnTBJ7Qz4",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "エミリアはぼちぼち強い",
+      "video_id": "E5fnTBJ7Qz4",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "シンディは影パなら強いかも",
+      "video_id": "E5fnTBJ7Qz4",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "ドールは全員10で価値がある",
+      "video_id": "E5fnTBJ7Qz4",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "8手運用で100位前後を狙える",
+      "video_id": "iF9iPWxxe7Y",
+      "channel": "tyamu"
+    },
+    {
+      "point": "今週の井戸も楽しくなってきた",
+      "video_id": "iF9iPWxxe7Y",
+      "channel": "tyamu"
+    },
+    {
+      "point": "SP化・SSP化チップがもらえてありがたい",
+      "video_id": "7-nVINBG4lQ",
+      "channel": "明星ch"
+    },
+    {
+      "point": "セイラ・ララァ2人とも使いやすそう",
+      "video_id": "7-nVINBG4lQ",
+      "channel": "明星ch"
+    },
+    {
+      "point": "作品数だけ無限にイベントできそう",
+      "video_id": "7-nVINBG4lQ",
+      "channel": "明星ch"
+    },
+    {
+      "point": "キャラ条件がタグ制で別作品に乗せやすい",
+      "video_id": "7-nVINBG4lQ",
+      "channel": "明星ch"
+    },
+    {
+      "point": "難易度はかなり低めで挑戦しやすい",
+      "video_id": "b6uc1BSgE5U",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "SSS武器エクスカリバーを入手できてお得",
+      "video_id": "b6uc1BSgE5U",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "ODゲージ上昇スタイルで回避を貫ける",
+      "video_id": "b6uc1BSgE5U",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "全体バフはいつも通り強い",
+      "video_id": "YGlgYV_Adig",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "タコおじのエクストラ永続付与は良い",
+      "video_id": "YGlgYV_Adig",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "タコおじの防御75%はなかなか良い",
+      "video_id": "YGlgYV_Adig",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "気ハは残雷の超高火力で短期戦・レイドで活躍",
+      "video_id": "sfa6i2-xkxs",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "ヒューズは全体火力とデバフを両立でき魅力",
+      "video_id": "sfa6i2-xkxs",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "オタマは継承前提なら無人島等で非常に強力",
+      "video_id": "sfa6i2-xkxs",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "Dナンバー5はザレ3属性で汎用性が高い",
+      "video_id": "sfa6i2-xkxs",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "手持ち編成で9ターン撃破できた",
+      "video_id": "Kmm-ItZagig",
+      "channel": "tyamu"
+    },
+    {
+      "point": "イベントが結構楽しかった",
+      "video_id": "ZjVEqGhtrwk",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "良い結果が出て嬉しい",
+      "video_id": "ZjVEqGhtrwk",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "ソウルピースやジュエルが出た",
+      "video_id": "ZjVEqGhtrwk",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "エレノアなど新スタイルを配信外で入手できた",
+      "video_id": "sj8fGEp2TxQ",
+      "channel": "もんでる"
+    },
+    {
+      "point": "堅実分配なら確実にジュエルがもらえる",
+      "video_id": "fhJLBkb_DIE",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "最大1万5000ジュエルの夢がある",
+      "video_id": "fhJLBkb_DIE",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "リアム等でOD満タン維持でき全力オートで安定",
+      "video_id": "g0m8PPUF0eI",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "1ゲージ目はカウンターが有効",
+      "video_id": "g0m8PPUF0eI",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ギミック少なく駆け抜けられる",
+      "video_id": "g0m8PPUF0eI",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "計8000ジュエルをしっかり配ってくれてありがたい",
+      "video_id": "K3fEgNELVGY",
+      "channel": "明星ch"
+    },
+    {
+      "point": "エクスカリバーFF2など限定品が交換できる",
+      "video_id": "K3fEgNELVGY",
+      "channel": "明星ch"
+    },
+    {
+      "point": "エレノアの火力がぶっ飛び一人だけ飛び抜けている",
+      "video_id": "XPxIc30OKN4",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "ファイナルイグニッションの演出がかっこいい",
+      "video_id": "XPxIc30OKN4",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "5ターン戦なら火力として活躍でき満足",
+      "video_id": "XPxIc30OKN4",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    }
+  ],
+  "negative_points": [
+    {
+      "point": "タコおじはデメリット持ちで刺さる場面少ない",
+      "video_id": "gTm0_KUFsT0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "エミリアは汎用性が限りなく低い",
+      "video_id": "gTm0_KUFsT0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "全体的に趣味ガチャでジュエル溜め込み期間",
+      "video_id": "gTm0_KUFsT0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "ヒューズも無尽塔36では火力が足りず微妙",
+      "video_id": "rDbjbuyeeQQ",
+      "channel": "もんでる"
+    },
+    {
+      "point": "ガチャ全体は環境を変えるほどでない",
+      "video_id": "rDbjbuyeeQQ",
+      "channel": "もんでる"
+    },
+    {
+      "point": "ダブルガチャ連発しすぎ",
+      "video_id": "rDbjbuyeeQQ",
+      "channel": "もんでる"
+    },
+    {
+      "point": "無尽塔36をクリアできず",
+      "video_id": "rDbjbuyeeQQ",
+      "channel": "もんでる"
+    },
+    {
+      "point": "最初に記憶再戦を固定化してはダメ",
+      "video_id": "SF83kHWzXpo",
+      "channel": "RS 周回チャンネル"
+    },
+    {
+      "point": "同じ場所を周回すると損",
+      "video_id": "SF83kHWzXpo",
+      "channel": "RS 周回チャンネル"
+    },
+    {
+      "point": "パスキー5個以上は無駄になる",
+      "video_id": "SF83kHWzXpo",
+      "channel": "RS 周回チャンネル"
+    },
+    {
+      "point": "イベントが複雑で注意点が多い",
+      "video_id": "SF83kHWzXpo",
+      "channel": "RS 周回チャンネル"
+    },
+    {
+      "point": "弱点がなくサやビンセント等ウィーク要員が使いづらい",
+      "video_id": "VvgifjGaF8E",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "エリクサーや連撃でHP回復され火力押し切りが必要",
+      "video_id": "VvgifjGaF8E",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "ガチャは来ないと明言され少し残念",
+      "video_id": "VvgifjGaF8E",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "ターコは1万ジュエル溶かしても何も出ずパニック買いを反省",
+      "video_id": "T4fLtThfvfU",
+      "channel": "くんちゃんねる"
+    },
+    {
+      "point": "110連やって何も出ず爆死",
+      "video_id": "mTiBvJWBVfA",
+      "channel": "明星ch"
+    },
+    {
+      "point": "演出が弱く全く出ない",
+      "video_id": "mTiBvJWBVfA",
+      "channel": "明星ch"
+    },
+    {
+      "point": "すり抜けが連発する",
+      "video_id": "mTiBvJWBVfA",
+      "channel": "明星ch"
+    },
+    {
+      "point": "課金した途端すり抜け",
+      "video_id": "mTiBvJWBVfA",
+      "channel": "明星ch"
+    },
+    {
+      "point": "エミリアは必須級ではなく属性内の便利枠止まり",
+      "video_id": "YK2Ulzm05os",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "メイレンの1.25倍付与率は低く控えめ",
+      "video_id": "YK2Ulzm05os",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "タコ寺・シンディはニッチで優先度控えめ",
+      "video_id": "YK2Ulzm05os",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "同じ場所を周回すると何も得られず後悔",
+      "video_id": "tpnVsue1c_U",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "ジュエルのドロップ率が薄そうで注意",
+      "video_id": "tpnVsue1c_U",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "全賭けは0の可能性が高く怖い",
+      "video_id": "tpnVsue1c_U",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "タコおじは雪だるまの劣化版で汎用性厳しい",
+      "video_id": "hERDn-5riJ8",
+      "channel": "tyamu"
+    },
+    {
+      "point": "タコおじは初動が遅い",
+      "video_id": "hERDn-5riJ8",
+      "channel": "tyamu"
+    },
+    {
+      "point": "エミリアは突き抜け感が足りない",
+      "video_id": "hERDn-5riJ8",
+      "channel": "tyamu"
+    },
+    {
+      "point": "シンディはすぐ引かず様子見が良い",
+      "video_id": "hERDn-5riJ8",
+      "channel": "tyamu"
+    },
+    {
+      "point": "部隊1の出撃制限が厳しめ",
+      "video_id": "HdW7rUDZ_Ow",
+      "channel": "明星ch"
+    },
+    {
+      "point": "ガチャが1〜2キャラでもあれば嬉しかった",
+      "video_id": "UcCWR7KAmnA",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "バッハのランダムヒットBP削りが運ゲーで厄介",
+      "video_id": "K35V4rPUpQ4",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "サ魂デバフがないと1ターン目が厳しい",
+      "video_id": "K35V4rPUpQ4",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ドールは継承なしミド君で今更感",
+      "video_id": "pTHzJ1pD-n0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "メイレンは一昔前の誓い系で縛りきつい",
+      "video_id": "pTHzJ1pD-n0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "3人ともデフレ気味の趣味ガチャ",
+      "video_id": "pTHzJ1pD-n0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "ヒューズはエクストラ拡張がなく連続性に難",
+      "video_id": "uReGYE0hB6E",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "エミリアは個人火力含め全体が無難すぎる",
+      "video_id": "uReGYE0hB6E",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "エミリアは根本的にそんなに強くない",
+      "video_id": "uReGYE0hB6E",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "メイレンの打の導きは使う機会が少ない",
+      "video_id": "E5fnTBJ7Qz4",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "ドールはアルティメットミド君に劣る",
+      "video_id": "E5fnTBJ7Qz4",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "今回のガチャは全体的に抑えめ",
+      "video_id": "E5fnTBJ7Qz4",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "新キャラは必須感がなく刺さる場面限定",
+      "video_id": "E5fnTBJ7Qz4",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "6手の上位編成がまだ分からない",
+      "video_id": "iF9iPWxxe7Y",
+      "channel": "tyamu"
+    },
+    {
+      "point": "部隊1の出撃制限が厳しめ",
+      "video_id": "7-nVINBG4lQ",
+      "channel": "明星ch"
+    },
+    {
+      "point": "弱点がなくエクストラフォースや余ダメ上昇が使えない",
+      "video_id": "b6uc1BSgE5U",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "エリクサーや7連撃でHP回復されるので火力が必要",
+      "video_id": "b6uc1BSgE5U",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "メイレンは拡張性1.25倍で強く感じない",
+      "video_id": "YGlgYV_Adig",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "属性縛りがただの縛りで弱い",
+      "video_id": "YGlgYV_Adig",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "メイレンは防御50%に下げられ不遇",
+      "video_id": "YGlgYV_Adig",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "タコおじは立ち上がり遅く使い所がない",
+      "video_id": "YGlgYV_Adig",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "Sランク該当なしで必須級はいない",
+      "video_id": "sfa6i2-xkxs",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "気ハ・ヒューズはサポート要素が薄く高難易度で採用されにくい",
+      "video_id": "sfa6i2-xkxs",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "シンディやメイレンは扱いづらく優先度低め",
+      "video_id": "sfa6i2-xkxs",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "タコおじさんは敵の冷続火力も上げるデメリット持ち",
+      "video_id": "sfa6i2-xkxs",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "連魔周回がきついという声が多い",
+      "video_id": "ZjVEqGhtrwk",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "連魔素材がなぜ多いのか疑問",
+      "video_id": "ZjVEqGhtrwk",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "雑魚が強すぎて火力・BPが足りず苦戦",
+      "video_id": "sj8fGEp2TxQ",
+      "channel": "もんでる"
+    },
+    {
+      "point": "排水を覚えないと突破は無理そう",
+      "video_id": "sj8fGEp2TxQ",
+      "channel": "もんでる"
+    },
+    {
+      "point": "1箇所43枚は最悪51ジュエルの危険例",
+      "video_id": "fhJLBkb_DIE",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "適当に交換するのはダメ",
+      "video_id": "fhJLBkb_DIE",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "回避によるディフレクトで防御低下が致命的",
+      "video_id": "g0m8PPUF0eI",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "回避の時間稼ぎがしんどい",
+      "video_id": "g0m8PPUF0eI",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "しっかり目の防御が必要",
+      "video_id": "g0m8PPUF0eI",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "エクスカリバーはロマショップに追加されない限定品で取り逃し注意",
+      "video_id": "K3fEgNELVGY",
+      "channel": "明星ch"
+    },
+    {
+      "point": "軽減がなく耐久性能はない(5ターン以降向け)",
+      "video_id": "XPxIc30OKN4",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "火力が高すぎて手加減が必要なほど",
+      "video_id": "XPxIc30OKN4",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    }
+  ],
+  "pick_candidates": [
+    {
+      "video_id": "E5fnTBJ7Qz4",
+      "title": "【ロマサガRS】神速6人性能確認！注意喚起ありエミリア＆メイレン編【ロマンシングサガリユニバース】",
+      "channel": "つむつむちゃんねる●ゲーム考察専門",
+      "published_at": "2026-07-07T04:01:49Z",
+      "url": "https://www.youtube.com/watch?v=E5fnTBJ7Qz4",
+      "summary_3lines": "真夏の花火は適当交換NGと注意喚起\nメイレン編・エミリア編の新6体を性能確認\nヒューズは使えるが全体的に抑えめと評価",
+      "key_topics": [
+        "花火交換注意",
+        "メイレン編性能",
+        "エミリア編性能",
+        "ヒューズ評価",
+        "導きシリーズ"
+      ],
+      "n_pos": 4,
+      "n_neg": 4,
+      "positive_points": [
+        "ヒューズは3対1回超物資で使いやすい",
+        "エミリアはぼちぼち強い",
+        "シンディは影パなら強いかも",
+        "ドールは全員10で価値がある"
+      ],
+      "negative_points": [
+        "メイレンの打の導きは使う機会が少ない",
+        "ドールはアルティメットミド君に劣る",
+        "今回のガチャは全体的に抑えめ",
+        "新キャラは必須感がなく刺さる場面限定"
+      ]
+    },
+    {
+      "video_id": "sfa6i2-xkxs",
+      "title": "【ロマサガRS】2026年7月上旬ガチャ総まとめ！全12スタイル引くべきスタイルランキング！【ロマンシング サガ リユニバース】",
+      "channel": "ジュラのサガちゃんねる",
+      "published_at": "2026-07-10T10:00:12Z",
+      "url": "https://www.youtube.com/watch?v=sfa6i2-xkxs",
+      "summary_3lines": "7月上旬実装ガチャ全12スタイルをティアランク付け\nSなし、Aは気ハとヒューズで火力重視の高評価\nオタマは継承前提で強力な特別枠として紹介",
+      "key_topics": [
+        "7月上旬ガチャ",
+        "ティアランク",
+        "気ハ",
+        "ヒューズ",
+        "オタマ",
+        "全12スタイル"
+      ],
+      "n_pos": 4,
+      "n_neg": 4,
+      "positive_points": [
+        "気ハは残雷の超高火力で短期戦・レイドで活躍",
+        "ヒューズは全体火力とデバフを両立でき魅力",
+        "オタマは継承前提なら無人島等で非常に強力",
+        "Dナンバー5はザレ3属性で汎用性が高い"
+      ],
+      "negative_points": [
+        "Sランク該当なしで必須級はいない",
+        "気ハ・ヒューズはサポート要素が薄く高難易度で採用されにくい",
+        "シンディやメイレンは扱いづらく優先度低め",
+        "タコおじさんは敵の冷続火力も上げるデメリット持ち"
+      ]
+    },
+    {
+      "video_id": "gTm0_KUFsT0",
+      "title": "【ロマサガRS】待望の新キャラの性能が実は...！エミリア編ガチャ性能チェック【ロマンシング サガ リユニバース】",
+      "channel": "サンゾーGAMES",
+      "published_at": "2026-07-07T23:55:04Z",
+      "url": "https://www.youtube.com/watch?v=gTm0_KUFsT0",
+      "summary_3lines": "エミリア編3体の性能を詳しくチェック\nシンディは陰属性レイドで輝く優秀な置物\nタコおじは冷続趣味枠、エミリアは打熱陽サポ",
+      "key_topics": [
+        "タコおじ性能",
+        "シンディ性能",
+        "エミリア性能",
+        "陰属性レイド",
+        "趣味ガチャ"
+      ],
+      "n_pos": 4,
+      "n_neg": 3,
+      "positive_points": [
+        "シンディはレイドで輝く優秀な置物",
+        "エミリアは打熱陽で意外と火力が出る",
+        "タコおじは冷続編成の強化に良い",
+        "エミリアのイラストは100点"
+      ],
+      "negative_points": [
+        "タコおじはデメリット持ちで刺さる場面少ない",
+        "エミリアは汎用性が限りなく低い",
+        "全体的に趣味ガチャでジュエル溜め込み期間"
+      ]
+    },
+    {
+      "video_id": "rDbjbuyeeQQ",
+      "title": "【ロマサガRS】無尽塔36クリア（後半部分）　2026サガ フロンティア発売日記念ガチャ",
+      "channel": "もんでる",
+      "published_at": "2026-07-07T16:02:41Z",
+      "url": "https://www.youtube.com/watch?v=rDbjbuyeeQQ",
+      "summary_3lines": "サガフロ記念ダブルガチャを引き性能を評価\nヒューズとオタマを確保、他は微妙と結論\n無尽塔36シャムマベル戦は攻略しきれず苦戦",
+      "key_topics": [
+        "サガフロ記念ガチャ",
+        "ヒューズ確保",
+        "タコおじ",
+        "無尽塔36攻略",
+        "花火番号ベット"
+      ],
+      "n_pos": 3,
+      "n_neg": 4,
+      "positive_points": [
+        "ヒューズが強く引けて大きい",
+        "オタマ(氷の剣素材)確保でライオン等クリア",
+        "均等ベットで最低3500確保"
+      ],
+      "negative_points": [
+        "ヒューズも無尽塔36では火力が足りず微妙",
+        "ガチャ全体は環境を変えるほどでない",
+        "ダブルガチャ連発しすぎ",
+        "無尽塔36をクリアできず"
+      ]
+    },
+    {
+      "video_id": "YK2Ulzm05os",
+      "title": "【ロマサガRS】残り時間僅か有！4大ガチャランキング引くべき優先順位考察【ロマンシングサガリユニバース】",
+      "channel": "つむつむちゃんねる●ゲーム考察専門",
+      "published_at": "2026-07-10T23:05:35Z",
+      "url": "https://www.youtube.com/watch?v=YK2Ulzm05os",
+      "summary_3lines": "4大ガチャの引くべき優先順位を1〜4位でランキング考察\n1位は気ハ＆オタマ、24ヒットの環境破壊性能で超おすすめ\n残り2日、迷っているなら引いて良いと結論",
+      "key_topics": [
+        "4大ガチャ",
+        "引くべき優先順位",
+        "気ハ",
+        "オタマ",
+        "イリス",
+        "ヒューズ"
+      ],
+      "n_pos": 4,
+      "n_neg": 3,
+      "positive_points": [
+        "気ハは24ヒットの環境破壊級アタッカーで超おすすめ",
+        "オタマは9種フォース＆無人島ほぼ必須で強力",
+        "イリスは高相性で環境を選べる優秀なサポーター",
+        "ヒューズは全体SS20ヒット＋デバフ両立で強力"
+      ],
+      "negative_points": [
+        "エミリアは必須級ではなく属性内の便利枠止まり",
+        "メイレンの1.25倍付与率は低く控えめ",
+        "タコ寺・シンディはニッチで優先度控えめ"
+      ]
+    },
+    {
+      "video_id": "hERDn-5riJ8",
+      "title": "【ロマサガrs】エミリア・シンディ・キャンベル・タコおじさん能力値早見表 ~火力サポーターがずらーりー〜エミリア編ガチャ",
+      "channel": "tyamu",
+      "published_at": "2026-07-07T05:27:30Z",
+      "url": "https://www.youtube.com/watch?v=hERDn-5riJ8",
+      "summary_3lines": "サガフロ記念ガチャ3体の能力値を考察\nタコおじはマスコット、エミリアは火力サポ\nシンディは敵多数で輝くテクニカルサポ",
+      "key_topics": [
+        "タコおじ考察",
+        "エミリア考察",
+        "シンディ考察",
+        "火力サポーター",
+        "能力値早見表"
+      ],
+      "n_pos": 3,
+      "n_neg": 4,
+      "positive_points": [
+        "エミリアは火力サポーターとして強い",
+        "シンディは敵が多いほど火力が上がり強力",
+        "シンディは主軸になるポテンシャルあり"
+      ],
+      "negative_points": [
+        "タコおじは雪だるまの劣化版で汎用性厳しい",
+        "タコおじは初動が遅い",
+        "エミリアは突き抜け感が足りない",
+        "シンディはすぐ引かず様子見が良い"
+      ]
+    },
+    {
+      "video_id": "uReGYE0hB6E",
+      "title": "【ロマサガRS】サライを凌ぐ「全体SS20連打」デバフに弱化とサポートもOKヒューズ&打熱陽エクストラ組み合わせで常時1.5倍置物に継承で1.75倍エミリアの継承汎用性!!　#ロマサガRS",
+      "channel": "タマゴローRS",
+      "published_at": "2026-07-07T04:35:11Z",
+      "url": "https://www.youtube.com/watch?v=uReGYE0hB6E",
+      "summary_3lines": "ヒューズは全体SS20連打で特攻性が高い\nエミリアはエクストラ拡張が救いの無難サポ\n2体ならヒューズ推奨と結論づける",
+      "key_topics": [
+        "ヒューズ性能",
+        "エミリア性能",
+        "全体SS20連打",
+        "エクストラ付与",
+        "継承汎用性"
+      ],
+      "n_pos": 4,
+      "n_neg": 3,
+      "positive_points": [
+        "ヒューズの2ターン全体41ヒットが強力",
+        "ヒューズは安定感がある",
+        "エミリアのエクストラ武器は強い",
+        "エミリアはデバフ/BP対策で対応力あり"
+      ],
+      "negative_points": [
+        "ヒューズはエクストラ拡張がなく連続性に難",
+        "エミリアは個人火力含め全体が無難すぎる",
+        "エミリアは根本的にそんなに強くない"
+      ]
+    },
+    {
+      "video_id": "YGlgYV_Adig",
+      "title": "【ロマサガRS】「打無限」増幅バフ…最後の刺客！？メイレン&ただのマスコットに収まらない32連打エクストラ冷1.5倍のタコおじさん!!　#ロマサガRS",
+      "channel": "タマゴローRS",
+      "published_at": "2026-07-07T22:29:48Z",
+      "url": "https://www.youtube.com/watch?v=YGlgYV_Adig",
+      "summary_3lines": "打属性無限増幅型メイレンの性能を辛口評価\n拡張性1.25倍止まりで中途半端と指摘\nタコおじは霊編成ファンプレイ向けと結論",
+      "key_topics": [
+        "メイレン性能",
+        "タコおじ性能",
+        "無限増幅バフ",
+        "属性縛り編成",
+        "高難度評価"
+      ],
+      "n_pos": 3,
+      "n_neg": 4,
+      "positive_points": [
+        "全体バフはいつも通り強い",
+        "タコおじのエクストラ永続付与は良い",
+        "タコおじの防御75%はなかなか良い"
+      ],
+      "negative_points": [
+        "メイレンは拡張性1.25倍で強く感じない",
+        "属性縛りがただの縛りで弱い",
+        "メイレンは防御50%に下げられ不遇",
+        "タコおじは立ち上がり遅く使い所がない"
+      ]
+    },
+    {
+      "video_id": "SF83kHWzXpo",
+      "title": "【ロマサガRS】理解していないと後悔案件 新イベントの進め方やキャンペーンを徹底解説します!!【ロマンシング サガ リ・ユニバース】",
+      "channel": "RS 周回チャンネル",
+      "published_at": "2026-07-07T09:49:53Z",
+      "url": "https://www.youtube.com/watch?v=SF83kHWzXpo",
+      "summary_3lines": "潜入キャンベルマリンリゾートの進め方を解説\nパスキーで部屋解放、周回場所の切替が必須\n花火大会は全突1.5万か均等3500かと説明",
+      "key_topics": [
+        "マリンリゾートイベント",
+        "パスキー",
+        "周回注意点",
+        "花火大会",
+        "ジュエル交換"
+      ],
+      "n_pos": 2,
+      "n_neg": 4,
+      "positive_points": [
+        "全突なら1万5000ジュエルの夢",
+        "均等振りで最低3500ジュエル保障"
+      ],
+      "negative_points": [
+        "最初に記憶再戦を固定化してはダメ",
+        "同じ場所を周回すると損",
+        "パスキー5個以上は無駄になる",
+        "イベントが複雑で注意点が多い"
+      ]
+    },
+    {
+      "video_id": "mTiBvJWBVfA",
+      "title": "【ロマサガRS】無償ジュエル110連分は犠牲になりました『サガ フロンティア発売日記念 Romancing祭 メイレン編＆エミリア編』【ロマンシング サガ リ・ユニバース】",
+      "channel": "明星ch",
+      "published_at": "2026-07-07T05:27:53Z",
+      "url": "https://www.youtube.com/watch?v=mTiBvJWBVfA",
+      "summary_3lines": "エミリア編を無償110連から回すも爆死\nすり抜け連発で課金しても3体止まり\nメイレンとエミリアは最低限確保で終了",
+      "key_topics": [
+        "エミリア編ガチャ",
+        "メイレン編ガチャ",
+        "無償110連",
+        "すり抜け",
+        "爆死"
+      ],
+      "n_pos": 2,
+      "n_neg": 4,
+      "positive_points": [
+        "メイレンとエミリアを確保できた",
+        "シンディを引けた"
+      ],
+      "negative_points": [
+        "110連やって何も出ず爆死",
+        "演出が弱く全く出ない",
+        "すり抜けが連発する",
+        "課金した途端すり抜け"
+      ]
+    }
+  ]
+}
