@@ -1,0 +1,19 @@
+{
+  "date": "2026-07-22",
+  "n_tweets": 134,
+  "summary_3lines": "公式がアンケート協力者へ1,000ジュエルを配布、再回答も案内\n螺旋580/570階や雷の窟・魚人の井戸の攻略報告が引き続き活発\n花火交換券の集めきりと本日正午のお知らせに注目が集まる",
+  "key_topics": ["アンケートお礼配布（1,000ジュエル）", "螺旋回廊580/570階攻略", "雷の窟", "魚人たちの井戸", "真夏の花火交換券（集めきり）", "本日正午のお知らせ待ち"],
+  "positive_themes": ["アンケートお礼の1,000ジュエル配布に感謝の声", "螺旋580階を新キャラ・マカパワー等で3T撃破できたという達成報告", "新キャラをコンプ／全員ゲットできた喜び"],
+  "negative_themes": ["花火交換券が45枚止まりで残り5枚の入手先が分からないという声", "フュージョンエッジの交換タイミングを逃した後悔"],
+  "hot_tweets": [
+    {"tweet_id": "2079501258520707141", "url": "https://x.com/romasaga_rs/status/2079501258520707141", "author_handle": "romasaga_rs", "author_name": "ロマンシング サガ リ・ユニバース公式", "text": "【アンケートのお礼配布】プレイヤーアンケートにご協力いただいた方へ、1,000ジュエルを配布いたしました。また、ID入力間違い等で、ジュエルが配布されていない方については、アンケートの再回答をお願いしております。 #ロマサガRS", "likes": 270, "retweets": 33, "replies": 3},
+    {"tweet_id": "", "url": "https://x.com/imojirou_saigo", "author_handle": "imojirou_saigo", "author_name": "imojirou_saigo", "text": "急に蒸し暑くなったので冷やっとしていってください… #ロマサガRS #ホラもに", "likes": 85, "retweets": 3, "replies": 4},
+    {"tweet_id": "", "url": "https://x.com/tamago8008x", "author_handle": "tamago8008x", "author_name": "tamago8008x", "text": "おはようございます 久しぶりに唸る魂アビきたー！！ マカ、エクストラフォースIIナイス #ロマサガRS", "likes": 63, "retweets": 0, "replies": 0},
+    {"tweet_id": "", "url": "https://x.com/NekoHarchan", "author_handle": "NekoHarchan", "author_name": "NekoHarchan", "text": "4マクマクマクリーで勝ちきった 雷窟全クリしました笑 #ロマサガRS", "likes": 56, "retweets": 0, "replies": 3},
+    {"tweet_id": "", "url": "https://x.com/RRs3939", "author_handle": "RRs3939", "author_name": "RRs3939", "text": "螺旋580階 超絶多忙の為かなり出遅れましたが、禁断の「マカパワー」を使って無事に3Tフィニッシュ。螺旋新キャラもコンプ #ロマサガRS", "likes": 36, "retweets": 0, "replies": 0},
+    {"tweet_id": "", "url": "https://x.com/tairatell", "author_handle": "tairatell", "author_name": "tairatell", "text": "ウルトラワイドモニターを購入してデスク周りが充実。花火交換券貰い切りましたが45枚…あとは5枚はどこへ…。 #ロマサガRS", "likes": 35, "retweets": 0, "replies": 0},
+    {"tweet_id": "", "url": "https://x.com/Albelt_saga", "author_handle": "Albelt_saga", "author_name": "Albelt_saga", "text": "CAUTIONを割らないモモ八ワントップアタッカーによる螺旋580階。プラチナパリベルトと挑発のたまアビで皇帝の気絶攻撃を受ける作戦 #ロマサガRS", "likes": 32, "retweets": 0, "replies": 0},
+    {"tweet_id": "", "url": "https://x.com/Amakusa13Low", "author_handle": "Amakusa13Low", "author_name": "Amakusa13Low", "text": "おはようございます 今日はお知らせの日ですね♪ ・・・私は河馬人間の新スタイルの実装をいつまでも諦めない #ロマサガRS", "likes": 22, "retweets": 0, "replies": 1}
+  ],
+  "summarized_at": "2026-07-22T01:35:00Z"
+}
