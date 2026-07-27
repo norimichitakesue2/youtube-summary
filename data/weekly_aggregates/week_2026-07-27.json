@@ -1,0 +1,2475 @@
+{
+  "meta": {
+    "since": "2026-07-21",
+    "until": "2026-07-27",
+    "generated_at": "2026-07-27T01:17:29.330699+00:00",
+    "n_videos": 41,
+    "n_channels": 11,
+    "n_positive_points": 101,
+    "n_negative_points": 95
+  },
+  "channels": [
+    {
+      "channel": "サンゾーGAMES",
+      "n_videos": 7,
+      "videos": [
+        {
+          "video_id": "_nKyPo4rt5A",
+          "title": "【ロマサガRS】現状ガチャの最強は意外なキャラ？最新版確保優先度ランキング【ロマンシング サガ リユニバース】",
+          "published_at": "2026-07-25T13:03:24Z",
+          "url": "https://www.youtube.com/watch?v=_nKyPo4rt5A",
+          "summary_3lines": "現行ガチャの確保優先度をランキング解説\n最優先なしでマカ・アセルス・エリスが優先高\n陰属性過多でルージュ・レイ姫は優先度低め",
+          "key_topics": [
+            "確保優先度",
+            "マカ",
+            "アセルス",
+            "エリス",
+            "陰属性"
+          ],
+          "positive_points": [
+            "マカは火ダメ軽減が強力で優先1位",
+            "アセルスは斬×陰の強属性で60ヒット短期戦向き",
+            "エリスはエクストラフォース配布で置き物優秀"
+          ],
+          "negative_points": [
+            "今回は最優先級がおらず凪の時期",
+            "陰属性は飽和で杖のレイ姫・ルージュは不要気味",
+            "マカのカウンター蓄積は不具合気味で影響は限定的"
+          ]
+        },
+        {
+          "video_id": "nLxP0KErCMY",
+          "title": "【ロマサガRS】隠された重要要素！これを知っているかどうかで大きく差がつく？【ロマンシング サガ リユニバース】",
+          "published_at": "2026-07-25T09:07:03Z",
+          "url": "https://www.youtube.com/watch?v=nLxP0KErCMY",
+          "summary_3lines": "交換所後の周回先にフリークエストを推奨\nスペシャルはソウル抽選2回で3秒周回とお得\nただし育成上限が低く能力値は伸びない点に注意",
+          "key_topics": [
+            "フリークエスト",
+            "スペシャル周回",
+            "ソウルアビリティ",
+            "絆の記憶",
+            "育成"
+          ],
+          "positive_points": [
+            "スペシャルはソウル抽選2回で1万週分の効率",
+            "汚された庭園後は1体3秒周回で高効率",
+            "連マの遺跡は素材集めにおすすめ"
+          ],
+          "negative_points": [
+            "フリークエストは育成上限が低く能力値は上がらない",
+            "スペシャルの場所が分かりにくく探すのが面倒"
+          ]
+        },
+        {
+          "video_id": "BkW6EWnhAHU",
+          "title": "【ロマサガRS】衝撃的な内容にびっくり！新イベントの内容と周回を解説【ロマンシング サガ リユニバース】",
+          "published_at": "2026-07-24T12:25:38Z",
+          "url": "https://www.youtube.com/watch?v=BkW6EWnhAHU",
+          "summary_3lines": "サンゾーが新イベント（後編ストーリー）を解説。\n内容は薄くつなぎ、周回は4番の1箇所のみ。\n近日の公式生放送53に期待。",
+          "key_topics": [
+            "新イベント",
+            "周回スポット",
+            "ストーリー",
+            "公式生放送",
+            "連マの遺跡"
+          ],
+          "positive_points": [
+            "ストーリーが面白く続きが気になる",
+            "神様編成で12秒周回ができる"
+          ],
+          "negative_points": [
+            "イベント内容が薄くつなぎになっている",
+            "周回スポットが1箇所しかない",
+            "ストーリーは賛否両論"
+          ]
+        },
+        {
+          "video_id": "KfGpNEKwvUI",
+          "title": "【ロマサガRS】結局神は強い説が浮上？ウコム編ガチャ性能チェック【ロマンシング サガ リユニバース】",
+          "published_at": "2026-07-23T13:30:24Z",
+          "url": "https://www.youtube.com/watch?v=KfGpNEKwvUI",
+          "summary_3lines": "サンゾーがウコム編3体の性能をチェック。\nイスカンダールは強力なカウンターディフェンダー。\nウコムは普通に強キャラ、エリスが一番の当たり。",
+          "key_topics": [
+            "ウコム編",
+            "イスカンダール",
+            "レイ姫",
+            "ウコム",
+            "カウンター"
+          ],
+          "positive_points": [
+            "イスカンダールは面白くカウンター好きは取る価値",
+            "ウコムはエクストラをばらまけて偉い",
+            "総合ではエリスが一番の当たり"
+          ],
+          "negative_points": [
+            "イスカンダールは属性ザンのみでエクストラなし",
+            "レイ姫は技3が3回限定で4ター目以降息切れ",
+            "陰属性は過剰供給気味で今はジュエル温存ターン"
+          ]
+        },
+        {
+          "video_id": "OKAqEyo2GPw",
+          "title": "【ロマサガRS】やはり噂通りの強キャラ！？エリス編ガチャ性能チェック【ロマンシング サガ リユニバース】",
+          "published_at": "2026-07-23T10:34:41Z",
+          "url": "https://www.youtube.com/watch?v=OKAqEyo2GPw",
+          "summary_3lines": "サンゾーがエリス編3体の性能をチェック。\nエリスは今回の当たりで洋属性パ必須級。\nルージュは待機型、コーデリアはマイス型で難度高。",
+          "key_topics": [
+            "エリス編",
+            "エリス",
+            "ルージュ",
+            "コーデリア",
+            "洋属性"
+          ],
+          "positive_points": [
+            "エリスが今回の当たりで洋属性パ必須級",
+            "エリスはイラストも素晴らしい",
+            "ルージュは高スペックで味方サポートも豊富"
+          ],
+          "negative_points": [
+            "ルージュは5ター目から本気の待機型で使い道が見えにくい",
+            "コーデリアはマイス型で無理する性能でない",
+            "コーデリアは弱点必須で編成難易度が高い"
+          ]
+        },
+        {
+          "video_id": "xlhsXiDuT6o",
+          "title": "【ロマサガRS】エリス神が遂に降臨！最新のガチャがヤバすぎた！！【ロマンシング サガ リユニバース】",
+          "published_at": "2026-07-22T10:16:48Z",
+          "url": "https://www.youtube.com/watch?v=xlhsXiDuT6o",
+          "summary_3lines": "7/23実装のウコム・エリスガチャに大興奮\nミンサガの神々が続々降臨する展開\n次ガチャは7/31と予想し警戒",
+          "key_topics": [
+            "エリス実装",
+            "ウコム編",
+            "エリス編",
+            "花火玉交換ラスト",
+            "ガチャ予想大会"
+          ],
+          "positive_points": [
+            "ウコム・エリスのプレイアブル実装に歓喜",
+            "エリスをシルベン名義で実装する愛を評価",
+            "サイバの例からウコムも強い可能性"
+          ],
+          "negative_points": [
+            "夏の花火玉交換は今回がラストで要注意",
+            "復刻ガチャは無し",
+            "予想大会でウコム・エリス正解者は0名"
+          ]
+        },
+        {
+          "video_id": "DuHTP-GFTTk",
+          "title": "【ロマサガRS】ロマサガRS界のギャルが遂に実装か！？ストーリー後編ガチャを徹底予想【ロマンシング サガ リユニバース】",
+          "published_at": "2026-07-21T06:00:18Z",
+          "url": "https://www.youtube.com/watch?v=DuHTP-GFTTk",
+          "summary_3lines": "サンゾーが後編ガチャの内容を徹底予想。\n千き・すみれ・教授の3スタイルを予想。\nシグナス・ワグナス・サウザも陰属性から予想。",
+          "key_topics": [
+            "ガチャ予想",
+            "ちあき",
+            "教授",
+            "シグナス",
+            "陰属性"
+          ],
+          "positive_points": [],
+          "negative_points": []
+        }
+      ]
+    },
+    {
+      "channel": "明星ch",
+      "n_videos": 7,
+      "videos": [
+        {
+          "video_id": "JH6T-uEes_g",
+          "title": "【Gジェネエターナル】騎士ガンダム祭り！8月の更新情報まとめ 『SDガンダムGジェネレーションエターナル』",
+          "published_at": "2026-07-25T11:15:59Z",
+          "url": "https://www.youtube.com/watch?v=JH6T-uEes_g",
+          "summary_3lines": "Gジェネ8月更新情報とガチャ予告をまとめ\n限定アルトロン等とSDガンダム外伝祭りが目玉\n月末は控えめだが8月はSDガンダムに全振り",
+          "key_topics": [
+            "Gジェネエターナル",
+            "8月更新",
+            "アルトロンガンダム",
+            "SDガンダム外伝",
+            "ガチャ予告"
+          ],
+          "positive_points": [
+            "ガチャ内容を事前告知してくれるのはありがたい",
+            "SDガンダム外伝のレトロRPGマップが良い",
+            "アルガス騎士団など期待できるイベント"
+          ],
+          "negative_points": [
+            "月末イベントのボリュームは控えめな印象"
+          ]
+        },
+        {
+          "video_id": "48kg8ahI0yg",
+          "title": "【Gジェネエターナル】N RFザク 武装アニメ ＃Shorts ＃ジージェネエターナル",
+          "published_at": "2026-07-24T22:00:06Z",
+          "url": "https://www.youtube.com/watch?v=48kg8ahI0yg",
+          "summary_3lines": "GジェネエターナルのN RFザク武装アニメ\n武装演出を見せるショート動画\nセリフのみで解説ナレーションは無し",
+          "key_topics": [
+            "Gジェネエターナル",
+            "RFザク",
+            "武装アニメ",
+            "ショート"
+          ],
+          "positive_points": [],
+          "negative_points": []
+        },
+        {
+          "video_id": "fJ63xd4SSYs",
+          "title": "新作ガンダムシリーズ発表！！『機動戦士ガンダムRG XARX ZERO』",
+          "published_at": "2026-07-24T02:42:43Z",
+          "url": "https://www.youtube.com/watch?v=fJ63xd4SSYs",
+          "summary_3lines": "新作ガンダム『RG XARX ZERO』の発表情報を紹介。\nゲームと世界観を共有するメディアミックス展開。\n主人公機ガンダムゼロはシンプルな見た目。",
+          "key_topics": [
+            "新作ガンダム",
+            "RGシリーズ",
+            "アポカリプス",
+            "メディアミックス",
+            "2027年"
+          ],
+          "positive_points": [
+            "ガンダムゼロがシンプルな見た目で良い",
+            "メディアミックス前提の展開に期待",
+            "地球侵食など挑戦的な設定が面白い"
+          ],
+          "negative_points": [
+            "今回の話だけでは完結せず続きはゲーム",
+            "公開キャラが主人公しかまだない"
+          ]
+        },
+        {
+          "video_id": "pbwgx3m_B_s",
+          "title": "【ロマサガRS】とりまエリス編だけ、、『こよみ編 第6話 後編 公開記念 Romancing祭 エリス編』【ロマンシング サガ リ・ユニバース】",
+          "published_at": "2026-07-23T03:57:30Z",
+          "url": "https://www.youtube.com/watch?v=pbwgx3m_B_s",
+          "summary_3lines": "明星chがエリス編ガチャを70連実況。\nルージュ・コーデリア・エリスを50連で全て確保。\nすり抜けでタリアも来て引きが良かった。",
+          "key_topics": [
+            "エリス編ガチャ",
+            "50連で確定",
+            "コーデリア",
+            "引き",
+            "OD"
+          ],
+          "positive_points": [
+            "50連でピックが全て揃い引きが良かった",
+            "オートでOD使えて使いやすくなった"
+          ],
+          "negative_points": [
+            "最近のガチャの引きが良くなくモチベ低下",
+            "コーデリアは消費BP増加付与が重い"
+          ]
+        },
+        {
+          "video_id": "4DnsN5TJMOQ",
+          "title": "【Gジェネエターナル】R RFグフ 武装アニメ ＃Shorts ＃ジージェネエターナル",
+          "published_at": "2026-07-22T22:00:28Z",
+          "url": "https://www.youtube.com/watch?v=4DnsN5TJMOQ",
+          "summary_3lines": "GジェネエターナルのRFグフ武装アニメ紹介\n武装ボイスを披露するショート動画\n短尺で演出を見せる内容",
+          "key_topics": [
+            "Gジェネエターナル",
+            "RFグフ",
+            "武装アニメ",
+            "ショート"
+          ],
+          "positive_points": [],
+          "negative_points": []
+        },
+        {
+          "video_id": "FN-WOGQt2s0",
+          "title": "【Gジェネエターナル】本日リリース！DMM版触ってみた感想 『SDガンダムGジェネレーションエターナル』",
+          "published_at": "2026-07-22T09:35:40Z",
+          "url": "https://www.youtube.com/watch?v=FN-WOGQt2s0",
+          "summary_3lines": "GジェネエターナルDMM版がリリースされPC選択肢増加\n画質・動作はDMM版が快適と評価\n難点はBGMパックが未販売な点",
+          "key_topics": [
+            "DMM版",
+            "Google Play版比較",
+            "画質",
+            "戦闘アニメ",
+            "BGMパック"
+          ],
+          "positive_points": [
+            "DMM版は画質がくっきり見やすい",
+            "戦闘アニメが綺麗に描画される",
+            "Google Play版より動作が快適"
+          ],
+          "negative_points": [
+            "Google Play PC版はフリーズやローディングが長い",
+            "DMM版はBGMパックが購入不可",
+            "BGM購入済の人は反映されず損をする"
+          ]
+        },
+        {
+          "video_id": "ZufhD4wFLfU",
+          "title": "【ロマサガRS】ウコムとエリス実装 7月23日更新情報まとめ 【ロマンシング サガ リ・ユニバース】",
+          "published_at": "2026-07-22T04:08:18Z",
+          "url": "https://www.youtube.com/watch?v=ZufhD4wFLfU",
+          "summary_3lines": "7/23更新でウコム・エリス実装のダブルガチャ\nHP育成上限が5270へ上昇\n投稿者はエリス編優先で様子見の構え",
+          "key_topics": [
+            "ウコム編",
+            "エリス編",
+            "暦読み第6話",
+            "HP5270",
+            "水発連携"
+          ],
+          "positive_points": [
+            "HP育成上限が5270に上昇",
+            "トリプルS槍ウコムの槍が交換所で入手可",
+            "ログインボーナスで3000ジュエル"
+          ],
+          "negative_points": [
+            "エリスはシルベン名義で初登場ではない",
+            "最近ガチャの引きが悪くモチベ低下",
+            "ダブルガチャで石消費が激しい"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "タマゴローRS",
+      "n_videos": 7,
+      "videos": [
+        {
+          "video_id": "mELM8Zce61c",
+          "title": "【ロマサガRS】「最強神々」エリスVSアセルス→9体3ガチャランキング!!最新スタイルの最強を決める比較検討会→2026年7月26日版　#ロマサガRS",
+          "published_at": "2026-07-25T22:30:39Z",
+          "url": "https://www.youtube.com/watch?v=mELM8Zce61c",
+          "summary_3lines": "エリス編9スタイルを最強比較でランク付け\nエリスは全体攻撃連打で環境屈指の強さ\n霊姫・マカ・ウコムは条件付きで伸び悩む",
+          "key_topics": [
+            "エリス編",
+            "最強ランキング",
+            "エリス",
+            "ウコム",
+            "マカ",
+            "継承"
+          ],
+          "positive_points": [
+            "エリスは全体攻撃連打が環境屈指で無人島無双",
+            "ルージュは1人でOD満タンを配れて優秀",
+            "デスは数値が高く便利で確保推奨",
+            "コーデリアは技3継承が刺さる場合あり"
+          ],
+          "negative_points": [
+            "霊姫は前スタイルと差がなく圧倒的最下位",
+            "マカは拡張性を活かせる機会がほぼない",
+            "ウコムは50%抽選頼みで安定感がない",
+            "イスカンダールは個人火力に爆発力がない"
+          ]
+        },
+        {
+          "video_id": "Dk_a46WXN9I",
+          "title": "【ロマサガRS】「不純な動機」神々とアセルスを天秤にかけ選んだスタイルは…!?ガチャ厳選勢ガチャを引く!!　#ロマサガRS",
+          "published_at": "2026-07-25T10:30:27Z",
+          "url": "https://www.youtube.com/watch?v=Dk_a46WXN9I",
+          "summary_3lines": "ガチャ厳選勢がアセルス狙いでガチャを実演\nアセルスは便利だがそこまで欲しくない微妙枠\nマカは被りやすく活躍機会が少ないと評価",
+          "key_topics": [
+            "ガチャ実演",
+            "アセルス",
+            "マカ",
+            "エクストラウィーク",
+            "厳選"
+          ],
+          "positive_points": [
+            "アセルスは便利で取れればラッキー枠"
+          ],
+          "negative_points": [
+            "マカはザンウィークでしか作れず被りやすい",
+            "マカは活躍機会がほぼ出ない",
+            "アセルスはそこまで欲しくない微妙な性能"
+          ]
+        },
+        {
+          "video_id": "1OIM313APYY",
+          "title": "【ロマサガRS】「ベット黄金比」15000ジュエル必勝法!?花火玉ベットにはそれぞれの勝ち方がある→パターン3種をご提案　#ロマサガRS",
+          "published_at": "2026-07-24T22:30:05Z",
+          "url": "https://www.youtube.com/watch?v=1OIM313APYY",
+          "summary_3lines": "花火玉ベット(期限31日朝4時)の賭け方指南\n全ベット/分散/中央値の3パターンを提案\nおすすめは最低保証を残しつつ上ぶれ狙い",
+          "key_topics": [
+            "花火玉ベット",
+            "ジュエル",
+            "交換期限",
+            "賭け方3種"
+          ],
+          "positive_points": [
+            "32番号ベットで2等5850/3等2950も狙える",
+            "中央値狙いは安定して20連分を確保しやすい"
+          ],
+          "negative_points": [
+            "0ベットは最低保証のみで意味が薄い",
+            "全ベットは捨て花火玉が発生してしまう"
+          ]
+        },
+        {
+          "video_id": "v4uO8tM7nAw",
+          "title": "【ロマサガRS】6体ランキング「〇〇が最強に」ウコムの冷雷サポートがとあるキャラを強力サポート&いつものコーデリアがマイス型踏襲で激変!?　#ロマサガRS",
+          "published_at": "2026-07-23T23:24:35Z",
+          "url": "https://www.youtube.com/watch?v=v4uO8tM7nAw",
+          "summary_3lines": "タマゴローが6体ランキングでコーデリア等を考察。\nウコムはエクストラ置き物として強力。\nコーデリアは縛りきつく刺さらない性能。",
+          "key_topics": [
+            "6体ランキング",
+            "ウコム",
+            "コーデリア",
+            "貝サポート",
+            "エクストラ"
+          ],
+          "positive_points": [
+            "ウコムはエクストラ置き物として強力",
+            "ウコムは貝と相性最高",
+            "エリスは確定1.75倍で運用価値十分"
+          ],
+          "negative_points": [
+            "コーデリアは縛りがきつい割に刺さらない",
+            "コーデリアはいつも通り特徴がない",
+            "ウコムは片持ち属性だと弱く貝以外出番薄い"
+          ]
+        },
+        {
+          "video_id": "WRr3h2oZVU4",
+          "title": "【ロマサガRS】「100ヒット可能」!?超上振れ&ダメブロでとにかく堅い無尽塔でも汎用イスカンダール&マイス型ハイブリッドでサブアタッカー最高峰ルージュ　#ロマサガRS",
+          "published_at": "2026-07-23T09:00:37Z",
+          "url": "https://www.youtube.com/watch?v=WRr3h2oZVU4",
+          "summary_3lines": "タマゴローがルージュとイスカンダールを性能考察。\nルージュは長期戦のマイターンOD満タが強み。\nイスカンダールは無人島向けの上振れ型カウンター。",
+          "key_topics": [
+            "ルージュ",
+            "イスカンダール",
+            "マイス型",
+            "無人島",
+            "カウンター"
+          ],
+          "positive_points": [
+            "ルージュは長期戦でマイターンOD満タが強力",
+            "イスカンダールは初手瞬発力とダメブロ、無限追撃",
+            "味方全体への火力・防御サポートもできる"
+          ],
+          "negative_points": [
+            "ルージュは突き抜けず無難、代わりがいる",
+            "イスカンダールは個人火力が中途半端",
+            "エクストラも自己バフも弱く1人では倒しきれない"
+          ]
+        },
+        {
+          "video_id": "XgxrvjSf-MA",
+          "title": "【ロマサガRS】「超有能置物」全体37ヒットの最強神様エリス&アセルスと陰をサポートするサブアタッカー零姫　#ロマサガRS",
+          "published_at": "2026-07-23T04:55:08Z",
+          "url": "https://www.youtube.com/watch?v=XgxrvjSf-MA",
+          "summary_3lines": "タマゴローがエリスと零姫を性能考察。\nエリスは全体37ヒットの置き物特化で総合A。\n零姫は超短期戦専用で出力弱く総合B。",
+          "key_topics": [
+            "エリス",
+            "零姫",
+            "全体攻撃",
+            "置き物",
+            "エクストラ拡張"
+          ],
+          "positive_points": [
+            "エリスは全体37ヒットの猛攻、置き物として優秀",
+            "エリスはエクストラ拡張性が高い"
+          ],
+          "negative_points": [
+            "エリスは絡むと即離脱がネック、スロースタート",
+            "零姫は術算3回のみで出力弱く中途半端",
+            "零姫は目立った特徴が全くない"
+          ]
+        },
+        {
+          "video_id": "TQWwaxeicCI",
+          "title": "【ロマサガRS】「神話」予想通りの新キャラ祭!!ウコム!!エリス(シルベン?)ストーリー後編ダブルガチャお知らせ読んでこー　#ロマサガRS",
+          "published_at": "2026-07-22T03:58:15Z",
+          "url": "https://www.youtube.com/watch?v=TQWwaxeicCI",
+          "summary_3lines": "エリス・ウコムのガチャ予想が的中と自称\n後編はつなぎイベント扱いで内容は薄め\nイベント無い期間なので普段の消化を推奨",
+          "key_topics": [
+            "ウコムガチャ",
+            "エリス",
+            "ストーリー後編",
+            "ダブルガチャ",
+            "イスカンダール"
+          ],
+          "positive_points": [
+            "ウコムの槍性能に注目",
+            "イスカンダールが無人島対応しそうで期待"
+          ],
+          "negative_points": [
+            "後編はつなぎイベント扱いで内容が薄い",
+            "目立ったイベントが特にない"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "つむつむちゃんねる●ゲーム考察専門",
+      "n_videos": 5,
+      "videos": [
+        {
+          "video_id": "9VIkhFIQLME",
+          "title": "【ロマサガRS】きたぞきたぞ！やはり強い神々大暴れ！新キャラランキング【ロマンシングサガリユニバース】",
+          "published_at": "2026-07-25T23:07:46Z",
+          "url": "https://www.youtube.com/watch?v=9VIkhFIQLME",
+          "summary_3lines": "週次新キャラランキングでエリス編神々を評価\nエリスとウコムがSSで置き物兼火力に高評価\nマカは残弱点かつカウンター条件で化ける",
+          "key_topics": [
+            "新キャラランキング",
+            "エリス",
+            "ウコム",
+            "マカ",
+            "イスカンダール"
+          ],
+          "positive_points": [
+            "エリスは弓の希少な強キャラで置き物性能が高い",
+            "ウコムは霊全体アタッカーで長期戦の安定感抜群",
+            "マカは残弱点+カウンターでSS+級の火力",
+            "ルージュはOD促進と回復が使いやすい"
+          ],
+          "negative_points": [
+            "レイ姫は素早さが低く運用に課題",
+            "コーデリアはデバフ化で自身の火力が出にくい",
+            "マカは残弱点でない相手にはまず使わない",
+            "SSは減り環境支配は裁判ら一部のみ"
+          ]
+        },
+        {
+          "video_id": "3ijfPLtwyls",
+          "title": "【ロマサガRS】3大ガチャランキング！引くべき優先度考察★使ってみた所感解説【ロマンシングサガリユニバース】",
+          "published_at": "2026-07-25T01:37:40Z",
+          "url": "https://www.youtube.com/watch?v=3ijfPLtwyls",
+          "summary_3lines": "新3大ガチャを使ってみた所感で優先度付け\n3位デリス(エリス弓)/2位グコム/1位アセルス編\nアセルスの爆発力とマカの環境性能が光る",
+          "key_topics": [
+            "3大ガチャ",
+            "エリス弓",
+            "グコム",
+            "アセルス",
+            "デス",
+            "マカ"
+          ],
+          "positive_points": [
+            "エリス:大望の弓の強キャラ、置き物性能が優秀",
+            "グコム:霊全体攻撃、最大2.25倍で強力",
+            "アセルス:弱点攻撃で300〜400億出る爆発力",
+            "デス:単体EXフォース2.5倍の最高級サポート",
+            "マカ:残弱点でバフ量がえげつなく環境級"
+          ],
+          "negative_points": [
+            "エリス:追撃が6ターン目で遠く長期戦向け",
+            "グコム:50%抽選頼みで運要素が大きい",
+            "レイ姫:火力低く覚醒に課題、優先度控えめ",
+            "コードリア/ルージュ:火力伸びず飛び抜けない",
+            "マカ×カウンター2枚でエラー発生の不具合あり"
+          ]
+        },
+        {
+          "video_id": "0HQdlFDLn74",
+          "title": "【ロマサガRS】あの編成でイスカンダール化けてしまう件【ロマンシングサガリユニバース】",
+          "published_at": "2026-07-24T12:11:23Z",
+          "url": "https://www.youtube.com/watch?v=0HQdlFDLn74",
+          "summary_3lines": "つむつむがイスカンダール×マカの組み合わせを検証。\nマカのバフで威力E低火力のイスカンが化ける。\n螺旋の最終皇帝相手にカウンターで大ダメージ。",
+          "key_topics": [
+            "イスカンダール",
+            "マカ",
+            "カウンター",
+            "螺旋回廊",
+            "残弱"
+          ],
+          "positive_points": [
+            "イスカンダール×マカで火力が化ける",
+            "マカのバフでカウンターが強烈に伸びる",
+            "残弱の相手ではさらにやばい火力に"
+          ],
+          "negative_points": [
+            "イスカンダール単体は威力Eで火力が出ない",
+            "DP系のバフは今回ほぼ機能せず微妙"
+          ]
+        },
+        {
+          "video_id": "Ps5V2x6X3NM",
+          "title": "【ロマサガRS】神々が降臨！！セコム＆エリス編6人全員性能確認「【ロマンシングサガリユニバース】",
+          "published_at": "2026-07-23T04:13:20Z",
+          "url": "https://www.youtube.com/watch?v=Ps5V2x6X3NM",
+          "summary_3lines": "つむつむがウコム&エリス編6人全員の性能を確認。\nウコムとエリスは当たり枠で取りたい評価。\nコーデリアは消費BP増加が今の流行りに逆行。",
+          "key_topics": [
+            "6人性能確認",
+            "ウコム",
+            "エリス",
+            "イスカンダール",
+            "コーデリア"
+          ],
+          "positive_points": [
+            "ウコム・エリスは当たり枠で取りたい",
+            "イスカンダールは面白いことができそう",
+            "ウコムはエクストラばらまきが強力"
+          ],
+          "negative_points": [
+            "コーデリアは消費BP増加が今の編成に合わない",
+            "ルージュ・レイ姫は威力Dで火力が低い",
+            "レイ姫は超短期戦専用で出力が弱い"
+          ]
+        },
+        {
+          "video_id": "lJmn-hSF3I8",
+          "title": "【ロマサガRS】強者がいる気配！神速公式情報確認【ロマンシングサガリユニバース】",
+          "published_at": "2026-07-22T03:47:52Z",
+          "url": "https://www.youtube.com/watch?v=lJmn-hSF3I8",
+          "summary_3lines": "暦読み第6話ダブルガチャの内容を確認\nウコム編とエリス編の新スタイルを解説\n投稿者はルージュ推しで実装に期待",
+          "key_topics": [
+            "ウコム編",
+            "エリス編",
+            "ルージュ",
+            "コーデリア",
+            "イスカンダール"
+          ],
+          "positive_points": [
+            "イスカンダールは毎回そこそこ強い",
+            "弓槍・人術系が揃いインパ強化に期待",
+            "推しのルージュ実装に期待"
+          ],
+          "negative_points": [
+            "コーデリアは性能がニッチで弱め傾向が続く",
+            "ダブルガチャで石消費が激しい",
+            "最近のガチャの引きに不安"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "tyamu",
+      "n_videos": 5,
+      "videos": [
+        {
+          "video_id": "TBCffhiBCdI",
+          "title": "【ロマサガrs】第130回 ~魚人たちの井戸 ~2ターン井戸を想定したい（1ターン編成も😅）厳選❗️8パーティを紹介‼️",
+          "published_at": "2026-07-25T23:31:47Z",
+          "url": "https://www.youtube.com/watch?v=TBCffhiBCdI",
+          "summary_3lines": "7/27実装の魚人たちの井戸を実装前考察\n弱点冷で打・全体アタッカーが活躍と予想\n簡単に編成が読め物足りなさを懸念し8編成紹介",
+          "key_topics": [
+            "魚人たちの井戸",
+            "井戸考察",
+            "冷属性",
+            "全体アタッカー",
+            "ウコム編成"
+          ],
+          "positive_points": [
+            "冷属性の全体アタッカーが最も輝く",
+            "ウコム単体編成など多彩なクリア編成が可能"
+          ],
+          "negative_points": [
+            "1ターン編成がすぐ分かりやりごたえがない",
+            "敵火力が乏しく軽減対策不要で単調になりそう",
+            "久々復活だが予想外の強さがないと厳しい"
+          ]
+        },
+        {
+          "video_id": "uhJbRtTfaec",
+          "title": "【ロマサガrs】ウコム編ガチャ能力値早見表〜氷雷爆撃機 ~参上‼️超絶反撃追撃 ~連撃‼️【ウコム・零姫・イスカンダール】",
+          "published_at": "2026-07-24T12:19:45Z",
+          "url": "https://www.youtube.com/watch?v=uhJbRtTfaec",
+          "summary_3lines": "tyamuがウコム編の能力値早見表を解説。\n計算するとウコムとイスカンダールが強力と判明。\nウコムは爆撃機並みの全体34連打火力。",
+          "key_topics": [
+            "ウコム編早見表",
+            "ウコム",
+            "イスカンダール",
+            "反撃追撃",
+            "霊属性"
+          ],
+          "positive_points": [
+            "イスカンダールは残直接攻撃5回受けでぶっ壊れ性能",
+            "ウコムは爆撃機並みの全体火力34連打",
+            "ウコムは霊属性のキャラを強化できる"
+          ],
+          "negative_points": [
+            "レイ姫は標準アタッカー止まりで変わりがいる"
+          ]
+        },
+        {
+          "video_id": "toyPWjPeEPk",
+          "title": "【ロマサガrs】エリス編ガチャ能力値早見表〜火力サポーターガチャ〜特に…陽属性か…りょく…ヤバいわ😨【エリス・コーデリア・ルージュ】",
+          "published_at": "2026-07-23T03:14:34Z",
+          "url": "https://www.youtube.com/watch?v=toyPWjPeEPk",
+          "summary_3lines": "tyamuがエリス編の能力値早見表を解説。\nエリスは洋の火力サポーター兼全体アタッカー。\n初登場エクストラフォースで全体2.25倍が強力。",
+          "key_topics": [
+            "エリス編早見表",
+            "エリス",
+            "陽属性",
+            "エクストラフォース",
+            "コーデリア"
+          ],
+          "positive_points": [
+            "エリスは洋の火力サポーターとして一級品",
+            "エリスは属性全体アタッカーも兼ね一石二鳥",
+            "ルージュは中長期戦でかなり強い"
+          ],
+          "negative_points": [
+            "ルージュは汎用性低くスカウト機会が気がかり",
+            "コーデリアは各数値がそこまで高くない",
+            "どこで使うか問題がありそう"
+          ]
+        },
+        {
+          "video_id": "4S-R4sx16-Q",
+          "title": "【ロマサガrs】ちゃむのガチャ配信〜アセルスとマカが欲しい✨【神引きするまで終われません…】",
+          "published_at": "2026-07-21T13:01:47Z",
+          "url": "https://www.youtube.com/watch?v=4S-R4sx16-Q",
+          "summary_3lines": "アセルス・マカ狙いのガチャ配信\n60連でアセルスを確保\nマカ・デスは次ガチャを見て様子見で終了",
+          "key_topics": [
+            "アセルス",
+            "マカ",
+            "デス",
+            "ガチャ配信",
+            "センジュエル"
+          ],
+          "positive_points": [
+            "アセルスはWS5行動60ヒット腕力3700%バフでぶっ壊れ",
+            "マカはサポーター武力から高アタッカー性能",
+            "デスは斬アタッカーの火力サポーターで優秀"
+          ],
+          "negative_points": [
+            "アセルス確保に60連を要し引きが渋かった",
+            "マカ・デスは次ガチャ性能を見て保留"
+          ]
+        },
+        {
+          "video_id": "CR7SdfYiTTM",
+          "title": "【ロマサガrs】第129回サウノックたちの井戸〜8手編成で〜100位以内を狙え！！",
+          "published_at": "2026-07-21T00:18:41Z",
+          "url": "https://www.youtube.com/watch?v=CR7SdfYiTTM",
+          "summary_3lines": "サウノックたちの井戸のランキング100位向け攻略。\nビクトール・AJ・サイバ等の8手編成を紹介。\n現在1位は6手、キャラ入替で6手も狙えると案内。",
+          "key_topics": [
+            "サウノックたちの井戸",
+            "8手編成",
+            "ランキング100位",
+            "ターミン運用"
+          ],
+          "positive_points": [
+            "ターミンに資源召喚を継承し1手でダメージを稼げる"
+          ],
+          "negative_points": []
+        }
+      ]
+    },
+    {
+      "channel": "あんずもん",
+      "n_videos": 3,
+      "videos": [
+        {
+          "video_id": "5o2gu3WYmmU",
+          "title": "【信長の野望出陣】プレイ開始294日目記録　加速　進捗状況に変化が",
+          "published_at": "2026-07-23T16:13:33Z",
+          "url": "https://www.youtube.com/watch?v=5o2gu3WYmmU",
+          "summary_3lines": "あんずもんの信長の野望出陣プレイ294日目記録。\n新武将4体入手やプレイヤーランク96到達を報告。\n武田信虎など新規武将の性能に注目。",
+          "key_topics": [
+            "信長の野望出陣",
+            "294日目",
+            "新武将",
+            "制圧率",
+            "すごろく6"
+          ],
+          "positive_points": [
+            "武田信虎が竹特攻で強くなりそう",
+            "すごろく6のキャラは意外と強い武将が多い",
+            "滝川一益系や小田過が取れて嬉しい"
+          ],
+          "negative_points": [
+            "足軽秋は統率が低く引かない予定",
+            "覚醒5段階必要でコバンが厳しい",
+            "共闘の全報酬は課金しないと厳しい"
+          ]
+        },
+        {
+          "video_id": "06IzuLk-AVU",
+          "title": "【ロマサガRS】　個性ありそうなキャラが登場　最新お知らせ見て行こう　Interesting games from Japan【初見さん大歓迎】",
+          "published_at": "2026-07-23T14:43:53Z",
+          "url": "https://www.youtube.com/watch?v=06IzuLk-AVU",
+          "summary_3lines": "技上げ雑談配信で最新お知らせや周回を紹介\n絆の記憶スペシャルはソウル抽選2回でお得\n井戸1ターン化やランキング運ゲー化に不満も",
+          "key_topics": [
+            "雑談配信",
+            "フリークエスト周回",
+            "ソウルアビリティ",
+            "井戸",
+            "ランキング"
+          ],
+          "positive_points": [
+            "絆の記憶スペシャルはソウル抽選2回でお得",
+            "周回速度とスタミナ改善はメリット大",
+            "昔の手動集回は個性があって面白かった"
+          ],
+          "negative_points": [
+            "井戸の1ターン化は10回で飽きてやる気が出ない",
+            "ランキングが手数のみの運ゲーになりつつある",
+            "周回に作業感が強くなってきた"
+          ]
+        },
+        {
+          "video_id": "GXp6XFt73GA",
+          "title": "【ロマサガRS】　「ヒマ」を「チャンス」に　神時間　隙間時間にやるべき事4選",
+          "published_at": "2026-07-22T01:51:00Z",
+          "url": "https://www.youtube.com/watch?v=GXp6XFt73GA",
+          "summary_3lines": "イベント空白期にやるべき育成4選を紹介\n技上げ・魂レベル・関門武器上げが柱\n螺旋回廊討伐や記憶再生も忘れず推奨",
+          "key_topics": [
+            "技上げ",
+            "魂レベル上げ",
+            "関門武器",
+            "螺旋回廊",
+            "記憶再生"
+          ],
+          "positive_points": [
+            "技99で威力+10%と効率的",
+            "短連道場の自動周回が手軽で便利",
+            "記憶再生は5分程度で済むので必須"
+          ],
+          "negative_points": [
+            "ガードアップ等カタカナ技は技上げ効果なし"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "ジュラのサガちゃんねる",
+      "n_videos": 3,
+      "videos": [
+        {
+          "video_id": "8xrIwNblesA",
+          "title": "【ロマサガRS】Romancing祭「エリス 編」スタイル考察＆性能チェック【ロマンシング サガ リユニバース】",
+          "published_at": "2026-07-25T11:00:19Z",
+          "url": "https://www.youtube.com/watch?v=8xrIwNblesA",
+          "summary_3lines": "ロマンシング祭エリス編3スタイルを性能考察\nエリスは置き物兼アタッカーの2役でA-評価\nコーデリアはBP消費デメリット、ルージュは晩成型",
+          "key_topics": [
+            "エリス編",
+            "スタイル考察",
+            "エリス",
+            "コーデリア",
+            "ルージュ"
+          ],
+          "positive_points": [
+            "エリスは置き物とアタッカーの2役をこなす良性能",
+            "エリスの軽減率は6ターン目88%で優秀",
+            "ルージュは宿命の共演継承で軽減役として有用"
+          ],
+          "negative_points": [
+            "コーデリアはBP+5消費のデメリットが重い",
+            "コーデリアは既存マイス型の属性違いで登場が遅い",
+            "ルージュは本気が5ターン目以降と遅い"
+          ]
+        },
+        {
+          "video_id": "zPtev6CPmD0",
+          "title": "【ロマサガRS】Romancing祭「ウコム 編」スタイル考察＆性能チェック【ロマンシング サガ リユニバース】",
+          "published_at": "2026-07-24T11:00:32Z",
+          "url": "https://www.youtube.com/watch?v=zPtev6CPmD0",
+          "summary_3lines": "ジュラがウコム編3体を考察しランク付け。\nウコムはB＋、レイ姫はB、イスカンダールはB＋。\nどれもワンポイント採用で無理に取らなくてよい。",
+          "key_topics": [
+            "ウコム編考察",
+            "ランク付け",
+            "ウコム",
+            "レイ姫",
+            "イスカンダール"
+          ],
+          "positive_points": [
+            "ウコムは技算起点の全体34ヒットがぶっ飛んだ性能",
+            "ウコムは冷続性の槍として速攻で活躍しそう",
+            "イスカンダールは残相手に強力で味方サポートもできる"
+          ],
+          "negative_points": [
+            "ウコムは村っ気があり技算に使用回数制限",
+            "レイ姫は火力が3ターン限定で高難度性能不足",
+            "イスカンダールは万能でなく特定相手特攻、エクストラ2ターンのみ"
+          ]
+        },
+        {
+          "video_id": "6zc2B3rqv70",
+          "title": "【ロマサガRS】こよみ編第6話ガチャを考察する配信【生配信】",
+          "published_at": "2026-07-22T10:36:53Z",
+          "url": "https://www.youtube.com/watch?v=6zc2B3rqv70",
+          "summary_3lines": "ジュラのこよみ編ガチャ考察生配信。\nウコムは上振れ強いが下振れ弱い村っ気スタイル。\nレイ姫はBP優秀だが火力役として中途半端で低評価。",
+          "key_topics": [
+            "こよみ編ガチャ",
+            "ウコム",
+            "レイ姫",
+            "イスカンダール",
+            "エクストラフォース"
+          ],
+          "positive_points": [
+            "ウコムは上振れが強く2ター目から強い、防御も高い",
+            "イスカンダールは残相手にカウンターで強い"
+          ],
+          "negative_points": [
+            "ウコムは村っ気があり計算が複雑で下振れ弱い",
+            "レイ姫はBP役兼火力が中途半端で低評価",
+            "イスカンダールはエクストラフォースが2ターンのみで残念"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "あっきゃんGAMES",
+      "n_videos": 1,
+      "videos": [
+        {
+          "video_id": "Uu799mWnqSw",
+          "title": "【ロマサガRS】神々はやはり引くべき？ウコム&エリスガチャ性能チェック・キャラランク付け【ロマンシングサガリユニバース】",
+          "published_at": "2026-07-24T08:35:13Z",
+          "url": "https://www.youtube.com/watch?v=Uu799mWnqSw",
+          "summary_3lines": "あっきゃんが6体の性能をまとめランク付け。\nエリスは置き物性能とバフの多さで注目。\n神2体は性能が盛られている印象。",
+          "key_topics": [
+            "性能まとめ",
+            "キャラランク",
+            "エリス",
+            "ウコム",
+            "OD特化"
+          ],
+          "positive_points": [
+            "エリスは置き物性能が高くバフも多い、攻防バランス良好",
+            "神(ウコム・エリス)は性能が盛られている",
+            "コーデリアの技3は技マシン候補として優秀"
+          ],
+          "negative_points": [
+            "レイ姫は術3を使い切ると火力ダウン、威力も低い",
+            "ウコムは1点狙いになるのが厳しい",
+            "コーデリアはOD運用前提で自己OD満タできない"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "くんちゃんねる",
+      "n_videos": 1,
+      "videos": [
+        {
+          "video_id": "24-UI8AENsU",
+          "title": "【ロマサガRS】【大感謝】１番閃いてるのは誰！？魂アビリティ所持数グランプリ【No.623】",
+          "published_at": "2026-07-24T12:36:44Z",
+          "url": "https://www.youtube.com/watch?v=24-UI8AENsU",
+          "summary_3lines": "くんちゃんねるの魂アビリティ所持数グランプリ。\n視聴者107名の集計で上位キャラを発表。\n1位はAJ、2位はリラとこよみ。",
+          "key_topics": [
+            "魂アビリティ",
+            "所持数ランキング",
+            "視聴者企画",
+            "AJ",
+            "こよみ"
+          ],
+          "positive_points": [],
+          "negative_points": []
+        }
+      ]
+    },
+    {
+      "channel": "RS 周回チャンネル",
+      "n_videos": 1,
+      "videos": [
+        {
+          "video_id": "QqbnCDaLjGA",
+          "title": "【ロマサガRS】新イベント解説 注意点 11秒周回の編成3種紹介【ロマンシング サガ リ ユニバース】",
+          "published_at": "2026-07-23T07:07:15Z",
+          "url": "https://www.youtube.com/watch?v=QqbnCDaLjGA",
+          "summary_3lines": "RS周回チャンネルが新イベントを解説。\n周回の注意点を紹介。\n11秒周回の編成3種を紹介。",
+          "key_topics": [
+            "新イベント解説",
+            "11秒周回",
+            "編成3種",
+            "周回",
+            "注意点"
+          ],
+          "positive_points": [],
+          "negative_points": []
+        }
+      ]
+    },
+    {
+      "channel": "もんでる",
+      "n_videos": 1,
+      "videos": [
+        {
+          "video_id": "CDZ2Yon2ZGE",
+          "title": "【ロマサガRS】こよみ編 第6話 後編 公開記念Wガチャ😻",
+          "published_at": "2026-07-23T15:10:25Z",
+          "url": "https://www.youtube.com/watch?v=CDZ2Yon2ZGE",
+          "summary_3lines": "もんでるのWガチャ配信。マカ×カウンターのバグ話題。\nイスカンダールは面白い当たり、レイ姫は超微妙評価。\n後半は猛暑や置き配盗難の雑談。",
+          "key_topics": [
+            "Wガチャ",
+            "イスカンダール",
+            "マカバグ",
+            "レイ姫",
+            "猛暑"
+          ],
+          "positive_points": [
+            "イスカンダールは面白い当たり",
+            "エリスはバフ枚数がやばく強い",
+            "ターン開始で敵全体能力ダウンが強い"
+          ],
+          "negative_points": [
+            "レイ姫は超絶微妙で弱め、能力が適当",
+            "マカ×カウンターはオーバーフローでバグる"
+          ]
+        }
+      ]
+    }
+  ],
+  "top_topics": [
+    {
+      "topic": "イスカンダール",
+      "count": 11,
+      "video_ids": [
+        "zPtev6CPmD0",
+        "lJmn-hSF3I8",
+        "Ps5V2x6X3NM",
+        "0HQdlFDLn74",
+        "uhJbRtTfaec",
+        "TQWwaxeicCI",
+        "6zc2B3rqv70",
+        "9VIkhFIQLME",
+        "CDZ2Yon2ZGE",
+        "KfGpNEKwvUI",
+        "WRr3h2oZVU4"
+      ]
+    },
+    {
+      "topic": "エリス",
+      "count": 10,
+      "video_ids": [
+        "OKAqEyo2GPw",
+        "mELM8Zce61c",
+        "8xrIwNblesA",
+        "Uu799mWnqSw",
+        "Ps5V2x6X3NM",
+        "TQWwaxeicCI",
+        "_nKyPo4rt5A",
+        "XgxrvjSf-MA",
+        "9VIkhFIQLME",
+        "toyPWjPeEPk"
+      ]
+    },
+    {
+      "topic": "ウコム",
+      "count": 9,
+      "video_ids": [
+        "zPtev6CPmD0",
+        "mELM8Zce61c",
+        "Uu799mWnqSw",
+        "Ps5V2x6X3NM",
+        "uhJbRtTfaec",
+        "v4uO8tM7nAw",
+        "6zc2B3rqv70",
+        "9VIkhFIQLME",
+        "KfGpNEKwvUI"
+      ]
+    },
+    {
+      "topic": "コーデリア",
+      "count": 7,
+      "video_ids": [
+        "OKAqEyo2GPw",
+        "lJmn-hSF3I8",
+        "8xrIwNblesA",
+        "Ps5V2x6X3NM",
+        "v4uO8tM7nAw",
+        "pbwgx3m_B_s",
+        "toyPWjPeEPk"
+      ]
+    },
+    {
+      "topic": "マカ",
+      "count": 7,
+      "video_ids": [
+        "Dk_a46WXN9I",
+        "3ijfPLtwyls",
+        "mELM8Zce61c",
+        "4S-R4sx16-Q",
+        "0HQdlFDLn74",
+        "_nKyPo4rt5A",
+        "9VIkhFIQLME"
+      ]
+    },
+    {
+      "topic": "エリス編",
+      "count": 6,
+      "video_ids": [
+        "OKAqEyo2GPw",
+        "ZufhD4wFLfU",
+        "lJmn-hSF3I8",
+        "mELM8Zce61c",
+        "8xrIwNblesA",
+        "xlhsXiDuT6o"
+      ]
+    },
+    {
+      "topic": "ルージュ",
+      "count": 4,
+      "video_ids": [
+        "OKAqEyo2GPw",
+        "lJmn-hSF3I8",
+        "8xrIwNblesA",
+        "WRr3h2oZVU4"
+      ]
+    },
+    {
+      "topic": "ウコム編",
+      "count": 4,
+      "video_ids": [
+        "ZufhD4wFLfU",
+        "lJmn-hSF3I8",
+        "xlhsXiDuT6o",
+        "KfGpNEKwvUI"
+      ]
+    },
+    {
+      "topic": "レイ姫",
+      "count": 4,
+      "video_ids": [
+        "zPtev6CPmD0",
+        "6zc2B3rqv70",
+        "CDZ2Yon2ZGE",
+        "KfGpNEKwvUI"
+      ]
+    },
+    {
+      "topic": "アセルス",
+      "count": 4,
+      "video_ids": [
+        "Dk_a46WXN9I",
+        "3ijfPLtwyls",
+        "4S-R4sx16-Q",
+        "_nKyPo4rt5A"
+      ]
+    },
+    {
+      "topic": "Gジェネエターナル",
+      "count": 3,
+      "video_ids": [
+        "48kg8ahI0yg",
+        "4DnsN5TJMOQ",
+        "JH6T-uEes_g"
+      ]
+    },
+    {
+      "topic": "カウンター",
+      "count": 3,
+      "video_ids": [
+        "0HQdlFDLn74",
+        "KfGpNEKwvUI",
+        "WRr3h2oZVU4"
+      ]
+    },
+    {
+      "topic": "武装アニメ",
+      "count": 2,
+      "video_ids": [
+        "48kg8ahI0yg",
+        "4DnsN5TJMOQ"
+      ]
+    },
+    {
+      "topic": "ショート",
+      "count": 2,
+      "video_ids": [
+        "48kg8ahI0yg",
+        "4DnsN5TJMOQ"
+      ]
+    },
+    {
+      "topic": "ソウルアビリティ",
+      "count": 2,
+      "video_ids": [
+        "06IzuLk-AVU",
+        "nLxP0KErCMY"
+      ]
+    },
+    {
+      "topic": "デス",
+      "count": 2,
+      "video_ids": [
+        "3ijfPLtwyls",
+        "4S-R4sx16-Q"
+      ]
+    },
+    {
+      "topic": "陰属性",
+      "count": 2,
+      "video_ids": [
+        "DuHTP-GFTTk",
+        "_nKyPo4rt5A"
+      ]
+    },
+    {
+      "topic": "螺旋回廊",
+      "count": 2,
+      "video_ids": [
+        "GXp6XFt73GA",
+        "0HQdlFDLn74"
+      ]
+    },
+    {
+      "topic": "エクストラフォース",
+      "count": 2,
+      "video_ids": [
+        "6zc2B3rqv70",
+        "toyPWjPeEPk"
+      ]
+    },
+    {
+      "topic": "洋属性",
+      "count": 1,
+      "video_ids": [
+        "OKAqEyo2GPw"
+      ]
+    }
+  ],
+  "positive_points": [
+    {
+      "point": "エリスが今回の当たりで洋属性パ必須級",
+      "video_id": "OKAqEyo2GPw",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "エリスはイラストも素晴らしい",
+      "video_id": "OKAqEyo2GPw",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "ルージュは高スペックで味方サポートも豊富",
+      "video_id": "OKAqEyo2GPw",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "絆の記憶スペシャルはソウル抽選2回でお得",
+      "video_id": "06IzuLk-AVU",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "周回速度とスタミナ改善はメリット大",
+      "video_id": "06IzuLk-AVU",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "昔の手動集回は個性があって面白かった",
+      "video_id": "06IzuLk-AVU",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "HP育成上限が5270に上昇",
+      "video_id": "ZufhD4wFLfU",
+      "channel": "明星ch"
+    },
+    {
+      "point": "トリプルS槍ウコムの槍が交換所で入手可",
+      "video_id": "ZufhD4wFLfU",
+      "channel": "明星ch"
+    },
+    {
+      "point": "ログインボーナスで3000ジュエル",
+      "video_id": "ZufhD4wFLfU",
+      "channel": "明星ch"
+    },
+    {
+      "point": "DMM版は画質がくっきり見やすい",
+      "video_id": "FN-WOGQt2s0",
+      "channel": "明星ch"
+    },
+    {
+      "point": "戦闘アニメが綺麗に描画される",
+      "video_id": "FN-WOGQt2s0",
+      "channel": "明星ch"
+    },
+    {
+      "point": "Google Play版より動作が快適",
+      "video_id": "FN-WOGQt2s0",
+      "channel": "明星ch"
+    },
+    {
+      "point": "ウコムは技算起点の全体34ヒットがぶっ飛んだ性能",
+      "video_id": "zPtev6CPmD0",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "ウコムは冷続性の槍として速攻で活躍しそう",
+      "video_id": "zPtev6CPmD0",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "イスカンダールは残相手に強力で味方サポートもできる",
+      "video_id": "zPtev6CPmD0",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "イスカンダールは毎回そこそこ強い",
+      "video_id": "lJmn-hSF3I8",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "弓槍・人術系が揃いインパ強化に期待",
+      "video_id": "lJmn-hSF3I8",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "推しのルージュ実装に期待",
+      "video_id": "lJmn-hSF3I8",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "冷属性の全体アタッカーが最も輝く",
+      "video_id": "TBCffhiBCdI",
+      "channel": "tyamu"
+    },
+    {
+      "point": "ウコム単体編成など多彩なクリア編成が可能",
+      "video_id": "TBCffhiBCdI",
+      "channel": "tyamu"
+    },
+    {
+      "point": "アセルスは便利で取れればラッキー枠",
+      "video_id": "Dk_a46WXN9I",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "エリス:大望の弓の強キャラ、置き物性能が優秀",
+      "video_id": "3ijfPLtwyls",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "グコム:霊全体攻撃、最大2.25倍で強力",
+      "video_id": "3ijfPLtwyls",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "アセルス:弱点攻撃で300〜400億出る爆発力",
+      "video_id": "3ijfPLtwyls",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "デス:単体EXフォース2.5倍の最高級サポート",
+      "video_id": "3ijfPLtwyls",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "マカ:残弱点でバフ量がえげつなく環境級",
+      "video_id": "3ijfPLtwyls",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "エリスは全体攻撃連打が環境屈指で無人島無双",
+      "video_id": "mELM8Zce61c",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ルージュは1人でOD満タンを配れて優秀",
+      "video_id": "mELM8Zce61c",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "デスは数値が高く便利で確保推奨",
+      "video_id": "mELM8Zce61c",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "コーデリアは技3継承が刺さる場合あり",
+      "video_id": "mELM8Zce61c",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "スペシャルはソウル抽選2回で1万週分の効率",
+      "video_id": "nLxP0KErCMY",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "汚された庭園後は1体3秒周回で高効率",
+      "video_id": "nLxP0KErCMY",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "連マの遺跡は素材集めにおすすめ",
+      "video_id": "nLxP0KErCMY",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "アセルスはWS5行動60ヒット腕力3700%バフでぶっ壊れ",
+      "video_id": "4S-R4sx16-Q",
+      "channel": "tyamu"
+    },
+    {
+      "point": "マカはサポーター武力から高アタッカー性能",
+      "video_id": "4S-R4sx16-Q",
+      "channel": "tyamu"
+    },
+    {
+      "point": "デスは斬アタッカーの火力サポーターで優秀",
+      "video_id": "4S-R4sx16-Q",
+      "channel": "tyamu"
+    },
+    {
+      "point": "技99で威力+10%と効率的",
+      "video_id": "GXp6XFt73GA",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "短連道場の自動周回が手軽で便利",
+      "video_id": "GXp6XFt73GA",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "記憶再生は5分程度で済むので必須",
+      "video_id": "GXp6XFt73GA",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "エリスは置き物とアタッカーの2役をこなす良性能",
+      "video_id": "8xrIwNblesA",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "エリスの軽減率は6ターン目88%で優秀",
+      "video_id": "8xrIwNblesA",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "ルージュは宿命の共演継承で軽減役として有用",
+      "video_id": "8xrIwNblesA",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "エリスは置き物性能が高くバフも多い、攻防バランス良好",
+      "video_id": "Uu799mWnqSw",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "神(ウコム・エリス)は性能が盛られている",
+      "video_id": "Uu799mWnqSw",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "コーデリアの技3は技マシン候補として優秀",
+      "video_id": "Uu799mWnqSw",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "32番号ベットで2等5850/3等2950も狙える",
+      "video_id": "1OIM313APYY",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "中央値狙いは安定して20連分を確保しやすい",
+      "video_id": "1OIM313APYY",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ウコム・エリスのプレイアブル実装に歓喜",
+      "video_id": "xlhsXiDuT6o",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "エリスをシルベン名義で実装する愛を評価",
+      "video_id": "xlhsXiDuT6o",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "サイバの例からウコムも強い可能性",
+      "video_id": "xlhsXiDuT6o",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "ターミンに資源召喚を継承し1手でダメージを稼げる",
+      "video_id": "CR7SdfYiTTM",
+      "channel": "tyamu"
+    },
+    {
+      "point": "ウコム・エリスは当たり枠で取りたい",
+      "video_id": "Ps5V2x6X3NM",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "イスカンダールは面白いことができそう",
+      "video_id": "Ps5V2x6X3NM",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "ウコムはエクストラばらまきが強力",
+      "video_id": "Ps5V2x6X3NM",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "ストーリーが面白く続きが気になる",
+      "video_id": "BkW6EWnhAHU",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "神様編成で12秒周回ができる",
+      "video_id": "BkW6EWnhAHU",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "イスカンダール×マカで火力が化ける",
+      "video_id": "0HQdlFDLn74",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "マカのバフでカウンターが強烈に伸びる",
+      "video_id": "0HQdlFDLn74",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "残弱の相手ではさらにやばい火力に",
+      "video_id": "0HQdlFDLn74",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "イスカンダールは残直接攻撃5回受けでぶっ壊れ性能",
+      "video_id": "uhJbRtTfaec",
+      "channel": "tyamu"
+    },
+    {
+      "point": "ウコムは爆撃機並みの全体火力34連打",
+      "video_id": "uhJbRtTfaec",
+      "channel": "tyamu"
+    },
+    {
+      "point": "ウコムは霊属性のキャラを強化できる",
+      "video_id": "uhJbRtTfaec",
+      "channel": "tyamu"
+    },
+    {
+      "point": "ガンダムゼロがシンプルな見た目で良い",
+      "video_id": "fJ63xd4SSYs",
+      "channel": "明星ch"
+    },
+    {
+      "point": "メディアミックス前提の展開に期待",
+      "video_id": "fJ63xd4SSYs",
+      "channel": "明星ch"
+    },
+    {
+      "point": "地球侵食など挑戦的な設定が面白い",
+      "video_id": "fJ63xd4SSYs",
+      "channel": "明星ch"
+    },
+    {
+      "point": "ウコムの槍性能に注目",
+      "video_id": "TQWwaxeicCI",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "イスカンダールが無人島対応しそうで期待",
+      "video_id": "TQWwaxeicCI",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "マカは火ダメ軽減が強力で優先1位",
+      "video_id": "_nKyPo4rt5A",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "アセルスは斬×陰の強属性で60ヒット短期戦向き",
+      "video_id": "_nKyPo4rt5A",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "エリスはエクストラフォース配布で置き物優秀",
+      "video_id": "_nKyPo4rt5A",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "エリスは全体37ヒットの猛攻、置き物として優秀",
+      "video_id": "XgxrvjSf-MA",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "エリスはエクストラ拡張性が高い",
+      "video_id": "XgxrvjSf-MA",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ウコムはエクストラ置き物として強力",
+      "video_id": "v4uO8tM7nAw",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ウコムは貝と相性最高",
+      "video_id": "v4uO8tM7nAw",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "エリスは確定1.75倍で運用価値十分",
+      "video_id": "v4uO8tM7nAw",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ウコムは上振れが強く2ター目から強い、防御も高い",
+      "video_id": "6zc2B3rqv70",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "イスカンダールは残相手にカウンターで強い",
+      "video_id": "6zc2B3rqv70",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "エリスは弓の希少な強キャラで置き物性能が高い",
+      "video_id": "9VIkhFIQLME",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "ウコムは霊全体アタッカーで長期戦の安定感抜群",
+      "video_id": "9VIkhFIQLME",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "マカは残弱点+カウンターでSS+級の火力",
+      "video_id": "9VIkhFIQLME",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "ルージュはOD促進と回復が使いやすい",
+      "video_id": "9VIkhFIQLME",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "イスカンダールは面白い当たり",
+      "video_id": "CDZ2Yon2ZGE",
+      "channel": "もんでる"
+    },
+    {
+      "point": "エリスはバフ枚数がやばく強い",
+      "video_id": "CDZ2Yon2ZGE",
+      "channel": "もんでる"
+    },
+    {
+      "point": "ターン開始で敵全体能力ダウンが強い",
+      "video_id": "CDZ2Yon2ZGE",
+      "channel": "もんでる"
+    },
+    {
+      "point": "イスカンダールは面白くカウンター好きは取る価値",
+      "video_id": "KfGpNEKwvUI",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "ウコムはエクストラをばらまけて偉い",
+      "video_id": "KfGpNEKwvUI",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "総合ではエリスが一番の当たり",
+      "video_id": "KfGpNEKwvUI",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "武田信虎が竹特攻で強くなりそう",
+      "video_id": "5o2gu3WYmmU",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "すごろく6のキャラは意外と強い武将が多い",
+      "video_id": "5o2gu3WYmmU",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "滝川一益系や小田過が取れて嬉しい",
+      "video_id": "5o2gu3WYmmU",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "50連でピックが全て揃い引きが良かった",
+      "video_id": "pbwgx3m_B_s",
+      "channel": "明星ch"
+    },
+    {
+      "point": "オートでOD使えて使いやすくなった",
+      "video_id": "pbwgx3m_B_s",
+      "channel": "明星ch"
+    },
+    {
+      "point": "エリスは洋の火力サポーターとして一級品",
+      "video_id": "toyPWjPeEPk",
+      "channel": "tyamu"
+    },
+    {
+      "point": "エリスは属性全体アタッカーも兼ね一石二鳥",
+      "video_id": "toyPWjPeEPk",
+      "channel": "tyamu"
+    },
+    {
+      "point": "ルージュは中長期戦でかなり強い",
+      "video_id": "toyPWjPeEPk",
+      "channel": "tyamu"
+    },
+    {
+      "point": "ルージュは長期戦でマイターンOD満タが強力",
+      "video_id": "WRr3h2oZVU4",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "イスカンダールは初手瞬発力とダメブロ、無限追撃",
+      "video_id": "WRr3h2oZVU4",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "味方全体への火力・防御サポートもできる",
+      "video_id": "WRr3h2oZVU4",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ガチャ内容を事前告知してくれるのはありがたい",
+      "video_id": "JH6T-uEes_g",
+      "channel": "明星ch"
+    },
+    {
+      "point": "SDガンダム外伝のレトロRPGマップが良い",
+      "video_id": "JH6T-uEes_g",
+      "channel": "明星ch"
+    },
+    {
+      "point": "アルガス騎士団など期待できるイベント",
+      "video_id": "JH6T-uEes_g",
+      "channel": "明星ch"
+    }
+  ],
+  "negative_points": [
+    {
+      "point": "ルージュは5ター目から本気の待機型で使い道が見えにくい",
+      "video_id": "OKAqEyo2GPw",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "コーデリアはマイス型で無理する性能でない",
+      "video_id": "OKAqEyo2GPw",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "コーデリアは弱点必須で編成難易度が高い",
+      "video_id": "OKAqEyo2GPw",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "井戸の1ターン化は10回で飽きてやる気が出ない",
+      "video_id": "06IzuLk-AVU",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "ランキングが手数のみの運ゲーになりつつある",
+      "video_id": "06IzuLk-AVU",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "周回に作業感が強くなってきた",
+      "video_id": "06IzuLk-AVU",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "エリスはシルベン名義で初登場ではない",
+      "video_id": "ZufhD4wFLfU",
+      "channel": "明星ch"
+    },
+    {
+      "point": "最近ガチャの引きが悪くモチベ低下",
+      "video_id": "ZufhD4wFLfU",
+      "channel": "明星ch"
+    },
+    {
+      "point": "ダブルガチャで石消費が激しい",
+      "video_id": "ZufhD4wFLfU",
+      "channel": "明星ch"
+    },
+    {
+      "point": "Google Play PC版はフリーズやローディングが長い",
+      "video_id": "FN-WOGQt2s0",
+      "channel": "明星ch"
+    },
+    {
+      "point": "DMM版はBGMパックが購入不可",
+      "video_id": "FN-WOGQt2s0",
+      "channel": "明星ch"
+    },
+    {
+      "point": "BGM購入済の人は反映されず損をする",
+      "video_id": "FN-WOGQt2s0",
+      "channel": "明星ch"
+    },
+    {
+      "point": "ウコムは村っ気があり技算に使用回数制限",
+      "video_id": "zPtev6CPmD0",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "レイ姫は火力が3ターン限定で高難度性能不足",
+      "video_id": "zPtev6CPmD0",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "イスカンダールは万能でなく特定相手特攻、エクストラ2ターンのみ",
+      "video_id": "zPtev6CPmD0",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "コーデリアは性能がニッチで弱め傾向が続く",
+      "video_id": "lJmn-hSF3I8",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "ダブルガチャで石消費が激しい",
+      "video_id": "lJmn-hSF3I8",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "最近のガチャの引きに不安",
+      "video_id": "lJmn-hSF3I8",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "1ターン編成がすぐ分かりやりごたえがない",
+      "video_id": "TBCffhiBCdI",
+      "channel": "tyamu"
+    },
+    {
+      "point": "敵火力が乏しく軽減対策不要で単調になりそう",
+      "video_id": "TBCffhiBCdI",
+      "channel": "tyamu"
+    },
+    {
+      "point": "久々復活だが予想外の強さがないと厳しい",
+      "video_id": "TBCffhiBCdI",
+      "channel": "tyamu"
+    },
+    {
+      "point": "マカはザンウィークでしか作れず被りやすい",
+      "video_id": "Dk_a46WXN9I",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "マカは活躍機会がほぼ出ない",
+      "video_id": "Dk_a46WXN9I",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "アセルスはそこまで欲しくない微妙な性能",
+      "video_id": "Dk_a46WXN9I",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "エリス:追撃が6ターン目で遠く長期戦向け",
+      "video_id": "3ijfPLtwyls",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "グコム:50%抽選頼みで運要素が大きい",
+      "video_id": "3ijfPLtwyls",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "レイ姫:火力低く覚醒に課題、優先度控えめ",
+      "video_id": "3ijfPLtwyls",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "コードリア/ルージュ:火力伸びず飛び抜けない",
+      "video_id": "3ijfPLtwyls",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "マカ×カウンター2枚でエラー発生の不具合あり",
+      "video_id": "3ijfPLtwyls",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "霊姫は前スタイルと差がなく圧倒的最下位",
+      "video_id": "mELM8Zce61c",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "マカは拡張性を活かせる機会がほぼない",
+      "video_id": "mELM8Zce61c",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ウコムは50%抽選頼みで安定感がない",
+      "video_id": "mELM8Zce61c",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "イスカンダールは個人火力に爆発力がない",
+      "video_id": "mELM8Zce61c",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "フリークエストは育成上限が低く能力値は上がらない",
+      "video_id": "nLxP0KErCMY",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "スペシャルの場所が分かりにくく探すのが面倒",
+      "video_id": "nLxP0KErCMY",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "アセルス確保に60連を要し引きが渋かった",
+      "video_id": "4S-R4sx16-Q",
+      "channel": "tyamu"
+    },
+    {
+      "point": "マカ・デスは次ガチャ性能を見て保留",
+      "video_id": "4S-R4sx16-Q",
+      "channel": "tyamu"
+    },
+    {
+      "point": "ガードアップ等カタカナ技は技上げ効果なし",
+      "video_id": "GXp6XFt73GA",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "コーデリアはBP+5消費のデメリットが重い",
+      "video_id": "8xrIwNblesA",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "コーデリアは既存マイス型の属性違いで登場が遅い",
+      "video_id": "8xrIwNblesA",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "ルージュは本気が5ターン目以降と遅い",
+      "video_id": "8xrIwNblesA",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "レイ姫は術3を使い切ると火力ダウン、威力も低い",
+      "video_id": "Uu799mWnqSw",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "ウコムは1点狙いになるのが厳しい",
+      "video_id": "Uu799mWnqSw",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "コーデリアはOD運用前提で自己OD満タできない",
+      "video_id": "Uu799mWnqSw",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "0ベットは最低保証のみで意味が薄い",
+      "video_id": "1OIM313APYY",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "全ベットは捨て花火玉が発生してしまう",
+      "video_id": "1OIM313APYY",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "夏の花火玉交換は今回がラストで要注意",
+      "video_id": "xlhsXiDuT6o",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "復刻ガチャは無し",
+      "video_id": "xlhsXiDuT6o",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "予想大会でウコム・エリス正解者は0名",
+      "video_id": "xlhsXiDuT6o",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "コーデリアは消費BP増加が今の編成に合わない",
+      "video_id": "Ps5V2x6X3NM",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "ルージュ・レイ姫は威力Dで火力が低い",
+      "video_id": "Ps5V2x6X3NM",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "レイ姫は超短期戦専用で出力が弱い",
+      "video_id": "Ps5V2x6X3NM",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "イベント内容が薄くつなぎになっている",
+      "video_id": "BkW6EWnhAHU",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "周回スポットが1箇所しかない",
+      "video_id": "BkW6EWnhAHU",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "ストーリーは賛否両論",
+      "video_id": "BkW6EWnhAHU",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "イスカンダール単体は威力Eで火力が出ない",
+      "video_id": "0HQdlFDLn74",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "DP系のバフは今回ほぼ機能せず微妙",
+      "video_id": "0HQdlFDLn74",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "レイ姫は標準アタッカー止まりで変わりがいる",
+      "video_id": "uhJbRtTfaec",
+      "channel": "tyamu"
+    },
+    {
+      "point": "今回の話だけでは完結せず続きはゲーム",
+      "video_id": "fJ63xd4SSYs",
+      "channel": "明星ch"
+    },
+    {
+      "point": "公開キャラが主人公しかまだない",
+      "video_id": "fJ63xd4SSYs",
+      "channel": "明星ch"
+    },
+    {
+      "point": "後編はつなぎイベント扱いで内容が薄い",
+      "video_id": "TQWwaxeicCI",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "目立ったイベントが特にない",
+      "video_id": "TQWwaxeicCI",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "今回は最優先級がおらず凪の時期",
+      "video_id": "_nKyPo4rt5A",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "陰属性は飽和で杖のレイ姫・ルージュは不要気味",
+      "video_id": "_nKyPo4rt5A",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "マカのカウンター蓄積は不具合気味で影響は限定的",
+      "video_id": "_nKyPo4rt5A",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "エリスは絡むと即離脱がネック、スロースタート",
+      "video_id": "XgxrvjSf-MA",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "零姫は術算3回のみで出力弱く中途半端",
+      "video_id": "XgxrvjSf-MA",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "零姫は目立った特徴が全くない",
+      "video_id": "XgxrvjSf-MA",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "コーデリアは縛りがきつい割に刺さらない",
+      "video_id": "v4uO8tM7nAw",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "コーデリアはいつも通り特徴がない",
+      "video_id": "v4uO8tM7nAw",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ウコムは片持ち属性だと弱く貝以外出番薄い",
+      "video_id": "v4uO8tM7nAw",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ウコムは村っ気があり計算が複雑で下振れ弱い",
+      "video_id": "6zc2B3rqv70",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "レイ姫はBP役兼火力が中途半端で低評価",
+      "video_id": "6zc2B3rqv70",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "イスカンダールはエクストラフォースが2ターンのみで残念",
+      "video_id": "6zc2B3rqv70",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "レイ姫は素早さが低く運用に課題",
+      "video_id": "9VIkhFIQLME",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "コーデリアはデバフ化で自身の火力が出にくい",
+      "video_id": "9VIkhFIQLME",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "マカは残弱点でない相手にはまず使わない",
+      "video_id": "9VIkhFIQLME",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "SSは減り環境支配は裁判ら一部のみ",
+      "video_id": "9VIkhFIQLME",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "レイ姫は超絶微妙で弱め、能力が適当",
+      "video_id": "CDZ2Yon2ZGE",
+      "channel": "もんでる"
+    },
+    {
+      "point": "マカ×カウンターはオーバーフローでバグる",
+      "video_id": "CDZ2Yon2ZGE",
+      "channel": "もんでる"
+    },
+    {
+      "point": "イスカンダールは属性ザンのみでエクストラなし",
+      "video_id": "KfGpNEKwvUI",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "レイ姫は技3が3回限定で4ター目以降息切れ",
+      "video_id": "KfGpNEKwvUI",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "陰属性は過剰供給気味で今はジュエル温存ターン",
+      "video_id": "KfGpNEKwvUI",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "足軽秋は統率が低く引かない予定",
+      "video_id": "5o2gu3WYmmU",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "覚醒5段階必要でコバンが厳しい",
+      "video_id": "5o2gu3WYmmU",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "共闘の全報酬は課金しないと厳しい",
+      "video_id": "5o2gu3WYmmU",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "最近のガチャの引きが良くなくモチベ低下",
+      "video_id": "pbwgx3m_B_s",
+      "channel": "明星ch"
+    },
+    {
+      "point": "コーデリアは消費BP増加付与が重い",
+      "video_id": "pbwgx3m_B_s",
+      "channel": "明星ch"
+    },
+    {
+      "point": "ルージュは汎用性低くスカウト機会が気がかり",
+      "video_id": "toyPWjPeEPk",
+      "channel": "tyamu"
+    },
+    {
+      "point": "コーデリアは各数値がそこまで高くない",
+      "video_id": "toyPWjPeEPk",
+      "channel": "tyamu"
+    },
+    {
+      "point": "どこで使うか問題がありそう",
+      "video_id": "toyPWjPeEPk",
+      "channel": "tyamu"
+    },
+    {
+      "point": "ルージュは突き抜けず無難、代わりがいる",
+      "video_id": "WRr3h2oZVU4",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "イスカンダールは個人火力が中途半端",
+      "video_id": "WRr3h2oZVU4",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "エクストラも自己バフも弱く1人では倒しきれない",
+      "video_id": "WRr3h2oZVU4",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "月末イベントのボリュームは控えめな印象",
+      "video_id": "JH6T-uEes_g",
+      "channel": "明星ch"
+    }
+  ],
+  "pick_candidates": [
+    {
+      "video_id": "3ijfPLtwyls",
+      "title": "【ロマサガRS】3大ガチャランキング！引くべき優先度考察★使ってみた所感解説【ロマンシングサガリユニバース】",
+      "channel": "つむつむちゃんねる●ゲーム考察専門",
+      "published_at": "2026-07-25T01:37:40Z",
+      "url": "https://www.youtube.com/watch?v=3ijfPLtwyls",
+      "summary_3lines": "新3大ガチャを使ってみた所感で優先度付け\n3位デリス(エリス弓)/2位グコム/1位アセルス編\nアセルスの爆発力とマカの環境性能が光る",
+      "key_topics": [
+        "3大ガチャ",
+        "エリス弓",
+        "グコム",
+        "アセルス",
+        "デス",
+        "マカ"
+      ],
+      "n_pos": 5,
+      "n_neg": 5,
+      "positive_points": [
+        "エリス:大望の弓の強キャラ、置き物性能が優秀",
+        "グコム:霊全体攻撃、最大2.25倍で強力",
+        "アセルス:弱点攻撃で300〜400億出る爆発力",
+        "デス:単体EXフォース2.5倍の最高級サポート",
+        "マカ:残弱点でバフ量がえげつなく環境級"
+      ],
+      "negative_points": [
+        "エリス:追撃が6ターン目で遠く長期戦向け",
+        "グコム:50%抽選頼みで運要素が大きい",
+        "レイ姫:火力低く覚醒に課題、優先度控えめ",
+        "コードリア/ルージュ:火力伸びず飛び抜けない",
+        "マカ×カウンター2枚でエラー発生の不具合あり"
+      ]
+    },
+    {
+      "video_id": "mELM8Zce61c",
+      "title": "【ロマサガRS】「最強神々」エリスVSアセルス→9体3ガチャランキング!!最新スタイルの最強を決める比較検討会→2026年7月26日版　#ロマサガRS",
+      "channel": "タマゴローRS",
+      "published_at": "2026-07-25T22:30:39Z",
+      "url": "https://www.youtube.com/watch?v=mELM8Zce61c",
+      "summary_3lines": "エリス編9スタイルを最強比較でランク付け\nエリスは全体攻撃連打で環境屈指の強さ\n霊姫・マカ・ウコムは条件付きで伸び悩む",
+      "key_topics": [
+        "エリス編",
+        "最強ランキング",
+        "エリス",
+        "ウコム",
+        "マカ",
+        "継承"
+      ],
+      "n_pos": 4,
+      "n_neg": 4,
+      "positive_points": [
+        "エリスは全体攻撃連打が環境屈指で無人島無双",
+        "ルージュは1人でOD満タンを配れて優秀",
+        "デスは数値が高く便利で確保推奨",
+        "コーデリアは技3継承が刺さる場合あり"
+      ],
+      "negative_points": [
+        "霊姫は前スタイルと差がなく圧倒的最下位",
+        "マカは拡張性を活かせる機会がほぼない",
+        "ウコムは50%抽選頼みで安定感がない",
+        "イスカンダールは個人火力に爆発力がない"
+      ]
+    },
+    {
+      "video_id": "9VIkhFIQLME",
+      "title": "【ロマサガRS】きたぞきたぞ！やはり強い神々大暴れ！新キャラランキング【ロマンシングサガリユニバース】",
+      "channel": "つむつむちゃんねる●ゲーム考察専門",
+      "published_at": "2026-07-25T23:07:46Z",
+      "url": "https://www.youtube.com/watch?v=9VIkhFIQLME",
+      "summary_3lines": "週次新キャラランキングでエリス編神々を評価\nエリスとウコムがSSで置き物兼火力に高評価\nマカは残弱点かつカウンター条件で化ける",
+      "key_topics": [
+        "新キャラランキング",
+        "エリス",
+        "ウコム",
+        "マカ",
+        "イスカンダール"
+      ],
+      "n_pos": 4,
+      "n_neg": 4,
+      "positive_points": [
+        "エリスは弓の希少な強キャラで置き物性能が高い",
+        "ウコムは霊全体アタッカーで長期戦の安定感抜群",
+        "マカは残弱点+カウンターでSS+級の火力",
+        "ルージュはOD促進と回復が使いやすい"
+      ],
+      "negative_points": [
+        "レイ姫は素早さが低く運用に課題",
+        "コーデリアはデバフ化で自身の火力が出にくい",
+        "マカは残弱点でない相手にはまず使わない",
+        "SSは減り環境支配は裁判ら一部のみ"
+      ]
+    },
+    {
+      "video_id": "OKAqEyo2GPw",
+      "title": "【ロマサガRS】やはり噂通りの強キャラ！？エリス編ガチャ性能チェック【ロマンシング サガ リユニバース】",
+      "channel": "サンゾーGAMES",
+      "published_at": "2026-07-23T10:34:41Z",
+      "url": "https://www.youtube.com/watch?v=OKAqEyo2GPw",
+      "summary_3lines": "サンゾーがエリス編3体の性能をチェック。\nエリスは今回の当たりで洋属性パ必須級。\nルージュは待機型、コーデリアはマイス型で難度高。",
+      "key_topics": [
+        "エリス編",
+        "エリス",
+        "ルージュ",
+        "コーデリア",
+        "洋属性"
+      ],
+      "n_pos": 3,
+      "n_neg": 3,
+      "positive_points": [
+        "エリスが今回の当たりで洋属性パ必須級",
+        "エリスはイラストも素晴らしい",
+        "ルージュは高スペックで味方サポートも豊富"
+      ],
+      "negative_points": [
+        "ルージュは5ター目から本気の待機型で使い道が見えにくい",
+        "コーデリアはマイス型で無理する性能でない",
+        "コーデリアは弱点必須で編成難易度が高い"
+      ]
+    },
+    {
+      "video_id": "06IzuLk-AVU",
+      "title": "【ロマサガRS】　個性ありそうなキャラが登場　最新お知らせ見て行こう　Interesting games from Japan【初見さん大歓迎】",
+      "channel": "あんずもん",
+      "published_at": "2026-07-23T14:43:53Z",
+      "url": "https://www.youtube.com/watch?v=06IzuLk-AVU",
+      "summary_3lines": "技上げ雑談配信で最新お知らせや周回を紹介\n絆の記憶スペシャルはソウル抽選2回でお得\n井戸1ターン化やランキング運ゲー化に不満も",
+      "key_topics": [
+        "雑談配信",
+        "フリークエスト周回",
+        "ソウルアビリティ",
+        "井戸",
+        "ランキング"
+      ],
+      "n_pos": 3,
+      "n_neg": 3,
+      "positive_points": [
+        "絆の記憶スペシャルはソウル抽選2回でお得",
+        "周回速度とスタミナ改善はメリット大",
+        "昔の手動集回は個性があって面白かった"
+      ],
+      "negative_points": [
+        "井戸の1ターン化は10回で飽きてやる気が出ない",
+        "ランキングが手数のみの運ゲーになりつつある",
+        "周回に作業感が強くなってきた"
+      ]
+    },
+    {
+      "video_id": "ZufhD4wFLfU",
+      "title": "【ロマサガRS】ウコムとエリス実装 7月23日更新情報まとめ 【ロマンシング サガ リ・ユニバース】",
+      "channel": "明星ch",
+      "published_at": "2026-07-22T04:08:18Z",
+      "url": "https://www.youtube.com/watch?v=ZufhD4wFLfU",
+      "summary_3lines": "7/23更新でウコム・エリス実装のダブルガチャ\nHP育成上限が5270へ上昇\n投稿者はエリス編優先で様子見の構え",
+      "key_topics": [
+        "ウコム編",
+        "エリス編",
+        "暦読み第6話",
+        "HP5270",
+        "水発連携"
+      ],
+      "n_pos": 3,
+      "n_neg": 3,
+      "positive_points": [
+        "HP育成上限が5270に上昇",
+        "トリプルS槍ウコムの槍が交換所で入手可",
+        "ログインボーナスで3000ジュエル"
+      ],
+      "negative_points": [
+        "エリスはシルベン名義で初登場ではない",
+        "最近ガチャの引きが悪くモチベ低下",
+        "ダブルガチャで石消費が激しい"
+      ]
+    },
+    {
+      "video_id": "FN-WOGQt2s0",
+      "title": "【Gジェネエターナル】本日リリース！DMM版触ってみた感想 『SDガンダムGジェネレーションエターナル』",
+      "channel": "明星ch",
+      "published_at": "2026-07-22T09:35:40Z",
+      "url": "https://www.youtube.com/watch?v=FN-WOGQt2s0",
+      "summary_3lines": "GジェネエターナルDMM版がリリースされPC選択肢増加\n画質・動作はDMM版が快適と評価\n難点はBGMパックが未販売な点",
+      "key_topics": [
+        "DMM版",
+        "Google Play版比較",
+        "画質",
+        "戦闘アニメ",
+        "BGMパック"
+      ],
+      "n_pos": 3,
+      "n_neg": 3,
+      "positive_points": [
+        "DMM版は画質がくっきり見やすい",
+        "戦闘アニメが綺麗に描画される",
+        "Google Play版より動作が快適"
+      ],
+      "negative_points": [
+        "Google Play PC版はフリーズやローディングが長い",
+        "DMM版はBGMパックが購入不可",
+        "BGM購入済の人は反映されず損をする"
+      ]
+    },
+    {
+      "video_id": "zPtev6CPmD0",
+      "title": "【ロマサガRS】Romancing祭「ウコム 編」スタイル考察＆性能チェック【ロマンシング サガ リユニバース】",
+      "channel": "ジュラのサガちゃんねる",
+      "published_at": "2026-07-24T11:00:32Z",
+      "url": "https://www.youtube.com/watch?v=zPtev6CPmD0",
+      "summary_3lines": "ジュラがウコム編3体を考察しランク付け。\nウコムはB＋、レイ姫はB、イスカンダールはB＋。\nどれもワンポイント採用で無理に取らなくてよい。",
+      "key_topics": [
+        "ウコム編考察",
+        "ランク付け",
+        "ウコム",
+        "レイ姫",
+        "イスカンダール"
+      ],
+      "n_pos": 3,
+      "n_neg": 3,
+      "positive_points": [
+        "ウコムは技算起点の全体34ヒットがぶっ飛んだ性能",
+        "ウコムは冷続性の槍として速攻で活躍しそう",
+        "イスカンダールは残相手に強力で味方サポートもできる"
+      ],
+      "negative_points": [
+        "ウコムは村っ気があり技算に使用回数制限",
+        "レイ姫は火力が3ターン限定で高難度性能不足",
+        "イスカンダールは万能でなく特定相手特攻、エクストラ2ターンのみ"
+      ]
+    },
+    {
+      "video_id": "lJmn-hSF3I8",
+      "title": "【ロマサガRS】強者がいる気配！神速公式情報確認【ロマンシングサガリユニバース】",
+      "channel": "つむつむちゃんねる●ゲーム考察専門",
+      "published_at": "2026-07-22T03:47:52Z",
+      "url": "https://www.youtube.com/watch?v=lJmn-hSF3I8",
+      "summary_3lines": "暦読み第6話ダブルガチャの内容を確認\nウコム編とエリス編の新スタイルを解説\n投稿者はルージュ推しで実装に期待",
+      "key_topics": [
+        "ウコム編",
+        "エリス編",
+        "ルージュ",
+        "コーデリア",
+        "イスカンダール"
+      ],
+      "n_pos": 3,
+      "n_neg": 3,
+      "positive_points": [
+        "イスカンダールは毎回そこそこ強い",
+        "弓槍・人術系が揃いインパ強化に期待",
+        "推しのルージュ実装に期待"
+      ],
+      "negative_points": [
+        "コーデリアは性能がニッチで弱め傾向が続く",
+        "ダブルガチャで石消費が激しい",
+        "最近のガチャの引きに不安"
+      ]
+    },
+    {
+      "video_id": "8xrIwNblesA",
+      "title": "【ロマサガRS】Romancing祭「エリス 編」スタイル考察＆性能チェック【ロマンシング サガ リユニバース】",
+      "channel": "ジュラのサガちゃんねる",
+      "published_at": "2026-07-25T11:00:19Z",
+      "url": "https://www.youtube.com/watch?v=8xrIwNblesA",
+      "summary_3lines": "ロマンシング祭エリス編3スタイルを性能考察\nエリスは置き物兼アタッカーの2役でA-評価\nコーデリアはBP消費デメリット、ルージュは晩成型",
+      "key_topics": [
+        "エリス編",
+        "スタイル考察",
+        "エリス",
+        "コーデリア",
+        "ルージュ"
+      ],
+      "n_pos": 3,
+      "n_neg": 3,
+      "positive_points": [
+        "エリスは置き物とアタッカーの2役をこなす良性能",
+        "エリスの軽減率は6ターン目88%で優秀",
+        "ルージュは宿命の共演継承で軽減役として有用"
+      ],
+      "negative_points": [
+        "コーデリアはBP+5消費のデメリットが重い",
+        "コーデリアは既存マイス型の属性違いで登場が遅い",
+        "ルージュは本気が5ターン目以降と遅い"
+      ]
+    }
+  ]
+}
