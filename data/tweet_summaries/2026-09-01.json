@@ -1,0 +1,151 @@
+{
+  "date": "2026-09-01",
+  "n_tweets": 114,
+  "summary_3lines": "9/1メンテで「魂の閃き道場」に武器種別・魂アビ確定クエスト追加\n追憶の幻闘場Hardに新強敵トゥ・クアイ登場、被ダメ高く攻略が話題\n新スタイル『魔女の娘』・ロマンシングパス更新・河馬人間の入手訂正",
+  "key_topics": [
+    "公式：魂の閃き道場に武器種ごとの魂アビ確定クエスト追加（9/1 04:00〜、対象武器種のみ編成可）",
+    "公式：追憶の幻闘場Hardに新強敵『トゥ・クアイ』＋SSS追憶武器の新進化段階（幻闘の耀錐）",
+    "公式：新スタイル『魔女の娘』（杖/風術/SaGaRS）Webショップ紹介",
+    "公式：ロマンシングパス更新（通常SSS杖『月蝶の風杖』／上級SS魔女の娘）",
+    "公式：生放送#54の訂正、SS河馬人間は今後ゲーム内で獲得可能に（ショップ追加ではない）",
+    "新幻闘トゥ・クアイの攻略（バフ解除必須・被ダメ高）",
+    "武器種別の性能評価（槍強い・棍棒/大剣はキャラ依存できつい）"
+  ],
+  "positive_themes": [
+    "新幻闘トゥ・クアイを大剣1ターン攻略など、こよみが強すぎるとの高評価",
+    "追憶の幻闘場を全クリア報告、9月の関門がアラケスで嬉しいとの声",
+    "魂の閃き道場の武器種別クエスト追加で魂アビ厳選が進めやすくなった期待",
+    "槍がバカ強いとの評価で新規アタッカー編成の幅が広がる",
+    "ロマンシングパス更新の陣形・目玉報酬の追加を歓迎"
+  ],
+  "negative_themes": [
+    "トゥ・クアイの被ダメが非常に高く、生き返る靴前提の耐久調整への戸惑い",
+    "武器種専用魂アビの道場に過度な期待をしないよう注意喚起（テン上げ止まりの懸念）",
+    "棍棒・槍がウコム/コーデリア等特定キャラ不在だときつく編成ハードルが高い",
+    "トゥ・クアイは初手ダメージが通らずバフ解除2回など攻略が煩雑",
+    "河馬人間の入手方法が生放送案内から訂正され情報が二転三転した点への戸惑い"
+  ],
+  "hot_tweets": [
+    {
+      "tweet_id": "2094350099619152051",
+      "url": "https://x.com/romasaga_rs/status/2094350099619152051",
+      "author_handle": "romasaga_rs",
+      "author_name": "ロマンシング サガ リ・ユニバース公式",
+      "text": "公式生放送#54において、\n未獲得だったSS[…まさかモブ勢？]河馬人間は、受け取り期間終了後ロマンシングショップで手に入る旨をご案内いたしましたが、\n正しくはロマンシングショップに追加ではなく、今後ゲーム内で獲得できるようになる予定です。\n\n獲得時期や入手方法は、改めてご案内いたします。",
+      "likes": 196,
+      "retweets": 22,
+      "replies": 3
+    },
+    {
+      "tweet_id": "2094350560359313458",
+      "url": "https://x.com/romasaga_rs/status/2094350560359313458",
+      "author_handle": "romasaga_rs",
+      "author_name": "ロマンシング サガ リ・ユニバース公式",
+      "text": "【常設コンテンツ「魂の閃き道場」に新たなクエストを追加！】\n9/1(火) 04:00より、武器種ごとの魂アビリティを必ず閃くクエストが登場！\n\n武器種ごとにクエストが分かれており、それぞれのクエストには対象武器種のスタイルのみ編成可能！\n\n▼お知らせ\n\nhttps://\ninfo.rs.aktsk.jp/info/detail/11\n0725?k=Px4WQGo_\n…\n\n#ロマサガRS",
+      "likes": 157,
+      "retweets": 22,
+      "replies": 1
+    },
+    {
+      "tweet_id": "2094546018763223400",
+      "url": "https://x.com/romasaga_rs/status/2094546018763223400",
+      "author_handle": "romasaga_rs",
+      "author_name": "ロマンシング サガ リ・ユニバース公式",
+      "text": "＼ アプリ内よりお得にジュエルGET！／\n\nhttps://\nsqex-bridge.jp/webstore/saga_\nreuniverse\n…\nㅤ\n【新スタイル紹介】\n▼魔女の娘（杖/風術/SaGaRS）\nジョーは私の思い描いた通りにイゴマールを倒したのか。\nそれともイゴマールの計画が私の上を行き、イゴマールの思うがままの世界になったのか。",
+      "likes": 146,
+      "retweets": 31,
+      "replies": 1
+    },
+    {
+      "tweet_id": "2094350924437508500",
+      "url": "https://x.com/romasaga_rs/status/2094350924437508500",
+      "author_handle": "romasaga_rs",
+      "author_name": "ロマンシング サガ リ・ユニバース公式",
+      "text": "【「追憶の幻闘場」難易度Hardに新しい強敵が登場＆追憶武器に更なる進化段階を追加！】\n9/1(火) 04:00より新たな強敵「トゥ・クアイ」が難易度Hard＞幻闘の耀錐で登場！\n2段階目の最大強化状態のSSS追憶武器に「幻闘の耀錐」を使用することで、更なる進化が可能に！\n\n\nhttps://\ninfo.rs.aktsk.jp/info/detail/11\n0698?k=kxrr1C1m\n…",
+      "likes": 145,
+      "retweets": 19,
+      "replies": 0
+    },
+    {
+      "tweet_id": "2094545779721384206",
+      "url": "https://x.com/romasaga_rs/status/2094545779721384206",
+      "author_handle": "romasaga_rs",
+      "author_name": "ロマンシング サガ リ・ユニバース公式",
+      "text": "【ロマンシングパス更新！】\nパスLvを上昇させて報酬をGET！\n通常パスや上級パスには特典や目玉報酬あり\n\n▼通常パス目玉報酬\nSSS杖武器「(風)月蝶の風杖」\n\n▼上級パス目玉報酬\nSS[勝ったの？負けたの？]魔女の娘\n\n#ロマサガRS",
+      "likes": 55,
+      "retweets": 6,
+      "replies": 0
+    },
+    {
+      "tweet_id": "2094546216021618704",
+      "url": "https://x.com/heaven26877539/status/2094546216021618704",
+      "author_handle": "heaven26877539",
+      "author_name": "heaven",
+      "text": "おはよう御座いますm(_ _)m\n追憶の幻闘場、全クリアになります^_^\n\n9月の関門がアラケスで嬉しいです(^○^)\n#ロマサガRS",
+      "likes": 35,
+      "retweets": 0,
+      "replies": 2
+    },
+    {
+      "tweet_id": "2094557444508930381",
+      "url": "https://x.com/nayami_miryoku/status/2094557444508930381",
+      "author_handle": "nayami_miryoku",
+      "author_name": "MoMoNGa",
+      "text": "#ロマサガRS\nズーリーが欲しいだけなんです",
+      "likes": 33,
+      "retweets": 1,
+      "replies": 0
+    },
+    {
+      "tweet_id": "2094546423857795112",
+      "url": "https://x.com/hiro1980301/status/2094546423857795112",
+      "author_handle": "hiro1980301",
+      "author_name": "山奥暮らしのパンダ",
+      "text": "皆様おはようございます\n涼しいのも朝の一瞬だけでした\n週末の雨にかけて涼しくなるようですが\n\nいや、100%でいいじゃん！\nと思う朝\n\n今日もモリモリ水分補給しましょ\n\n #ロマサガRS",
+      "likes": 32,
+      "retweets": 0,
+      "replies": 1
+    },
+    {
+      "tweet_id": "2094540447230386485",
+      "url": "https://x.com/GS808839011/status/2094540447230386485",
+      "author_handle": "GS808839011",
+      "author_name": "GS",
+      "text": "なんとなんとーー\n陣形まで追加されてるーー\nとりあえず回収しておきます\n#ロマサガRS",
+      "likes": 28,
+      "retweets": 0,
+      "replies": 1
+    },
+    {
+      "tweet_id": "2094551844488106121",
+      "url": "https://x.com/tumutumuCHN/status/2094551844488106121",
+      "author_handle": "tumutumuCHN",
+      "author_name": "つむつむちゃんねる",
+      "text": "#ロマサガRS\n大剣さん、、",
+      "likes": 27,
+      "retweets": 2,
+      "replies": 1
+    },
+    {
+      "tweet_id": "2094551211928404082",
+      "url": "https://x.com/seven7_rs/status/2094551211928404082",
+      "author_handle": "seven7_rs",
+      "author_name": "せぶん",
+      "text": "槍がバカ強過ぎるって話、、\n\n#ロマサガRS",
+      "likes": 27,
+      "retweets": 0,
+      "replies": 1
+    },
+    {
+      "tweet_id": "2094549238348980238",
+      "url": "https://x.com/Kingratta/status/2094549238348980238",
+      "author_handle": "Kingratta",
+      "author_name": "ラッ汰",
+      "text": "おはヘクタァァァァァヽ(ﾟ∀｡)ﾉ\n #ロマサガRS",
+      "likes": 27,
+      "retweets": 0,
+      "replies": 7
+    }
+  ],
+  "summarized_at": "2026-09-01T01:36:21Z"
+}
