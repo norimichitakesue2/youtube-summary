@@ -1,0 +1,2189 @@
+{
+  "meta": {
+    "since": "2026-09-01",
+    "until": "2026-09-07",
+    "generated_at": "2026-09-07T02:41:15.430139+00:00",
+    "n_videos": 36,
+    "n_channels": 11,
+    "n_positive_points": 90,
+    "n_negative_points": 81
+  },
+  "channels": [
+    {
+      "channel": "tyamu",
+      "n_videos": 6,
+      "videos": [
+        {
+          "video_id": "N7rk12kEeMA",
+          "title": "【ロマサガrs】幻闘場：トゥ・クアイ【銃：レベル5】〜4ターンクリア編成〜",
+          "published_at": "2026-09-03T12:27:32Z",
+          "url": "https://www.youtube.com/watch?v=N7rk12kEeMA",
+          "summary_3lines": "幻闘場トゥクアイ銃レベル5の4ターンクリア編成を紹介\nT260Gとメイレンでバフのダブル解除役を担当\n新速人・浮気武器で強化なしでもギリギリ攻略",
+          "key_topics": [
+            "トゥクアイ銃Lv5",
+            "4ターンクリア編成",
+            "T260G",
+            "バフ解除",
+            "新速人"
+          ],
+          "positive_points": [
+            "T260Gとメイレンのダブル解除で安定攻略",
+            "強化・防具を揃えれば楽勝"
+          ],
+          "negative_points": [
+            "無強化だとギリギリのクリアで安定しない"
+          ]
+        },
+        {
+          "video_id": "GYMpCt7-_1Q",
+          "title": "【ロマサガrs】幻闘場：トゥ・クアイ【杖：レベル5】〜2ターンクリア編成〜",
+          "published_at": "2026-09-02T23:13:34Z",
+          "url": "https://www.youtube.com/watch?v=GYMpCt7-_1Q",
+          "summary_3lines": "幻闘場トゥ・クアイ杖レベル5の2ターンクリア編成を紹介。\nロックブーケのバフ解除役を先に動かすのが鍵。\n新ターミン・はまるか等がいればクリア可能。",
+          "key_topics": [
+            "トゥ・クアイ",
+            "杖レベル5",
+            "2ターン編成",
+            "ロックブーケ",
+            "バフ解除"
+          ],
+          "positive_points": [
+            "新ターミン・はまるか・はるかがいればクリアできる",
+            "ロックブーケのダークスフィアで解除できる"
+          ],
+          "negative_points": [
+            "ダークスフィアが当たりにくく数回散らす必要がある"
+          ]
+        },
+        {
+          "video_id": "l9JXnqUsr5k",
+          "title": "【ロマサガrs】幻闘武器進化‼️徹底考察‼️〜10の武器種の【優先度】〜アタッカー83体紹介〜",
+          "published_at": "2026-09-02T12:29:08Z",
+          "url": "https://www.youtube.com/watch?v=l9JXnqUsr5k",
+          "summary_3lines": "幻闘武器の進化はエクストラフォース1.5倍付与が目玉。\n全武器種のアタッカー83体を比較し優先度を考察。\nおすすめは剣か体術、チャムは体術を選択。",
+          "key_topics": [
+            "幻闘武器進化",
+            "エクストラフォース1.5倍",
+            "アタッカー83体",
+            "武器種優先度",
+            "剣/体術"
+          ],
+          "positive_points": [
+            "幻闘武器はエクストラフォース1.5倍付与とど偉い効果",
+            "剣・体術は強アタッカーが揃い最有力",
+            "体術は井戸で毎週活躍するキャラが多い"
+          ],
+          "negative_points": [
+            "月に1つしか強化できず選択ミスで1ヶ月後悔",
+            "コンボ・斧は球がおらず最後まで選ばれない",
+            "証券はサポーター気質が多くアタッカーが物足りない"
+          ]
+        },
+        {
+          "video_id": "QtaMdO71NGg",
+          "title": "【ロマサガrs】幻闘場：トゥ・クアイ【体術:レベル5】〜2ターンクリア編成〜",
+          "published_at": "2026-09-01T11:41:00Z",
+          "url": "https://www.youtube.com/watch?v=QtaMdO71NGg",
+          "summary_3lines": "幻闘場トゥ・クアイ体術レベル5の2ターンクリア編成を紹介。\n人間女のバフ解除役＋アタッカーで構成。\n能力アップ解除役と火力キャラが充実し比較的簡単。",
+          "key_topics": [
+            "トゥ・クアイ",
+            "体術レベル5",
+            "2ターン編成",
+            "人間女",
+            "バフ解除"
+          ],
+          "positive_points": [
+            "体術は能力アップ解除役が多く比較的簡単",
+            "火力キャラ・サポーターが充実",
+            "装備はこのメンツなら何でも大丈夫"
+          ],
+          "negative_points": []
+        },
+        {
+          "video_id": "G6NLUuIIoPA",
+          "title": "【ロマサガrs】幻闘場:トゥ・クアイ【大剣:レベル5】〜井戸流:1ターン攻略編成‼️",
+          "published_at": "2026-09-01T10:08:28Z",
+          "url": "https://www.youtube.com/watch?v=G6NLUuIIoPA",
+          "summary_3lines": "幻闘場トゥ・クアイ大剣レベル5の井戸流1ターン攻略編成。\nオトマン・暦み・ビクトル・サルーイン・ニトの編成。\n新速人会で1ターンクリアを狙う。",
+          "key_topics": [
+            "トゥ・クアイ",
+            "大剣レベル5",
+            "井戸流1ターン",
+            "オトマン/暦み/ビクトル",
+            "新速人会"
+          ],
+          "positive_points": [],
+          "negative_points": []
+        },
+        {
+          "video_id": "C9hIBIfqTVo",
+          "title": "【ロマサガrs】幻闘場:トゥ・クアイ【剣:レベル5】〜井戸流2ターン攻略編成〜",
+          "published_at": "2026-09-01T07:17:58Z",
+          "url": "https://www.youtube.com/watch?v=C9hIBIfqTVo",
+          "summary_3lines": "幻闘場トゥ・クアイ剣レベル5の井戸流2ターン攻略編成。\n剣での2ターンクリア編成を紹介する短尺動画。\n※字幕が自動生成で内容の読み取りは限定的。",
+          "key_topics": [
+            "トゥ・クアイ",
+            "剣レベル5",
+            "井戸流",
+            "2ターン攻略",
+            "編成紹介"
+          ],
+          "positive_points": [],
+          "negative_points": []
+        }
+      ]
+    },
+    {
+      "channel": "タマゴローRS",
+      "n_videos": 6,
+      "videos": [
+        {
+          "video_id": "BRVDQgY9DdM",
+          "title": "【ロマサガRS】こよみ「第二形態」!?親友のギャルも含めて第2弾1日早く予想開始!!その前に俺達を頼むよ…　#ロマサガRS",
+          "published_at": "2026-09-04T22:30:03Z",
+          "url": "https://www.youtube.com/watch?v=BRVDQgY9DdM",
+          "summary_3lines": "暦み編第2弾ガチャを1日早く予想開始\n16日メンテ後TGSでロマサ新作発表を予測\n第2弾はストーリー準拠の8星ダブルガチャが濃厚",
+          "key_topics": [
+            "第2弾ガチャ予想",
+            "ガチャ日程",
+            "TGS新作発表",
+            "ダブルガチャ",
+            "こよみ第二形態"
+          ],
+          "positive_points": [
+            "8周年に向け祭りの盛り上がりに期待"
+          ],
+          "negative_points": [
+            "立ち絵フラグ乱発など出しすぎ問題を懸念"
+          ]
+        },
+        {
+          "video_id": "W9ksDp2zqyY",
+          "title": "【ロマサガRS】63連ガチャ「真の当たり」とは!?狙うべき最強八選!!タイプ別にランキング　#ロマサガRS",
+          "published_at": "2026-09-04T08:54:59Z",
+          "url": "https://www.youtube.com/watch?v=W9ksDp2zqyY",
+          "summary_3lines": "無料で回せる63連ガチャの当たりをタイプ別に解説\nイシスが総合使用回数で頭一つ抜けて最強\n今は引く理由がなく無料分だけ回すのを推奨",
+          "key_topics": [
+            "63連ガチャ",
+            "タイプ別当たり",
+            "イシス最強",
+            "ガチャ厳選",
+            "無料周回"
+          ],
+          "positive_points": [
+            "イシスは立ち上がり早く制圧戦で最強",
+            "マイスは半年前でもまだ現役",
+            "リラは唯一性の高い連打追撃が強い"
+          ],
+          "negative_points": [
+            "雪だ系はエクストラ以外の出力が弱く必須でない",
+            "AJは全体攻撃追撃主流で機能しなくなった",
+            "デスマシーンは倒すべき敵がいない"
+          ]
+        },
+        {
+          "video_id": "yYx47ZpXHMs",
+          "title": "【ロマサガRS】男女「性能格差」限定超えた!?リベル男女の性能詳細!!&追憶の幻闘場トゥクアイ以外に使い道は?使い方取り合い説明書　#ロマサガRS",
+          "published_at": "2026-09-03T10:09:18Z",
+          "url": "https://www.youtube.com/watch?v=yYx47ZpXHMs",
+          "summary_3lines": "配布リベル男女の性能を詳細解説\n限定より強くもある無難な性能でサブコンテンツ向き\n2人セットで毎ターンOD＆エクストラを実現",
+          "key_topics": [
+            "リベル男女",
+            "性能評価",
+            "配布キャラ",
+            "トゥクアイ",
+            "術産継承"
+          ],
+          "positive_points": [
+            "女は回復以外を器用にこなし限定超えの配布",
+            "男は限定並み火力でサブアタッカー優秀",
+            "2人並べれば毎ターンOD満タン"
+          ],
+          "negative_points": [
+            "単体で見ると土平均を少し下回る数値",
+            "奇数偶数ターン仕様が今後の限定で苦しい懸念",
+            "術産継承は必須ではない"
+          ]
+        },
+        {
+          "video_id": "Judr9TllL0A",
+          "title": "【ロマサガRS】ジャミル超強化で「弓/必勝立ち回り」&「メンツ豊富」な杖なのに勝てないのは〇〇が当たらないから　追憶の幻闘場トゥ・クアイ　#ロマサガRS",
+          "published_at": "2026-09-02T09:44:27Z",
+          "url": "https://www.youtube.com/watch?v=Judr9TllL0A",
+          "summary_3lines": "弓は最難だが最新リズでジャミルを維持し安定攻略。\n杖は火力十分だが敵の術回避で苦戦、ODデバフ解除で対応。\n敵の高バフ直後にデバフを当てるのが攻略の鍵。",
+          "key_topics": [
+            "追憶の幻闘場トゥ・クアイ",
+            "弓/杖攻略",
+            "ジャミル",
+            "リズ",
+            "バフ解除"
+          ],
+          "positive_points": [
+            "リズは単体強化＋回復で耐久が成立し必須級",
+            "ジャミル超強化で弓がかなりやりやすい",
+            "アイスのアローシャワーが必須の動き"
+          ],
+          "negative_points": [
+            "弓は最難関",
+            "敵の術が当たらないバグったステータス",
+            "強化破りされるとバフが消え1ター目に戻る"
+          ]
+        },
+        {
+          "video_id": "vUJ8BfXm_e4",
+          "title": "【ロマサガRS】難関「槍/必勝立ち回り」ハンニバルにかけろ&「バフ解除豊富」な小剣をどう扱う!?　追憶の幻闘場トゥ・クアイ　#ロマサガRS",
+          "published_at": "2026-09-02T09:39:17Z",
+          "url": "https://www.youtube.com/watch?v=vUJ8BfXm_e4",
+          "summary_3lines": "槍は難関だがハンニバルが刺さる編成を紹介。\n小剣はバフ解除豊富だがメンツは強くない。\n敵HPが一定以下でバフ入りすぎ判定のデスコンボに注意。",
+          "key_topics": [
+            "トゥ・クアイ",
+            "槍/小剣攻略",
+            "ハンニバル",
+            "バフ解除",
+            "敵HPゾーン"
+          ],
+          "positive_points": [
+            "難関の槍にハンニバルが刺さる",
+            "ジェラールの火力が飛び抜けている",
+            "西王のデバフがダメージアップに有効"
+          ],
+          "negative_points": [
+            "敵HPゾーンでバフ解除・スタンのデスコンボ",
+            "小剣はメンツが強くない",
+            "確定行動でなく調整が難しい"
+          ]
+        },
+        {
+          "video_id": "zwuTgIfzBrI",
+          "title": "【ロマサガRS】勝ち筋掴め「真・ギミック解明」体術/銃/棍棒/斧まとめて4パターン攻略!!　追憶の幻闘場トゥ・クアイ　#ロマサガRS",
+          "published_at": "2026-09-01T10:00:47Z",
+          "url": "https://www.youtube.com/watch?v=zwuTgIfzBrI",
+          "summary_3lines": "速報から状況が変わりあっさり倒せる新立ち回り。\n敵の高バフ直後にデバフを打ち込むのが重要。\nHPは低く立ち回り次第でアタッカー不要。",
+          "key_topics": [
+            "トゥ・クアイ",
+            "体術/銃/棍棒/斧",
+            "バフ解除薬",
+            "立ち回り",
+            "魂アビ"
+          ],
+          "positive_points": [
+            "見た目強いがHP低くめちゃくちゃ弱い",
+            "バフ解除薬の優先度が高い",
+            "成熟した立ち回りなら早く倒せる"
+          ],
+          "negative_points": [
+            "スタンで無理やり3ターンに収める運ゲー",
+            "ナ払いが鬱陶しい",
+            "バフ解除いないとダメージ通らない"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "サンゾーGAMES",
+      "n_videos": 5,
+      "videos": [
+        {
+          "video_id": "1wcerLRg1HE",
+          "title": "【ロマサガRS】マジで全員要注目！今気をつけるべき重要な注意点を大紹介！【ロマンシング サガ リユニバース】",
+          "published_at": "2026-09-04T14:45:27Z",
+          "url": "https://www.youtube.com/watch?v=1wcerLRg1HE",
+          "summary_3lines": "8周年で見逃しやすい重要ポイントを注意喚起\n88日ログボや遠征ソウルピース・週末クエストの回収を推奨\nWebジュエルショップ登録やリポスト企画も忘れず",
+          "key_topics": [
+            "8周年注意点",
+            "88日ログボ",
+            "ソウルピース遠征",
+            "EX周回",
+            "Webジュエルショップ"
+          ],
+          "positive_points": [
+            "88日ログボで8000ジュエルが太っ腹",
+            "EX4は5枠育成で1周3回抽選と激熱",
+            "リポストで全員2000ジュエルもらえる"
+          ],
+          "negative_points": [
+            "お知らせを開くユーザーが1〜2割で告知が地味",
+            "Webショップのメール登録につまずく人が多い"
+          ]
+        },
+        {
+          "video_id": "upVUnroscvQ",
+          "title": "【ロマサガRS】あの追憶トゥ・クアイもぶっ壊す！配布リベルがめちゃくちゃ強かった！！【ロマンシング サガ リユニバース】",
+          "published_at": "2026-09-03T13:30:10Z",
+          "url": "https://www.youtube.com/watch?v=upVUnroscvQ",
+          "summary_3lines": "配布リベル男女がトゥクアイでめちゃくちゃ強いと解説\n男女セットで毎ターンOD＆能力アップ解除コンボが可能\n新難易度レベル5も配布中心で突破できる",
+          "key_topics": [
+            "配布リベル男女",
+            "トゥクアイ攻略",
+            "能力アップ解除",
+            "毎ターンOD",
+            "術回避ステータス"
+          ],
+          "positive_points": [
+            "配布とは思えない強さでトゥクアイで大活躍",
+            "男女セットで奇数偶数ターン両カバー",
+            "技マシンとしてのガチャも高い"
+          ],
+          "negative_points": [
+            "術は素早さ＋精神参照で単体だと解除が当たりにくい",
+            "トゥクアイは能力アップ解除必須で対策キャラ不在だときつい"
+          ]
+        },
+        {
+          "video_id": "Q8cAGj8qe5w",
+          "title": "【ロマサガRS】今の主役はこのキャラたちだ！能力アップ持ちのスタイルを一挙大紹介！【ロマンシング サガ リユニバース】",
+          "published_at": "2026-09-02T13:45:33Z",
+          "url": "https://www.youtube.com/watch?v=Q8cAGj8qe5w",
+          "summary_3lines": "強敵トゥ・クアイに必須の能力アップ解除持ちを一挙紹介。\n技術で64スタイル＋アビリティ15と数は多い。\n弓は武器技に解除がなくリズが必須級。",
+          "key_topics": [
+            "能力アップ解除",
+            "スタイル一覧",
+            "トゥ・クアイ",
+            "リズリンウッド",
+            "配布リベル"
+          ],
+          "positive_points": [
+            "配布リベルの男女だけで剣がいける",
+            "絶望の歌が斧ですごく便利",
+            "リズがいると弓の難易度が一気に下がる"
+          ],
+          "negative_points": [
+            "弓は武器技に解除がなくリズがいないと厳しい",
+            "今回のトガはここ最近で相当難しい",
+            "術は当たりづらく火力も相当要求される"
+          ]
+        },
+        {
+          "video_id": "xGc0INdSM4I",
+          "title": "【ロマサガRS】これが今のロマサガRSの最強の配布キャラ！？周回で困ってる人全員集合！【ロマンシング サガ リユニバース】",
+          "published_at": "2026-09-02T10:06:52Z",
+          "url": "https://www.youtube.com/watch?v=xGc0INdSM4I",
+          "summary_3lines": "今のロマサガRS最強の配布キャラはアレツと紹介。\nアビサルサーカス周回で1手クリアできる周回性能。\n武器錬磨でエクストラフォースの価値が急上昇。",
+          "key_topics": [
+            "配布アレツ",
+            "アビサルサーカス周回",
+            "エクストラフォース",
+            "20ヒット必殺技",
+            "ビクトール代用"
+          ],
+          "positive_points": [
+            "配布アレツは周回で最強で1番強い",
+            "20ヒット必殺でエフェクトも早い",
+            "能力プラス582の腕力で火力が漏れる"
+          ],
+          "negative_points": [
+            "アレツのソウルレベルが低いと弱い",
+            "エクストラフォース足りないと1手で無理",
+            "EX1が一番時間がかかる"
+          ]
+        },
+        {
+          "video_id": "GOhbi0HrFE0",
+          "title": "【ロマサガRS】作るだけで大幅に強くなる神錬磨！？新しくなった武器錬磨を徹底解説【ロマンシング サガ リユニバース】",
+          "published_at": "2026-09-01T13:30:01Z",
+          "url": "https://www.youtube.com/watch?v=GOhbi0HrFE0",
+          "summary_3lines": "新しくなった武器錬磨のおすすめを徹底解説。\n看門・幻闘武器には錬磨不可、能力プラスが汎用性高くおすすめ。\n最優先はエクストラフォース付き武器の強化。",
+          "key_topics": [
+            "武器錬磨解説",
+            "能力プラス",
+            "エクストラフォース",
+            "味方威力プラス",
+            "看門武器"
+          ],
+          "positive_points": [
+            "能力プラスが汎用性高く一番おすすめ",
+            "エクストラフォース付き武器が最優先で偉い",
+            "一括錬磨は便利な新機能"
+          ],
+          "negative_points": [
+            "看門・幻闘武器には錬磨がつけられない",
+            "オールサガプラスは大して強くない",
+            "一括錬磨マックスは素材が一瞬で枯渇する"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "あんずもん",
+      "n_videos": 4,
+      "videos": [
+        {
+          "video_id": "gz-HorhUIG8",
+          "title": "【信長の野望出陣】特別黄金茶会　新規入手の方必見！　1000武将確認",
+          "published_at": "2026-09-04T11:42:53Z",
+          "url": "https://www.youtube.com/watch?v=gz-HorhUIG8",
+          "summary_3lines": "信長の野望出陣の特別黄金茶会パックの1戦武将を全確認\n始めたてでも使える速戦力キャラを性能面から吟味\nおすすめは明智光秀・真田幸村・上杉謙信ら",
+          "key_topics": [
+            "黄金茶会パック",
+            "1戦武将",
+            "武将性能",
+            "覚醒",
+            "おすすめ武将"
+          ],
+          "positive_points": [
+            "真田幸村は覚醒なしでも再起バフで強い",
+            "上杉謙信はバフ入るアタッカーで価値高い",
+            "明智光秀はイベント上位が使う優秀バフ"
+          ],
+          "negative_points": [
+            "北条など家染め前提のバフ量が不明で不安",
+            "全部取ると約7万コ番必要で負担大",
+            "武田系は武田染め必須がきつい"
+          ]
+        },
+        {
+          "video_id": "kosoi3pXIYo",
+          "title": "【信長の野望出陣】プレイ開始335日目記録　突撃　衝撃の展開　新イベントの結果はいかに",
+          "published_at": "2026-09-02T13:57:52Z",
+          "url": "https://www.youtube.com/watch?v=kosoi3pXIYo",
+          "summary_3lines": "信長の野望出陣プレイ335日目の記録動画。\n新武将8体を入手し課金13.5万円で織田信長を100連ゲット。\n無凸でも火力が高く山形・内藤戦を突破。",
+          "key_topics": [
+            "信長の野望出陣",
+            "335日目",
+            "織田信長",
+            "課金",
+            "徳川編成"
+          ],
+          "positive_points": [
+            "織田信長は無凸でも火力がやばい",
+            "北条氏康がバフ要員として優秀",
+            "徳川イエアスは統率高く内政向き"
+          ],
+          "negative_points": [
+            "北条氏康は耐久できず使いにくい",
+            "課金13.5万円が痛い",
+            "本多忠勝1体だと壁が足りず壊滅"
+          ]
+        },
+        {
+          "video_id": "hnDRyKZOg0U",
+          "title": "【ロマサガRS】　幻闘：トゥ・クアイ　挑戦　全武器種制覇なるか！　Interesting games from Japan【初見さん大歓迎】",
+          "published_at": "2026-09-01T15:36:10Z",
+          "url": "https://www.youtube.com/watch?v=hnDRyKZOg0U",
+          "summary_3lines": "幻闘場トゥ・クアイを全武器種制覇に挑む生配信。\n術が当たらず特に弓が最難、リズで攻略。\n新速人会編成とアップ解除3体が有効。",
+          "key_topics": [
+            "トゥ・クアイ全武器制覇",
+            "生配信",
+            "弓が最難",
+            "リズ",
+            "ウコム"
+          ],
+          "positive_points": [
+            "視聴者提案の編成が天才的でリズが強い",
+            "ウコムの火力がバグってる",
+            "新速人会が便利で井戸攻略が活きた"
+          ],
+          "negative_points": [
+            "術が当たらず弓が一番きつい",
+            "アップ解除がないと厳しい",
+            "来月の幻闘も難しそう"
+          ]
+        },
+        {
+          "video_id": "o9qxJKQt6lI",
+          "title": "【ロマサガRS】　幻闘:トゥ・クアイ　フルオート1ターン",
+          "published_at": "2026-09-01T02:48:39Z",
+          "url": "https://www.youtube.com/watch?v=o9qxJKQt6lI",
+          "summary_3lines": "幻闘場トゥ・クアイをフルオートで体験攻略。\n最初にアップ解除しないと攻撃が通らない。\nHP約20億で武器によってはかなりきつい。",
+          "key_topics": [
+            "トゥ・クアイ",
+            "フルオート",
+            "アップ解除",
+            "カウンターキャラ",
+            "防御"
+          ],
+          "positive_points": [
+            "火力高い武器ならフルオートで倒せる",
+            "カウンターキャラが使えそう",
+            "アップ解除である程度耐えられる"
+          ],
+          "negative_points": [
+            "アップ解除しないと攻撃が通らない",
+            "15回まで体力上昇でダメージ通らない場合あり",
+            "防御75-80ないと厳しい"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "あっきゃんGAMES",
+      "n_videos": 3,
+      "videos": [
+        {
+          "video_id": "6Wh-gckrUs8",
+          "title": "【ロマサガRS】幻闘場トゥクアイ攻略を一気に楽に！安定攻略&ギミック解説【ロマンシングサガリユニバース】",
+          "published_at": "2026-09-02T03:00:13Z",
+          "url": "https://www.youtube.com/watch?v=6Wh-gckrUs8",
+          "summary_3lines": "幻闘場トゥクアイの安定攻略とギミックを解説。\n敵はウィークEF2倍持ちで蒸気バフをループさせる。\nバフ解除役を1・4-5に置くと攻略が楽。",
+          "key_topics": [
+            "トゥクアイ",
+            "ギミック解説",
+            "バフ解除",
+            "ウィークEF2倍",
+            "蒸気ループ"
+          ],
+          "positive_points": [
+            "バフ解除役を配置すると攻略が楽になる"
+          ],
+          "negative_points": [
+            "敵の体制バフが高くバフ解除ないとダメージ通らない"
+          ]
+        },
+        {
+          "video_id": "VBmJn48aaQs",
+          "title": "【ロマサガRS】9月ロマンシングパスは本当に買うべきか？上級・通常パスオススメか判断！【ロマンシング サガ リユニバース】",
+          "published_at": "2026-09-01T10:54:06Z",
+          "url": "https://www.youtube.com/watch?v=VBmJn48aaQs",
+          "summary_3lines": "9月ロマパスの上級・通常の性能をチェック。\n上級の魔女の娘は残雷の火力バッファーで買っても良い様子見。\n通常パスは条件が厳しくスルー予定。",
+          "key_topics": [
+            "9月ロマンシングパス",
+            "魔女の娘",
+            "火力バッファー",
+            "通常パス",
+            "気発相性"
+          ],
+          "positive_points": [
+            "魔女の娘は開幕火力バフ＆最大BP増加が優秀",
+            "気発と相性が良く周回適性が高い",
+            "付与するエクストラフォースが被らない"
+          ],
+          "negative_points": [
+            "通常パスは行動後防御強化が1回分しか入らず残念",
+            "ODやファスト先行が必要で条件が厳しい",
+            "魔女の娘は付与側がやや弱い気がする"
+          ]
+        },
+        {
+          "video_id": "VRxwJ-djsKc",
+          "title": "【ロマサガRS】白薔薇姫厄&T260G厄ガチャの最後に引くべきキャラを決めます【ロマンシングサガリユニバース】",
+          "published_at": "2026-09-01T10:00:20Z",
+          "url": "https://www.youtube.com/watch?v=VRxwJ-djsKc",
+          "summary_3lines": "白薔薇姫厄とT260G厄ガチャの最終判断動画。\nどちらも代用が多く基本スルー濃厚。\n引くなら白薔薇姫アビスが一番の当たり。",
+          "key_topics": [
+            "白薔薇姫厄",
+            "T260G厄",
+            "ガチャ判断",
+            "スルー濃厚",
+            "9月ガチャ温存"
+          ],
+          "positive_points": [
+            "白薔薇姫アビスは癖がなく使いやすい",
+            "タイムは開幕大量バフでレイド時短に貢献",
+            "初心者・復帰勢には白薔薇姫アビスがおすすめ"
+          ],
+          "negative_points": [
+            "両ガチャとも代用が多く基本スルー",
+            "T260Gの4ターン火力は使う場面がほぼない",
+            "最終皇帝勢は世代交代に飲まれやすい"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "明星ch",
+      "n_videos": 3,
+      "videos": [
+        {
+          "video_id": "TEaXERvSG0g",
+          "title": "見た目のカスタマイズも可能！発売日アナウンストレーラーから見る新情報を確認！『GUNDAM ROGUE ORBIT』",
+          "published_at": "2026-09-04T05:38:28Z",
+          "url": "https://www.youtube.com/watch?v=TEaXERvSG0g",
+          "summary_3lines": "ガンダム新作ローグオビットの発売日が2027年3月5日に決定\nトレーラーから見た目カスタマイズなど新情報を確認\n機体・キャラ追加も進み続報に期待",
+          "key_topics": [
+            "ガンダムローグオビット",
+            "発売日発表",
+            "見た目カスタマイズ",
+            "MODスキン",
+            "新モビルスーツ"
+          ],
+          "positive_points": [
+            "見た目を大きく変えられるカスタマイズが面白そう",
+            "モビルスーツが多数登場しそうで良い",
+            "2027年発売で思ったより早い"
+          ],
+          "negative_points": [
+            "MODスキンが有料DLC販売されそうな懸念",
+            "中身と見た目を別設定できると嬉しいが不明"
+          ]
+        },
+        {
+          "video_id": "CPPbq9iyXbo",
+          "title": "【Gジェネエターナル】SRキュベレイMkｰⅡ(プルツー専用機) 武装アニメ ＃Shorts ＃ジージェネエターナル",
+          "published_at": "2026-09-03T22:00:32Z",
+          "url": "https://www.youtube.com/watch?v=CPPbq9iyXbo",
+          "summary_3lines": "SRキュベレイMk-II（プルツー専用機）の武装アニメ紹介ショート\nプルツーのセリフと共に武装演出を披露\n短尺のShorts動画",
+          "key_topics": [
+            "キュベレイMk-II",
+            "プルツー専用機",
+            "武装アニメ",
+            "Gジェネエターナル",
+            "ショート"
+          ],
+          "positive_points": [],
+          "negative_points": []
+        },
+        {
+          "video_id": "qLQaDptgKGs",
+          "title": "【タガタメ】タガタメ新作ゲーム！タガマス発表！『誰ガ為のアルケミスト』",
+          "published_at": "2026-09-02T04:26:03Z",
+          "url": "https://www.youtube.com/watch?v=qLQaDptgKGs",
+          "summary_3lines": "タガタメ新作「タガマス」ポートマスターズが発表。\nリアルタイムバトルRPGで事前登録が近日開始。\nURウロボロスが初手配布でもらえる。",
+          "key_topics": [
+            "タガタメ新作",
+            "タガマス",
+            "事前登録",
+            "ウロボロス配布",
+            "タイプ/ロール"
+          ],
+          "positive_points": [
+            "URウロボロスが初手で配布はお得",
+            "イラストが動くようになった",
+            "SSR以上確定チケットなど報酬が充実"
+          ],
+          "negative_points": [
+            "ゲーム性がまだ分からない",
+            "プロローグがいきなりクライマックスすぎる",
+            "タイプの意味合いが不明で分かりにくい"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "RS 周回チャンネル",
+      "n_videos": 2,
+      "videos": [
+        {
+          "video_id": "I753on-4kIM",
+          "title": "【ロマサガRS】新イベント 諦めるのまだ早い!? ガチャ限1+配布4人 周回編成の紹介!!【ロマンシング サガ リ・ユニバース】",
+          "published_at": "2026-09-03T22:05:49Z",
+          "url": "https://www.youtube.com/watch?v=I753on-4kIM",
+          "summary_3lines": "アビッサルサーカス周回をガチャ限1＋配布4人の編成で紹介\n再現性重視でAJ・アレツ・ビンセント・リベル男女を採用\nEX1〜3それぞれの技・人系設定を解説",
+          "key_topics": [
+            "アビッサルサーカス周回",
+            "再現性重視編成",
+            "配布キャラ活用",
+            "AJ",
+            "リベル男女"
+          ],
+          "positive_points": [
+            "ガチャ限1＋配布で再現性の高い周回編成",
+            "ロマンシングショップやジュエルショップで揃えやすい"
+          ],
+          "negative_points": [
+            "求められる周回数が想像以上に厳しい",
+            "ドロップ追加で集めやすくなることに期待（現状不満）"
+          ]
+        },
+        {
+          "video_id": "3MkrwkDNTsU",
+          "title": "【ロマサガRS】新イベント[EX4.全員集結] ヤバい事実が発覚… EX4解放後の次のイベントまでの過ごし方を解説します【ロマンシング サガ リ・ユニバース】【周回】【編成】",
+          "published_at": "2026-09-02T01:02:20Z",
+          "url": "https://www.youtube.com/watch?v=3MkrwkDNTsU",
+          "summary_3lines": "アビサルサーカスEX4全員集結の解説と過ごし方。\n戦闘は7秒自動勝利だが力姫錬装の素材集めが問題。\n最大進化に55万個・約1週間の周回が必要。",
+          "key_topics": [
+            "アビサルサーカスEX4",
+            "自動勝利",
+            "力姫カグラスズ進化",
+            "素材周回",
+            "レマの遺跡"
+          ],
+          "positive_points": [
+            "EX4は7秒自動勝利で判定3回のパラダイス",
+            "力姫を最大進化させると非常に強力な装備",
+            "ドロップ2倍で錬磨の遺跡も魅力"
+          ],
+          "negative_points": [
+            "最大進化に55万個・約1週間かかる",
+            "旨みがフリークエストと大差なく交換所も無い",
+            "錬磨2倍の餌の前でEX4に籠らせる強い意思を感じる"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "もんでる",
+      "n_videos": 2,
+      "videos": [
+        {
+          "video_id": "p61Vcl-pIRw",
+          "title": "【ロマサガRS】イベント完全に出遅れた、幻闘やってます、途中からP雑談",
+          "published_at": "2026-09-03T15:57:10Z",
+          "url": "https://www.youtube.com/watch?v=p61Vcl-pIRw",
+          "summary_3lines": "イベントに出遅れEX周回と幻闘トゥクアイに苦戦する配信\nX4周回が7秒で終わる高効率と知り慌ててEX解放\n後半はパチンコ・スロットの雑談に脱線",
+          "key_topics": [
+            "イベント出遅れ",
+            "EX周回",
+            "幻闘トゥクアイ",
+            "X4周回",
+            "パチスロ雑談"
+          ],
+          "positive_points": [
+            "X4は5人誰でも育成でき6〜7秒で終わる高効率",
+            "ロマサガ3リメイクに期待"
+          ],
+          "negative_points": [
+            "EX3到達に1日半かかり要求周回数がきつい",
+            "メインばかり回してEX解放が出遅れた"
+          ]
+        },
+        {
+          "video_id": "EEpi70liGgs",
+          "title": "【ロマサガRS】幻闘やってます",
+          "published_at": "2026-09-01T13:18:21Z",
+          "url": "https://www.youtube.com/watch?v=EEpi70liGgs",
+          "summary_3lines": "幻闘場を大剣中心に攻略する雑談生配信。\nUI変更やダメージ表記の重さに不満が続出。\n今月のロマパスは両方スルー予定。",
+          "key_topics": [
+            "幻闘場",
+            "生配信",
+            "ロマパススルー",
+            "UI変更不満",
+            "リズ"
+          ],
+          "positive_points": [
+            "リズがいればギミック突破しやすそう",
+            "無敵のラゼムがいい味を出す",
+            "EX真剣勝負で周回が楽になる"
+          ],
+          "negative_points": [
+            "今月のロマパスは両方スルー",
+            "UI変更でウェブショップに飛べず不便",
+            "ダメージ最新表記はアプリが重くなる"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "くんちゃんねる",
+      "n_videos": 2,
+      "videos": [
+        {
+          "video_id": "hkvOQLvZrME",
+          "title": "【ロマサガRS】【ガチャ動画】実は追ってたT260G厄！！「アンリィ!!」復活計画も…！？【No.635】",
+          "published_at": "2026-09-03T07:59:05Z",
+          "url": "https://www.youtube.com/watch?v=hkvOQLvZrME",
+          "summary_3lines": "T260G厄を狙って50連ガチャに挑戦する雑談ガチャ配信\n相性が悪く50連で目当てが何も出ず\nアンリィの代わりになる母系キャラ探しで盛り上がる",
+          "key_topics": [
+            "T260G厄ガチャ",
+            "50連",
+            "ガチャ渋い",
+            "アンリィ復活計画",
+            "雑談"
+          ],
+          "positive_points": [
+            "ロボ系スタイルの見た目がかっこいい",
+            "9月お祭りでジュエル追加配布に期待"
+          ],
+          "negative_points": [
+            "ガチャの相性が悪く50連で何も出ず",
+            "クーンが301回引いても出ない渋さ"
+          ]
+        },
+        {
+          "video_id": "kSutYTIrsXw",
+          "title": "【ロマサガRS】【ガチャ動画】最遅！？サルーインガチャ！なんかごめん【No.633】",
+          "published_at": "2026-09-01T07:48:26Z",
+          "url": "https://www.youtube.com/watch?v=kSutYTIrsXw",
+          "summary_3lines": "黒薔薇/白薔薇姫ガチャをフレイヤー狙いで実況。\nフレイヤーやハンニバル、まきびなどを確保。\n安定演出で複数体を引き当てる。",
+          "key_topics": [
+            "ガチャ実況",
+            "黒薔薇/白薔薇姫",
+            "フレイヤー確保",
+            "サルーイン",
+            "くんちゃんねる"
+          ],
+          "positive_points": [
+            "フレイヤーを確保でき流れが良い",
+            "安定演出で2体以上引けた",
+            "まきび・マイアなど良キャラが来た"
+          ],
+          "negative_points": [
+            "ペットガチャが悪くないのに全然出ない",
+            "ピックアップが1体も来ないのはもったいない"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "つむつむちゃんねる●ゲーム考察専門",
+      "n_videos": 2,
+      "videos": [
+        {
+          "video_id": "HB9DV9nPPIM",
+          "title": "【ロマサガRS】錬磨注意点！後になって後悔しても遅いので話を聞いてみてください【ロマンシングサガリユニバース】",
+          "published_at": "2026-09-02T13:21:10Z",
+          "url": "https://www.youtube.com/watch?v=HB9DV9nPPIM",
+          "summary_3lines": "新しい武器錬磨は必要な分だけやるべきと助言。\nなんとなくやると石・素材が枯渇し後悔する。\nイベント配布素材で試すのがおすすめ。",
+          "key_topics": [
+            "武器錬磨",
+            "素材枯渇",
+            "錬磨注意",
+            "全体攻撃",
+            "リサギ精神"
+          ],
+          "positive_points": [
+            "錬磨は簡単にまとめてやれるようになった",
+            "イベント配布素材なら気軽に使える",
+            "やってみると楽しくハマる"
+          ],
+          "negative_points": [
+            "なんとなくやると素材が枯渇し後悔",
+            "100%程度の伸びで意味を感じなかった",
+            "上げた水準を下げるのは大変"
+          ]
+        },
+        {
+          "video_id": "ii9BwayvRn4",
+          "title": "【ロマサガRS】幻闘場全編成＆ギミック代用考察トゥクアイ編【ロマンシングサガリユニバース】",
+          "published_at": "2026-09-01T14:02:46Z",
+          "url": "https://www.youtube.com/watch?v=ii9BwayvRn4",
+          "summary_3lines": "トゥ・クアイ全武器種の編成とギミックを解説。\nバフ解除必須でコンボと弓が最難、体術は簡単。\n2ターン想定で武器ごとの攻略難易度を紹介。",
+          "key_topics": [
+            "トゥ・クアイ全編成",
+            "ギミック解説",
+            "バフ解除",
+            "難易度評価",
+            "リズ/アイス"
+          ],
+          "positive_points": [
+            "トゥ・クアイは出来がよく面白いボス",
+            "暦みがいると楽にクリアしやすい",
+            "イスカンダールが吸ってくれて剣が安定"
+          ],
+          "negative_points": [
+            "コンボはSランクでめちゃくちゃ難しい",
+            "弓は精神高すぎて術が当たらない",
+            "リズ・アイスがいないと弓はきつい"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "ジュラのサガちゃんねる",
+      "n_videos": 1,
+      "videos": [
+        {
+          "video_id": "JsB4bD6hmfs",
+          "title": "【ロマサガRS】いともたやすく行われる幻闘場攻略配信【生配信】",
+          "published_at": "2026-09-02T14:42:09Z",
+          "url": "https://www.youtube.com/watch?v=JsB4bD6hmfs",
+          "summary_3lines": "幻闘場トゥ・クアイを武器種ごとに攻略する生配信。\n体術は簡単だが証券・弓は解除と火力が問われ苦戦。\n斧はじじ（薬王）が活躍、弓はリズ不足が課題。",
+          "key_topics": [
+            "幻闘場攻略",
+            "生配信",
+            "体術/証券/弓/斧",
+            "バフ解除",
+            "リズ未所持"
+          ],
+          "positive_points": [
+            "体術はバカでも勝てる強い武器",
+            "斧はじじ（薬王）が匠に活躍",
+            "コンボはゴリラ編成が最強で1周ムーブで勝てる"
+          ],
+          "negative_points": [
+            "弓はリズ未所持できつく取っておくべきだった",
+            "証券はサポーター気質で火力が出しにくい",
+            "斧が2ヶ月連続でゼロスタイル"
+          ]
+        }
+      ]
+    }
+  ],
+  "top_topics": [
+    {
+      "topic": "トゥ・クアイ",
+      "count": 8,
+      "video_ids": [
+        "C9hIBIfqTVo",
+        "vUJ8BfXm_e4",
+        "GYMpCt7-_1Q",
+        "QtaMdO71NGg",
+        "G6NLUuIIoPA",
+        "Q8cAGj8qe5w",
+        "zwuTgIfzBrI",
+        "o9qxJKQt6lI"
+      ]
+    },
+    {
+      "topic": "バフ解除",
+      "count": 8,
+      "video_ids": [
+        "N7rk12kEeMA",
+        "JsB4bD6hmfs",
+        "vUJ8BfXm_e4",
+        "GYMpCt7-_1Q",
+        "QtaMdO71NGg",
+        "Judr9TllL0A",
+        "6Wh-gckrUs8",
+        "ii9BwayvRn4"
+      ]
+    },
+    {
+      "topic": "生配信",
+      "count": 3,
+      "video_ids": [
+        "JsB4bD6hmfs",
+        "EEpi70liGgs",
+        "hnDRyKZOg0U"
+      ]
+    },
+    {
+      "topic": "リズ",
+      "count": 3,
+      "video_ids": [
+        "Judr9TllL0A",
+        "EEpi70liGgs",
+        "hnDRyKZOg0U"
+      ]
+    },
+    {
+      "topic": "リベル男女",
+      "count": 2,
+      "video_ids": [
+        "I753on-4kIM",
+        "yYx47ZpXHMs"
+      ]
+    },
+    {
+      "topic": "EX周回",
+      "count": 2,
+      "video_ids": [
+        "1wcerLRg1HE",
+        "p61Vcl-pIRw"
+      ]
+    },
+    {
+      "topic": "2ターン編成",
+      "count": 2,
+      "video_ids": [
+        "GYMpCt7-_1Q",
+        "QtaMdO71NGg"
+      ]
+    },
+    {
+      "topic": "エクストラフォース",
+      "count": 2,
+      "video_ids": [
+        "xGc0INdSM4I",
+        "GOhbi0HrFE0"
+      ]
+    },
+    {
+      "topic": "能力アップ解除",
+      "count": 2,
+      "video_ids": [
+        "upVUnroscvQ",
+        "Q8cAGj8qe5w"
+      ]
+    },
+    {
+      "topic": "トゥクアイ",
+      "count": 2,
+      "video_ids": [
+        "yYx47ZpXHMs",
+        "6Wh-gckrUs8"
+      ]
+    },
+    {
+      "topic": "ギミック解説",
+      "count": 2,
+      "video_ids": [
+        "6Wh-gckrUs8",
+        "ii9BwayvRn4"
+      ]
+    },
+    {
+      "topic": "信長の野望出陣",
+      "count": 1,
+      "video_ids": [
+        "kosoi3pXIYo"
+      ]
+    },
+    {
+      "topic": "335日目",
+      "count": 1,
+      "video_ids": [
+        "kosoi3pXIYo"
+      ]
+    },
+    {
+      "topic": "織田信長",
+      "count": 1,
+      "video_ids": [
+        "kosoi3pXIYo"
+      ]
+    },
+    {
+      "topic": "課金",
+      "count": 1,
+      "video_ids": [
+        "kosoi3pXIYo"
+      ]
+    },
+    {
+      "topic": "徳川編成",
+      "count": 1,
+      "video_ids": [
+        "kosoi3pXIYo"
+      ]
+    },
+    {
+      "topic": "白薔薇姫厄",
+      "count": 1,
+      "video_ids": [
+        "VRxwJ-djsKc"
+      ]
+    },
+    {
+      "topic": "T260G厄",
+      "count": 1,
+      "video_ids": [
+        "VRxwJ-djsKc"
+      ]
+    },
+    {
+      "topic": "ガチャ判断",
+      "count": 1,
+      "video_ids": [
+        "VRxwJ-djsKc"
+      ]
+    },
+    {
+      "topic": "スルー濃厚",
+      "count": 1,
+      "video_ids": [
+        "VRxwJ-djsKc"
+      ]
+    }
+  ],
+  "positive_points": [
+    {
+      "point": "織田信長は無凸でも火力がやばい",
+      "video_id": "kosoi3pXIYo",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "北条氏康がバフ要員として優秀",
+      "video_id": "kosoi3pXIYo",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "徳川イエアスは統率高く内政向き",
+      "video_id": "kosoi3pXIYo",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "白薔薇姫アビスは癖がなく使いやすい",
+      "video_id": "VRxwJ-djsKc",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "タイムは開幕大量バフでレイド時短に貢献",
+      "video_id": "VRxwJ-djsKc",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "初心者・復帰勢には白薔薇姫アビスがおすすめ",
+      "video_id": "VRxwJ-djsKc",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "ガチャ限1＋配布で再現性の高い周回編成",
+      "video_id": "I753on-4kIM",
+      "channel": "RS 周回チャンネル"
+    },
+    {
+      "point": "ロマンシングショップやジュエルショップで揃えやすい",
+      "video_id": "I753on-4kIM",
+      "channel": "RS 周回チャンネル"
+    },
+    {
+      "point": "8周年に向け祭りの盛り上がりに期待",
+      "video_id": "BRVDQgY9DdM",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "イシスは立ち上がり早く制圧戦で最強",
+      "video_id": "W9ksDp2zqyY",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "マイスは半年前でもまだ現役",
+      "video_id": "W9ksDp2zqyY",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "リラは唯一性の高い連打追撃が強い",
+      "video_id": "W9ksDp2zqyY",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "URウロボロスが初手で配布はお得",
+      "video_id": "qLQaDptgKGs",
+      "channel": "明星ch"
+    },
+    {
+      "point": "イラストが動くようになった",
+      "video_id": "qLQaDptgKGs",
+      "channel": "明星ch"
+    },
+    {
+      "point": "SSR以上確定チケットなど報酬が充実",
+      "video_id": "qLQaDptgKGs",
+      "channel": "明星ch"
+    },
+    {
+      "point": "幻闘武器はエクストラフォース1.5倍付与とど偉い効果",
+      "video_id": "l9JXnqUsr5k",
+      "channel": "tyamu"
+    },
+    {
+      "point": "剣・体術は強アタッカーが揃い最有力",
+      "video_id": "l9JXnqUsr5k",
+      "channel": "tyamu"
+    },
+    {
+      "point": "体術は井戸で毎週活躍するキャラが多い",
+      "video_id": "l9JXnqUsr5k",
+      "channel": "tyamu"
+    },
+    {
+      "point": "T260Gとメイレンのダブル解除で安定攻略",
+      "video_id": "N7rk12kEeMA",
+      "channel": "tyamu"
+    },
+    {
+      "point": "強化・防具を揃えれば楽勝",
+      "video_id": "N7rk12kEeMA",
+      "channel": "tyamu"
+    },
+    {
+      "point": "体術はバカでも勝てる強い武器",
+      "video_id": "JsB4bD6hmfs",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "斧はじじ（薬王）が匠に活躍",
+      "video_id": "JsB4bD6hmfs",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "コンボはゴリラ編成が最強で1周ムーブで勝てる",
+      "video_id": "JsB4bD6hmfs",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "難関の槍にハンニバルが刺さる",
+      "video_id": "vUJ8BfXm_e4",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ジェラールの火力が飛び抜けている",
+      "video_id": "vUJ8BfXm_e4",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "西王のデバフがダメージアップに有効",
+      "video_id": "vUJ8BfXm_e4",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "88日ログボで8000ジュエルが太っ腹",
+      "video_id": "1wcerLRg1HE",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "EX4は5枠育成で1周3回抽選と激熱",
+      "video_id": "1wcerLRg1HE",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "リポストで全員2000ジュエルもらえる",
+      "video_id": "1wcerLRg1HE",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "新ターミン・はまるか・はるかがいればクリアできる",
+      "video_id": "GYMpCt7-_1Q",
+      "channel": "tyamu"
+    },
+    {
+      "point": "ロックブーケのダークスフィアで解除できる",
+      "video_id": "GYMpCt7-_1Q",
+      "channel": "tyamu"
+    },
+    {
+      "point": "体術は能力アップ解除役が多く比較的簡単",
+      "video_id": "QtaMdO71NGg",
+      "channel": "tyamu"
+    },
+    {
+      "point": "火力キャラ・サポーターが充実",
+      "video_id": "QtaMdO71NGg",
+      "channel": "tyamu"
+    },
+    {
+      "point": "装備はこのメンツなら何でも大丈夫",
+      "video_id": "QtaMdO71NGg",
+      "channel": "tyamu"
+    },
+    {
+      "point": "リズは単体強化＋回復で耐久が成立し必須級",
+      "video_id": "Judr9TllL0A",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ジャミル超強化で弓がかなりやりやすい",
+      "video_id": "Judr9TllL0A",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "アイスのアローシャワーが必須の動き",
+      "video_id": "Judr9TllL0A",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "配布アレツは周回で最強で1番強い",
+      "video_id": "xGc0INdSM4I",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "20ヒット必殺でエフェクトも早い",
+      "video_id": "xGc0INdSM4I",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "能力プラス582の腕力で火力が漏れる",
+      "video_id": "xGc0INdSM4I",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "能力プラスが汎用性高く一番おすすめ",
+      "video_id": "GOhbi0HrFE0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "エクストラフォース付き武器が最優先で偉い",
+      "video_id": "GOhbi0HrFE0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "一括錬磨は便利な新機能",
+      "video_id": "GOhbi0HrFE0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "リズがいればギミック突破しやすそう",
+      "video_id": "EEpi70liGgs",
+      "channel": "もんでる"
+    },
+    {
+      "point": "無敵のラゼムがいい味を出す",
+      "video_id": "EEpi70liGgs",
+      "channel": "もんでる"
+    },
+    {
+      "point": "EX真剣勝負で周回が楽になる",
+      "video_id": "EEpi70liGgs",
+      "channel": "もんでる"
+    },
+    {
+      "point": "配布とは思えない強さでトゥクアイで大活躍",
+      "video_id": "upVUnroscvQ",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "男女セットで奇数偶数ターン両カバー",
+      "video_id": "upVUnroscvQ",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "技マシンとしてのガチャも高い",
+      "video_id": "upVUnroscvQ",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "配布リベルの男女だけで剣がいける",
+      "video_id": "Q8cAGj8qe5w",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "絶望の歌が斧ですごく便利",
+      "video_id": "Q8cAGj8qe5w",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "リズがいると弓の難易度が一気に下がる",
+      "video_id": "Q8cAGj8qe5w",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "真田幸村は覚醒なしでも再起バフで強い",
+      "video_id": "gz-HorhUIG8",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "上杉謙信はバフ入るアタッカーで価値高い",
+      "video_id": "gz-HorhUIG8",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "明智光秀はイベント上位が使う優秀バフ",
+      "video_id": "gz-HorhUIG8",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "フレイヤーを確保でき流れが良い",
+      "video_id": "kSutYTIrsXw",
+      "channel": "くんちゃんねる"
+    },
+    {
+      "point": "安定演出で2体以上引けた",
+      "video_id": "kSutYTIrsXw",
+      "channel": "くんちゃんねる"
+    },
+    {
+      "point": "まきび・マイアなど良キャラが来た",
+      "video_id": "kSutYTIrsXw",
+      "channel": "くんちゃんねる"
+    },
+    {
+      "point": "錬磨は簡単にまとめてやれるようになった",
+      "video_id": "HB9DV9nPPIM",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "イベント配布素材なら気軽に使える",
+      "video_id": "HB9DV9nPPIM",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "やってみると楽しくハマる",
+      "video_id": "HB9DV9nPPIM",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "見た目を大きく変えられるカスタマイズが面白そう",
+      "video_id": "TEaXERvSG0g",
+      "channel": "明星ch"
+    },
+    {
+      "point": "モビルスーツが多数登場しそうで良い",
+      "video_id": "TEaXERvSG0g",
+      "channel": "明星ch"
+    },
+    {
+      "point": "2027年発売で思ったより早い",
+      "video_id": "TEaXERvSG0g",
+      "channel": "明星ch"
+    },
+    {
+      "point": "視聴者提案の編成が天才的でリズが強い",
+      "video_id": "hnDRyKZOg0U",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "ウコムの火力がバグってる",
+      "video_id": "hnDRyKZOg0U",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "新速人会が便利で井戸攻略が活きた",
+      "video_id": "hnDRyKZOg0U",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "ロボ系スタイルの見た目がかっこいい",
+      "video_id": "hkvOQLvZrME",
+      "channel": "くんちゃんねる"
+    },
+    {
+      "point": "9月お祭りでジュエル追加配布に期待",
+      "video_id": "hkvOQLvZrME",
+      "channel": "くんちゃんねる"
+    },
+    {
+      "point": "女は回復以外を器用にこなし限定超えの配布",
+      "video_id": "yYx47ZpXHMs",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "男は限定並み火力でサブアタッカー優秀",
+      "video_id": "yYx47ZpXHMs",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "2人並べれば毎ターンOD満タン",
+      "video_id": "yYx47ZpXHMs",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "見た目強いがHP低くめちゃくちゃ弱い",
+      "video_id": "zwuTgIfzBrI",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "バフ解除薬の優先度が高い",
+      "video_id": "zwuTgIfzBrI",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "成熟した立ち回りなら早く倒せる",
+      "video_id": "zwuTgIfzBrI",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "バフ解除役を配置すると攻略が楽になる",
+      "video_id": "6Wh-gckrUs8",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "EX4は7秒自動勝利で判定3回のパラダイス",
+      "video_id": "3MkrwkDNTsU",
+      "channel": "RS 周回チャンネル"
+    },
+    {
+      "point": "力姫を最大進化させると非常に強力な装備",
+      "video_id": "3MkrwkDNTsU",
+      "channel": "RS 周回チャンネル"
+    },
+    {
+      "point": "ドロップ2倍で錬磨の遺跡も魅力",
+      "video_id": "3MkrwkDNTsU",
+      "channel": "RS 周回チャンネル"
+    },
+    {
+      "point": "魔女の娘は開幕火力バフ＆最大BP増加が優秀",
+      "video_id": "VBmJn48aaQs",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "気発と相性が良く周回適性が高い",
+      "video_id": "VBmJn48aaQs",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "付与するエクストラフォースが被らない",
+      "video_id": "VBmJn48aaQs",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "火力高い武器ならフルオートで倒せる",
+      "video_id": "o9qxJKQt6lI",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "カウンターキャラが使えそう",
+      "video_id": "o9qxJKQt6lI",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "アップ解除である程度耐えられる",
+      "video_id": "o9qxJKQt6lI",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "X4は5人誰でも育成でき6〜7秒で終わる高効率",
+      "video_id": "p61Vcl-pIRw",
+      "channel": "もんでる"
+    },
+    {
+      "point": "ロマサガ3リメイクに期待",
+      "video_id": "p61Vcl-pIRw",
+      "channel": "もんでる"
+    },
+    {
+      "point": "トゥ・クアイは出来がよく面白いボス",
+      "video_id": "ii9BwayvRn4",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "暦みがいると楽にクリアしやすい",
+      "video_id": "ii9BwayvRn4",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "イスカンダールが吸ってくれて剣が安定",
+      "video_id": "ii9BwayvRn4",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    }
+  ],
+  "negative_points": [
+    {
+      "point": "北条氏康は耐久できず使いにくい",
+      "video_id": "kosoi3pXIYo",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "課金13.5万円が痛い",
+      "video_id": "kosoi3pXIYo",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "本多忠勝1体だと壁が足りず壊滅",
+      "video_id": "kosoi3pXIYo",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "両ガチャとも代用が多く基本スルー",
+      "video_id": "VRxwJ-djsKc",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "T260Gの4ターン火力は使う場面がほぼない",
+      "video_id": "VRxwJ-djsKc",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "最終皇帝勢は世代交代に飲まれやすい",
+      "video_id": "VRxwJ-djsKc",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "求められる周回数が想像以上に厳しい",
+      "video_id": "I753on-4kIM",
+      "channel": "RS 周回チャンネル"
+    },
+    {
+      "point": "ドロップ追加で集めやすくなることに期待（現状不満）",
+      "video_id": "I753on-4kIM",
+      "channel": "RS 周回チャンネル"
+    },
+    {
+      "point": "立ち絵フラグ乱発など出しすぎ問題を懸念",
+      "video_id": "BRVDQgY9DdM",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "雪だ系はエクストラ以外の出力が弱く必須でない",
+      "video_id": "W9ksDp2zqyY",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "AJは全体攻撃追撃主流で機能しなくなった",
+      "video_id": "W9ksDp2zqyY",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "デスマシーンは倒すべき敵がいない",
+      "video_id": "W9ksDp2zqyY",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ゲーム性がまだ分からない",
+      "video_id": "qLQaDptgKGs",
+      "channel": "明星ch"
+    },
+    {
+      "point": "プロローグがいきなりクライマックスすぎる",
+      "video_id": "qLQaDptgKGs",
+      "channel": "明星ch"
+    },
+    {
+      "point": "タイプの意味合いが不明で分かりにくい",
+      "video_id": "qLQaDptgKGs",
+      "channel": "明星ch"
+    },
+    {
+      "point": "月に1つしか強化できず選択ミスで1ヶ月後悔",
+      "video_id": "l9JXnqUsr5k",
+      "channel": "tyamu"
+    },
+    {
+      "point": "コンボ・斧は球がおらず最後まで選ばれない",
+      "video_id": "l9JXnqUsr5k",
+      "channel": "tyamu"
+    },
+    {
+      "point": "証券はサポーター気質が多くアタッカーが物足りない",
+      "video_id": "l9JXnqUsr5k",
+      "channel": "tyamu"
+    },
+    {
+      "point": "無強化だとギリギリのクリアで安定しない",
+      "video_id": "N7rk12kEeMA",
+      "channel": "tyamu"
+    },
+    {
+      "point": "弓はリズ未所持できつく取っておくべきだった",
+      "video_id": "JsB4bD6hmfs",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "証券はサポーター気質で火力が出しにくい",
+      "video_id": "JsB4bD6hmfs",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "斧が2ヶ月連続でゼロスタイル",
+      "video_id": "JsB4bD6hmfs",
+      "channel": "ジュラのサガちゃんねる"
+    },
+    {
+      "point": "敵HPゾーンでバフ解除・スタンのデスコンボ",
+      "video_id": "vUJ8BfXm_e4",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "小剣はメンツが強くない",
+      "video_id": "vUJ8BfXm_e4",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "確定行動でなく調整が難しい",
+      "video_id": "vUJ8BfXm_e4",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "お知らせを開くユーザーが1〜2割で告知が地味",
+      "video_id": "1wcerLRg1HE",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "Webショップのメール登録につまずく人が多い",
+      "video_id": "1wcerLRg1HE",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "ダークスフィアが当たりにくく数回散らす必要がある",
+      "video_id": "GYMpCt7-_1Q",
+      "channel": "tyamu"
+    },
+    {
+      "point": "弓は最難関",
+      "video_id": "Judr9TllL0A",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "敵の術が当たらないバグったステータス",
+      "video_id": "Judr9TllL0A",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "強化破りされるとバフが消え1ター目に戻る",
+      "video_id": "Judr9TllL0A",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "アレツのソウルレベルが低いと弱い",
+      "video_id": "xGc0INdSM4I",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "エクストラフォース足りないと1手で無理",
+      "video_id": "xGc0INdSM4I",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "EX1が一番時間がかかる",
+      "video_id": "xGc0INdSM4I",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "看門・幻闘武器には錬磨がつけられない",
+      "video_id": "GOhbi0HrFE0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "オールサガプラスは大して強くない",
+      "video_id": "GOhbi0HrFE0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "一括錬磨マックスは素材が一瞬で枯渇する",
+      "video_id": "GOhbi0HrFE0",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "今月のロマパスは両方スルー",
+      "video_id": "EEpi70liGgs",
+      "channel": "もんでる"
+    },
+    {
+      "point": "UI変更でウェブショップに飛べず不便",
+      "video_id": "EEpi70liGgs",
+      "channel": "もんでる"
+    },
+    {
+      "point": "ダメージ最新表記はアプリが重くなる",
+      "video_id": "EEpi70liGgs",
+      "channel": "もんでる"
+    },
+    {
+      "point": "術は素早さ＋精神参照で単体だと解除が当たりにくい",
+      "video_id": "upVUnroscvQ",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "トゥクアイは能力アップ解除必須で対策キャラ不在だときつい",
+      "video_id": "upVUnroscvQ",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "弓は武器技に解除がなくリズがいないと厳しい",
+      "video_id": "Q8cAGj8qe5w",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "今回のトガはここ最近で相当難しい",
+      "video_id": "Q8cAGj8qe5w",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "術は当たりづらく火力も相当要求される",
+      "video_id": "Q8cAGj8qe5w",
+      "channel": "サンゾーGAMES"
+    },
+    {
+      "point": "北条など家染め前提のバフ量が不明で不安",
+      "video_id": "gz-HorhUIG8",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "全部取ると約7万コ番必要で負担大",
+      "video_id": "gz-HorhUIG8",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "武田系は武田染め必須がきつい",
+      "video_id": "gz-HorhUIG8",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "ペットガチャが悪くないのに全然出ない",
+      "video_id": "kSutYTIrsXw",
+      "channel": "くんちゃんねる"
+    },
+    {
+      "point": "ピックアップが1体も来ないのはもったいない",
+      "video_id": "kSutYTIrsXw",
+      "channel": "くんちゃんねる"
+    },
+    {
+      "point": "なんとなくやると素材が枯渇し後悔",
+      "video_id": "HB9DV9nPPIM",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "100%程度の伸びで意味を感じなかった",
+      "video_id": "HB9DV9nPPIM",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "上げた水準を下げるのは大変",
+      "video_id": "HB9DV9nPPIM",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "MODスキンが有料DLC販売されそうな懸念",
+      "video_id": "TEaXERvSG0g",
+      "channel": "明星ch"
+    },
+    {
+      "point": "中身と見た目を別設定できると嬉しいが不明",
+      "video_id": "TEaXERvSG0g",
+      "channel": "明星ch"
+    },
+    {
+      "point": "術が当たらず弓が一番きつい",
+      "video_id": "hnDRyKZOg0U",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "アップ解除がないと厳しい",
+      "video_id": "hnDRyKZOg0U",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "来月の幻闘も難しそう",
+      "video_id": "hnDRyKZOg0U",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "ガチャの相性が悪く50連で何も出ず",
+      "video_id": "hkvOQLvZrME",
+      "channel": "くんちゃんねる"
+    },
+    {
+      "point": "クーンが301回引いても出ない渋さ",
+      "video_id": "hkvOQLvZrME",
+      "channel": "くんちゃんねる"
+    },
+    {
+      "point": "単体で見ると土平均を少し下回る数値",
+      "video_id": "yYx47ZpXHMs",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "奇数偶数ターン仕様が今後の限定で苦しい懸念",
+      "video_id": "yYx47ZpXHMs",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "術産継承は必須ではない",
+      "video_id": "yYx47ZpXHMs",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "スタンで無理やり3ターンに収める運ゲー",
+      "video_id": "zwuTgIfzBrI",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "ナ払いが鬱陶しい",
+      "video_id": "zwuTgIfzBrI",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "バフ解除いないとダメージ通らない",
+      "video_id": "zwuTgIfzBrI",
+      "channel": "タマゴローRS"
+    },
+    {
+      "point": "敵の体制バフが高くバフ解除ないとダメージ通らない",
+      "video_id": "6Wh-gckrUs8",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "最大進化に55万個・約1週間かかる",
+      "video_id": "3MkrwkDNTsU",
+      "channel": "RS 周回チャンネル"
+    },
+    {
+      "point": "旨みがフリークエストと大差なく交換所も無い",
+      "video_id": "3MkrwkDNTsU",
+      "channel": "RS 周回チャンネル"
+    },
+    {
+      "point": "錬磨2倍の餌の前でEX4に籠らせる強い意思を感じる",
+      "video_id": "3MkrwkDNTsU",
+      "channel": "RS 周回チャンネル"
+    },
+    {
+      "point": "通常パスは行動後防御強化が1回分しか入らず残念",
+      "video_id": "VBmJn48aaQs",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "ODやファスト先行が必要で条件が厳しい",
+      "video_id": "VBmJn48aaQs",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "魔女の娘は付与側がやや弱い気がする",
+      "video_id": "VBmJn48aaQs",
+      "channel": "あっきゃんGAMES"
+    },
+    {
+      "point": "アップ解除しないと攻撃が通らない",
+      "video_id": "o9qxJKQt6lI",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "15回まで体力上昇でダメージ通らない場合あり",
+      "video_id": "o9qxJKQt6lI",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "防御75-80ないと厳しい",
+      "video_id": "o9qxJKQt6lI",
+      "channel": "あんずもん"
+    },
+    {
+      "point": "EX3到達に1日半かかり要求周回数がきつい",
+      "video_id": "p61Vcl-pIRw",
+      "channel": "もんでる"
+    },
+    {
+      "point": "メインばかり回してEX解放が出遅れた",
+      "video_id": "p61Vcl-pIRw",
+      "channel": "もんでる"
+    },
+    {
+      "point": "コンボはSランクでめちゃくちゃ難しい",
+      "video_id": "ii9BwayvRn4",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "弓は精神高すぎて術が当たらない",
+      "video_id": "ii9BwayvRn4",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    },
+    {
+      "point": "リズ・アイスがいないと弓はきつい",
+      "video_id": "ii9BwayvRn4",
+      "channel": "つむつむちゃんねる●ゲーム考察専門"
+    }
+  ],
+  "pick_candidates": [
+    {
+      "video_id": "kosoi3pXIYo",
+      "title": "【信長の野望出陣】プレイ開始335日目記録　突撃　衝撃の展開　新イベントの結果はいかに",
+      "channel": "あんずもん",
+      "published_at": "2026-09-02T13:57:52Z",
+      "url": "https://www.youtube.com/watch?v=kosoi3pXIYo",
+      "summary_3lines": "信長の野望出陣プレイ335日目の記録動画。\n新武将8体を入手し課金13.5万円で織田信長を100連ゲット。\n無凸でも火力が高く山形・内藤戦を突破。",
+      "key_topics": [
+        "信長の野望出陣",
+        "335日目",
+        "織田信長",
+        "課金",
+        "徳川編成"
+      ],
+      "n_pos": 3,
+      "n_neg": 3,
+      "positive_points": [
+        "織田信長は無凸でも火力がやばい",
+        "北条氏康がバフ要員として優秀",
+        "徳川イエアスは統率高く内政向き"
+      ],
+      "negative_points": [
+        "北条氏康は耐久できず使いにくい",
+        "課金13.5万円が痛い",
+        "本多忠勝1体だと壁が足りず壊滅"
+      ]
+    },
+    {
+      "video_id": "VRxwJ-djsKc",
+      "title": "【ロマサガRS】白薔薇姫厄&T260G厄ガチャの最後に引くべきキャラを決めます【ロマンシングサガリユニバース】",
+      "channel": "あっきゃんGAMES",
+      "published_at": "2026-09-01T10:00:20Z",
+      "url": "https://www.youtube.com/watch?v=VRxwJ-djsKc",
+      "summary_3lines": "白薔薇姫厄とT260G厄ガチャの最終判断動画。\nどちらも代用が多く基本スルー濃厚。\n引くなら白薔薇姫アビスが一番の当たり。",
+      "key_topics": [
+        "白薔薇姫厄",
+        "T260G厄",
+        "ガチャ判断",
+        "スルー濃厚",
+        "9月ガチャ温存"
+      ],
+      "n_pos": 3,
+      "n_neg": 3,
+      "positive_points": [
+        "白薔薇姫アビスは癖がなく使いやすい",
+        "タイムは開幕大量バフでレイド時短に貢献",
+        "初心者・復帰勢には白薔薇姫アビスがおすすめ"
+      ],
+      "negative_points": [
+        "両ガチャとも代用が多く基本スルー",
+        "T260Gの4ターン火力は使う場面がほぼない",
+        "最終皇帝勢は世代交代に飲まれやすい"
+      ]
+    },
+    {
+      "video_id": "W9ksDp2zqyY",
+      "title": "【ロマサガRS】63連ガチャ「真の当たり」とは!?狙うべき最強八選!!タイプ別にランキング　#ロマサガRS",
+      "channel": "タマゴローRS",
+      "published_at": "2026-09-04T08:54:59Z",
+      "url": "https://www.youtube.com/watch?v=W9ksDp2zqyY",
+      "summary_3lines": "無料で回せる63連ガチャの当たりをタイプ別に解説\nイシスが総合使用回数で頭一つ抜けて最強\n今は引く理由がなく無料分だけ回すのを推奨",
+      "key_topics": [
+        "63連ガチャ",
+        "タイプ別当たり",
+        "イシス最強",
+        "ガチャ厳選",
+        "無料周回"
+      ],
+      "n_pos": 3,
+      "n_neg": 3,
+      "positive_points": [
+        "イシスは立ち上がり早く制圧戦で最強",
+        "マイスは半年前でもまだ現役",
+        "リラは唯一性の高い連打追撃が強い"
+      ],
+      "negative_points": [
+        "雪だ系はエクストラ以外の出力が弱く必須でない",
+        "AJは全体攻撃追撃主流で機能しなくなった",
+        "デスマシーンは倒すべき敵がいない"
+      ]
+    },
+    {
+      "video_id": "qLQaDptgKGs",
+      "title": "【タガタメ】タガタメ新作ゲーム！タガマス発表！『誰ガ為のアルケミスト』",
+      "channel": "明星ch",
+      "published_at": "2026-09-02T04:26:03Z",
+      "url": "https://www.youtube.com/watch?v=qLQaDptgKGs",
+      "summary_3lines": "タガタメ新作「タガマス」ポートマスターズが発表。\nリアルタイムバトルRPGで事前登録が近日開始。\nURウロボロスが初手配布でもらえる。",
+      "key_topics": [
+        "タガタメ新作",
+        "タガマス",
+        "事前登録",
+        "ウロボロス配布",
+        "タイプ/ロール"
+      ],
+      "n_pos": 3,
+      "n_neg": 3,
+      "positive_points": [
+        "URウロボロスが初手で配布はお得",
+        "イラストが動くようになった",
+        "SSR以上確定チケットなど報酬が充実"
+      ],
+      "negative_points": [
+        "ゲーム性がまだ分からない",
+        "プロローグがいきなりクライマックスすぎる",
+        "タイプの意味合いが不明で分かりにくい"
+      ]
+    },
+    {
+      "video_id": "l9JXnqUsr5k",
+      "title": "【ロマサガrs】幻闘武器進化‼️徹底考察‼️〜10の武器種の【優先度】〜アタッカー83体紹介〜",
+      "channel": "tyamu",
+      "published_at": "2026-09-02T12:29:08Z",
+      "url": "https://www.youtube.com/watch?v=l9JXnqUsr5k",
+      "summary_3lines": "幻闘武器の進化はエクストラフォース1.5倍付与が目玉。\n全武器種のアタッカー83体を比較し優先度を考察。\nおすすめは剣か体術、チャムは体術を選択。",
+      "key_topics": [
+        "幻闘武器進化",
+        "エクストラフォース1.5倍",
+        "アタッカー83体",
+        "武器種優先度",
+        "剣/体術"
+      ],
+      "n_pos": 3,
+      "n_neg": 3,
+      "positive_points": [
+        "幻闘武器はエクストラフォース1.5倍付与とど偉い効果",
+        "剣・体術は強アタッカーが揃い最有力",
+        "体術は井戸で毎週活躍するキャラが多い"
+      ],
+      "negative_points": [
+        "月に1つしか強化できず選択ミスで1ヶ月後悔",
+        "コンボ・斧は球がおらず最後まで選ばれない",
+        "証券はサポーター気質が多くアタッカーが物足りない"
+      ]
+    },
+    {
+      "video_id": "JsB4bD6hmfs",
+      "title": "【ロマサガRS】いともたやすく行われる幻闘場攻略配信【生配信】",
+      "channel": "ジュラのサガちゃんねる",
+      "published_at": "2026-09-02T14:42:09Z",
+      "url": "https://www.youtube.com/watch?v=JsB4bD6hmfs",
+      "summary_3lines": "幻闘場トゥ・クアイを武器種ごとに攻略する生配信。\n体術は簡単だが証券・弓は解除と火力が問われ苦戦。\n斧はじじ（薬王）が活躍、弓はリズ不足が課題。",
+      "key_topics": [
+        "幻闘場攻略",
+        "生配信",
+        "体術/証券/弓/斧",
+        "バフ解除",
+        "リズ未所持"
+      ],
+      "n_pos": 3,
+      "n_neg": 3,
+      "positive_points": [
+        "体術はバカでも勝てる強い武器",
+        "斧はじじ（薬王）が匠に活躍",
+        "コンボはゴリラ編成が最強で1周ムーブで勝てる"
+      ],
+      "negative_points": [
+        "弓はリズ未所持できつく取っておくべきだった",
+        "証券はサポーター気質で火力が出しにくい",
+        "斧が2ヶ月連続でゼロスタイル"
+      ]
+    },
+    {
+      "video_id": "vUJ8BfXm_e4",
+      "title": "【ロマサガRS】難関「槍/必勝立ち回り」ハンニバルにかけろ&「バフ解除豊富」な小剣をどう扱う!?　追憶の幻闘場トゥ・クアイ　#ロマサガRS",
+      "channel": "タマゴローRS",
+      "published_at": "2026-09-02T09:39:17Z",
+      "url": "https://www.youtube.com/watch?v=vUJ8BfXm_e4",
+      "summary_3lines": "槍は難関だがハンニバルが刺さる編成を紹介。\n小剣はバフ解除豊富だがメンツは強くない。\n敵HPが一定以下でバフ入りすぎ判定のデスコンボに注意。",
+      "key_topics": [
+        "トゥ・クアイ",
+        "槍/小剣攻略",
+        "ハンニバル",
+        "バフ解除",
+        "敵HPゾーン"
+      ],
+      "n_pos": 3,
+      "n_neg": 3,
+      "positive_points": [
+        "難関の槍にハンニバルが刺さる",
+        "ジェラールの火力が飛び抜けている",
+        "西王のデバフがダメージアップに有効"
+      ],
+      "negative_points": [
+        "敵HPゾーンでバフ解除・スタンのデスコンボ",
+        "小剣はメンツが強くない",
+        "確定行動でなく調整が難しい"
+      ]
+    },
+    {
+      "video_id": "Judr9TllL0A",
+      "title": "【ロマサガRS】ジャミル超強化で「弓/必勝立ち回り」&「メンツ豊富」な杖なのに勝てないのは〇〇が当たらないから　追憶の幻闘場トゥ・クアイ　#ロマサガRS",
+      "channel": "タマゴローRS",
+      "published_at": "2026-09-02T09:44:27Z",
+      "url": "https://www.youtube.com/watch?v=Judr9TllL0A",
+      "summary_3lines": "弓は最難だが最新リズでジャミルを維持し安定攻略。\n杖は火力十分だが敵の術回避で苦戦、ODデバフ解除で対応。\n敵の高バフ直後にデバフを当てるのが攻略の鍵。",
+      "key_topics": [
+        "追憶の幻闘場トゥ・クアイ",
+        "弓/杖攻略",
+        "ジャミル",
+        "リズ",
+        "バフ解除"
+      ],
+      "n_pos": 3,
+      "n_neg": 3,
+      "positive_points": [
+        "リズは単体強化＋回復で耐久が成立し必須級",
+        "ジャミル超強化で弓がかなりやりやすい",
+        "アイスのアローシャワーが必須の動き"
+      ],
+      "negative_points": [
+        "弓は最難関",
+        "敵の術が当たらないバグったステータス",
+        "強化破りされるとバフが消え1ター目に戻る"
+      ]
+    },
+    {
+      "video_id": "xGc0INdSM4I",
+      "title": "【ロマサガRS】これが今のロマサガRSの最強の配布キャラ！？周回で困ってる人全員集合！【ロマンシング サガ リユニバース】",
+      "channel": "サンゾーGAMES",
+      "published_at": "2026-09-02T10:06:52Z",
+      "url": "https://www.youtube.com/watch?v=xGc0INdSM4I",
+      "summary_3lines": "今のロマサガRS最強の配布キャラはアレツと紹介。\nアビサルサーカス周回で1手クリアできる周回性能。\n武器錬磨でエクストラフォースの価値が急上昇。",
+      "key_topics": [
+        "配布アレツ",
+        "アビサルサーカス周回",
+        "エクストラフォース",
+        "20ヒット必殺技",
+        "ビクトール代用"
+      ],
+      "n_pos": 3,
+      "n_neg": 3,
+      "positive_points": [
+        "配布アレツは周回で最強で1番強い",
+        "20ヒット必殺でエフェクトも早い",
+        "能力プラス582の腕力で火力が漏れる"
+      ],
+      "negative_points": [
+        "アレツのソウルレベルが低いと弱い",
+        "エクストラフォース足りないと1手で無理",
+        "EX1が一番時間がかかる"
+      ]
+    },
+    {
+      "video_id": "GOhbi0HrFE0",
+      "title": "【ロマサガRS】作るだけで大幅に強くなる神錬磨！？新しくなった武器錬磨を徹底解説【ロマンシング サガ リユニバース】",
+      "channel": "サンゾーGAMES",
+      "published_at": "2026-09-01T13:30:01Z",
+      "url": "https://www.youtube.com/watch?v=GOhbi0HrFE0",
+      "summary_3lines": "新しくなった武器錬磨のおすすめを徹底解説。\n看門・幻闘武器には錬磨不可、能力プラスが汎用性高くおすすめ。\n最優先はエクストラフォース付き武器の強化。",
+      "key_topics": [
+        "武器錬磨解説",
+        "能力プラス",
+        "エクストラフォース",
+        "味方威力プラス",
+        "看門武器"
+      ],
+      "n_pos": 3,
+      "n_neg": 3,
+      "positive_points": [
+        "能力プラスが汎用性高く一番おすすめ",
+        "エクストラフォース付き武器が最優先で偉い",
+        "一括錬磨は便利な新機能"
+      ],
+      "negative_points": [
+        "看門・幻闘武器には錬磨がつけられない",
+        "オールサガプラスは大して強くない",
+        "一括錬磨マックスは素材が一瞬で枯渇する"
+      ]
+    }
+  ]
+}
