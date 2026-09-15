@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>YouTube要約レポート 2026-09-09 〜 2026-09-15</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #1e293b;
+    --panel-2: #273449;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --accent: #60a5fa;
+    --pos: #34d399;
+    --neg: #f87171;
+    --topic: #fbbf24;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  header {
+    padding: 32px 48px;
+    background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
+    border-bottom: 1px solid #334155;
+  }
+  header h1 { margin: 0 0 8px; font-size: 28px; }
+  header .meta { color: #cbd5e1; font-size: 14px; }
+  main { padding: 32px 48px; max-width: 1200px; margin: 0 auto; }
+  .summary-stats {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .stat {
+    background: var(--panel);
+    padding: 16px 24px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 180px;
+  }
+  .stat .num { font-size: 28px; font-weight: 700; color: var(--accent); }
+  .stat .label { font-size: 13px; color: var(--muted); margin-top: 4px; }
+  .date-section { margin-bottom: 32px; }
+  .date-section h2 {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .date-section h2 .day-count {
+    font-size: 13px;
+    font-weight: normal;
+    color: var(--muted);
+  }
+  .video {
+    background: var(--panel);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 12px;
+    border-left: 4px solid var(--accent);
+  }
+  .video-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  .video-channel {
+    display: inline-block;
+    background: rgba(96, 165, 250, 0.18);
+    color: var(--accent);
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .video.pending { border-left: 3px solid var(--muted); opacity: 0.85; }
+  .pending-badge {
+    display: inline-block;
+    background: rgba(148, 163, 184, 0.18);
+    color: var(--muted);
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 500;
+    margin-left: 6px;
+    margin-bottom: 6px;
+  }
+  .video-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .video-title a { color: var(--text); text-decoration: none; }
+  .video-title a:hover { color: var(--accent); }
+  .video-date { color: var(--muted); font-size: 13px; white-space: nowrap; }
+  .video-summary {
+    color: #cbd5e1;
+    margin: 8px 0 16px;
+    white-space: pre-wrap;
+  }
+  .pos-neg-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  @media (max-width: 700px) { .pos-neg-grid { grid-template-columns: 1fr; } }
+  .pos, .neg {
+    background: var(--panel-2);
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  .pos { border-left: 3px solid var(--pos); }
+  .neg { border-left: 3px solid var(--neg); }
+  .pos .label, .neg .label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+  .pos .label { color: var(--pos); }
+  .neg .label { color: var(--neg); }
+  .pos ul, .neg ul { margin: 0; padding-left: 18px; }
+  .pos li, .neg li { margin-bottom: 2px; }
+  .topics { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .topic {
+    background: rgba(251, 191, 36, 0.15);
+    color: var(--topic);
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+  }
+  .empty-note { color: var(--muted); font-size: 13px; font-style: italic; }
+  .filter-bar {
+    background: var(--panel);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  .filter-bar .filter-label {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .filter-bar .filter-actions {
+    display: flex;
+    gap: 8px;
+  }
+  .filter-bar button {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid #334155;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .filter-bar button:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+  .filter-bar .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .filter-bar .chip {
+    background: var(--panel-2);
+    color: var(--muted);
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    transition: all 0.15s;
+  }
+  .filter-bar .chip:hover {
+    border-color: var(--accent);
+  }
+  .filter-bar .chip.active {
+    background: var(--accent);
+    color: #0f172a;
+    font-weight: 600;
+  }
+  .filter-bar .chip.x-chip {
+    border-color: #1da1f2;
+    color: #7dd3fc;
+  }
+  .filter-bar .chip.x-chip.active {
+    background: #1da1f2;
+    color: #0f172a;
+  }
+  .filter-bar .chip .count {
+    opacity: 0.7;
+    font-size: 11px;
+    margin-left: 4px;
+  }
+  .video.hidden { display: none; }
+  .date-section.hidden { display: none; }
+  .x-card.hidden { display: none; }
+  .x-card {
+    background: linear-gradient(180deg, #0c4a6e 0%, #164e63 100%);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    border-left: 4px solid #1da1f2;
+  }
+  .x-badge {
+    display: inline-block;
+    background: rgba(29, 161, 242, 0.25);
+    color: #7dd3fc;
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .x-card h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .x-card .x-summary {
+    color: #cbd5e1;
+    margin-bottom: 14px;
+    white-space: pre-wrap;
+    font-size: 14px;
+  }
+  .x-card .hot {
+    margin-top: 12px;
+  }
+  .x-card .hot-label {
+    color: #94a3b8;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+  .x-card .tweet {
+    background: rgba(15, 23, 42, 0.55);
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+  .x-card .tweet .author {
+    color: #7dd3fc;
+    font-weight: 600;
+    margin-bottom: 2px;
+    font-size: 12px;
+  }
+  .x-card .tweet a {
+    color: #7dd3fc;
+    text-decoration: none;
+    font-size: 11px;
+  }
+  .x-card .tweet .stats {
+    color: #94a3b8;
+    font-size: 11px;
+    margin-top: 4px;
+  }
+  .visible-stats {
+    display: inline-block;
+    color: var(--muted);
+    font-size: 12px;
+    margin-left: 8px;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    padding: 24px;
+    border-top: 1px solid #334155;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>YouTube要約レポート</h1>
+  <div class="meta">対象期間: 2026-09-09 〜 2026-09-15（7日間） / 生成日時: 2026-09-15 10:37</div>
+</header>
+<main>
+  <div class="summary-stats">
+    <div class="stat"><div class="num">49</div><div class="label">対象動画数</div></div>
+    <div class="stat"><div class="num">11</div><div class="label">チャンネル数</div></div>
+    <div class="stat"><div class="num">153</div><div class="label">ポジ要素（合計）</div></div>
+    <div class="stat"><div class="num">129</div><div class="label">ネガ要素（合計）</div></div>
+  </div>
+  <div class="filter-bar" id="filterBar">
+    <div class="filter-label">
+      <span>表示するYouTuberを選択 <span id="visibleStats" class="visible-stats"></span></span>
+      <div class="filter-actions">
+        <button onclick="setAll(true)">全て表示</button>
+        <button onclick="setAll(false)">全て非表示</button>
+      </div>
+    </div>
+    <div class="chips" id="chips"><span class="chip active" data-channel="タマゴローRS">タマゴローRS<span class="count">9</span></span>
+<span class="chip active" data-channel="明星ch">明星ch<span class="count">9</span></span>
+<span class="chip active" data-channel="つむつむちゃんねる●ゲーム考察専門">つむつむちゃんねる●ゲーム考察専門<span class="count">7</span></span>
+<span class="chip active" data-channel="あんずもん">あんずもん<span class="count">6</span></span>
+<span class="chip active" data-channel="サンゾーGAMES">サンゾーGAMES<span class="count">6</span></span>
+<span class="chip active" data-channel="tyamu">tyamu<span class="count">5</span></span>
+<span class="chip active" data-channel="RS 周回チャンネル">RS 周回チャンネル<span class="count">4</span></span>
+<span class="chip active" data-channel="あっきゃんGAMES">あっきゃんGAMES<span class="count">4</span></span>
+<span class="chip active" data-channel="くんちゃんねる">くんちゃんねる<span class="count">3</span></span>
+<span class="chip active" data-channel="ジュラのサガちゃんねる">ジュラのサガちゃんねる<span class="count">3</span></span>
+<span class="chip active" data-channel="もんでる">もんでる<span class="count">1</span></span>
+<span class="chip x-chip active" data-channel="X (Twitter)">X (Twitter)<span class="count">6日</span></span></div>
+  </div>
+  <section class="date-section"><h2>2026-09-15<span class="day-count">0本 ／ X 129ツイート</span></h2>
+<div class="x-card" data-channel="X (Twitter)">
+  <div><span class="x-badge">X (Twitter) ・ 129ツイート集約</span></div>
+  <h3>その日のXハイライト</h3>
+  <div class="x-summary">挑戦の井戸シグフレイ戦は強敵で苦戦→クリア報告が続出<br>正午のお知らせ更新に注目、ロマサガ3(デスサガ)ガチャ・イベント予想で盛り上がり<br>魂アビ閃き報告（魂ブーストは17日木3:59まで）とゼノンお迎え・幻闘場やり込みが活発</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素（X）</div><ul><li>強敵シグフレイをようやく倒せた・80万点/報酬を取りきった達成感の共有</li><li>推しキャラの魂アビ閃き（カタリナ連日、闘気吸収5など有用アビ）や一致エクフォ達成の喜び</li><li>ゼノンお迎え報告、9月から復帰・Rank7000・全キャラ仮上限達成など長期プレイの手応え</li><li>正午のお知らせやロマサガ3リメイク関連への期待感で盛り上がり</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素（X）</div><ul><li>挑戦の井戸シグフレイ戦が強く「800位以内は厳しい」「満額届かない」等の苦戦の嘆き</li><li>ガチャの出費（ジョー天井・チケ交換）への愚痴・自制の呼びかけ</li><li>エリスの弓が弱い・武器適性やEXフォース付与の要望など性能面への不満</li><li>魂アビが誰も閃かなくなった、育成+が出ない等のやり込み進捗の停滞</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">挑戦の井戸（対シグフレイ）：強敵で苦戦しつつ「倒せただけで良い」「80万点超えた」等クリア報告が多数、攻略編成動画の共有も</span><span class="topic">正午のお知らせ更新への期待：ロマサガ3リメイク(デスサガ)関連ガチャ・お月見/敬老イベント予想</span><span class="topic">魂アビリティ閃き報告（カタリナ連日、闘気吸収5全体など）／魂ブースト・閃き道場チケットは9/17(木)3:59まで</span><span class="topic">ガチャ報告：ゼノンお迎え、ジョー狙いの天井・チケ交換の報告と自制の呼びかけ</span><span class="topic">幻闘場やり込み（トゥ・クアイ斧/杖/弓レベル上げ）、長期プレイ節目（Rank7000・復帰・全キャラ仮上限達成）</span><span class="topic">ロマサガ3リメイク発表記念 第四弾ネタ（神王の塔でマスカレイド奪還等）で盛り上がり継続</span></div>
+  <div class="hot"><div class="hot-label">注目ツイート TOP3</div>
+<div class="tweet">
+  <div class="author">@A_UDON_RS</div>
+  <div>仕事が落ち着いたので<br><br>9月からRSを再開しました🏃‍♀️‍➡️<br><br>戦い方を思い出しながら<br><br>マイペースにプレイしてます💦<br><br>幻闘はガタガタだけどそれなりに楽しめてる✌️<br><br>#ロマサガRS</div>
+  <div class="stats">♥101 ↻0 💬5 ・ <a href="https://x.com/A_UDON_RS/status/2099496894678569185" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@EiNdPcRykD2U04d</div>
+  <div>やっと勝てたよ😭😭😭<br>報酬も取りきった☺️☺️☺️<br>#ロマサガRS</div>
+  <div class="stats">♥85 ↻0 💬4 ・ <a href="https://x.com/EiNdPcRykD2U04d/status/2099507235894571018" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@imojirou_saigo</div>
+  <div>いつもより伸びた投稿の後にいつも通りの伸び方をすると、何だか滑った感が出てしまうのでインプ稼げる魚類で箸休めをして心を守る。<br>これが戦略というものですギョ。<br>#ロマサガRS<br>#中古屋で100円くらいで売ってるやつ</div>
+  <div class="stats">♥80 ↻4 💬4 ・ <a href="https://x.com/imojirou_saigo/status/2099566858907353549" target="_blank" rel="noopener">原文</a></div>
+</div></div>
+</div>
+</section>
+<section class="date-section"><h2>2026-09-14<span class="day-count">7本 ／ X 121ツイート</span></h2>
+<div class="video" data-channel="RS 周回チャンネル">
+  <div>
+    <span class="video-channel">RS 周回チャンネル</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=90WY84P-dtA" target="_blank" rel="noopener">【ロマサガRS】要注意!!意外と取ってない人いるかも!?9月16日の12時まで!!ついでに[闘者の関門-シュウザー-]の最速更新!!【ロマンシング サガ リ・ユニバース】</a></h3>
+  </div>
+  <div class="video-summary">見落としがちな上限突破ミッションを注意喚起<br>9月16日12時まで、実行で3000ジュエル獲得<br>闘者の関門シューザーをジョーで最速8秒に更新</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ジョーはフランベソルベプラス継承で最速8秒を実現</li><li>追撃順を固定しない方が速い</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>上限突破ミッションは見落としジュエル未受取になりがち</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ミッション注意</span><span class="topic">3000ジュエル</span><span class="topic">闘者の関門シューザー</span><span class="topic">最速更新</span><span class="topic">ジョー</span></div>
+</div>
+
+<div class="video" data-channel="tyamu">
+  <div>
+    <span class="video-channel">tyamu</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=lVbS71YuMsI" target="_blank" rel="noopener">【ロマサガrs】シグフレイたちの井戸：⭐️超難関~100位編成⭐️</a></h3>
+  </div>
+  <div class="video-summary">第137回シグフレイたちの井戸100位以内編成紹介<br>サイバ等5名の4ターン85手ノーダメージ編成<br>術継承変更で55位・27位まで狙える</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>マイターンODが安定して打てる好編成</li><li>ポルカのダメブロでノーダメ立ち回り可能</li><li>術継承変更で順位を大きく伸ばせる</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>3ターン目のロベ打ちの呪でターミンの属性が無効化される</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">シグフレイの井戸</span><span class="topic">100位編成</span><span class="topic">ノーダメージ</span><span class="topic">マイターンOD</span><span class="topic">4ターン85手</span></div>
+</div>
+
+<div class="video pending" data-channel="あんずもん">
+  <div>
+    <span class="video-channel">あんずもん</span>
+    <span class="pending-badge">字幕取得エラー・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=szruBMR4p6Y" target="_blank" rel="noopener">【ロマサガRS】　井戸やっていこう！　Interesting games from Japan【初見さん大歓迎】</a></h3>
+  </div>
+</div>
+
+<div class="video" data-channel="くんちゃんねる">
+  <div>
+    <span class="video-channel">くんちゃんねる</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=kpfoNSnVPnc" target="_blank" rel="noopener">【ロマサガRS】【ガチャ動画】玄ちゃんを待ちきれなくて【No.638】</a></h3>
+  </div>
+  <div class="video-summary">玄ちゃん(ダブルガチャ分裂)狙いのガチャ実況<br>待ち切れず事前30連、さらに単発10連を追加<br>結局すり抜けリズのみで玄ちゃん確保できず</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><div class="empty-note">特になし</div></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>9000ジュエルしかなく天井まで届かない</li><li>回しても玄ちゃんが出ずすり抜けリズのみ</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ガチャ実況</span><span class="topic">玄ちゃん</span><span class="topic">ダブルガチャ</span><span class="topic">単発10連</span><span class="topic">すり抜け</span></div>
+</div>
+
+<div class="video" data-channel="サンゾーGAMES">
+  <div>
+    <span class="video-channel">サンゾーGAMES</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=S-qX1VFgYcQ" target="_blank" rel="noopener">【ロマサガRS】やはり次はロマサガ3リメイクガチャがくる！？9月16日の新ガチャを徹底予想【ロマンシング サガ リユニバース】</a></h3>
+  </div>
+  <div class="video-summary">三蔵による9月16日新ガチャ内容の徹底予想<br>デス発売決定ガチャではなくストーリー内実装と予想<br>ミカエル等ロマサガ3主人公6人の登場を予想</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><div class="empty-note">特になし</div></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>ミカエルは17ヶ月未実装で待たされすぎと指摘</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">新ガチャ予想</span><span class="topic">ロマサガ3リメイク</span><span class="topic">旧発生</span><span class="topic">9月16日</span><span class="topic">主人公6人</span></div>
+</div>
+
+<div class="video" data-channel="タマゴローRS">
+  <div>
+    <span class="video-channel">タマゴローRS</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=YmFCneEo_-8" target="_blank" rel="noopener">【ロマサガRS】「鬼八を超える逸材」!?ゼノンと鬼八を徹底比較して現環境における手持ちアタッカーバランスを整えろ　#ロマサガRS</a></h3>
+  </div>
+  <div class="video-summary">ゼノンと気端(鬼八)のスタイル性能を徹底比較<br>大枠ではゼノンが優位、防御と瞬発力で勝る<br>手薄な突属性の穴を埋める便利枠でお得</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ゼノンは防御レジスト50%+回避37%で気端に大差</li><li>スタンバイ4ターン技の瞬発力が高い</li><li>活動限界12ターンで実用上十分</li><li>手薄な突属性の穴を埋められる</li><li>ガチャでバートランドも拾える良ガチャ</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>気端は不具合でため活動限界が延長中(想定外)</li><li>気端は防御レジスト50%のみで高難度に不利</li><li>防御ダウンはおまけ要素で差を感じにくい</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ゼノンvs気端</span><span class="topic">スタイル性能比較</span><span class="topic">突属性</span><span class="topic">エクストラ倍率</span><span class="topic">バートランド</span></div>
+</div>
+
+<div class="video pending" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=1ZgERwJV_rw" target="_blank" rel="noopener">【Gジェネエターナル】R ZⅡ 武装アニメ ＃Shorts ＃ジージェネエターナル</a></h3>
+  </div>
+</div>
+
+<div class="x-card" data-channel="X (Twitter)">
+  <div><span class="x-badge">X (Twitter) ・ 121ツイート集約</span></div>
+  <h3>その日のXハイライト</h3>
+  <div class="x-summary">今週の挑戦の井戸（シグフレイ戦）が高難度で満額80万点が難しいと話題<br>魂アビ閃き報告やガチャ（ジョー・ゼノンお迎え）の当たり報告が多数<br>ロマサガ3リメイク発表記念の第3弾ネタ・こよみ戦キャンペーン残3日の呼びかけ</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素（X）</div><ul><li>挑戦の井戸が「久しぶりにやると全滅できる良コンテンツ」と歯ごたえを好評価する声</li><li>推しキャラの魂アビ閃き・初一致エクフォ達成（エクフォ難民卒業）の喜び</li><li>ガチャでジョー・ゼノンをお迎えできた当たり報告、絆ミッション報酬への感謝</li><li>ロマサガ3リメイク発表記念ネタで盛り上がり、長期プレイ（2840日/4周年）の達成感</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素（X）</div><ul><li>挑戦の井戸シグフレイ戦の満額80万点/SSSが渋く、満額到達できないという嘆き</li><li>ガチャの出費（ジョー狙いで天井まっしぐら）への愚痴・自制の呼びかけ</li><li>ダメージが全部0になる（操作・編成起因）等の戦闘での躓き</li><li>キャンペーン期限やEX周回・素材消化などの作業感・時間のなさ</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">挑戦の井戸（対シグフレイ）：満額80万点/SSSが難しく編成試行錯誤、最低保証ジュエルの話題</span><span class="topic">魂アビリティ閃き報告（カタリナが大剣ガードアップ、閃きチケット一括消化など）</span><span class="topic">ガチャ報告：ジョー・ゼノンお迎え、絆ミッション報酬でゼノン獲得</span><span class="topic">ロマサガ3リメイク発表記念 第3弾（ユリアンネタ等）で盛り上がり継続</span><span class="topic">こよみとの戦い（ロマンシング）キャンペーン終了まで残り3日のクリア呼びかけ</span><span class="topic">エクフォ（一致エクスタシーフォース）難民卒業報告、幻闘場・技ランク上げのやり込み</span><span class="topic">プレイ開始2840日（リリース記念日）・4周年など継続プレイ報告</span></div>
+  <div class="hot"><div class="hot-label">注目ツイート TOP3</div>
+<div class="tweet">
+  <div class="author">@mn_jiro_II</div>
+  <div>おはようございます<br><br>私事ですが本日プレイ開始から４年となりました🙇‍♂️リリース2,840日、ルミナス暦では1,141日となります🥹✨<br><br>今月の最低保証は💎65,000、月末に生放送があれば7万に届くでしょう<br><br>ご利用は計画的に🥹✨<br><br>#ロマサガRS<br>#ルミナス財務部</div>
+  <div class="stats">♥35 ↻2 💬0 ・ <a href="https://x.com/mn_jiro_II/status/2099259158017216908" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@hiro1980301</div>
+  <div>皆様おはようございます☺️<br>今週もぼちぼちで(๑•̀ㅂ•́)و✧<br><br>日差しが柔らかい感じになり、秋かなと思いましたがまだまだ暑いっすね😫<br><br>白玄さん、順応早えなと思った2840日目😗<br><br> #ロマサガRS</div>
+  <div class="stats">♥33 ↻0 💬2 ・ <a href="https://x.com/hiro1980301/status/2099260017690223043" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@NekoHarchan</div>
+  <div>ダメージ全部0なんだけど…🎯<br>何が間違ってる？🤔🐈‍⬛<br>#ロマサガRS</div>
+  <div class="stats">♥31 ↻0 💬1 ・ <a href="https://x.com/NekoHarchan/status/2099263488556429708" target="_blank" rel="noopener">原文</a></div>
+</div></div>
+</div>
+</section>
+<section class="date-section"><h2>2026-09-13<span class="day-count">6本 ／ X 141ツイート</span></h2>
+<div class="video" data-channel="tyamu">
+  <div>
+    <span class="video-channel">tyamu</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=EQxgFZindUU" target="_blank" rel="noopener">【ロマサガrs】シグフレイ解体新書【シグフレイたちの井戸】【螺旋570階シグフレイ】のアビリティ・ギミックを解説‼️</a></h3>
+  </div>
+  <div class="video-summary">井戸シグフレイと螺旋570階の攻略を徹底解説<br>弱点は斬＋熱(メイン)・陰(手下)、全体術と同着撃破が基本<br>技をシグフレイに当てすぎると全滅リスク大</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>全体術＋斬熱要因で効率よく攻略できる</li><li>裁判のデバフを戦闘手下に入れ火力を伸ばせる</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>技100%カットの大義の鎧いで技攻撃が通らない</li><li>シグフレイへの技は術師の反攻で強化され全滅を招く</li><li>誰か倒れるとバフ全解除で同着撃破がシビア</li><li>井戸は螺旋570階よりさらに強くなる見込み</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">シグフレイ解体新書</span><span class="topic">螺旋570階</span><span class="topic">斬・熱・陰弱点</span><span class="topic">全体術編成</span><span class="topic">同着撃破ギミック</span></div>
+</div>
+
+<div class="video" data-channel="あんずもん">
+  <div>
+    <span class="video-channel">あんずもん</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=84xzWEayPoE" target="_blank" rel="noopener">【信長の野望出陣】どれ選ぶ？　織田有効箱　後悔する前に！</a></h3>
+  </div>
+  <div class="video-summary">信長の野望出陣3周年SSR有効箱の選択を解説<br>鉄砲・足軽・弓の候補8体を性能比較<br>筆者はタン波(鉄砲)と細川藤(足軽)を最有力に選定</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>タン波(鉄砲)は係数・兵数上昇で耐久強化に有効</li><li>細川藤孝は戦法ゲージ15%上げと軽減が優秀</li><li>森吉は寄唯一で覚醒5会心70%が強力</li><li>佐々成政は兵上昇で火力期待値が高い</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>佐々成政は覚醒機会が来ず現状取得が難しい</li><li>タン波(弓)は火力バフ要因として物足りない</li><li>戦力14万で停滞し耐久編成が課題</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">有効箱3周年</span><span class="topic">織田武将</span><span class="topic">鉄砲/足軽/弓</span><span class="topic">戦法ゲージ</span><span class="topic">兵数・係数</span></div>
+</div>
+
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=8sP90xGVDEE" target="_blank" rel="noopener">【ロマサガRS】これがRS現在の最強編成候補！陰斬＆＋１system★こよみも聖王もダメージ０！全部２ターンで消えてしまう。【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">現環境の螺旋向け最強編成候補を実戦で紹介<br>暦読み・裁判・コテパン軸にバートランド継承を検証<br>バートランドは編成適応力が高くSS評価</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>バートランドは編成適応力が高く総合SS評価</li><li>マギアコントラリア継承でアセルスのBP不足を補える</li><li>原流(げちゃん)がハマると1人600億級の火力</li><li>白バラ・T260と相性が良く火力が伸びる</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>バートランド入り編成は火力不足で2ターンに工夫が必要</li><li>アセルスはBPが少なく手数当たり火力が伸びにくい</li><li>敵の豪体持ちは低威力技が通らずダメージが出ない</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">最強編成候補</span><span class="topic">バートランド</span><span class="topic">暦読み・裁判・コテパン</span><span class="topic">マギアコントラリア</span><span class="topic">2ターンクリア</span></div>
+</div>
+
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=E3NbVMsW1mg" target="_blank" rel="noopener">【ロマサガRS】重要事項！ちゃんねるから今後のおしらせ【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">チャンネルの動画スケジュール変更と新企画を告知<br>ガチャ終了前にリスナー参加型アンケートを実施<br>集計結果とコメントを2日前に動画で発表</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>アンケート企画に93%が見たいと好反応</li><li>みんなの確保率が確保判断の参考になる</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><div class="empty-note">特になし</div></div>
+  </div>
+  <div class="topics"><span class="topic">新企画告知</span><span class="topic">参加型アンケート</span><span class="topic">ガチャ確保判断</span><span class="topic">スケジュール変更</span><span class="topic">雷バートガチャ</span></div>
+</div>
+
+<div class="video" data-channel="サンゾーGAMES">
+  <div>
+    <span class="video-channel">サンゾーGAMES</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=lVR-HERr7u0" target="_blank" rel="noopener">【ロマサガRS】今かなり美味しい期間って気付いてる？この時期にやるべきことを徹底解説！【ロマンシング サガ リユニバース】</a></h3>
+  </div>
+  <div class="video-summary">今は育成が捗る美味しい期間と徹底解説<br>アビサルサーカス周回でこよみ副防具と道場チケット確保が最優先<br>武器の連携アビリティのひらめきも狙い目</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>イベクエEX4は1周で3回分の育成判定が美味しい</li><li>こよみ副防具は最大強化で1.5フォース＆ダメブロック</li><li>毎日500枚の道場チケットは貴重で必ず集めるべき</li><li>武器連携アビリティは弱い武器の底上げに有効</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>記憶再生の場所切り替えが面倒でチケット取り逃しに注意</li><li>道場チケットは苦戦武器以外に無駄使いしない方が良い</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">育成の好機</span><span class="topic">アビサルサーカス周回</span><span class="topic">こよみ副防具</span><span class="topic">道場チケット500枚</span><span class="topic">武器ソウルアビリティ</span></div>
+</div>
+
+<div class="video" data-channel="タマゴローRS">
+  <div>
+    <span class="video-channel">タマゴローRS</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=C1PaB2a4_OQ" target="_blank" rel="noopener">【ロマサガRS】井戸シグフレイ「あの術師」初の活躍!?ギミックおさらい速報で満額クリア目指せ　#ロマサガRS　2026年9月14日</a></h3>
+  </div>
+  <div class="video-summary">井戸シグフレイのギミックをおさらいし満額を狙う<br>全体術で殴りシグフレイを同着で倒すのが要点<br>エレノアと西王のデバフが刺さり満額達成</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>エレノアが非常に強く編成の主力</li><li>西王のデバフでシグフレイのEF攻撃をノーダメ化</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>シグフレイの無限エンハンスで長期戦は難易度高め</li><li>打突無効カウンターがあり打属性は持たせない方が良い</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">井戸シグフレイ</span><span class="topic">ギミック解説</span><span class="topic">満額クリア</span><span class="topic">貫通有効</span><span class="topic">同着撃破</span></div>
+</div>
+
+<div class="x-card" data-channel="X (Twitter)">
+  <div><span class="x-badge">X (Twitter) ・ 141ツイート集約</span></div>
+  <h3>その日のXハイライト</h3>
+  <div class="x-summary">公式：魂(ソウル)実装1周年で通常魂アビリティ多数追加、魂の祠・道場・遠征「魂の聖域」実装<br>魂の祠を回して推しの魂アビリティ閃き報告が多数、遠征帰還ミッション達成で800ジュエルも<br>ロマサガ3リメイク（TGS出展・キャラ声優・どの主人公で始めるか）の話題が引き続き盛り上がる</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素（X）</div><ul><li>魂実装1周年アプデ（魂アビリティ追加・魂の聖域遠征でLvアップ）が育成サボり派にも好評</li><li>推しキャラが良い魂アビリティ（電撃戦・一致フォース等）を閃いた喜び・テンション上昇</li><li>遠征帰還ミッション達成で800ジュエル獲得、追憶の幻闘場を各武器種クリアできた達成感</li><li>ロマサガ3リメイクのTGS出展・声優キャストへの期待、原作/リメイクへの関心の高まり</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素（X）</div><ul><li>魂の祠を半日回しても成果が渋く過度な期待は禁物との声、毎ターン防バフ級を求める声</li><li>ガチャが渋い・アビガチャ外れ続きの嘆き、天井まっしぐらの出費</li><li>閃くと誰が誰か分からないほどキャラがギラギラする不具合の早期修正要望</li><li>EX周回など作業感・素材の無駄溜まり、ロマ3を見据えたガチャ様子見の悩み</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">公式(@romasaga_rs)：魂実装1周年記念、通常の魂アビリティを複数追加（8/28〜）</span><span class="topic">公式：魂関連の新クエスト/遠征追加（魂の祠、魂の閃き道場、遠征場所「魂の聖域」で魂Lvアップ）</span><span class="topic">公式：スペシャルショップにソウルピースパック登場、魂Lv上限解放</span><span class="topic">魂の祠周回で推しキャラの魂アビリティ閃き報告が多数（カタリナ電撃戦・シウグナス枠解放など）</span><span class="topic">遠征「遠征からの帰還」協力ミッション100%達成で800ジュエル配布</span><span class="topic">ロマサガ3リメイク：東京ゲームショー(TGS)出展、キャラ名/声優(レオニード=子安さん等)、どの主人公で始めるか話題</span><span class="topic">記憶再戦・追憶の幻闘場のやり込み進捗、ガチャ(ジョー/バートランド編・天井・リズお迎え)報告</span></div>
+  <div class="hot"><div class="hot-label">注目ツイート TOP3</div>
+<div class="tweet">
+  <div class="author">@romasaga_rs</div>
+  <div>【🌟祝！魂(ソウル)実装1周年 紹介①🌟】<br>8/28より、通常の魂アビリティを新たに複数追加！✨<br>ㅤ<br>魂アビリティは、戦闘終了時に閃くことがある！<br>好きなキャラクターをパーティ編成して、任意のクエストに挑戦しよう！<br>ㅤ<br>閃いて嬉しかった魂アビリティがあればぜひ教えてください💬<br>#ロマサガRS</div>
+  <div class="stats">♥259 ↻32 💬11 ・ <a href="https://x.com/romasaga_rs/status/2098698128333398135" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@romasaga_rs</div>
+  <div>【🌟祝！魂(ソウル)実装1周年 紹介②🌟】<br>魂に関連した新たなクエストや遠征場所が登場✨<br>ㅤ<br>「魂の祠」や「魂の閃き道場」の武器種タブのクエストで、武器種ごとの魂アビリティを閃こう💡<br>また、新たな遠征場所「魂の聖域」では魂Lvアップが可能！<br>ㅤ<br>皆さんはどのキャラクターを連れていきますか？</div>
+  <div class="stats">♥135 ↻16 💬1 ・ <a href="https://x.com/romasaga_rs/status/2098698380084166885" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@romasaga_rs</div>
+  <div>【🌟祝！魂実装1周年 紹介③🌟】<br>スペシャルショップに、お得なソウルピースパックが登場中！<br>ㅤ<br>「魂アビリティをたくさん閃いたけど、枠が足りない！」<br><br>そんな時は、<br>道場＞魂 限界突破より、ソウルピースで魂Lv上限を解放して、<br>クエストや遠征場所「魂の聖域」で魂Lvを上げよう！<br><br>#ロマサガRS</div>
+  <div class="stats">♥126 ↻19 💬2 ・ <a href="https://x.com/romasaga_rs/status/2098698631599542365" target="_blank" rel="noopener">原文</a></div>
+</div></div>
+</div>
+</section>
+<section class="date-section"><h2>2026-09-12<span class="day-count">12本 ／ X 139ツイート</span></h2>
+<div class="video" data-channel="tyamu">
+  <div>
+    <span class="video-channel">tyamu</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=_fl7SzInQ-c" target="_blank" rel="noopener">【ロマサガrs】ジョー能力値早見表~【2パターンの早見表を~比較】ありゃ~😳貴女も~○○で大活躍しますのん？</a></h3>
+  </div>
+  <div class="video-summary">第2弾ガチャのジョー能力値を2パターンで比較。<br>フランソルベプラス継承で強力な熱アタッカーに。<br>状態異常体制付与で周回アタッカーも可能。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>フランソルベプラス継承で全体クアトロエス連打が強力</li><li>熱冷用フォース1.5倍で火力貢献大</li><li>状態異常体制極大でスタン対策になる</li><li>周回アタッカーとしても使える</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>素の遺灰戦術は追撃が弱く今の時代に合わない</li><li>熱冷術が術算1回でもったいない</li><li>シグフレイの直接攻撃でスタンを食らう懸念</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ジョー能力値</span><span class="topic">フランソルベプラス継承</span><span class="topic">熱冷サポート</span><span class="topic">状態異常体制</span><span class="topic">周回運用</span></div>
+</div>
+
+<div class="video" data-channel="あっきゃんGAMES">
+  <div>
+    <span class="video-channel">あっきゃんGAMES</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=up-yrSRdIyM" target="_blank" rel="noopener">【ロマサガRS】小剣の救世主！幻闘場ウンディーネ&amp;ボルカノ小剣の戦録3ターン攻略【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">幻闘場小剣ウンディーネ&amp;ボルカノを3ターン攻略。<br>ゼノンの火力で220億出し証券コンプリート。<br>イリスのルミナスフォースで生存を確保。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ゼノンの火力が正義で220億出る</li><li>イリスのルミナスフォースで生存確定</li><li>ネオンの天品持ちが偉い</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><div class="empty-note">特になし</div></div>
+  </div>
+  <div class="topics"><span class="topic">幻闘場小剣</span><span class="topic">ウンディーネ&amp;ボルカノ</span><span class="topic">ゼノン火力</span><span class="topic">3ターン攻略</span><span class="topic">証券コンプ</span></div>
+</div>
+
+<div class="video" data-channel="あんずもん">
+  <div>
+    <span class="video-channel">あんずもん</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=i_93SpxN-yA" target="_blank" rel="noopener">【ロマサガRS】　討伐：飯綱こよみ　最大の壁４ターンを乗り越えて勝利を掴み取る</a></h3>
+  </div>
+  <div class="video-summary">討伐こよみを火力控えめ編成で長期戦攻略。<br>4ターン目の気絶とダメブロ15回対策が鍵。<br>ダメブロ活用と白薔薇姫のガード超極で完勝。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ダメブロの効果が高く有効</li><li>白薔薇姫のガードアップ超極が大きい</li><li>弱点つけない暦みでも最高火力</li><li>ターミンの資源継承が有効</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>暦みが弱点入らず厄介</li><li>5ターン目以降の能力バフ上昇で硬くなる</li><li>火力低いと15ターン強制終了リスク</li><li>カウンターすると敵の防御強化が上がる</li><li>火力が全然通らず苦戦</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">こよみ討伐</span><span class="topic">4ターン気絶対策</span><span class="topic">ダメブロ15回</span><span class="topic">状態異常対策</span><span class="topic">白薔薇姫ガード</span><span class="topic">暦みアタッカー</span></div>
+</div>
+
+<div class="video" data-channel="あんずもん">
+  <div>
+    <span class="video-channel">あんずもん</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=WblRvSY5jmo" target="_blank" rel="noopener">【信長の野望出陣】プレイ開始343日目記録　猛将　今回の主役は筆頭武将！</a></h3>
+  </div>
+  <div class="video-summary">出陣343日目、周年で新規武将6体を追加。<br>織田信長や柴田勝家の育成方針とイベント報告。<br>ガチャで柴田勝家を50連50%で無事引き当て。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>織田信長は火力も軽減もあり生き残りやすい</li><li>明智光秀は無凸でもバフとゲージ低下が優秀</li><li>モリ元就はデバフ枠として貴重</li><li>柴田勝家は保湿で攻撃を集め軽減も高い</li><li>本多小松はタンク完成系に最適</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>明智光秀は3凸しないと厳しい</li><li>モリ元就は未育成で落ちやすい</li><li>柴田勝家は5凸しないとダメ向けできず育成難易度が高い</li><li>特性素材が全然足りない</li><li>徳川家は復勝・より持ちが少ない</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">新規武将6体</span><span class="topic">織田信長</span><span class="topic">明智光秀</span><span class="topic">柴田勝家ガチャ</span><span class="topic">勢力戦/列伝</span><span class="topic">徳川家育成</span></div>
+</div>
+
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=l3Pe6nSutTc" target="_blank" rel="noopener">【ロマサガRS】全コンプ済！最新キャラランキング★王者陰斬ＶＳ新星熱冷主人公軍団【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">全コンプ済みで最新キャラをTierランク付け。<br>残環境は不動、ジョーS・原流SS・新ドゥーA評価。<br>バートは無名双剣継承込みでSS、ゼノンもSS。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>原流は弱点つけると破壊力えげつない</li><li>ゼノンは1回行動超火力で証券唯一無二</li><li>バートは3ターンに1回2.5倍が強い</li><li>継承込みバートはSS級評価</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>ジョーは器用貧乏でアタッカー物足りない</li><li>新ドゥーは500ヒット条件が尖りすぎ使いづらい</li><li>ポルカは編成が面倒でS止まり</li><li>新ドゥーは無人島適正も怖い</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">キャラランキング</span><span class="topic">残環境不動</span><span class="topic">原流SS評価</span><span class="topic">バートランド継承</span><span class="topic">ゼノンSS</span><span class="topic">所持率アンケート</span></div>
+</div>
+
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=4vuZhIXkm4c" target="_blank" rel="noopener">【ロマサガRS】瞬間火力最強をきめようか。。超パワーゲンちゃん★次元が違いすぎる件【ロマンシングサガリユニバース】【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">原流とアセルスの火力を実機で比較検証。<br>弱点つけなくても編成で軽く火力を出せると解説。<br>原流が圧倒的火力でアセルス超え、評価を改める。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>原流は1ターン目から火力が出て編成の幅が広い</li><li>原流はエクストラ乗せヒットが下がらず強力</li><li>アセルスはパークワンド等で2ターン目に爆発</li><li>熱冷逆転時の原流はやばい火力</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>原流もアセルスも弱点つけないとエクストラ乗らず1億止まり</li><li>アセルスは2ターン目に化けるが原流に届かない</li><li>アセルスの汎用性が原流の登場で少し減った</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">原流vsアセルス</span><span class="topic">弱点なし火力</span><span class="topic">編成火力</span><span class="topic">バートランド併用</span><span class="topic">YouTube収益変化</span></div>
+</div>
+
+<div class="video" data-channel="もんでる">
+  <div>
+    <span class="video-channel">もんでる</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=oOSfpCzAY7U" target="_blank" rel="noopener">【ロマサガRS】こよみとの闘い！と🎪</a></h3>
+  </div>
+  <div class="video-summary">雑談しつつ暦み討伐とアビサルサーカスを消化。<br>原流を入れると火力激増で3ターン討伐が可能に。<br>魂アビ排水は運次第で全然覚えず苦戦。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>原流を入れると火力が段違いで楽勝</li><li>原流はアセルスを超えるダメージ</li><li>げんちゃんは弱点あれば強力</li><li>RS3リメイクのミニゲーム(トレード)に期待</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>暦みは弱点つけず動けないと厳しい</li><li>魂アビ排水が全然覚えられず討伐も失敗</li><li>アビサルサーカスは目玉が弱くインパクト不足</li><li>ロマサガRSはインフレがひどい</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">こよみ討伐</span><span class="topic">原流火力</span><span class="topic">魂アビ排水</span><span class="topic">RS3リメイク雑談</span><span class="topic">パチスロ/株談義</span></div>
+</div>
+
+<div class="video" data-channel="サンゾーGAMES">
+  <div>
+    <span class="video-channel">サンゾーGAMES</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=CrekX_POvBI" target="_blank" rel="noopener">【ロマサガ3リメイク】衝撃の新情報アリ！公式生放送で発表された内容を大紹介【ロマンシング サガ3デスティニーユナイテッド】</a></h3>
+  </div>
+  <div class="video-summary">RS3リメイク公式生放送の新情報を大紹介。<br>全キャラ仲間化・カタリナ加入で編成自由度向上。<br>術は閃き習得に変更、マスコンバット等も継続。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>どの主人公でも全キャラ仲間にできる</li><li>セーブポイントでLP/BP全回復&amp;仲間交代可能</li><li>マスコンバットが見やすく改善</li><li>トレードにODゲージ新要素で戦略的に</li><li>サラが大事なバトルでも使える</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>コマンダーモードはなし</li><li>王家の指輪の金策は不可に</li><li>暗闇の迷宮は削除</li><li>技術の王冠システムは廃止</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">RS3リメイク</span><span class="topic">カタリナ仲間化</span><span class="topic">術閃き習得</span><span class="topic">セーブ回復/交代</span><span class="topic">マスコンバット/トレード</span><span class="topic">新キャラ示唆</span></div>
+</div>
+
+<div class="video" data-channel="タマゴローRS">
+  <div>
+    <span class="video-channel">タマゴローRS</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=Vbs2cjdO-5M" target="_blank" rel="noopener">【ロマサガRS】バートランド取説「最強×最強」こよみ&amp;サルーイン比較とバート軸編成2種!!斬陰熱冷を活かせるまたは活かせない高難度&amp;無尽塔お仲間は誰!?　#ロマサガRS</a></h3>
+  </div>
+  <div class="video-summary">バートランドの性能を斬・熱冷で要点解説。<br>継承無名双剣の残編成が本命、暦みが短期の相棒。<br>熱冷運用は原流と組む時のみで汎用性は低い。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>無名双剣継承で装備込み暦みを超える火力</li><li>味方全体にODザイン2.5倍ばら撒きが強力</li><li>長期戦で確実に暦みを上回る残部隊</li><li>原流とはまれば1ターン最大恩恵でベストパートナー</li><li>ODゲージ55%補填が有用</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>リキャスト3ターンが惜しい</li><li>熱冷運用は火力が出ず活躍機会ほぼ無し</li><li>無名双剣か怪獣継承がないと使い勝手が悪い</li><li>熱冷は副属性が広がる見込みなく不遇</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">バートランド性能</span><span class="topic">無名双剣継承</span><span class="topic">残編成</span><span class="topic">暦み/サルーイン比較</span><span class="topic">熱冷運用</span><span class="topic">ODゲージ補填</span></div>
+</div>
+
+<div class="video" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=NKmliJNMMWk" target="_blank" rel="noopener">Gジェネやりながら雑談</a></h3>
+  </div>
+  <div class="video-summary">Gジェネエターナルを遊びつつ雑談配信。<br>1.5周年はVガンダム参戦がほぼ確定。<br>年明けのゲーム発売ラッシュとロマサガ3も話題。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>チャレンジ配布ユニットは毎回優秀で強い</li><li>ダブルZチャレンジがなんとかなり安心</li><li>1.5周年キャンペーンは消費半減で回りやすい</li><li>三日月(ミカ)はチャンスステップ多く優秀</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>URのEX武装は必中で回避が死んでいる</li><li>パイロットの性能がついてこない</li><li>攻撃型が限定に寄りすぎ</li><li>ゼクアインが弱い</li><li>ダブルZはキャラが少ない</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">Gジェネエターナル</span><span class="topic">1.5周年Vガンダム</span><span class="topic">チャレンジ機体</span><span class="topic">ローグオービット</span><span class="topic">ロマサガ3リメイク</span><span class="topic">課金調整</span></div>
+</div>
+
+<div class="video" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=peFsh5ea42U" target="_blank" rel="noopener">【Gジェネエターナル】1.5周年はVガンダムで確定！？特設サイト＆インタビュー記事を確認 『SDガンダムGジェネレーションエターナル』</a></h3>
+  </div>
+  <div class="video-summary">Gジェネエターナル1.5周年の特設サイトを確認。<br>参戦記念作品はVガンダムでほぼ確定。<br>Eシミュレーター第2弾など運営の対応を評価。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>運営がユーザーの声によく耳を傾けている</li><li>Eシミュレーター第2弾が前倒しで期待</li><li>ガシャクロス光の騎士編も確実に来る</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>キャラクターSSPは現状予定なし</li><li>ジークアクス・劇場版シードは1.5周年ではなさそう</li><li>ビルド系はメインステージ参戦せずストーリーイベント止まり</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">1.5周年Vガンダム確定</span><span class="topic">特設サイト</span><span class="topic">Eシミュレーター第2弾</span><span class="topic">ガシャクロス4章</span><span class="topic">キャラSSP</span></div>
+</div>
+
+<div class="video" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=UgA96ueu1fA" target="_blank" rel="noopener">【RS3R】仲間の自由度は？コマンダーは？公式生放送情報まとめ【ロマンシングサガ3デスティニーユナイテッド】</a></h3>
+  </div>
+  <div class="video-summary">ロマサガ3リメイクの公式生放送情報まとめ。<br>カタリナ加入可、パーティー編成の自由度が大幅向上。<br>コマンダーはなし、術は購入から閃き習得に変更。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>主人公問わず全キャラ仲間にでき編成自由度が高い</li><li>セーブポイントで自由に再編成可能</li><li>固有装備が意味のあるものに</li><li>術が強化される</li><li>弱かった術も使い道あり</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>コマンダーモードはなし</li><li>暗闇の迷宮は削除</li><li>術が購入式でなく閃き型になり自由度減</li><li>ひらめき適正は確率差として残る</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">RS3リメイク</span><span class="topic">カタリナ加入</span><span class="topic">編成自由度</span><span class="topic">コマンダー廃止</span><span class="topic">術強化</span><span class="topic">隠しダンジョン</span></div>
+</div>
+
+<div class="x-card" data-channel="X (Twitter)">
+  <div><span class="x-badge">X (Twitter) ・ 139ツイート集約</span></div>
+  <h3>その日のXハイライト</h3>
+  <div class="x-summary">ロマサガ3リメイク『デスティニーユナイテッド』2027/2/16発売決定＋3000ジュエル配布で歓喜<br>9/11 20:00の発売記念公式生放送、どの主人公で始めるか話題が盛り上がる<br>こよみRomancing攻略、幻闘場トゥ・クアイ/ウンボル小剣クリア、神楽鈴進化など進捗報告も継続</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素（X）</div><ul><li>ロマサガ3リメイク発売日決定＋記念3000ジュエル配布への歓喜・感謝、生放送や主人公選びへの期待</li><li>こよみRomancingを様々な編成で全員生存クリアできた達成感、手応えある難易度への好評</li><li>幻闘場トゥ・クアイ制覇・ウンボル小剣クリアなどやり込み達成、ヴィクトール等の火力への満足</li><li>神楽鈴進化・バート編ガチャコンプなど育成進捗の喜び</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素（X）</div><ul><li>こよマールになかなか勝てず手こずる、記憶再戦での報酬確保に苦戦する声</li><li>EX4/閃き道場チケ周回で素材が無駄に溜まる作業感への不満</li><li>ロマサガ3リメイクの流れで小林智美公式絵未実装の主人公の実装がさらに遅れそうという懸念</li><li>ロマ3を見据えガチャ厳選・様子見で回すか悩む声</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">【最大の話題】公式：ロマサガ3リメイク『ロマンシング サガ3 デスティニーユナイテッド』2027/2/16発売決定、記念に3,000ジュエル配布</span><span class="topic">公式：9/11(金)20:00より発売記念公式生放送（MCペンギンズ・田付P・榎木淳弥・瀬戸麻沙美 出演）</span><span class="topic">公式：週末限定イベント「せんせいの週末限定クエスト」開催（100ジュエル・ゴールドピース等）</span><span class="topic">ロマサガ3リメイクをどの主人公で始めるか（ハリード・エレン等）で盛り上がり、原作/Switch購入検討の声も</span><span class="topic">こよみ／こよマールRomancing高難易度攻略：冷パ・リヴァイヴァ靴等での全員生存クリア報告</span><span class="topic">幻闘場トゥ・クアイ完全制覇、ウンボルLv5小剣クリア（ゼノン活躍）などやり込み進捗</span><span class="topic">神楽鈴MAX進化完成、バート編ガチャ120連コンプ、EX4周回など育成・ガチャ報告</span></div>
+  <div class="hot"><div class="hot-label">注目ツイート TOP3</div>
+<div class="tweet">
+  <div class="author">@romasaga_rs</div>
+  <div>2027/02/16(火)に、<br>『ロマンシング サガ3 デスティニーユナイテッド』が発売決定🎉<br>ㅤ<br>サガシリーズの一員として、『ロマサガRS』運営チーム一同、<br>プレイヤーの皆さまとともに心よりお祝い申し上げます。<br>ㅤ<br>発売日公開を記念して、<br>プレイヤーの皆さまへ💎3,000ジュエルをプレゼントいたします！</div>
+  <div class="stats">♥1058 ↻245 💬14 ・ <a href="https://x.com/romasaga_rs/status/2098337244474187876" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@romasaga_rs</div>
+  <div>さらに！<br>本日9/11(金) 20:00より、#ロマサガ3R 発売決定を記念した公式生放送を配信予定✨<br>ぜひご視聴ください！<br>ㅤ<br>◆出演者<br>ペンギンズ ノブオ(MC)<br>田付 信一(プロデューサー)<br>榎木 淳弥(ユリアン役)<br>瀬戸 麻沙美(カタリナ役)  <br>ㅤ<br>ご視聴はこちら☟<br><br>https://<br>youtube.com/live/W4bPQVZuZ<br>6g<br>… <br><br>#デスサガ</div>
+  <div class="stats">♥151 ↻65 💬0 ・ <a href="https://x.com/romasaga_rs/status/2098337709530198502" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@romasaga_rs</div>
+  <div>週末限定イベント「せんせいの週末限定クエスト」開催！✨<br><br>クエストクリアで、100ジュエルやゴールドピースなどをGET！<br>さらに、ウィークエンドメダルを集めて、せんせいの週末限定クエスト交換所でアイテムと交換しよう！<br><br>▼お知らせ<br><br>https://<br>info.rs.aktsk.jp/info/detail/11<br>0783?k=byPwsGMy<br>…<br><br>#ロマサガRS</div>
+  <div class="stats">♥145 ↻16 💬1 ・ <a href="https://x.com/romasaga_rs/status/2098245225642963317" target="_blank" rel="noopener">原文</a></div>
+</div></div>
+</div>
+</section>
+<section class="date-section"><h2>2026-09-11<span class="day-count">11本</span></h2>
+<div class="video" data-channel="tyamu">
+  <div>
+    <span class="video-channel">tyamu</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=UYZ1yXhdG_0" target="_blank" rel="noopener">【ロマサガrs】第137回シグフレイたちの井戸【ギミック・アビリティ・攻撃】〜攻略法を徹底解説〜ランキング上位を目指そう‼️</a></h3>
+  </div>
+  <div class="video-summary">9月14日実装シグフレイの井戸を実装前に考察。<br>全員術士で挑む初の井戸でギミックが多彩。<br>術全体アタッカーとバッファーの総合力が問われる。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>全員術士という初の井戸で編成が楽しい</li><li>術師の総合力が問われる面白いステージ</li><li>ターミン・黒原姫・サイバーなどが活躍思想</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>引用元の螺旋1570回はかなりの強敵</li><li>突属性は無効化され採用しづらい</li><li>最後の抵抗でバフを剥がされ厄介</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">シグフレイの井戸</span><span class="topic">第137回</span><span class="topic">術士編成</span><span class="topic">ギミック考察</span><span class="topic">螺旋1570回</span></div>
+</div>
+
+<div class="video pending" data-channel="あっきゃんGAMES">
+  <div>
+    <span class="video-channel">あっきゃんGAMES</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=aq-z5hmHCQo" target="_blank" rel="noopener">【ロマサガRS】あのキャラは取るしかない！&amp;幻闘場やります！～ライブ配信/声あり～</a></h3>
+  </div>
+</div>
+
+<div class="video" data-channel="あっきゃんGAMES">
+  <div>
+    <span class="video-channel">あっきゃんGAMES</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=zUEaJ3ESCQ8" target="_blank" rel="noopener">【ロマサガRS】これがあれば開幕から術が当たる！幻闘場トゥクアイ杖の戦録ギミック対策【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">幻闘場トゥクアイ杖の戦録ギミックを実戦で対策。<br>術は当たらず技やODで必中を取る必要がある。<br>追撃・解除薬とターミンのゴリ押しでクリア。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ODや技なら必中で当てられる</li><li>ターミンの火力でゴリ押しクリアできた</li><li>黒バラを連れて行って正解だった</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>通常の術は当たらず対策が必要</li><li>デバフが効きにくく難しい</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">幻闘場</span><span class="topic">トゥクアイ</span><span class="topic">杖の戦録</span><span class="topic">ギミック対策</span><span class="topic">術無効</span></div>
+</div>
+
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=lIN0yFvZUi4" target="_blank" rel="noopener">【ロマサガRS】全コンプ済★最新ガチャランキング引くべき優先順位考察【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">今回6ガチャを順位付けし、1位はバートランド編。<br>暦読み・幸持ちの雑員加速に噛み合い魅力的と評価。<br>全体的にSS級の環境支配キャラはいない印象。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>バートランド編は絆を2.5倍にでき暦読みと好相性</li><li>上編ジョは超強力火力の大当たり枠</li><li>ポルカは全体耐久を圧倒的に強化</li><li>ゼノンはスコアアタックに刺さる</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>ディラ編は今取らなくてよい・最近使わない</li><li>ポルカは弱点必須で使いづらい</li><li>シドゥの500ヒットは実用性が乏しい</li><li>環境を支配するSS級キャラは不在</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ガチャランキング</span><span class="topic">バートランド編</span><span class="topic">上編</span><span class="topic">63連ガチャ</span><span class="topic">特定条件活躍</span></div>
+</div>
+
+<div class="video" data-channel="サンゾーGAMES">
+  <div>
+    <span class="video-channel">サンゾーGAMES</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=03STS-yFlJ8" target="_blank" rel="noopener">【ロマサガRS】まさかのキャラが第1位！最新版確保優先度ランキング【ロマンシング サガ リユニバース】</a></h3>
+  </div>
+  <div class="video-summary">確保優先度、最優先は該当なしで悩ましい結果。<br>優先高は原流1位、次いでジョ・バート・ブラウニー・ゼノン。<br>暦読み編キャラの方が環境上位と分析する。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>原流は1・2ターン目とも火力が高く周回向き</li><li>ジョは絆アビ2つ持ちで熱パに好相性</li><li>ブラウニーは強欲の原頭上で貴重な戦力</li><li>ゼノンは弱点つければレイドで活躍</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>最優先に置ける性能のキャラはいない</li><li>バートランドは継承がほぼ必須</li><li>原流標節はディフェンダーで使い所がない</li><li>ポルカ編は暦読み編より一段下の性能</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">確保優先度</span><span class="topic">原流1位</span><span class="topic">ジョ</span><span class="topic">ゼノン</span><span class="topic">暦読み編</span></div>
+</div>
+
+<div class="video" data-channel="ジュラのサガちゃんねる">
+  <div>
+    <span class="video-channel">ジュラのサガちゃんねる</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=-ZIiMV-DA8Y" target="_blank" rel="noopener">【ロマサガRS】2026年9月上旬ガチャ総まとめ！全12スタイル引くべきスタイルランキング！【ロマンシング サガ リユニバース】</a></h3>
+  </div>
+  <div class="video-summary">9月上旬ガチャをティアランク付け、S評価は該当なし。<br>A評価はリズ、原流やゼノンはダークホース枠。<br>ブラウニーは幻闘場特化で実質A級と高評価。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>リズは短期決戦・レイドで超火力を出せA評価</li><li>ゼノンは攻撃倍率6倍でレイドで活躍</li><li>ブラウニーは半年〜1年使える幻闘場特化</li><li>イーブリンは火ダメ87%軽減が優秀</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>抜けて強いS評価スタイルは今はいない</li><li>リズは長期戦では火力が失速</li><li>ゼノンは13ターン目以降使い物にならない</li><li>バートランドは前の暦読み編がないと厳しい</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ティアランク</span><span class="topic">ガチャ総まとめ</span><span class="topic">リズA評価</span><span class="topic">S該当なし</span><span class="topic">ブラウニー</span></div>
+</div>
+
+<div class="video" data-channel="タマゴローRS">
+  <div>
+    <span class="video-channel">タマゴローRS</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=qpCKESk3F1c" target="_blank" rel="noopener">【ロマサガ3R】「意外」デスサガ声優の共通点!!主人公8人中 鬼〇の刃が…名探〇プリキュアが…!?ロマサガ3リメイクの発売を待て!!　#ロマサガ3R　#デスサガ</a></h3>
+  </div>
+  <div class="video-summary">ロマサガ3リメイクはフルボイス化が最大の変更点。<br>主人公8人の担当声優を実力派中心に紹介。<br>名探偵プリキュア出演者が多くプリキュア化と話題。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>フルボイス化で豪華声優陣に期待</li><li>カタリナ役 瀬戸麻沙美ははまり役</li><li>日野聡のミカエルなど実力派揃い</li><li>アーミック役 小安のボイスが楽しみ</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>モニカの兄はRSでガチャに全く出ず不遇</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ロマサガ3R</span><span class="topic">フルボイス</span><span class="topic">声優紹介</span><span class="topic">主人公8人</span></div>
+</div>
+
+<div class="video" data-channel="タマゴローRS">
+  <div>
+    <span class="video-channel">タマゴローRS</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=JLYnoCeJNz8" target="_blank" rel="noopener">【ロマサガRS】ますます「一択」忘れずにせんせい週末限定クエスト補充!!　#ロマサガRS</a></h3>
+  </div>
+  <div class="video-summary">週末限定クエスト補充・攻略の短編動画。<br>字幕がほぼ取得できず詳細は不明。<br>「一択」編成を推奨する内容とみられる。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><div class="empty-note">特になし</div></div>
+    <div class="neg"><div class="label">ネガ要素</div><div class="empty-note">特になし</div></div>
+  </div>
+  <div class="topics"><span class="topic">週末限定クエスト</span><span class="topic">一択編成</span></div>
+</div>
+
+<div class="video" data-channel="タマゴローRS">
+  <div>
+    <span class="video-channel">タマゴローRS</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=yT8Js4wUWc0" target="_blank" rel="noopener">【ロマサガRS】ロマサガ3R始動!?「ロマサガ2R比較」TGSは!?11月発売日記念は!?新キャラプレイアブルは!?デスサガガチャ襲来解明速報　#ロマサガRS</a></h3>
+  </div>
+  <div class="video-summary">TGS・ロマサガ3R発売を控えRSのガチャ展開を予想。<br>過去のリベサガ時は何も出なかったが主人公実装に期待。<br>何もしなければやばい運営と苦言も呈する。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>主人公8人をこの機に実装する流れに期待</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>リベサガ時は新作発表でも何も出さなかった</li><li>TGS直前で何もしなければ運営としてやばい</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ガチャ予想</span><span class="topic">ロマサガ3R</span><span class="topic">TGS</span><span class="topic">主人公8人実装</span><span class="topic">発売日記念</span></div>
+</div>
+
+<div class="video" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=htqgv65mLPM" target="_blank" rel="noopener">【Gジェネエターナル】00Fのイベント詳細来たので確認 『SDガンダムGジェネレーションエターナル』</a></h3>
+  </div>
+  <div class="video-summary">ガンダムWFイベントが9月17日開催と判明し詳細確認。<br>報酬ユニット・キャラは事前情報通りの内容。<br>ガチャはZ系補強など複数の可能性を考察。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ヒサ・フェルミは支援防御回数が多く使いやすい</li><li>アストレアF2は範囲広めのマップ兵器持ち</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>フォン・スパークはチャンスステップが増えず残念</li><li>イベント開催が予想より先で少し遅い</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">Gジェネエターナル</span><span class="topic">WFイベント</span><span class="topic">報酬ユニット</span><span class="topic">ガチャ予想</span></div>
+</div>
+
+<div class="video" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=7PpICyors2w" target="_blank" rel="noopener">【Gジェネエターナル】00Fのイベント詳細来たので確認 ＃Shorts ＃ジージェネエターナル</a></h3>
+  </div>
+  <div class="video-summary">ガンダムWFイベントが9月17日開催と判明。<br>報酬はラジエル・アストレアF2など事前情報通り。<br>ガチャはUR版や新規ダブルZ系の可能性を予想。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ヒサ・フェルミは支援防御回数が多く使いやすい</li><li>アストレアF2は範囲広めのマップ兵器持ち</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>フォン・スパークはチャンスステップが増えず残念</li><li>イベント開催が予想より先で少し遅い</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">Gジェネエターナル</span><span class="topic">WFイベント</span><span class="topic">報酬ユニット</span><span class="topic">ガチャ予想</span></div>
+</div>
+</section>
+<section class="date-section"><h2>2026-09-10<span class="day-count">11本 ／ X 159ツイート</span></h2>
+<div class="video pending" data-channel="RS 周回チャンネル">
+  <div>
+    <span class="video-channel">RS 周回チャンネル</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=_rCmTFNAg-o" target="_blank" rel="noopener">【ロマサガRS】討伐クエスト「こよみとの戦い」ドラクエブーケを使った編成【ロマンシング サガ リ・ユニバース】</a></h3>
+  </div>
+</div>
+
+<div class="video" data-channel="RS 周回チャンネル">
+  <div>
+    <span class="video-channel">RS 周回チャンネル</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=NjVioNNDq4U" target="_blank" rel="noopener">【ロマサガRS】討伐クエスト「こよみとの戦い」リクエストがあった編成3種類 ロマンシングクリアの詳細を解説!!【ロマンシング サガ リ・ユニバース】</a></h3>
+  </div>
+  <div class="video-summary">討伐「こよみとの戦い」の視聴者リクエスト編成を3種紹介<br>暦み覚醒を軸に継承・並び順・装備を解説<br>西王アビスやコッペパンで状態異常/生存を確保</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>暦みを最左に置く並び順で確保を安定維持できる</li><li>西王アビスで状態異常回避と3ター目生存が可能</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><div class="empty-note">特になし</div></div>
+  </div>
+  <div class="topics"><span class="topic">こよみとの戦い</span><span class="topic">討伐クエスト</span><span class="topic">編成3種</span><span class="topic">継承</span><span class="topic">並び順</span></div>
+</div>
+
+<div class="video" data-channel="tyamu">
+  <div>
+    <span class="video-channel">tyamu</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=T3xTj1veqL8" target="_blank" rel="noopener">【ロマサガrs】ちゃむのYouTubeガチャ配信【間違いなく~つぎの○○で大活躍〜】〜今宵も~神引きの剣捌きが咲き乱れ〜✨</a></h3>
+  </div>
+  <div class="video-summary">ロマサガ3リメイク発表に触れつつガチャ録画配信<br>バートランド編でゼノンなど狙い60連<br>上編でもスーパーアタッカーを60連で確保</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>バートランドは斬突アタッカー多い今の時代に活躍</li><li>ロマサガ3リメイクのコレクターズEd買いたいほど楽しみ</li><li>カウンタースタイルはどこかで必ず使える</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>バートランド編は40連すり抜けでピックなしと渋い</li><li>ゼノンは井戸で活躍しうるが必須でなく悩む</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ガチャ配信</span><span class="topic">ロマサガ3リメイク</span><span class="topic">バートランド</span><span class="topic">ゼノン</span><span class="topic">神引き</span></div>
+</div>
+
+<div class="video" data-channel="あんずもん">
+  <div>
+    <span class="video-channel">あんずもん</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=ef4xLwBQITA" target="_blank" rel="noopener">【信長の野望出陣】プレイ開始343日目記録　猛将　衝撃の展開　今回の主役は筆頭武将</a></h3>
+  </div>
+  <div class="video-summary">信長の野望出陣343日目の現状とイベント進捗を報告<br>新規6武将を入手し織田信長や毛利元就を育成<br>勢力戦や長篠レイドで報酬狙いランク維持</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>織田信長は火力もダメージ軽減もあり生き残りやすく優秀</li><li>明智光秀は無凸でもバフが乗り戦法ゲージ低下が強力</li><li>生駒は回復間隔が短く回復要因として活躍</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>毛利元就は育成不足で落ちやすく特性も上げ切れていない</li><li>明智・真田幸村は凸しないと厳しい</li><li>経験部が周年イベントでだいぶ枯渇した</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">343日目記録</span><span class="topic">新規武将6体</span><span class="topic">織田信長</span><span class="topic">毛利元就</span><span class="topic">勢力戦/レイド</span></div>
+</div>
+
+<div class="video pending" data-channel="くんちゃんねる">
+  <div>
+    <span class="video-channel">くんちゃんねる</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=l9mVIL4xXLA" target="_blank" rel="noopener">【ロマサガRS】【討伐】こよみとの戦いRomancing (推しクーン入り)【No.637】#Shorts</a></h3>
+  </div>
+</div>
+
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=sAkAYG-mej0" target="_blank" rel="noopener">【ロマサガRS】小剣を救ってみせる、、超本気ゼノン！こうやって使うんだぁぁぁぁぁ！！！！【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">ゼノン(小剣)で高難度戦を3ターン攻略に挑戦<br>何度も全滅しつつ成功パターンを解説<br>ロマサガ3リメイク発表への雑談も長め</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ゼノンがいればシャトリスで組みクリアできる</li><li>エクストラフォース1.75倍持ちがいると火力が段違い</li><li>サルゴンは器用でOD加速もでき優秀</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>ゼノン単体では2ターン攻略は無理で3ターンかかる</li><li>残攻線が5ヒットでバフを消され事故りやすい</li><li>2発来ると耐えられず何度も死に戻り</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ゼノン</span><span class="topic">小剣/斬アタッカー</span><span class="topic">3ターン攻略</span><span class="topic">オーバードライブ</span><span class="topic">成功パターン</span></div>
+</div>
+
+<div class="video" data-channel="サンゾーGAMES">
+  <div>
+    <span class="video-channel">サンゾーGAMES</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=ffl-OTfKOzM" target="_blank" rel="noopener">【ロマサガ3リメイク】あの名作がリメイク！ロマサガ3リメイクの現状判明している内容まとめ【ロマンシング サガ3デスティニーユナイテッド】</a></h3>
+  </div>
+  <div class="video-summary">ロマサガ3リメイク「デスティニーユナイテッド」判明情報を総まとめ<br>2027年2月発売、リベサガのたけP・ジーン開発<br>マスコンバットやトレードも進化して続投</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>リベサガと同じたけP・ジーン開発で期待大</li><li>マスコンバット・トレードが進化して続投</li><li>伊藤賢治の楽曲が約2倍の大ボリューム</li><li>原曲とアレンジをいつでも切替可能</li><li>フリーシナリオ健在で遊び応え十分</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><div class="empty-note">特になし</div></div>
+  </div>
+  <div class="topics"><span class="topic">ロマサガ3リメイク</span><span class="topic">2027年2月発売</span><span class="topic">タイムラインバトル</span><span class="topic">マスコンバット/トレード</span><span class="topic">豪華キャスト</span><span class="topic">極意化</span></div>
+</div>
+
+<div class="video" data-channel="ジュラのサガちゃんねる">
+  <div>
+    <span class="video-channel">ジュラのサガちゃんねる</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=MJ5308oT0II" target="_blank" rel="noopener">【ロマサガRS】Romancing祭「バートランド 編」スタイル考察＆性能チェック【ロマンシング サガ リユニバース】</a></h3>
+  </div>
+  <div class="video-summary">Romancing祭バートランド編3体の性能を考察・ランク付け<br>バートランドは継承込A-、氷結ちゃんはB評価<br>ゼノンは攻撃倍率6倍の超火力アタッカーでB+</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ゼノンは攻撃倍率6倍でレイド/高難度に採用でき隙間需要が高い</li><li>バートランドは無名双剣継承で環境トップ級かつ能力バフ優秀</li><li>氷結ちゃんはストック型リベンジャーが地味に輝く可能性</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>バートランドは前作暦み編がないと厳しく継承必須</li><li>氷結ちゃんは条件が噛み合わないと汎用性低め</li><li>ゼノンは13ター目以降使い物にならずサポート乏しい</li><li>バートランドの火ダメ軽減50%が物足りない</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">バートランド編考察</span><span class="topic">バートランド</span><span class="topic">原竜/氷結ちゃん</span><span class="topic">ゼノン</span><span class="topic">ランク付け</span></div>
+</div>
+
+<div class="video pending" data-channel="タマゴローRS">
+  <div>
+    <span class="video-channel">タマゴローRS</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=scmzY1RfXRs" target="_blank" rel="noopener">【ロマサガRS】知ってますか「味方全体」行動後防御15%持ち杖を　#ロマサガRS</a></h3>
+  </div>
+</div>
+
+<div class="video pending" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=-8bPQ3jhoCQ" target="_blank" rel="noopener">【Gジェネエターナル】SSR クィン・マンサ 武装アニメ ＃Shorts ＃ジージェネエターナル</a></h3>
+  </div>
+</div>
+
+<div class="video" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=h2u_XaUtArs" target="_blank" rel="noopener">【RS3R】遂に来た！ロマサガ3リメイク発表！！【ロマンシングサガ3デスティニーユナイテッド】</a></h3>
+  </div>
+  <div class="video-summary">ロマサガ3リメイク発表内容を主人公・システム面から確認<br>2リメイクベースにフリーシナリオや極意化を実装<br>マスコンバット・トレードも続投し2027年2月発売</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>2リメイク譲りの綺麗なグラとテンポの良さに期待</li><li>フリーシナリオが冒険記で分かりやすくなった</li><li>キャラごと固有モーションで妖精なども可愛い</li><li>マスコンバットのグラが豪快になった</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>コマンダーモード記載がなくサラの最終戦参加が不安</li><li>サラや少年など育てる意味の薄いキャラの救済が気になる</li><li>略称が「デサガ」だと響きが良くない</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ロマサガ3リメイク</span><span class="topic">8人主人公/フリーシナリオ</span><span class="topic">タイムラインバトル</span><span class="topic">マスコンバット/トレード</span><span class="topic">固有モーション</span></div>
+</div>
+
+<div class="x-card" data-channel="X (Twitter)">
+  <div><span class="x-badge">X (Twitter) ・ 159ツイート集約</span></div>
+  <h3>その日のXハイライト</h3>
+  <div class="x-summary">昨夜のニンダイでロマサガ3リメイク（来年2月）正式発表、界隈が歓喜で沸騰<br>こよみ／こよマールRomancing攻略・クリア報告と幻闘場トゥ・クアイのやり込みが継続<br>ジョー編・バートランド編ガチャ、EX4解放や神楽鈴・修行僧完成などの進捗報告も多数</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素（X）</div><ul><li>ロマサガ3リメイク発表への歓喜・興奮、来年2月と続報・TGS出展への期待</li><li>こよみ／こよマールRomancingを様々な編成で撃破できた達成感、無課金でもクリアできる絶妙な難易度への称賛</li><li>幻闘場トゥ・クアイの『よく考えられた』手応えある調整への好評</li><li>ジョー神引き・玄竜おはガチャ入手、神楽鈴/修行僧完成などの嬉しい進捗報告</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素（X）</div><ul><li>こよまーるに全然勝てず記憶再戦で報酬確保に切り替える等の苦戦の声</li><li>聖王（厄）のギミックが分からず全滅する難しさへの嘆き</li><li>バート追いガチャへの警戒（追ったらダメな気がする）、天井・沼への不安</li><li>ロマンシングパス画面の期限切れ不具合・キャラが光って見えなくなるバグの報告</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">【最大の話題】ロマサガ3リメイク（通称デスサガ）の正式発表：Nintendo Direct発、来年2月発売、Steam DX版予約、主人公8人ボイス好評、TGS出展・カタリナ銀髪デザイン等で盛り上がり</span><span class="topic">こよみ／こよマールRomancing（高難易度）攻略：黒薔薇/フォルネウス編成、デトックス閃き、無課金クリア報告など達成報告多数</span><span class="topic">幻闘場トゥ・クアイ（小剣・杖など）のやり込み：OD＋強技だけでは勝てない歯応えある調整への評価</span><span class="topic">ジョー編・バートランド編ガチャ（Romancing祭）：ジョー神引き報告、玄竜すり抜け再評価、次ガチャ情報待ちの様子見</span><span class="topic">EX4解放、神楽鈴（こよみ鈴）超進化完成、修行僧完成などのやり込み進捗</span><span class="topic">公式（@romasaga_rs）：ジョー編ストーリー紹介、ロマンシングパス画面の期限切れ不具合を確認・修正予定と告知</span></div>
+  <div class="hot"><div class="hot-label">注目ツイート TOP3</div>
+<div class="tweet">
+  <div class="author">@romasaga_rs</div>
+  <div>【リン・ウッドの家族たち】<br>死食と時を合わせるようにして生まれたリズの娘ジョー。<br>生まれた瞬間から引き離され、その存在すら消し去られていた弟のバートランド。<br>二人の宿命、そして宿敵であるイゴマール。<br>ジョー編とは彼ら家族の戦いの物語である。</div>
+  <div class="stats">♥401 ↻73 💬2 ・ <a href="https://x.com/romasaga_rs/status/2097612423259922912" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@romasaga_rs</div>
+  <div>現在、特定条件下でホームよりロマンシングパス画面に遷移した際、期限切れのダイアログが表示され、正常に遷移することができない場合がごく稀にある不具合を確認しております。<br><br>今後のアップデートにて修正予定です。<br>ご迷惑をおかけし、申し訳ございません。<br><br>▼お知らせ<br><br>https://<br>info.rs.aktsk.jp/info/detail/91<br>0416?k=SEesFztG<br>…</div>
+  <div class="stats">♥107 ↻16 💬2 ・ <a href="https://x.com/romasaga_rs/status/2097611453817831576" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@romasagarika</div>
+  <div>お…おぁぁぁ…(๑ơ ᴗơ)！！！<br>ロマサガ3リメイク？！？！<br><br>あ、こよみとの戦いRomancing<br>ブラック&amp;フォルネウス入り✨<br>ちょっと大変だった<br>ブラックOD参加しないように<br><br>出てきますよね？？<br>あんなブラッ…あ、ネタバレ( *ˊᵕˋ)<br>あんなハーマンこんなハーマン✨<br><br>ブラック仲間仕方忘れたw<br>#ロマサガRS</div>
+  <div class="stats">♥74 ↻0 💬3 ・ <a href="https://x.com/romasagarika/status/2097792598970945860" target="_blank" rel="noopener">原文</a></div>
+</div></div>
+</div>
+</section>
+<section class="date-section"><h2>2026-09-09<span class="day-count">10本 ／ X 100ツイート</span></h2>
+<div class="video" data-channel="RS 周回チャンネル">
+  <div>
+    <span class="video-channel">RS 周回チャンネル</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=7UYqSdIRQ08" target="_blank" rel="noopener">【ロマサガRS】超絶注意喚起!!周回場所マジで気をつけて!!知らないとマジで後悔します!!【ロマンシング サガ リ・ユニバース】</a></h3>
+  </div>
+  <div class="video-summary">周回場所に関する超絶注意喚起の動画<br>知らないと後悔する周回先の落とし穴を警告<br>(字幕取得不良のため詳細は動画本編を参照)</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><div class="empty-note">特になし</div></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>知らないと後悔する周回場所があると警告</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">周回注意喚起</span><span class="topic">周回場所</span><span class="topic">こよみ関連</span><span class="topic">注意喚起</span></div>
+</div>
+
+<div class="video" data-channel="あっきゃんGAMES">
+  <div>
+    <span class="video-channel">あっきゃんGAMES</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=xtgQHSKWFvo" target="_blank" rel="noopener">【ロマサガRS】ジョー&amp;バートランドガチャ性能チェック！全6体のキャラランク評価＆徹底解説【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">新ガチャ全6体の性能とランクを声付き解説。<br>ゼノンが証券の貴重な火力枠で個人的注目キャラ。<br>ジョーは高難度向け、新ドゥーは500ヒット条件。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ジョーは2種の絆で高難度に重宝</li><li>原流は火力ヒット数稼げる熱アタッカー</li><li>ゼノンは証券の貴重な火力枠でアタッカー性能ピカイチ</li><li>バートはジョーとの相性抜群</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>原流は条件厳しく使う場所を選ぶ</li><li>新ドゥーは500ヒットが局所的で星1</li><li>バートはユニーク性が薄い</li><li>ゼノンは弱点がはっきりしている</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ガチャ6体性能</span><span class="topic">ジョー星3</span><span class="topic">原流星2</span><span class="topic">新ドゥー星1</span><span class="topic">バート星2</span><span class="topic">ゼノン注目</span></div>
+</div>
+
+<div class="video" data-channel="あんずもん">
+  <div>
+    <span class="video-channel">あんずもん</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=H4qnVbOor7E" target="_blank" rel="noopener">【信長の野望出陣】3周年SSR1000 友好箱　武将確認　新規入手の方必見！　1000武将確認</a></h3>
+  </div>
+  <div class="video-summary">3周年SSR1000友好箱の交換候補武将を1体ずつ解説<br>本多忠勝・毛利元就・井伊直政・竹中半兵衛・豊臣秀吉など<br>タンク/デバフ/切り込みなど役割別に性能を紹介</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>本多忠勝は被ダメが相手の強化に影響されずタンク役として優秀</li><li>毛利元就のデバフは味方全体に付与され勢力戦で強力</li><li>豊臣秀吉は戦法速度低下とゲージ増加で強い</li><li>井伊直政は初動の貫通確定が強力な切り込み隊長</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>毛利元就は覚醒5段階まで育てないと落ちやすい</li><li>井伊直政は中盤以降バフがないと火力が厳しい</li><li>竹中半兵衛は未所持で効果量がピンと来ない</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">3周年友好箱</span><span class="topic">武将交換候補</span><span class="topic">本多忠勝</span><span class="topic">豊臣秀吉</span><span class="topic">デバフ性能</span></div>
+</div>
+
+<div class="video" data-channel="くんちゃんねる">
+  <div>
+    <span class="video-channel">くんちゃんねる</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=qGeoAS5Zn_A" target="_blank" rel="noopener">【ロマサガRS】【ガチャ動画】やはり単発・・・！！【No.636】</a></h3>
+  </div>
+  <div class="video-summary">アビサルサーカスガチャでブラウニー狙いの実況。<br>100連で出ず単発切り替えでSS2体を引き当て。<br>1800ジュエル温存で感動のフィナーレ。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>単発切り替えでブラウニー2体ゲット</li><li>1800ジュエル温存できてお得</li><li>すり抜けなく綺麗に獲得できた</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>100連物センサーで目当てが出ず</li><li>ブラウニーとの相性が悪いガチャ</li><li>10連だとジュエルの無駄が出る懸念</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">アビサルサーカスガチャ</span><span class="topic">ブラウニー狙い</span><span class="topic">単発引き</span><span class="topic">SS2体獲得</span><span class="topic">ジュエル温存</span></div>
+</div>
+
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=DYV9-oI9_A0" target="_blank" rel="noopener">【ロマサガRS】これが【今の】現実・・ゼノン確保前の注意事項を共有【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">ゼノン確保前の注意喚起、小剣編成を劇的には楽にしない。<br>体術と違い小剣は全体フォース配布が乏しく火力が出にくい。<br>ゼノンは防御ゲージが低くギミック対応で落ちやすい。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ゼノンは刺さる場面ではしっかり刺さる</li><li>バートランドは使い所がある評価</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>小剣編成の難易度を簡単にはしない</li><li>ゼノンは防御ゲージが低く落ちやすい</li><li>小剣は全体エクストラフォース配布役が不在</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ゼノン</span><span class="topic">小剣編成</span><span class="topic">こよみとの戦い</span><span class="topic">確保前注意</span><span class="topic">ギミック対応</span></div>
+</div>
+
+<div class="video" data-channel="サンゾーGAMES">
+  <div>
+    <span class="video-channel">サンゾーGAMES</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=28QY6GPX6rY" target="_blank" rel="noopener">【ロマサガRS】結局このメンツが強過ぎなのよ...！現状最強レベルの編成でこよみとの戦いに挑戦【ロマンシング サガ リユニバース】</a></h3>
+  </div>
+  <div class="video-summary">こよみとの戦いロマンシングに暦読み最強編成でオート挑戦。<br>暦読み・サイバー・コッぺパンが環境トップと再認識。<br>オートでも余裕でクリア、報酬の少なさには苦言。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>コッぺパンは補助サポーターとして非常に優秀</li><li>サライは1ターン目から高火力</li><li>暦読み・サイバーは環境トップの強さ</li><li>サイバーの状態異常解除が有用</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>報酬のジュエル500・ソウルピース100は少ない</li><li>オート時はダメージが足りず倒せない場合がある</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">こよみとの戦い</span><span class="topic">暦読み編成</span><span class="topic">オートクリア</span><span class="topic">コッぺパン</span><span class="topic">環境トップ</span></div>
+</div>
+
+<div class="video" data-channel="ジュラのサガちゃんねる">
+  <div>
+    <span class="video-channel">ジュラのサガちゃんねる</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=SjkzLQW_rkQ" target="_blank" rel="noopener">【ロマサガRS】Romancing祭「ジョー 編」スタイル考察＆性能チェック【ロマンシング サガ リユニバース】</a></h3>
+  </div>
+  <div class="video-summary">ロマンシングフェス上編3体のスタイルを考察評価。<br>ジョーは万能B、原流は火力特化B+、新ドゥーはB。<br>継承や条件次第で評価が変わる尖った性能。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ジョーは軽減・状態異常対策要因として心強い</li><li>原流はユニゾンブレス53ヒットが強力でレイド/高難度に使える</li><li>新ドゥーは500ヒット後2.75〜3.25倍の脅威の火力</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>ジョーは器用貧乏でサポも火力も中途半端</li><li>原流は火ダメ軽減0でウィーク条件が必要</li><li>新ドゥーは500ヒット条件が高く序盤活躍しない</li><li>超高難度は年2〜3回しかなく重要度は落ちる</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ジョー考察B</span><span class="topic">原流B+</span><span class="topic">新ドゥーB</span><span class="topic">火ダメ軽減</span><span class="topic">継承候補</span><span class="topic">高難度適性</span></div>
+</div>
+
+<div class="video" data-channel="タマゴローRS">
+  <div>
+    <span class="video-channel">タマゴローRS</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=gza3-1N9VwY" target="_blank" rel="noopener">【ロマサガRS】引くべき「1ガチャ」週間ランキング!!ジョー&amp;バートランドVSポルカ&amp;リズ編→12体4ガチャランキング!!最新スタイルの最強を決める比較検討会→2026年9月10日版　#ロマサガRS</a></h3>
+  </div>
+  <div class="video-summary">Romancing祭のガチャ4種を並べて比較検討<br>ゼノン・バートランド・原竜が高評価で確保優先<br>後半戦の無人島/高難度に向け石を蓄えるべき</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ゼノンは与ダメ分野で飛び抜け確保優先度高め</li><li>バートランドは無名双剣継承で環境トップ級</li><li>原竜は熱の唯一性が高く現環境最高</li><li>バートのカースドカルテッド12ヒットが爽快</li><li>リズはここ数体で一番の出来</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>ジは置物として便利な程度で他は弱い</li><li>熱弱点4体編成自体が強くない</li><li>リラのコピーは基本性能のみで継承差が歴然</li><li>ノエルはライバル多く優先度が下がっている</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ガチャ優先度</span><span class="topic">4ガチャ比較</span><span class="topic">ゼノン</span><span class="topic">バートランド</span><span class="topic">原竜</span><span class="topic">リズ</span></div>
+</div>
+
+<div class="video pending" data-channel="タマゴローRS">
+  <div>
+    <span class="video-channel">タマゴローRS</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=Fhz8XF4onUI" target="_blank" rel="noopener">【ロマサガRS】神楽鈴完成「魂の祠へゴー」いや!?籠もれない→〇〇諦めますか??交互に回しますか!?　#ロマサガRS</a></h3>
+  </div>
+</div>
+
+<div class="video" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=ExXCBcjxjg8" target="_blank" rel="noopener">【Gジェネエターナル】SSR ガンダムMkｰⅣ 武装アニメ ＃Shorts ＃ジージェネエターナル</a></h3>
+  </div>
+  <div class="video-summary">SSRガンダムMk-Ⅳの武装アニメ紹介Shorts<br>台詞のみで性能解説はなし<br>Gジェネエターナルの短尺動画</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><div class="empty-note">特になし</div></div>
+    <div class="neg"><div class="label">ネガ要素</div><div class="empty-note">特になし</div></div>
+  </div>
+  <div class="topics"><span class="topic">Gジェネエターナル</span><span class="topic">ガンダムMk-Ⅳ</span><span class="topic">武装アニメ</span><span class="topic">Shorts</span></div>
+</div>
+
+<div class="x-card" data-channel="X (Twitter)">
+  <div><span class="x-badge">X (Twitter) ・ 100ツイート集約</span></div>
+  <h3>その日のXハイライト</h3>
+  <div class="x-summary">高難易度「こよみ／こよマールRomancing」の攻略・クリア報告が最大の話題<br>ジョー編・バートランド編ガチャは玄竜・シン・ドゥのすり抜けやムクチャー演出でジョー狙い難航の声<br>本日のニンダイでロマサガ3リメイク発表への期待も高まる</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素（X）</div><ul><li>こよみ／こよマールRomancingを様々な編成で撃破できた達成感・攻略の楽しさ</li><li>ジョーが当たって『大当たり』、こよみにエクストラフォースⅢ付与などの嬉しい報告</li><li>ハズレ扱いだった玄竜が予想外に火力を出すとの再評価</li><li>神楽鈴の超進化完成、EX4全員集結の解放などやり込み進捗の手応え</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素（X）</div><ul><li>ジョー狙いで玄竜・シン・ドゥにすり抜け、ムクチャー爆発演出でもPUが出ない渋さへの嘆き</li><li>こよみRomancingが硬い・勝てない、勝ち方を求める苦戦の声</li><li>火力偏重スタイルの供給過多で萎える・惰性感、一部に離脱（アンインストール）を示すネガ投稿</li><li>天候（大雨）・体調不良でだるいという声</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">こよみ／こよマールRomancing（高難易度）攻略：黒薔薇/白薔薇編成、耐久パ、火力ゴリ押し等のクリア報告多数</span><span class="topic">ジョー編・バートランド編ガチャ（Romancing祭継続）：ジョー狙いで玄竜・シン・ドゥすり抜け、ムクチャー爆発演出の報告</span><span class="topic">玄竜（体術）が想定外に高火力との再評価、こよみへエクストラフォースⅢ実装の嬉しい報告</span><span class="topic">本日開催のニンダイ（Nintendo Direct）でのロマサガ3リメイク発表への期待</span><span class="topic">幻闘場トゥ・クアイ／小剣、螺旋590階、雷窟サガスカ編100層などのやり込み攻略</span><span class="topic">おはガチャ・晩酌酒場ガチャの結果報告、神楽鈴の超進化完成</span><span class="topic">日常・天候：重陽の節句、中部・佐賀の大雨、ロマ佐賀列車</span></div>
+  <div class="hot"><div class="hot-label">注目ツイート TOP3</div>
+<div class="tweet">
+  <div class="author">@mn_jiro_II</div>
+  <div>おはようございます<br><br>昨日のガチャ結果で少し復活してアイコンもノエルに近づきました🥹✨<br><br>コヨマールは足切りギリギリで何とか…ジョーもルミナスの一員です🥹✨<br><br>#ロマサガRS</div>
+  <div class="stats">♥46 ↻0 💬1 ・ <a href="https://x.com/mn_jiro_II/status/2097458966922195333" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@hiro1980301</div>
+  <div>皆様おはようございます☺️<br>雨の具合が不安なので、1本早い電車乗ったら座れて爆睡してました😪<br><br>起きたら大阪でちょうど😳<br><br>早いものでシチョーメダル、2キャラ目が貯まりましたので次はクーンさんを😗<br>やたら50が出ました✨✨✨<br><br> #ロマサガRS</div>
+  <div class="stats">♥40 ↻0 💬1 ・ <a href="https://x.com/hiro1980301/status/2097450589852680352" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@tadanomoni</div>
+  <div>おはようございました🍊<br>おはガチャでリズ🥰<br><br>#ロマサガRS</div>
+  <div class="stats">♥31 ↻0 💬1 ・ <a href="https://x.com/tadanomoni/status/2097449779949355234" target="_blank" rel="noopener">原文</a></div>
+</div></div>
+</div>
+</section>
+</main>
+<footer>generated by youtube-summary</footer>
+<script>
+function getActiveChannels() {
+  return new Set(
+    Array.from(document.querySelectorAll('.chip.active'))
+      .map(c => c.dataset.channel)
+  );
+}
+function applyFilter() {
+  const active = getActiveChannels();
+  // 各動画の表示/非表示
+  document.querySelectorAll('.video').forEach(v => {
+    const ch = v.dataset.channel;
+    v.classList.toggle('hidden', !active.has(ch));
+  });
+  // Xカードの表示/非表示
+  document.querySelectorAll('.x-card').forEach(v => {
+    const ch = v.dataset.channel;
+    v.classList.toggle('hidden', !active.has(ch));
+  });
+  // 日付セクションは、コンテンツが0なら非表示
+  document.querySelectorAll('.date-section').forEach(s => {
+    const visible = s.querySelectorAll('.video:not(.hidden), .x-card:not(.hidden)').length;
+    s.classList.toggle('hidden', visible === 0);
+  });
+  updateStats();
+}
+function updateStats() {
+  const totalCh = document.querySelectorAll('.chip').length;
+  const activeCh = document.querySelectorAll('.chip.active').length;
+  const visibleVideos = document.querySelectorAll('.video:not(.hidden)').length;
+  const visibleX = document.querySelectorAll('.x-card:not(.hidden)').length;
+  const visibleDays = document.querySelectorAll('.date-section:not(.hidden)').length;
+  document.getElementById('visibleStats').textContent =
+    `（${activeCh}/${totalCh} 選択中、動画${visibleVideos}本／X${visibleX}日／合計${visibleDays}日）`;
+}
+function toggleChannel(chip) {
+  chip.classList.toggle('active');
+  applyFilter();
+}
+function setAll(on) {
+  document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', on));
+  applyFilter();
+}
+document.querySelectorAll('.chip').forEach(c => {
+  c.addEventListener('click', () => toggleChannel(c));
+});
+updateStats();
+</script>
+</body>
+</html>
