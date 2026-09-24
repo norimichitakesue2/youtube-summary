@@ -18,3 +18,4 @@ node_modules/
 
 .pylibs_linux/
 .pytmp/
+.pylibs_yt/
