@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+import json, datetime
+D='data/pending_summaries/'
+now=datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+f='UCBC_Fpd3wW-2kjYXVbQJ2hQ__OBa02p_k478.json'
+fields={
+ "summary_3lines":"幻闘イベントを長時間耐久で全武器種クリアするライブ\nウンディーネとボルカノの属性＆コーション気絶が厄介\nウコムやまさかり等の火力ゴリ押しで各ステージを突破",
+ "key_topics":["幻闘全武器種クリア","属性打ち分けギミック","コーション/気絶対策","火力ゴリ押し攻略","ウコム1点狙いガチャ"],
+ "positive_points":["ウコムは圧倒的火力で取って良かった","斧はまさかりが最高火力でクリア","ヒューズやジンが火力で大活躍","アイスのドライブチェーンが強すぎる","歯応えある幻闘で久々に楽しめた"],
+ "negative_points":["コーション未解除の気絶/スタンがとにかく厄介","斧と槍がキャラ不足できつい","3ターン即死級で難易度が謎に高い","ガチャの新キャラは幻闘寄りで魅力に欠ける"],
+}
+d=json.load(open(D+f,encoding='utf-8'))
+d.update(fields)
+d['summarized_at']=now
+json.dump(d,open(D+f,'w',encoding='utf-8'),ensure_ascii=False,indent=2)
+print('OK',f,now)
