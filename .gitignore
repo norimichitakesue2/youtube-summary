@@ -19,3 +19,6 @@ node_modules/
 .pylibs_linux/
 .pytmp/
 .pylibs_yt/
+
+# stale git locks parked by scheduled task (delete manually)
+_to_delete/
