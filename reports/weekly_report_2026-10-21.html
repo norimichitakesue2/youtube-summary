@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>YouTube要約レポート 2026-10-15 〜 2026-10-21</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #1e293b;
+    --panel-2: #273449;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --accent: #60a5fa;
+    --pos: #34d399;
+    --neg: #f87171;
+    --topic: #fbbf24;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  header {
+    padding: 32px 48px;
+    background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
+    border-bottom: 1px solid #334155;
+  }
+  header h1 { margin: 0 0 8px; font-size: 28px; }
+  header .meta { color: #cbd5e1; font-size: 14px; }
+  main { padding: 32px 48px; max-width: 1200px; margin: 0 auto; }
+  .summary-stats {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .stat {
+    background: var(--panel);
+    padding: 16px 24px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 180px;
+  }
+  .stat .num { font-size: 28px; font-weight: 700; color: var(--accent); }
+  .stat .label { font-size: 13px; color: var(--muted); margin-top: 4px; }
+  .date-section { margin-bottom: 32px; }
+  .date-section h2 {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .date-section h2 .day-count {
+    font-size: 13px;
+    font-weight: normal;
+    color: var(--muted);
+  }
+  .video {
+    background: var(--panel);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 12px;
+    border-left: 4px solid var(--accent);
+  }
+  .video-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  .video-channel {
+    display: inline-block;
+    background: rgba(96, 165, 250, 0.18);
+    color: var(--accent);
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .video.pending { border-left: 3px solid var(--muted); opacity: 0.85; }
+  .pending-badge {
+    display: inline-block;
+    background: rgba(148, 163, 184, 0.18);
+    color: var(--muted);
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 500;
+    margin-left: 6px;
+    margin-bottom: 6px;
+  }
+  .video-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .video-title a { color: var(--text); text-decoration: none; }
+  .video-title a:hover { color: var(--accent); }
+  .video-date { color: var(--muted); font-size: 13px; white-space: nowrap; }
+  .video-summary {
+    color: #cbd5e1;
+    margin: 8px 0 16px;
+    white-space: pre-wrap;
+  }
+  .pos-neg-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  @media (max-width: 700px) { .pos-neg-grid { grid-template-columns: 1fr; } }
+  .pos, .neg {
+    background: var(--panel-2);
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  .pos { border-left: 3px solid var(--pos); }
+  .neg { border-left: 3px solid var(--neg); }
+  .pos .label, .neg .label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+  .pos .label { color: var(--pos); }
+  .neg .label { color: var(--neg); }
+  .pos ul, .neg ul { margin: 0; padding-left: 18px; }
+  .pos li, .neg li { margin-bottom: 2px; }
+  .topics { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .topic {
+    background: rgba(251, 191, 36, 0.15);
+    color: var(--topic);
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+  }
+  .empty-note { color: var(--muted); font-size: 13px; font-style: italic; }
+  .filter-bar {
+    background: var(--panel);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  .filter-bar .filter-label {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .filter-bar .filter-actions {
+    display: flex;
+    gap: 8px;
+  }
+  .filter-bar button {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid #334155;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .filter-bar button:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+  .filter-bar .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .filter-bar .chip {
+    background: var(--panel-2);
+    color: var(--muted);
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    transition: all 0.15s;
+  }
+  .filter-bar .chip:hover {
+    border-color: var(--accent);
+  }
+  .filter-bar .chip.active {
+    background: var(--accent);
+    color: #0f172a;
+    font-weight: 600;
+  }
+  .filter-bar .chip.x-chip {
+    border-color: #1da1f2;
+    color: #7dd3fc;
+  }
+  .filter-bar .chip.x-chip.active {
+    background: #1da1f2;
+    color: #0f172a;
+  }
+  .filter-bar .chip .count {
+    opacity: 0.7;
+    font-size: 11px;
+    margin-left: 4px;
+  }
+  .video.hidden { display: none; }
+  .date-section.hidden { display: none; }
+  .x-card.hidden { display: none; }
+  .x-card {
+    background: linear-gradient(180deg, #0c4a6e 0%, #164e63 100%);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    border-left: 4px solid #1da1f2;
+  }
+  .x-badge {
+    display: inline-block;
+    background: rgba(29, 161, 242, 0.25);
+    color: #7dd3fc;
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .x-card h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .x-card .x-summary {
+    color: #cbd5e1;
+    margin-bottom: 14px;
+    white-space: pre-wrap;
+    font-size: 14px;
+  }
+  .x-card .hot {
+    margin-top: 12px;
+  }
+  .x-card .hot-label {
+    color: #94a3b8;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+  .x-card .tweet {
+    background: rgba(15, 23, 42, 0.55);
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+  .x-card .tweet .author {
+    color: #7dd3fc;
+    font-weight: 600;
+    margin-bottom: 2px;
+    font-size: 12px;
+  }
+  .x-card .tweet a {
+    color: #7dd3fc;
+    text-decoration: none;
+    font-size: 11px;
+  }
+  .x-card .tweet .stats {
+    color: #94a3b8;
+    font-size: 11px;
+    margin-top: 4px;
+  }
+  .visible-stats {
+    display: inline-block;
+    color: var(--muted);
+    font-size: 12px;
+    margin-left: 8px;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    padding: 24px;
+    border-top: 1px solid #334155;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>YouTube要約レポート</h1>
+  <div class="meta">対象期間: 2026-10-15 〜 2026-10-21（7日間） / 生成日時: 2026-10-21 01:36</div>
+</header>
+<main>
+  <div class="summary-stats">
+    <div class="stat"><div class="num">47</div><div class="label">対象動画数</div></div>
+    <div class="stat"><div class="num">11</div><div class="label">チャンネル数</div></div>
+    <div class="stat"><div class="num">127</div><div class="label">ポジ要素（合計）</div></div>
+    <div class="stat"><div class="num">106</div><div class="label">ネガ要素（合計）</div></div>
+  </div>
+  <div class="filter-bar" id="filterBar">
+    <div class="filter-label">
+      <span>表示するYouTuberを選択 <span id="visibleStats" class="visible-stats"></span></span>
+      <div class="filter-actions">
+        <button onclick="setAll(true)">全て表示</button>
+        <button onclick="setAll(false)">全て非表示</button>
+      </div>
+    </div>
+    <div class="chips" id="chips"><span class="chip active" data-channel="明星ch">明星ch<span class="count">15</span></span>
+<span class="chip active" data-channel="タマゴローRS">タマゴローRS<span class="count">10</span></span>
+<span class="chip active" data-channel="つむつむちゃんねる●ゲーム考察専門">つむつむちゃんねる●ゲーム考察専門<span class="count">9</span></span>
+<span class="chip active" data-channel="サンゾーGAMES">サンゾーGAMES<span class="count">6</span></span>
+<span class="chip active" data-channel="tyamu">tyamu<span class="count">5</span></span>
+<span class="chip active" data-channel="あんずもん">あんずもん<span class="count">5</span></span>
+<span class="chip active" data-channel="あっきゃんGAMES">あっきゃんGAMES<span class="count">4</span></span>
+<span class="chip active" data-channel="ジュラのサガちゃんねる">ジュラのサガちゃんねる<span class="count">3</span></span>
+<span class="chip active" data-channel="RS 周回チャンネル">RS 周回チャンネル<span class="count">2</span></span>
+<span class="chip active" data-channel="くんちゃんねる">くんちゃんねる<span class="count">2</span></span>
+<span class="chip active" data-channel="もんでる">もんでる<span class="count">1</span></span>
+<span class="chip x-chip active" data-channel="X (Twitter)">X (Twitter)<span class="count">7日</span></span></div>
+  </div>
+  <section class="date-section"><h2>2026-10-21<span class="day-count">0本 ／ X 119ツイート</span></h2>
+<div class="x-card" data-channel="X (Twitter)">
+  <div><span class="x-badge">X (Twitter) ・ 119ツイート集約</span></div>
+  <h3>その日のXハイライト</h3>
+  <div class="x-summary">螺旋回廊610階（エルダードラゴン）攻略が2日目も継続、クリア報告と「まだ勝てない」が混在。<br>新キャラ「戦士」が引き続き“接待・独壇場”で大活躍、戦士なし編成の工夫報告も多数。<br>公式は期間限定「技・術鍛錬道場」を開催、明日お知らせ・明後日ガチャ更新の予告で期待と警戒の声。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素（X）</div><ul><li>戦士のカウンター破壊力・独壇場性能に『ヤバい』『頭ひとつ抜けてる』『取って良かった』と満足の声</li><li>螺旋610階を初日～当日にクリアできた達成感、ヴェント・ギュス様・雷パ・槍パ・突パ・周年アドラーなど手持ち活用の報告が多数</li><li>ギミックを理解し試行錯誤の末に突破できた『初めて理解して勝てた』という攻略の手応え</li><li>鍛錬道場で億劫な技・術ランク上げが進められる、螺旋給料（昇給）への『ありがたい』という運営配布への感謝</li><li>戦士なしでも手持ちの突メンバーや綱紀・コーデリアで完封気味に安定クリアできたという編成研究の楽しさ</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素（X）</div><ul><li>エルダードラゴンが強く『まだ勝てない』『全滅』『30分かかった』など初見での苦戦・歯応えの重さ</li><li>戦士未所持・すり抜けでジュエルを溶かした嘆き、『戦士おりゅ？環境になりませんように』という性能偏重への不安</li><li>『救済のはずが戦士ゴリ押しが目立つ』『完全に戦士接待』と接待調整への冷めた評価</li><li>スタン耐性防具を錬磨で作ったのに意味がなかったショック、ガチャで本命すり抜け（キャッシュを天井まで追ってしまった等）の落胆</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">螺旋回廊610階（ボス=エルダードラゴン）攻略継続：クリア報告と「強くてまだ勝てない／全滅」が混在</span><span class="topic">610階ギミック考察：突属性で攻撃弱化・毎ターンOD必須・カウンター対応・スタン対策</span><span class="topic">新キャラ「戦士」がカウンター＆独壇場で“接待”級の活躍、戦士なし編成の攻略共有も</span><span class="topic">公式@romasaga_rs：期間限定イベント「技・術鍛錬道場」開催（技・術ランク上げ）</span><span class="topic">ガチャ：ブルーガチャ最終日・ギュス編すり抜け報告、明日お知らせ＆明後日ガチャ更新の予告</span><span class="topic">螺旋給料（ジュエル配布／昇給）への感謝、無尽塔37層ハーディ・井戸シグフレイなど他コンテンツ</span></div>
+  <div class="hot"><div class="hot-label">注目ツイート TOP3</div>
+<div class="tweet">
+  <div class="author">@romasaga_rs</div>
+  <div>期間限定イベント「技・術鍛錬道場」開催！✨<br><br>鍛錬道場が開催！<br>鍛えたい技・術に合ったクエストに挑戦しよう！<br><br>▼お知らせ<br><br>#ロマサガRS</div>
+  <div class="stats">♥115 ↻9 💬0 ・ <a href="https://x.com/romasaga_rs/status/2112378394101125434" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@imojirou_saigo</div>
+  <div>…………<br>エルダードラゴンは強い……<br>まだ勝てない……<br>#ロマサガRS</div>
+  <div class="stats">♥84 ↻0 💬6 ・ <a href="https://x.com/imojirou_saigo/status/2112614266511732826" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@romasagarika</div>
+  <div>おはす☕ 無尽塔37層ハーディクリア ここも私出来た嬉しい 昨日の夜やったけど眠くて…ログインしたらハーディのHP増えてて😂</div>
+  <div class="stats">♥57 ↻0 💬0 ・ <a href="https://x.com/romasagarika/status/2112660961152889012" target="_blank" rel="noopener">原文</a></div>
+</div></div>
+</div>
+</section>
+<section class="date-section"><h2>2026-10-20<span class="day-count">8本 ／ X 119ツイート</span></h2>
+<div class="video pending" data-channel="あっきゃんGAMES">
+  <div>
+    <span class="video-channel">あっきゃんGAMES</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=IdY6rTy0KIE" target="_blank" rel="noopener">【ロマサガRS】カギのなるのは◯攻撃⁉︎螺旋回廊610階攻略【ロマンシングサガリユニバース】</a></h3>
+  </div>
+</div>
+
+<div class="video pending" data-channel="あっきゃんGAMES">
+  <div>
+    <span class="video-channel">あっきゃんGAMES</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=fALALVpFArA" target="_blank" rel="noopener">【ロマサガRS】終了間近！ギュスターヴ・ブルーガチャ引くべき？スルーすべき？#ロマサガRS #shorts #ガチャ</a></h3>
+  </div>
+</div>
+
+<div class="video pending" data-channel="くんちゃんねる">
+  <div>
+    <span class="video-channel">くんちゃんねる</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=RN8F2XXZccY" target="_blank" rel="noopener">【ロマサガRS】螺旋回廊610階・エルダードラゴン(推しクーン入り)【No.648】#shorts</a></h3>
+  </div>
+</div>
+
+<div class="video" data-channel="サンゾーGAMES">
+  <div>
+    <span class="video-channel">サンゾーGAMES</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=mafJvSFnZ0c" target="_blank" rel="noopener">【ロマサガRS】やはり今の環境キャラ！あの男が螺旋回廊610階でも無双していた！【ロマンシング サガ リユニバース】</a></h3>
+  </div>
+  <div class="video-summary">螺旋回廊610階エルダードラゴンを戦士で攻略。<br>突属性で敵を弱体化させ戦士が1500億無双。<br>ベントや竜騎士との好相性も紹介。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>戦士が1500億ダメージで無双、加工優先度は最優先</li><li>直接攻撃主体の敵にカウンターが刺さりまくる</li><li>ベントが槍・暗でギュス/戦士編成どこでも活躍</li><li>竜騎士のダメブロ5回継承が面白く有用</li><li>お給料部で無料ジェム7600超が嬉しい</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>戦士はかなり接待されている(属性相性のたまたま)</li><li>スタンが事故要素で3ター目から発生し注意</li><li>突属性が絡まないと敵火力が跳ね上がる</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">螺旋回廊610階</span><span class="topic">戦士</span><span class="topic">エルダードラゴン</span><span class="topic">突属性ギミック</span><span class="topic">ベント</span></div>
+</div>
+
+<div class="video" data-channel="タマゴローRS">
+  <div>
+    <span class="video-channel">タマゴローRS</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=yT053LwVkaE" target="_blank" rel="noopener">【ロマサガRS】ギュスターヴの取説「各武器種5体選出」環境最高峰に近づける最強編成二選!!→強さの仕組みを徹底解説　#ロマサガRS</a></h3>
+  </div>
+  <div class="video-summary">ギュスターヴの最強編成を徹底解説する取説。<br>エクストラ値4.5倍と高いが組みづらい性能。<br>鋼の軍勢で武器種統一編成が強力になる。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>エクストラ値4.5倍と高く個人火力はトップクラス</li><li>鋼の軍勢で剣斧槍編成全体を強化できる</li><li>ゼノンやミルザとのシナジーが強力で圧倒的火力</li><li>強化版AJのように使える置き物型サポート</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>使いづらく最高峰編成に近づけるのが難しい</li><li>技3は効果のないただの16連打でヒット数稼ぎ</li><li>武器種限定で組みづらく評価は控えめ</li><li>入れ替え要員がいない縛り編成のもろさ</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ギュスターヴ</span><span class="topic">鋼の軍勢</span><span class="topic">最強編成</span><span class="topic">武器種縛り</span><span class="topic">エクストラ値</span></div>
+</div>
+
+<div class="video" data-channel="タマゴローRS">
+  <div>
+    <span class="video-channel">タマゴローRS</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=m-CKUsoYncY" target="_blank" rel="noopener">【ロマサガRS】リベンジ「出番だ」敗れし者たちのガチャ登場なるか!!しかしあの美少女の徹底ブロックで…!?　10/23ガチャ予想　#ロマサガRS</a></h3>
+  </div>
+  <div class="video-summary">10/23の次回ガチャ内容を予想する動画。<br>「敗れし者たち」リベンジ枠の登場に期待。<br>美少女キャラのブロックで実現するか注目。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><div class="empty-note">特になし</div></div>
+    <div class="neg"><div class="label">ネガ要素</div><div class="empty-note">特になし</div></div>
+  </div>
+  <div class="topics"><span class="topic">ガチャ予想</span><span class="topic">10/23ガチャ</span><span class="topic">リベンジ枠</span><span class="topic">敗れし者たち</span></div>
+</div>
+
+<div class="video pending" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=KruFZNVKydI" target="_blank" rel="noopener">【GジェネET】SSR ライノサラスB型 武装アニメ ＃Shorts ＃ジージェネエターナル</a></h3>
+  </div>
+</div>
+
+<div class="video pending" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=2W4Vp8xXcag" target="_blank" rel="noopener">【ロマサガRS】螺旋回廊 610階 オート攻略  #ロマンシングサガリ・ユニバース ＃Shorts</a></h3>
+  </div>
+</div>
+
+<div class="x-card" data-channel="X (Twitter)">
+  <div><span class="x-badge">X (Twitter) ・ 119ツイート集約</span></div>
+  <h3>その日のXハイライト</h3>
+  <div class="x-summary">月曜朝、螺旋回廊610階（エルダードラゴン）更新でクリア報告が一斉に投稿。<br>突属性＆新キャラ「戦士」が刺さる“接待・独壇場”編成で初日踏破報告が多数。<br>螺旋給料＝給料日の重なりでジュエル配布に感謝、一方で戦士未所持勢やすり抜けへの嘆きも。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素（X）</div><ul><li>螺旋610階を初日に全力オート／フルオートで撃破できたという達成感・安定クリア報告が多数</li><li>新キャラ『戦士』が突属性ボスに刺さり『強すぎ』『取って良かった』と性能満足の声</li><li>ギミックが明示されていて分かりやすい、クリコピでも倒せたとの難易度評価の好意的反応</li><li>螺旋給料（ジュエル）が給料日と重なり『ありがたや』『お賃金ありがとう』と運営配布への感謝</li><li>ヴェントや突/槍/雷パなど手持ちキャラが活躍でき編成の幅を楽しめたという声</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素（X）</div><ul><li>戦士未所持・すり抜けで天井までジュエルを溶かした、ジュエル不足という嘆き</li><li>戦士がいないと面倒・スタンで落ちるなど無課金/手持ち次第で苦戦する不公平感</li><li>『突攻撃以外許さない』接待設計で、次の間接・術系ボスでは詰みそうという先行き不安</li><li>かみ（新キャラ）の出番が無い・引いて致命傷といった実装直後キャラの肩透かし感</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">螺旋回廊610階（ボス=エルダードラゴン）の初日クリア報告ラッシュ</span><span class="topic">ギミック＝突属性攻撃で攻撃弱化を重ねる構成が有効（突パ／槍パ／雷パ）</span><span class="topic">新キャラ「戦士」が大活躍＝“戦士接待・独壇場”との声</span><span class="topic">螺旋給料（ジュエル配布）が給料日と重なり感謝ツイート多数</span><span class="topic">ヴェント・ゼノン・かみ（新キャラ）など手持ち活用レポート</span></div>
+  <div class="hot"><div class="hot-label">注目ツイート TOP3</div>
+<div class="tweet">
+  <div class="author">@Albelt_saga</div>
+  <div>結局こうするしか😅<br><br>しかし戦士を取りに行った事が英断だという証にもなりました💡<br><br>イスマス姉弟殿下攻略完了ですわ🥹✨️<br><br>#ロマサガRS</div>
+  <div class="stats">♥33 ↻0 💬0 ・ <a href="https://x.com/Albelt_saga/status/2112316141125390843" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@hiro1980301</div>
+  <div>皆様おはようございます☺️<br><br>ゲントーはぼちぼちですが、螺旋は一応当日に💪<br>610もノールックフルオートファーストテイクでクリアできました😗<br>言うてもあと1ヶ月半なのでおジュエルを貯めにかかりたいですね💎✨<br><br> #ロマサガRS</div>
+  <div class="stats">♥32 ↻0 💬0 ・ <a href="https://x.com/hiro1980301/status/2112306627932262534" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@seven7_rs</div>
+  <div>螺旋610階はいつもの雷パで ⚡️<br>やっとダリ夫の神教典を活躍させる事が出来ましたよ 📔<br>現状、単体攻撃オンリーのダリ夫にはもってこいですね。<br>(しかしいつもの雷パとは？<br><br>#ロマサガRS</div>
+  <div class="stats">♥28 ↻0 💬1 ・ <a href="https://x.com/seven7_rs/status/2112322929241530657" target="_blank" rel="noopener">原文</a></div>
+</div></div>
+</div>
+</section>
+<section class="date-section"><h2>2026-10-19<span class="day-count">10本 ／ X 132ツイート</span></h2>
+<div class="video" data-channel="tyamu">
+  <div>
+    <span class="video-channel">tyamu</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=ISx5unE9xbY" target="_blank" rel="noopener">【ロマサガrs】シグフレイたちの井戸【100位編成】キャラ揃ってたら誰でもランクイン可能⁉️</a></h3>
+  </div>
+  <div class="video-summary">ロマサガRS『シグフレイたちの井戸』100位編成を紹介。<br>3ターン63の立ち回りでジの火力を最大化。<br>キャラが揃えば誰でもランクイン可能。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ジの火力で約9億ダメージが出ると高評価</li><li>キャラが揃えば誰でもランクイン可能</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>1ターン目に下の手下が交渉発動したらやり直しが必要と注意</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ロマサガRS</span><span class="topic">シグフレイの井戸</span><span class="topic">100位編成</span><span class="topic">3ターン攻略</span><span class="topic">ジ火力編成</span></div>
+</div>
+
+<div class="video" data-channel="あっきゃんGAMES">
+  <div>
+    <span class="video-channel">あっきゃんGAMES</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=Sw7lzl_3xOg" target="_blank" rel="noopener">【ロマサガRS】かみガチャ3キャラを徹底評価！今引くべきキャラは誰？</a></h3>
+  </div>
+  <div class="video-summary">暦嫁編ガチャの神・ミリアム・ベント3体を性能評価<br>いずれも星2評価、全体技の神やOD支援のベントが優秀<br>特にベントは攻撃時HP回復と槍枠の貴重さで高評価</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>神は全体技でSSS21ヒットと火力に期待できる</li><li>ベントは攻撃時HP回復付与が優秀</li><li>ベントはギュス編成とも相性が良い</li><li>ミリアムは熱用編成の火力アップに貢献</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>神は全体技特化で単体技継承と相性が悪い</li><li>神は女性・全体技など使用縛りがある</li><li>ミリアムは熱の火力バフにODゲージアップがない</li><li>ベントはOD満タンでないと火力バフを活かせない</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ガチャ性能評価</span><span class="topic">神</span><span class="topic">ミリアム</span><span class="topic">ベント</span><span class="topic">キャラランク付け</span></div>
+</div>
+
+<div class="video pending" data-channel="あんずもん">
+  <div>
+    <span class="video-channel">あんずもん</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=cR5L4Z63O5g" target="_blank" rel="noopener">【ロマサガRS】　螺旋回廊610　フルオート3ターン　 Interesting games from Japan【初見さん大歓迎】</a></h3>
+  </div>
+</div>
+
+<div class="video" data-channel="くんちゃんねる">
+  <div>
+    <span class="video-channel">くんちゃんねる</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=vTsM6Y7Jj2g" target="_blank" rel="noopener">【ロマサガRS】【ガチャ動画】こやつがいろいろとヤバい【No.647】</a></h3>
+  </div>
+  <div class="video-summary">声が枯れた状態で女神狙いのガチャ生配信<br>戦士が連続で出つつ目当ての女神も無事確保<br>終始雑談とノリ中心の賑やかなガチャ回</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>目当ての女神を無事に確保できた</li><li>戦士やプーちゃんなど複数当たりが出た</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><div class="empty-note">特になし</div></div>
+  </div>
+  <div class="topics"><span class="topic">ガチャ動画</span><span class="topic">女神狙い</span><span class="topic">戦士</span><span class="topic">雑談回</span></div>
+</div>
+
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=Z8zMkh2NeOc" target="_blank" rel="noopener">【Gジェネ】誰でもできる！イベントシークレットをカウンターぶっぱで安定攻略【ジージェネエターナル】</a></h3>
+  </div>
+  <div class="video-summary">Gジェネのイベントシークレットをカウンター戦法で攻略。<br>配布ユニット中心でフォースガードを活用。<br>戦力強化すれば安定してクリア可能。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>カウンターぶっぱで安定攻略できると高評価</li><li>配布ユニットでも十分クリア可能</li><li>戦力を強化すれば簡単になる</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>スタミナ剤を10個ほど消費したと言及</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">Gジェネ</span><span class="topic">イベントシークレット</span><span class="topic">カウンター攻略</span><span class="topic">配布ユニット</span><span class="topic">フォースガード</span></div>
+</div>
+
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=t5HH7bVgb3g" target="_blank" rel="noopener">【ロマサガRS】螺旋610階ギミック解説★王道＆特攻3編成実況【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">ロマサガRS螺旋610階エルダードラゴンのギミックを解説。<br>戦士軸の特攻編成と王道のミルザ編成を実況。<br>突属性は1人だけ入れBP系ゲージを重視。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>戦士軸の特攻編成が刺さって無双できると高評価</li><li>ミルザ(ネウ)編成は防御力が高く最強系と絶賛</li><li>ベントがサポートとして優秀</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>突属性を全員に入れると逆にやられると注意</li><li>ゼノンは行動回数が少なく3ターンは厳しいと指摘</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ロマサガRS</span><span class="topic">螺旋610階</span><span class="topic">エルダードラゴン</span><span class="topic">ギミック解説</span><span class="topic">戦士軸編成</span><span class="topic">ミルザ編成</span></div>
+</div>
+
+<div class="video" data-channel="ジュラのサガちゃんねる">
+  <div>
+    <span class="video-channel">ジュラのサガちゃんねる</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=B9msULySSQQ" target="_blank" rel="noopener">【ロマサガRS】螺旋回廊610階「エルダードラゴン」を攻略！【ロマンシング サガ リユニバース】</a></h3>
+  </div>
+  <div class="video-summary">ロマサガRS螺旋回廊610階エルダードラゴンを攻略。<br>実際の戦闘を実況。<br>エルダードラゴン討伐の様子を紹介。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><div class="empty-note">特になし</div></div>
+    <div class="neg"><div class="label">ネガ要素</div><div class="empty-note">特になし</div></div>
+  </div>
+  <div class="topics"><span class="topic">ロマサガRS</span><span class="topic">螺旋610階</span><span class="topic">エルダードラゴン</span><span class="topic">攻略実況</span></div>
+</div>
+
+<div class="video" data-channel="タマゴローRS">
+  <div>
+    <span class="video-channel">タマゴローRS</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=vz75pomfsWU" target="_blank" rel="noopener">【ロマサガRS】螺旋610階「2パターン」無双!!アイツが単騎でも行けるし〇〇縛りで超楽勝なエルダードラゴンのギミック解明速報!!　#ロマサガRS</a></h3>
+  </div>
+  <div class="video-summary">螺旋610階エルダードラゴンのギミック解明速報。<br>アイツが単騎でも行ける2パターンの無双編成を紹介。<br>〇〇縛りで超楽勝になる攻略を解説。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>単騎でも610階を攻略できると高評価</li><li>縛り編成でも超楽勝とアピール</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><div class="empty-note">特になし</div></div>
+  </div>
+  <div class="topics"><span class="topic">螺旋610階</span><span class="topic">エルダードラゴン</span><span class="topic">ギミック解明</span><span class="topic">単騎攻略</span><span class="topic">縛り攻略</span></div>
+</div>
+
+<div class="video pending" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=7OHQnzVo6oc" target="_blank" rel="noopener">【GジェネET】SSR 陸戦型ゲルググ(ヴィッシュ・ドナヒュー専用機) 武装アニメ ＃Shorts ＃ジージェネエターナル</a></h3>
+  </div>
+</div>
+
+<div class="video" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=9nsYmYceiEo" target="_blank" rel="noopener">【GジェネET】やばいと噂のULTユニットの改造やってみた 『SDガンダムGジェネレーションエターナル』</a></h3>
+  </div>
+  <div class="video-summary">GジェネETのULTユニット改造を実際に検証<br>支援・耐久型が強力、特にハイペリオンの初撃無効が優秀<br>解放条件が激重でエンドコンテンツ級の大変さ</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>支援型・耐久型のアビリティが強力</li><li>ハイペリオンの初撃ダメージ無効が優秀</li><li>武装追加で使い方の幅が増える</li><li>ファーストは直ドロップで期待納品がやりやすい</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>監凸SSR30体納品など獲得条件が激シビア</li><li>作品縛りやステージ30回クリアが大変</li><li>素材や強化データの消耗がえげつない</li><li>ほぼエンドコンテンツで時間が相当かかる</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ULTユニット改造</span><span class="topic">ハイペリオン</span><span class="topic">解放条件</span><span class="topic">エンドコンテンツ</span><span class="topic">素材消費</span></div>
+</div>
+
+<div class="x-card" data-channel="X (Twitter)">
+  <div><span class="x-badge">X (Twitter) ・ 132ツイート集約</span></div>
+  <h3>その日のXハイライト</h3>
+  <div class="x-summary">月曜朝、おはガチャで「めがみ」「戦士」「神」報告が相次ぎ全体的に明るい空気。<br>無尽塔（35〜40層・アビサルマローダ）攻略報告と、新規「井戸シグフレイ」満額・ランクイン報告が中心。<br>一方で井戸シグフレイ/アントニウスの難易度やガチャすり抜け・複雑化への不満もちらほら。</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素（X）</div><ul><li>おはガチャ・単発ガチャで狙いのキャラ（めがみ/戦士/神/ミリアム/ゼノンⅢ閃き）が来た歓喜報告が多数</li><li>無尽塔40層アビサルマローダをジェラール・ノーアの粘りでようやく撃破など高難度クリアの達成感</li><li>井戸シグフレイを過去パーティ流用で満額・ランクイン（800位以内）できた安堵</li><li>オフ会でRSプレイヤーと交流できて楽しかったという前向きな声</li><li>螺旋での戦士の活躍と金曜ガチャ更新への期待感</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素（X）</div><ul><li>井戸シグフレイ/アントニウスが手数もダメージも難しく『もう嫌』『BGMまで嫌いになりそう』との疲弊</li><li>ガチャのすり抜け・天井未コンプや『今回のガチャはスルー』といった消極的な声</li><li>ウンボル銃5が戦士を引いてもクリアできないなど高難度コンテンツの壁</li><li>トゥクアイ全武器種の複雑化に理解が追いつかないという戸惑い</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">おはガチャ（めがみ・戦士・神・ミリアム・ゼノン等の入手報告）</span><span class="topic">無尽塔（35層イヴェリス/40層アビサルマローダ攻略）</span><span class="topic">今週の井戸（シグフレイ）満額・ランキング残留報告</span><span class="topic">螺旋イベントと金曜ガチャ更新（戦士が活躍との期待）</span><span class="topic">ミリアムのホーム画面ボイス（火術/水術/体術の小ネタ）が話題</span></div>
+  <div class="hot"><div class="hot-label">注目ツイート TOP3</div>
+<div class="tweet">
+  <div class="author">@supernova790830</div>
+  <div>無尽塔　第6回<br>40層　アビサルマローダ<br><br>先駆者の皆さんのおかげでようやく！<br>毎ターン確定までの命護は12ターン目のみ<br><br>6ターン目に早くもジェラールが倒されてダメなパターンかと思いきや、18ターンまで粘ってくれた<br><br>玄ちゃんが落とされたあともノーアが粘ってなんとか撃破！<br><br>#ロマサガRS</div>
+  <div class="stats">♥79 ↻0 💬5 ・ <a href="https://x.com/supernova790830/status/2111840684240146655" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@imojirou_saigo</div>
+  <div>【今のうちに描き慣れておきたいキャラ】<br>だーれだ？<br>#ロマサガRS</div>
+  <div class="stats">♥67 ↻0 💬3 ・ <a href="https://x.com/imojirou_saigo/status/2111871900007993576" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@romasagarika</div>
+  <div>おはようございます(๑ơ ᴗơ)☕⁺⊹˚<br><br>無尽塔35層イヴェリスクリア✨<br><br>朝から頭が？？？なった<br>昨日これ１戦して寝ようでオートでそのまま寝落ちしたんだ<br>スクショなんもない😂w<br><br>昨日はピクニックとか色々で心地よく寝てしまった…<br><br>やったぁ(๑ơ ᴗơ)ꕤ*｡ﾟ<br>#ロマサガRS</div>
+  <div class="stats">♥48 ↻0 💬0 ・ <a href="https://x.com/romasagarika/status/2111938141120864406" target="_blank" rel="noopener">原文</a></div>
+</div></div>
+</div>
+</section>
+<section class="date-section"><h2>2026-10-18<span class="day-count">6本 ／ X 134ツイート</span></h2>
+<div class="video" data-channel="tyamu">
+  <div>
+    <span class="video-channel">tyamu</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=vMkM8UraIgw" target="_blank" rel="noopener">【ロマサガrs】メタルアルカイザーの井戸【復習】17手5位の立ち回り</a></h3>
+  </div>
+  <div class="video-summary">メタルアルカイザー井戸17手5位の編成と立ち回りを紹介<br>暦み・裁判・ビクトール・シルハ編成でリタラ要素が大変<br>16手には1本届かず、おと・ターミンの現実的編成も言及</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>17手5位にランクインできた</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>リタラ要素が多く真似しない方がいい編成</li><li>ビクトールが40ヒット近く必要でかなりシビア</li><li>あと1本で16手に届かなかった</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">メタルアルカイザー井戸</span><span class="topic">17手5位</span><span class="topic">編成紹介</span><span class="topic">リタラ</span><span class="topic">ランキング</span></div>
+</div>
+
+<div class="video" data-channel="tyamu">
+  <div>
+    <span class="video-channel">tyamu</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=b5azpQsyWdM" target="_blank" rel="noopener">【ロマサガrs】第142回シグフレイたちの井戸~ギミック・リキャスト・スタンバイ無効~考察~16体の術士を紹介【能力値早見表SIGMA版】</a></h3>
+  </div>
+  <div class="video-summary">第142回シグフレイ井戸の攻略を事前考察<br>スタンバイ・リキャスト無効で使える術士が増え考察難航<br>活躍しそうな16体の術士とおすすめ編成6つを紹介</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>スタンバイ・リキャスト無効でエレノアが主力になり得る</li><li>使えるキャラが増え編成の幅が広がり楽しみ</li><li>バッハは2行動28ヒットで刺さる場面がある</li><li>エレノアは掘り出し物で全体火力が高い</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>下の手下のコーション消費BP+10が厄介</li><li>敵を倒すタイミングでバフ全剥がしに注意</li><li>シグフレイに技を当てると火力バフが増大し危険</li><li>シムメシュは攻撃回数が多すぎ活躍は未知数</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">シグフレイ井戸</span><span class="topic">考察</span><span class="topic">スタンバイ無効</span><span class="topic">術士16体</span><span class="topic">おすすめ編成</span></div>
+</div>
+
+<div class="video pending" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=aLjBNn8yavY" target="_blank" rel="noopener">＃ロマサガRS かみは戦術ではなく戦略兵器</a></h3>
+  </div>
+</div>
+
+<div class="video" data-channel="サンゾーGAMES">
+  <div>
+    <span class="video-channel">サンゾーGAMES</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=2253Pk-Ap94" target="_blank" rel="noopener">【ロマサガRS】1位はぶっちゃけ断トツです！最新版確保優先度ランキング【ロマンシング サガ リユニバース】</a></h3>
+  </div>
+  <div class="video-summary">10月18日版の確保優先度ランキングを発表<br>最優先は戦士、高評価にギュス・ベント・マグダレーナ・神<br>優先中にブルー・キャッシュ・女神・ミリアムを配置</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>戦士は新しい遊び方ができ最優先評価</li><li>ベントは上位互換の全体OD付与で文句なし</li><li>ベントはアンサガの貴重な槍で当たり</li><li>マグダレーナはコンボ武器の強化に役立つ</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>神は火力のみでサポート性能は高くなく優先低め</li><li>女神は必須感がない</li><li>キャッシュは運が良ければ強いアタッカー止まり</li><li>ミリアムはリズと比べ優先度が下がる</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">確保優先度</span><span class="topic">ランキング</span><span class="topic">戦士</span><span class="topic">ベント</span><span class="topic">螺旋回廊</span></div>
+</div>
+
+<div class="video" data-channel="タマゴローRS">
+  <div>
+    <span class="video-channel">タマゴローRS</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=zR0Va9-Kcoo" target="_blank" rel="noopener">【ロマサガRS】「高難度井戸」手数にダメージ…やること満載のシグフレイ!!ギミックを理解してとにかく満額を目指せ　2026年10月19日挑戦の井戸</a></h3>
+  </div>
+  <div class="video-summary">シグフレイ高難度井戸のギミックと立ち回りを解説<br>剣士を先に倒し、シグフレイには技を当てすぎ注意<br>運ゲ要素が多く手数削減は難航、満額達成を目指す</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>後半で満額達成までは到達できた</li><li>西王のデバフで行動順の荒れをカバーできる</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>運ゲ要素が多すぎて手数を減らしにくい</li><li>シグフレイ戦は防御が低く誰かやられやすい</li><li>先週は全然ダメで今週も相当やらないと厳しい</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">シグフレイ井戸</span><span class="topic">ギミック解説</span><span class="topic">立ち回り</span><span class="topic">満額達成</span><span class="topic">高難度</span></div>
+</div>
+
+<div class="video pending" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=ivbn-OAakvw" target="_blank" rel="noopener">【GジェネET】SSR ジム・スナイパーⅡ(ホワイト・ディンゴ隊仕様) 武装アニメ ＃Shorts ＃ジージェネエターナル</a></h3>
+  </div>
+</div>
+
+<div class="x-card" data-channel="X (Twitter)">
+  <div><span class="x-badge">X (Twitter) ・ 134ツイート集約</span></div>
+  <h3>その日のXハイライト</h3>
+  <div class="x-summary">新ガチャ(かみ/ヴェント/ミリアム)の引き報告と、幻闘場クリア・魂アビ閃き報告が盛ん<br>ヴェントやブラー採用で銃・杖の幻闘場攻略が進展、ブーケ等の魂アビ枠解放が話題<br>すり抜け・SS出ない嘆きや、無尽塔(32〜37層)・杖トゥクアイの理不尽さへの不満も</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素（X）</div><ul><li>新ガチャで かみ/ヴェント/ミリアム を引けた喜びの報告(かみコンプ、ミリアム当たり、運び屋の帽子入手)</li><li>魂アビリティの閃き・レアアビ解放報告が相次ぎテンション上昇(ブラー魂アビ枠解放、ブーケ連日閃き)</li><li>ヴェントやブラー採用で幻闘場(銃・杖・シュウザー・トゥクアイ)のクリア報告が進展</li><li>こよみ編9話後編・ダリオ前日譚のストーリーが新鮮・好評(母が毒親気味という切り口、多重人格キャラの描写)</li><li>グルメ部・サガ飯・日常ツイートが活発でコミュニティが和やかに賑わう</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素（X）</div><ul><li>すり抜けが多くSSが出ない嘆き(すり抜け大量、おはガチャでSS出ず)</li><li>無尽塔が厳しくキャラが揃わず進めない(32階/37層ハーディが硬すぎ、アケビ9000個でも不足)</li><li>杖の幻闘場トゥ・クアイが理不尽でストレス(攻撃当たらない・ODでバフ解除不可・減給にしての声)</li><li>螺旋回廊を今月まだクリアできていない焦り</li><li>狙いキャラ(ミリアム等)が引けなかった落胆</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">Romancing祭「かみ編」ガチャの結果報告が継続(かみコンプ・ミリアム当たり・ヴェント&amp;かみ引けた/ミリアム引けず)</span><span class="topic">魂アビリティの閃き報告ラッシュ(ブラーが魂アビ枠解放、ブーケが連日レアアビ閃き、ギュスのエクストラフォースⅢ一致)</span><span class="topic">幻闘場クリア報告(銃をブラー採用でクリア、シュウザー銃完、トゥクアイ棍棒クリア)</span><span class="topic">こよみ編 第9話 後編・ダリオ前日譚ストーリーの感想(『母が毒親気味』の切り口や多重人格描写が新鮮との声、薄いとの意見も)</span><span class="topic">無尽塔の攻略難航(32階から進めない、37層ハーディが硬すぎ、アケビ9000個でも足りず)</span><span class="topic">杖の幻闘場トゥ・クアイが理不尽との不満(攻撃が当たらない・ODでバフ解除できない)</span><span class="topic">螺旋回廊の月内クリア状況と更新待ち、超進化防具の厳選</span><span class="topic">サガ飯・グルメ部・日常ツイートや配信告知の賑わい(公式@romasaga_rsの当日告知は無し)</span></div>
+  <div class="hot"><div class="hot-label">注目ツイート TOP3</div>
+<div class="tweet">
+  <div class="author">@lll_yuh_lll</div>
+  <div>幻闘場の銃クリア出来たよー！！<br>まさかのブラーを採用。結実で小回復＋<br>教授のアイデア(OD)で極小回復連打<br>ヒューズかリアムに(OD)が付くようお祈り<br>#ロマサガRS</div>
+  <div class="stats">♥90 ↻0 💬0 ・ <a href="https://x.com/lll_yuh_lll/status/2111411912588349446" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@striderhiryumtg</div>
+  <div>ブーケまさかの連日レアアビ閃き💡😳<br>対高難度○ 連打○になった😌💤 #ロマサガRS</div>
+  <div class="stats">♥65 ↻0 💬0 ・ <a href="https://x.com/striderhiryumtg/status/2111497583386615812" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@RayYamamoto4913</div>
+  <div>本日の記憶再戦ー🏃‍♀️🏃🏃‍♂️<br><br>ブラーが魂アビリティ枠解放！🔥<br>#ロマサガRS</div>
+  <div class="stats">♥56 ↻0 💬0 ・ <a href="https://x.com/RayYamamoto4913/status/2111428805030277394" target="_blank" rel="noopener">原文</a></div>
+</div></div>
+</div>
+</section>
+<section class="date-section"><h2>2026-10-17<span class="day-count">8本 ／ X 133ツイート</span></h2>
+<div class="video pending" data-channel="あんずもん">
+  <div>
+    <span class="video-channel">あんずもん</span>
+    <span class="pending-badge">字幕取得エラー・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=xtBidaaFqFk" target="_blank" rel="noopener">【信長の野望出陣】雑談配信！色々語り合いませんか？　Interesting games from Japan【初見さん大歓迎】</a></h3>
+  </div>
+</div>
+
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=dlAq3qRWsxk" target="_blank" rel="noopener">【ロマサガRS】SSSランク入りなるか！？救世主ヴェント登場！新キャラランキング【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">RS新キャラランキングで神・ミディアム・ヴェントを評価<br>ヴェントはギュスターブ編成で優秀だがSSSは見送り<br>神は螺旋の集団戦向け、ミディアムは熱杖の個性枠</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ヴェントは軽減70%・回復持ちで安定し優秀</li><li>神は今月の螺旋集団戦で活躍しそう</li><li>ミディアムは美しく個性ある極み枠</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>ヴェントはギュスタム編成の難易度が高く要注意</li><li>ヴェントはすごいがSSSには上げづらい</li><li>ミディアムは杖が供給過多で取る必要が薄い</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">新キャラランキング</span><span class="topic">ヴェント評価</span><span class="topic">ギュスターブ編成</span><span class="topic">神(集団戦)</span><span class="topic">ミディアム(熱杖)</span><span class="topic">8周年ジュエル</span></div>
+</div>
+
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=oJwlo0ERO_8" target="_blank" rel="noopener">＃ロマサガRS ヴェント活躍の幅が広すぎる！</a></h3>
+  </div>
+  <div class="video-summary">ベントの活躍の幅広さを紹介<br>全体バフ＋耐久火力支援の優秀な槍アタッカー<br>ギュス編成や幻闘場で当たり枠</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ベントはHP回復・ODゲージ加速・全体1.75倍配る優秀な槍アタッカー</li><li>ギュスターブ編成や幻闘場の槍枠として特に優秀</li><li>範囲が広く手パンとの相性も良い当たり枠</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><div class="empty-note">特になし</div></div>
+  </div>
+  <div class="topics"><span class="topic">ベント</span><span class="topic">ギュスターブ編成</span><span class="topic">幻闘場</span><span class="topic">OD1.75倍</span><span class="topic">当たり枠</span></div>
+</div>
+
+<div class="video" data-channel="サンゾーGAMES">
+  <div>
+    <span class="video-channel">サンゾーGAMES</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=QsOaw7fyuL4" target="_blank" rel="noopener">【ロマサガRS】まずは1番欲しいキャラを一点狙い！かみ編ガチャに全力で挑む！！【ロマンシング サガ リユニバース】</a></h3>
+  </div>
+  <div class="video-summary">一点狙い侍が「かみ編」ガチャで本命を狙う<br>狙いはヴェント、1点狙いで見事に引き当て<br>追加で神も欲しくステップを残して続行</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>本命ヴェントを1点狙いで見事に引き当てた</li><li>ギュスターブ編成に入る良い槍が欲しかった</li><li>花嫁など美しいスタイルも出て満足</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>膜(マ)演出が続くとやや萎える</li><li>アセルスが2回被るなど本命以外が多い</li><li>神は結局引けず締まらない引き</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">かみ編ガチャ</span><span class="topic">一点狙い</span><span class="topic">ヴェント狙い</span><span class="topic">ギュスターブ編成</span><span class="topic">槍キャラ</span><span class="topic">PU確定演出</span></div>
+</div>
+
+<div class="video" data-channel="ジュラのサガちゃんねる">
+  <div>
+    <span class="video-channel">ジュラのサガちゃんねる</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=fyrae0lo1v0" target="_blank" rel="noopener">【ロマサガRS】Romancing祭「かみ 編」スタイル考察＆性能チェック【ロマンシング サガ リユニバース】</a></h3>
+  </div>
+  <div class="video-summary">ロマフェス上編の神・ミリアム・ベントを考察<br>神はザン打熱消の全体アタッカーで評価B<br>ベントは槍・アンサガ枠で救済向き、評価A-</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>神は4属性使い分けの全体火力と81%軽減が優秀</li><li>ベントはノーリスクでOD攻撃1.75倍を付与</li><li>ベントは火ダメ75%軽減で来屈の救済役になる</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>神はバフ等のサポート要素が弱く単体戦だと微妙</li><li>ミリアムは火力が出せるのが7ターンまで</li><li>ミリアムはエクストラフォース倍率2.5倍と低め</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ロマフェス上編考察</span><span class="topic">神(評価B)</span><span class="topic">ミリアム(評価B)</span><span class="topic">ベント(評価A-)</span><span class="topic">アンサガ枠</span><span class="topic">螺旋回路ギミック</span></div>
+</div>
+
+<div class="video" data-channel="タマゴローRS">
+  <div>
+    <span class="video-channel">タマゴローRS</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=oauTyYuDecg" target="_blank" rel="noopener">【ロマサガRS】装備充実「周回&amp;高難度で使える〇〇」超進化が止まらない…失敗しない最強装備厳選八選!!　#ロマサガRS</a></h3>
+  </div>
+  <div class="video-summary">超進化素材が溢れ、使える厳選装備八選を紹介<br>1位2位はダメブロ系とOD蓄積のねじりヒドラ<br>精神バフのゴールデンローブやBP+3佐賀県Tシャツも便利</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ダメブロ1回で乗り切れる高難度が多く便利</li><li>佐賀県TシャツはレイドでBP+3がぴったり</li><li>ゴールデンローブ2枚で精神バフをばら撒ける</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>ねじりヒドラはコッペパンのダメブロ回避に非対応</li><li>正王マントは魂アビ追加で価値が下がる可能性</li><li>超進化素材は有限なので使い所の判断が要る</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">超進化装備八選</span><span class="topic">ねじりヒドラ</span><span class="topic">ゴールデンローブ</span><span class="topic">佐賀県Tシャツ</span><span class="topic">ダメブロ系装備</span><span class="topic">装備厳選</span></div>
+</div>
+
+<div class="video" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=iKoL9foWvdY" target="_blank" rel="noopener">【GジェネET】UR ガンダムデュナメス 武装アニメ ＃Shorts ＃ジージェネエターナル</a></h3>
+  </div>
+  <div class="video-summary">GジェネETのURデュナメス武装アニメShorts<br>トランザムなど武装演出のセリフを披露<br>短尺でデュナメスの攻撃モーションを紹介</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><div class="empty-note">特になし</div></div>
+    <div class="neg"><div class="label">ネガ要素</div><div class="empty-note">特になし</div></div>
+  </div>
+  <div class="topics"><span class="topic">GジェネET</span><span class="topic">デュナメス</span><span class="topic">武装アニメ</span><span class="topic">Shorts</span><span class="topic">トランザム</span></div>
+</div>
+
+<div class="video" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=i9deXHlJd1E" target="_blank" rel="noopener">【GジェネET】リボガン､デュナメス追いガシャ100連！！ 『SDガンダムGジェネレーションエターナル』</a></h3>
+  </div>
+  <div class="video-summary">GジェネETでリボガン狙いの追いガチャ200連<br>UR率が高くデュナメスが完凸する大当たり<br>リボガンは出ず天井でリボンズを交換で確保</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>UR率がすごくアムロが連続で出た</li><li>デュナメスが完凸して大満足</li><li>射程が長いと一方的に殴れて強い</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>本命リボガンは最後まで出なかった</li><li>ピックアップの新規サポーターが全然出ない</li><li>URを出しすぎて後半は完全に失速</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">GジェネET</span><span class="topic">リボガンガチャ</span><span class="topic">デュナメス完凸</span><span class="topic">高UR率</span><span class="topic">天井交換</span><span class="topic">射程長ユニット</span></div>
+</div>
+
+<div class="x-card" data-channel="X (Twitter)">
+  <div><span class="x-badge">X (Twitter) ・ 133ツイート集約</span></div>
+  <h3>その日のXハイライト</h3>
+  <div class="x-summary">こよみ編第9話後編の新ガチャ(かみ/ヴェント)が実装、引けた報告と撤退・天井の悲喜こもごも<br>ヴェントが幻闘場で即戦力・高火力と好評、戦士と合わせウンボル/シュウザー攻略報告が相次ぐ<br>魂アビが運(閃き)依存で課金でも解決不可との不満、育成上限アップで育て直し負担の声も</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素（X）</div><ul><li>新ガチャで かみ/ヴェント を引けた喜びの報告が多数(神引き・10連/20連で撤退)</li><li>ヴェントが幻闘場で即戦力・高火力(ウンボル/シュウザー一発クリア、単体150-180億)と高評価</li><li>幻闘場・螺旋回廊(600階)のクリア達成報告が相次ぐ(戦士＋女神編成など)</li><li>ダリオ前日譚・こよみ編後編のストーリーが良かった、かみのイラスト・キャラ性が好評</li><li>サガレコで好きなBGMを流せる機能が好評で、だらだら続けたくなるとの声</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素（X）</div><ul><li>魂アビが運(閃き)依存で課金でも解決できず、モチベに強く影響するとの不満</li><li>天井まで到達・SSが出ない嘆き(39連SS無し、収束して天上、天井でかみ交換)</li><li>育成上限アップで全員育て直しが必要になる負担感</li><li>お知らせに育成上限アップの有無が明記されず分かりにくい</li><li>無尽塔(39層ラゼム等)が厳しくキャラが揃わず先に進めない</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">公式(@romasaga_rs)当日告知: こよみ編第9話後編 公開記念ログインボーナス(最大5日3,000ジュエル)</span><span class="topic">公式: こよみ編ストーリーイベント「Dario 前日譚」開催(交換所で1,000ジュエル・SS副防具「運び屋の帽子」・魂の聖域遠征即時帰還チケットなど)</span><span class="topic">公式: 週末限定「せんせいの週末限定クエスト」開催(100ジュエル・ゴールドピース・ウィークエンドメダル交換)</span><span class="topic">公式: 「Romancing祭 かみ編」ガチャ開催。限定SS[私は導く者です]かみ等3体が新スタイル&amp;PickUP、2周限りステップ7でPickUPSS1体確定の有償ガチャ同時開催</span><span class="topic">新ガチャ実装日。かみ/ヴェント/ミリアムのガチャ結果報告が大量(神引き・10連/20連で引けて撤退・天井交換・すり抜け)</span><span class="topic">ヴェント(槍/和装)の性能が好評。幻闘場で即戦力(ウンボル・シュウザー一発クリア)、単体火力150-180億、エクフォOD1.75倍の脳筋アタッカーとの評価</span><span class="topic">追憶の幻闘場クリア報告(戦士やヴェント投入でウンディーネ&amp;ボルカノ/シュウザー杖Lv5クリア、今月分終了の声)</span><span class="topic">ストーリー(ダリオ前日譚・こよみ編後編)読破・好評。かみのキャラ性やイラスト(GBドット由来の髪型)への好感</span><span class="topic">魂アビの閃きが運依存で課金でも解決できない点への不満(モチベに影響との強い声)</span><span class="topic">螺旋回廊更新迫る(600階クリア・戦士＋女神でクリア報告)、無尽塔(39層ラゼム・35層)の攻略挑戦</span><span class="topic">育成上限アップで全キャラ育て直しが必要になる負担、お知らせに上限アップ有無の記載がなく分かりにくいとの指摘</span><span class="topic">サガレコ(ジュークボックス)で周回中に好きなBGMを流せる機能が好評で継続モチベに</span><span class="topic">戦士の確保を螺旋更新・新ガチャ性能を見てから判断する様子見派</span></div>
+  <div class="hot"><div class="hot-label">注目ツイート TOP3</div>
+<div class="tweet">
+  <div class="author">@romasaga_rs</div>
+  <div>【こよみ編 第9話 後編 公開記念ログインボーナス開催！】<br>期間中、最大5日間ログインで3,000ジュエルなどをプレゼント！<br><br>▼お知らせ<br><br>https://<br>info.rs.aktsk.jp/info/detail/13<br>0931?k=mPX-CWYs<br>…<br><br>#ロマサガRS</div>
+  <div class="stats">♥109 ↻11 💬0 ・ <a href="https://x.com/romasaga_rs/status/2110930234988286261" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@romasaga_rs</div>
+  <div>こよみ編ストーリーイベント「Dario 前日譚」開催！✨<br><br>アイテムを集めて、イベント限定交換所で1,000ジュエルやSS副防具「運び屋の帽子」、【魂の聖域】遠征即時帰還チケットなどと交換しよう！<br><br>▼お知らせ<br><br>https://<br>info.rs.aktsk.jp/info/detail/11<br>0813?k=NLd8AbOU<br>…<br><br>#ロマサガRS</div>
+  <div class="stats">♥91 ↻11 💬0 ・ <a href="https://x.com/romasaga_rs/status/2110929611660071225" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@romasaga_rs</div>
+  <div>週末限定イベント「せんせいの週末限定クエスト」開催！✨<br><br>クエストクリアで、100ジュエルやゴールドピースなどをGET！<br>さらに、ウィークエンドメダルを集めて、せんせいの週末限定クエスト交換所でアイテムと交換しよう！<br><br>▼お知らせ<br><br>https://<br>info.rs.aktsk.jp/info/detail/11<br>0783?k=byPwsGMy<br>…<br><br>#ロマサガRS</div>
+  <div class="stats">♥83 ↻5 💬0 ・ <a href="https://x.com/romasaga_rs/status/2110929319283622045" target="_blank" rel="noopener">原文</a></div>
+</div></div>
+</div>
+</section>
+<section class="date-section"><h2>2026-10-16<span class="day-count">21本 ／ X 109ツイート</span></h2>
+<div class="video pending" data-channel="RS 周回チャンネル">
+  <div>
+    <span class="video-channel">RS 周回チャンネル</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=cKXNkSL9avo" target="_blank" rel="noopener">【ロマサガRS】「Dario 前日譚」11秒周回の編成2種紹介【ロマンシング サガ リ・ユニバース】</a></h3>
+  </div>
+</div>
+
+<div class="video" data-channel="RS 周回チャンネル">
+  <div>
+    <span class="video-channel">RS 周回チャンネル</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=0rJcjeek7sg" target="_blank" rel="noopener">【ロマサガRS】次のイベントまでどう過ごす？新イベント解説 11秒周回編成の紹介【ロマンシング サガ リ・ユニバース】</a></h3>
+  </div>
+  <div class="video-summary">ダリオ前日イベントと周回方法を解説<br>再び森を彷徨うの11秒周回編成を紹介<br>次イベントまでの記憶再戦・自動周回先を案内</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>再び森を彷徨うで11秒周回ができ効率的</li><li>育成上限が上がり育成目的で看問青龍やダリオ前日が有効</li><li>短連道場の木人は通常攻撃で倒せ魂アビひらめきにも使える</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>ダリオ前日は進化の奇跡1のためだけに残る理由はない</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ダリオ前日</span><span class="topic">11秒周回</span><span class="topic">記憶再戦</span><span class="topic">魂アビリティ</span><span class="topic">育成上限</span></div>
+</div>
+
+<div class="video" data-channel="tyamu">
+  <div>
+    <span class="video-channel">tyamu</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=eXTy5OLyPGU" target="_blank" rel="noopener">【ロマサガrs】かみ能力値早見表〜破壊神〜全体攻撃のスペシャリスト‼️（◯◯必須キャラだよ♡）</a></h3>
+  </div>
+  <div class="video-summary">神の能力値早見表を考察<br>全体攻撃のスーパーアタッカーで21連が強力<br>井戸プレイヤーには必須級、編成はバフ役注意</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>神は全体攻撃のスーパーアタッカーでトリプルS21連が破壊的</li><li>残熱弱点の井戸ステージ多数で井戸プレイヤーには必須級</li><li>残熱攻撃の味方にエクストラフォース1.5倍を付与</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>本人はステバフ・デバフを持たず編成に注意が必要</li><li>シグフレイ戦は攻撃技ゆえメインを強化してしまい厳しい</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">神能力値</span><span class="topic">全体攻撃</span><span class="topic">井戸</span><span class="topic">エクストラフォース</span><span class="topic">残熱属性</span></div>
+</div>
+
+<div class="video" data-channel="tyamu">
+  <div>
+    <span class="video-channel">tyamu</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=4tFomHgkxcs" target="_blank" rel="noopener">【ロマサガrs】ミリアム能力値早見表〜熱陽のスーパーアタッカー（◯◯◯◯◯を蹴散らすぞっ♡）</a></h3>
+  </div>
+  <div class="video-summary">ミリアムの能力値早見表を考察<br>熱用アタッカーで継続性はトップ3級<br>シグフレイ戦に刺さる可能性、汎用性は一歩及ばず</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ミリアムは熱用アタッカー性能が高く継続性ならトップ3</li><li>熱属性味方にエクストラフォース熱1.5倍を付与できる</li><li>来週のシグフレイ（熱弱点）に刺さりそう</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>汎用性や強さは暦みやビクトールには届かない</li><li>行動回数4-5回で必須級の活躍かは使ってみないと不明</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ミリアム能力値</span><span class="topic">熱用アタッカー</span><span class="topic">エクストラフォース</span><span class="topic">シグフレイ</span></div>
+</div>
+
+<div class="video pending" data-channel="あっきゃんGAMES">
+  <div>
+    <span class="video-channel">あっきゃんGAMES</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=pQLCUTq9Vt0" target="_blank" rel="noopener">【ロマサガRS】Romancing祭かみ編ガチャ評価 #ロマサガRS #shorts #ガチャ</a></h3>
+  </div>
+</div>
+
+<div class="video" data-channel="あんずもん">
+  <div>
+    <span class="video-channel">あんずもん</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=3iMcu3tY-io" target="_blank" rel="noopener">【ロマサガRS】　無尽塔40　Interesting games from Japan【初見さん大歓迎】</a></h3>
+  </div>
+  <div class="video-summary">シングルガチャ3体を雑談考察、基本スルー<br>神は全体なら強いが使い所が課題<br>無尽塔40に挑むも運ゲできつくクリアならず</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>神は全体火力が高く井戸・討伐・レイド全体なら刺さる</li><li>ベントは便利で天品持ち・攻撃能力上昇もある</li><li>ミリアムはリズ系で2回攻撃でき強い</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>神は全体コンテンツ頼みで今は出番が不透明</li><li>無尽塔40は名護とジェラール運ゲできつくクリア不可</li><li>神のエクストラフォース量は少なめでサポートはおまけ</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">無尽塔40</span><span class="topic">シングルガチャ</span><span class="topic">神の全体火力</span><span class="topic">名護運ゲ</span><span class="topic">ベント</span></div>
+</div>
+
+<div class="video" data-channel="あんずもん">
+  <div>
+    <span class="video-channel">あんずもん</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=TrzJXySeWfU" target="_blank" rel="noopener">【ロマサガRS】　無尽塔40　Interesting games from Japan【初見さん大歓迎】</a></h3>
+  </div>
+  <div class="video-summary">冒頭は上司と待機時間の給料で揉めた愚痴トーク<br>信長の野望出陣の共闘戦をリスナーと多数実施<br>特性・指令書・タップ範囲など育成談義で盛り上がる</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>共闘をみんなでできて楽しい、人も集まるのが早い</li><li>伊達政宗が連発できて火力がすごい</li><li>タップ範囲拡大で列伝イベントを取り切れる</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>特性・指令書がなかなか貯まらない</li><li>黄金茶室が7万と重く巻き物消費も激しい</li><li>自分は火力不足で工場戦の上位は無理</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">信長の野望出陣</span><span class="topic">共闘戦</span><span class="topic">育成・特性</span><span class="topic">指令書交換</span><span class="topic">タップ範囲拡大</span><span class="topic">伊達政宗</span></div>
+</div>
+
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=XkKsIq_xkxk" target="_blank" rel="noopener">【ロマサガRS】かみVSギュスVSブルー編！今一番引き得はこれだ！３大ガチャランキング【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">神・ブルー・ギュスの3大ガチャをランキング<br>1位ギュス編、2位ブルー編、3位神編<br>ベントは汎用的だが神編は一点狙い向き</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ベントは槍＆残で汎用性高く継続火力・OD1.75倍を全体配布</li><li>ギュスターブ編は3人全員使い道が明確で1位</li><li>ブルーは100ヒット到達のオールマイティで使いやすい</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>ミリアムは現闘上終わってると優先度がかなり低い</li><li>ベントはギュス編成なら他編成の方が使いやすい場面も</li><li>女神は行動回数少ないキャラが混ざると防御強化率が下がる</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">3大ガチャランキング</span><span class="topic">神編</span><span class="topic">ギュスターブ編</span><span class="topic">ブルー編</span><span class="topic">ベント</span></div>
+</div>
+
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=0jncDVD-zCU" target="_blank" rel="noopener">【ロマサガRS】今週もすり抜け祭り！もぉやめろつむつむの体力は０よ【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">神編ガチャですり抜け祭りに苦戦<br>最終的にベントと神を入手<br>ベント検証動画を予告</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>最終的にベントと神を入手できた</li><li>ベントを槍の救収士として検証したい</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>すり抜け祭りでなかなか出ず苦戦</li><li>佐賀県コラボキャラがすり抜けて邪魔</li><li>最近の確率が渋い</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">神編ガチャ</span><span class="topic">すり抜け</span><span class="topic">ベント</span><span class="topic">佐賀県コラボ</span></div>
+</div>
+
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=avtShMC3JZQ" target="_blank" rel="noopener">【ロマサガRS】神速かみ編は引くべきか！？新キャラ性能確認＆優先度チェック【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">神編3キャラの性能を詳しく確認<br>ベントに超期待、キスターブ編成筆頭候補<br>神は集団戦向き、ミリアムは剣闘向き</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ベントはデメリットなしでキスターブ編成の筆頭候補になり得る</li><li>神は63億の全体攻撃＋神の試練で集団戦に強い</li><li>ベントは3.75倍自前で28-38ヒット、回線の一撃＋75%軽減</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>ベントのエクストラフォースは特大で欲しかった（OD台止まり）</li><li>ミリアムは剣闘向きで高難度向きではない</li><li>神は今は集団戦コンテンツ次第</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">神編</span><span class="topic">ベント</span><span class="topic">キスターブ編成</span><span class="topic">神の試練</span><span class="topic">ミリアム</span></div>
+</div>
+
+<div class="video" data-channel="もんでる">
+  <div>
+    <span class="video-channel">もんでる</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=KqqlWtMeBtk" target="_blank" rel="noopener">【ロマサガRS】祝！「こよみ編 第9話 後編 公開記念」開催！ガチャ！</a></h3>
+  </div>
+  <div class="video-summary">神編ガチャを雑談配信で引く<br>ベントが当たり評価、神はそこそこ<br>ベント狙うも引けず、パチンコ雑談多め</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ベントはHP回復・回避・OD・全体バフが豊富で当たり</li><li>神はSSが21回出て全体戦では強い</li><li>ミリアムはリズ系で12-13回攻撃と悪くない</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>神は全体攻撃オンリーで螺旋ボス（単体）には使いにくい</li><li>最近のキャラはみんなそこそこで飛び抜けたのが来ない</li><li>ベントを狙うも引けなかった</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">神編ガチャ</span><span class="topic">ベント当たり</span><span class="topic">神全体攻撃</span><span class="topic">ミリアム</span><span class="topic">生配信</span></div>
+</div>
+
+<div class="video" data-channel="サンゾーGAMES">
+  <div>
+    <span class="video-channel">サンゾーGAMES</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=KsYFzC4qvTY" target="_blank" rel="noopener">【ロマサガRS】実は意外なあのキャラが今回1番の当たり枠だった！？かみ編ガチャ性能チェック【ロマンシング サガ リユニバース】</a></h3>
+  </div>
+  <div class="video-summary">神編3体の性能を詳細チェック<br>意外にもベントが1番の当たり枠<br>神は周回向き、ミリアムは短期決戦型</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ベントは超大当たり、サポート性能豊富でギュス編成の槍枠筆頭</li><li>ミリアムは6ターン最終2.5倍37ヒットの強力な短期アタッカー</li><li>神は神の試練でエクストラフォースを配布、周回で雑に使える</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>ミリアムは無理して取るほどの性能ではない</li><li>神はエクストラフォース配布以外は置き物として強くない</li><li>ベントは1点狙いになる可能性があり無理するガチャではない</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">神編性能チェック</span><span class="topic">ベント大当たり</span><span class="topic">ギュスターブ編成</span><span class="topic">神の試練</span><span class="topic">ミリアム</span></div>
+</div>
+
+<div class="video" data-channel="サンゾーGAMES">
+  <div>
+    <span class="video-channel">サンゾーGAMES</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=U7P9Fw7LUV0" target="_blank" rel="noopener">【ロマサガRS】期限に要注意な要素多数！イベント周回と損をしない立ち回りを大紹介【ロマンシング サガ リユニバース】</a></h3>
+  </div>
+  <div class="video-summary">ダリオ前日イベントの周回と立ち回り解説<br>10/24終了の各イベント確保を要注意喚起<br>11秒周回と育成上限5780を紹介</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ダリオ前日は11秒周回でスピーディに周回できる</li><li>育成上限が5780に上がり育成し直せる</li><li>神グラスズは暦みの最強装備で作る価値大</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>ビンセント前日・アビサルサーカス等が10/24で終了、確保要注意</li><li>神グラスズを作らないとマジで後悔する</li><li>ダリオ前日の記憶再戦を延々やるのはもったいない</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ダリオ前日</span><span class="topic">イベント周回</span><span class="topic">11秒周回</span><span class="topic">神グラスズ</span><span class="topic">育成上限</span></div>
+</div>
+
+<div class="video" data-channel="ジュラのサガちゃんねる">
+  <div>
+    <span class="video-channel">ジュラのサガちゃんねる</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=jk-fiEl49fE" target="_blank" rel="noopener">【ロマサガRS】こよみ編第9話後編ガチャを考察する配信【生配信】</a></h3>
+  </div>
+  <div class="video-summary">神編3体を考察する生配信<br>ベントは使い道が豊富で評価高め<br>神はそこそこ、ミリアムは短期決戦・レイド用</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ベントはノーリスクでエクストラフォースOD台配布＋3.75倍火力で評価高め</li><li>ベントは幻闘場・ライクス・屈で使い道が用意されている</li><li>神は神の試練でうまくやれば1.75-2倍エクストラフォースを狙える</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>神は使い所が明確に浮かばず今すぐ欲しくはない</li><li>ミリアムはヒートダウンきつく公園の正段5回限定で長期戦向きでない</li><li>ベントはマイスと組ませると使いづらい可能性</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">神編考察</span><span class="topic">ベント</span><span class="topic">神の試練</span><span class="topic">ミリアム</span><span class="topic">魂アビリティ</span></div>
+</div>
+
+<div class="video" data-channel="タマゴローRS">
+  <div>
+    <span class="video-channel">タマゴローRS</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=dboX6HJqABk" target="_blank" rel="noopener">【ロマサガRS】3体ランキング!「ヴァッハとは?」ミリアム5ターン200連打!!&amp;「マイス型」デメリットを排斥したヴェントの汎用性と強さ　#ロマサガRS</a></h3>
+  </div>
+  <div class="video-summary">神・ミリアム・ベント3体を性能評価<br>ベントは汎用S、無難だが高難度向き<br>ミリアムは中途半端、神は全体火力次第</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ベントは無難ながらしっかり強く高難度に混ぜやすい</li><li>ベントはマイス型のわずかな上位互換で回避・OD満タン</li><li>ミリアムは5ターン限定なら瞬発力も継続性もある</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>ミリアムは性能が中途半端で必然性が起きづらい</li><li>ミリアムは配布にエクストラを付けただけのスタイル</li><li>神は全体攻撃が刺さらないと出番がない</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">性能ランキング</span><span class="topic">ベント汎用S</span><span class="topic">ミリアム</span><span class="topic">神</span><span class="topic">マイス型</span></div>
+</div>
+
+<div class="video pending" data-channel="タマゴローRS">
+  <div>
+    <span class="video-channel">タマゴローRS</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=L9b-yhxoXhc" target="_blank" rel="noopener">【ロマサガRS】「唯一神」新エクストラフォース猛威/鳴動/激流!!全体ヒットさせながらしっかりサポートの高防御かみ性能速報　#ロマサガRS</a></h3>
+  </div>
+</div>
+
+<div class="video" data-channel="タマゴローRS">
+  <div>
+    <span class="video-channel">タマゴローRS</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=FedqNagHN0c" target="_blank" rel="noopener">【ロマサガRS】かみ「新エクストラ」VS戦士!!9体3ガチャランキング!!最新スタイルの最強を決める比較検討会→2026年10月17日版　#ロマサガRS</a></h3>
+  </div>
+  <div class="video-summary">3ガチャ9スタイルを比較ランキング<br>1位は破壊力の戦士、ベントが2位<br>執念年でも今は戦士が環境で強い</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>戦士は破壊力が高く1位、各コンテンツを1ターンで沈める</li><li>ベントはマイス型の上位互換で汎用的に使える</li><li>マグダレーナは高難度の完成度が高い</li><li>ブルーは万能であらゆる面に対応できる</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>キャッシュは運ゲ発動25%で不遇なスタイル</li><li>ギュスターブは武器縛りがきつく組みづらい</li><li>女神は属性をめちゃくちゃにされ特化できず</li><li>神は火力バフを配れずエクストラ依存</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">3ガチャランキング</span><span class="topic">戦士</span><span class="topic">ベント</span><span class="topic">神</span><span class="topic">キャッシュ</span></div>
+</div>
+
+<div class="video pending" data-channel="タマゴローRS">
+  <div>
+    <span class="video-channel">タマゴローRS</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=T1nOr76Kxf4" target="_blank" rel="noopener">【ロマサガRS】ミルザで記憶再戦→5.再び森を彷徨う　#ロマサガRS</a></h3>
+  </div>
+</div>
+
+<div class="video pending" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+    <span class="pending-badge">字幕なし・未要約</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=MHf80-d4VbE" target="_blank" rel="noopener">【GジェネET】UR リボーンズガンダム 武装アニメ ＃Shorts ＃ジージェネエターナル</a></h3>
+  </div>
+</div>
+
+<div class="video" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=TKDLG4hj-Qc" target="_blank" rel="noopener">【GジェネET】リボガン､デュナメス狙ってとりま100連！ 『SDガンダムGジェネレーションエターナル』</a></h3>
+  </div>
+  <div class="video-summary">リボガン・デュナメス狙いで100連ガチャ<br>両ピックとも引けて大満足<br>凸アイテム不足で追いガチャ予定</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>リボーンズガンダムもデュナメスも引けて良かった</li><li>UR率が良く演出も多かった</li><li>ピック両方引けて新規を獲得できた</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>1.5周年で凸アイテムを使い切り在庫がない</li><li>デュナメスがなかなか出ず終盤まで苦戦</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">GジェネET</span><span class="topic">100連ガチャ</span><span class="topic">リボーンズガンダム</span><span class="topic">デュナメス</span><span class="topic">凸アイテム</span></div>
+</div>
+
+<div class="video" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=tYNMbLywE2I" target="_blank" rel="noopener">【ロマサガRS】とりま有償ガチャ1周分『こよみ編 第9話 後編 公開記念 Romancing祭 かみ編』【ロマンシング サガ リ・ユニバース】</a></h3>
+  </div>
+  <div class="video-summary">有償ガチャ1周分で神編を引く<br>神とミディアムを確保、ベントは引けず<br>ミリアムはヒートダウン型の短期決戦</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>神とミディアムのキャラ的に欲しい方を引けた</li><li>ステップ7ギリギリで神を確保できた</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>ベントを引けず槍の補充ができなかった</li><li>ミリアムはヒートダウンで火力が下がる短期決戦型</li><li>最近すり抜け（ポロリ）が全然ない</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">有償ガチャ</span><span class="topic">神編</span><span class="topic">ミディアム</span><span class="topic">ベント</span><span class="topic">短期決戦</span></div>
+</div>
+
+<div class="x-card" data-channel="X (Twitter)">
+  <div><span class="x-badge">X (Twitter) ・ 109ツイート集約</span></div>
+  <h3>その日のXハイライト</h3>
+  <div class="x-summary">公式が10/16開幕「こよみ編第9話後編 公開記念」を予告、新スタイル3体を紹介し大反響<br>新スタイル=かみ(体術)/ヴェント(槍)/ミリアム(杖火術)、シングルガチャ形式で性能見極めの声<br>Dario前日譚イベント予告と魂アビ閃き・無尽塔/螺旋攻略報告、コミュニティの平和さへの感謝も</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素（X）</div><ul><li>新スタイル3体(かみ/ヴェント/ミリアム)の公式紹介に大反響・期待(300いいね超)</li><li>聖王厄を戦士編成で撃破し螺旋討伐を全て3人編成でクリアした達成感</li><li>無尽塔42層まで到達できた(先駆者への感謝)</li><li>今回がシングルガチャでジュエル消費を抑えられて助かるとの声</li><li>コミュニティが平和で居心地が良く救われるという感謝の投稿</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素（X）</div><ul><li>「またかみ・ミリアムか」既存キャラ再登場で新規スタイル不足を感じる声</li><li>無課金だと凶器クロー/コッペパンエール無しで攻略が厳しいとの指摘</li><li>今月すでに1天井使ってしまい慎重にならざるを得ない嘆き</li><li>ガチャが安定の約1週間後ペース・金曜実装で慌ただしい</li><li>こよみ(スタイル)があと2ヶ月ほどで終わってしまう寂しさ</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">公式(@romasaga_rs): 10/16(金)より「こよみ編 第9話 後編 公開記念」開催予告(期間限定イベント・ガチャ・各種キャンペーン)</span><span class="topic">公式: 新スタイル3体を紹介し大反響。かみ(体術/SaGa1「私は導くだけ」318いいね)、ヴェント(槍/US 運び屋)、ミリアム(杖・火術/RS1)。ウェブストアのお得ジュエル導線付き</span><span class="topic">公式: ガチャ開催予告「Romancing祭 かみ編」。限定SS[私は導く者です]かみ等3体が新スタイル&amp;PickUP、2周限りステップ7でPickUPSS1体確定の有償ガチャ同時開催</span><span class="topic">公式: イベント予告「Dario 前日譚」10/16 12:00~(交換所で1,000ジュエル・SS副防具「運び屋の帽子」・魂の聖域遠征即時帰還チケット)。ダリオ=八歌仙のひとり、ランス出身の祓魔師で異界の戦士を召喚、おすすめ話数も紹介</span><span class="topic">今回はシングルガチャ形式。ジュエル枯渇勢には助かる一方、性能を見てから引くか判断する様子見の声</span><span class="topic">「またかみ・ミリアムか」と既存キャラの再登場・新規不足を指摘する声</span><span class="topic">朝恒例の魂アビ閃き報告会(リズ一致・マグダレーナ・ジニー・ミルザ大器晩成/闘気吸収Ⅳ)</span><span class="topic">無尽塔の攻略報告(42層まで到達の最終到達点・40層アビサル・37層ハーディ、43層の敵わろたの声)</span><span class="topic">螺旋回廊/関門の攻略(聖王厄を戦士ほぼ単騎で撃破し螺旋討伐を全て3人編成クリア、御堂綱紀エクストラフォース習得)</span><span class="topic">恒常・配布スタイルチャレンジ(無尽塔27階・螺旋500階)で配布の実力を検証</span><span class="topic">長期継続プレイ(ミーティア育成2025日目・ログイン2872日目)とコミュニティの平和さへの感謝</span></div>
+  <div class="hot"><div class="hot-label">注目ツイート TOP3</div>
+<div class="tweet">
+  <div class="author">@romasaga_rs</div>
+  <div>＼ アプリ内よりお得にジュエルGET！／<br><br>https://<br>sqex-bridge.jp/webstore/saga_<br>reuniverse<br>…<br>ㅤ<br>【新スタイル紹介】<br>▼かみ（体術/SaGa1）<br>私は導くだけ。<br>ただ導きに従うか、自らの意志で導きを拒絶するか、導きに従おうとして道を踏み外すか、導かれる者の有り様も様々です。</div>
+  <div class="stats">♥328 ↻92 💬3 ・ <a href="https://x.com/romasaga_rs/status/2110568312971362661" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@romasaga_rs</div>
+  <div>10/16(金)から「こよみ編 第9話 後編 公開記念」開催！<br>期間限定イベントや、ガチャなどさまざまなキャンペーンを開催いたします✨<br><br>▼お知らせ<br><br>https://<br>info.rs.aktsk.jp/info/detail/13<br>0931?k=mPX-CWYs<br>…<br><br>#ロマサガRS</div>
+  <div class="stats">♥315 ↻122 💬9 ・ <a href="https://x.com/romasaga_rs/status/2110567184921772107" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@romasaga_rs</div>
+  <div>＼ アプリ内よりお得にジュエルGET！／<br><br>https://<br>sqex-bridge.jp/webstore/saga_<br>reuniverse<br>…<br>ㅤ<br>【新スタイル紹介】<br>▼ヴェント（槍/US）<br>兄貴に追いつきたくて運び屋になった。必死に運んだ。<br>運び屋を続けて分かったことがある。<br>荷を受け取った人の色んな表情が俺を次の運びへと駆り立てるんだ。</div>
+  <div class="stats">♥289 ↻91 💬3 ・ <a href="https://x.com/romasaga_rs/status/2110568980582920341" target="_blank" rel="noopener">原文</a></div>
+</div></div>
+</div>
+</section>
+<section class="date-section"><h2>2026-10-15<span class="day-count">9本 ／ X 132ツイート</span></h2>
+<div class="video" data-channel="あんずもん">
+  <div>
+    <span class="video-channel">あんずもん</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=sGDR-67NZyY" target="_blank" rel="noopener">【信長の野望出陣】プレイ開始378日目記録　守成　今回の主役は第２代将軍！</a></h3>
+  </div>
+  <div class="video-summary">信長出陣378日目、武将6体追加で石高2万増<br>新武将・徳川秀忠は特性強力だが能力低め<br>共闘イベント苦戦、秀忠ガチャは見送り予定</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>徳川秀忠は特性が強力（敵壊滅で攻防兵付与、覚醒後火ダメ100%軽減）</li><li>工場戦はライブのおかげで664まで伸びた</li><li>武将入手で最大石高が2万ほど上がった</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>共闘イベントは火力不足で10位以内に入れず16位</li><li>徳川秀忠は能力が低く編成に入れづらい</li><li>秀忠は欲しいほどではなく引くのを我慢</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">信長の野望出陣</span><span class="topic">徳川秀忠</span><span class="topic">共闘イベント</span><span class="topic">最大石高</span><span class="topic">工場戦</span></div>
+</div>
+
+<div class="video" data-channel="つむつむちゃんねる●ゲーム考察専門">
+  <div>
+    <span class="video-channel">つむつむちゃんねる●ゲーム考察専門</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=Q7Pe3iQW7dg" target="_blank" rel="noopener">【ロマサガRS】かみとヴェントとミリアム！このタイミングで槍とかやばそう！！【ロマンシングサガリユニバース】</a></h3>
+  </div>
+  <div class="video-summary">神・ベント・ミリアム3キャラを事前考察<br>槍枠が薄い今ベントに期待大<br>ギュス編成への採用を熱望</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>ベントは槍枠が薄い今ギュスターブ編成に刺さる期待大</li><li>神は今の時代に合った性能で作られているかも</li><li>ミリアムは人気キャラで強そう</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>ベントの性能がやばいアタッカーだと他が霞む懸念</li><li>神はキャラ性能より調整路線かもしれない</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">ベント槍</span><span class="topic">ギュスターブ編成</span><span class="topic">神</span><span class="topic">ミリアム</span><span class="topic">事前考察</span></div>
+</div>
+
+<div class="video" data-channel="サンゾーGAMES">
+  <div>
+    <span class="video-channel">サンゾーGAMES</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=xbLW1FlWBs8" target="_blank" rel="noopener">【ロマサガRS】次の主役はかみ！最新情報をチェック【ロマンシング サガ リユニバース】</a></h3>
+  </div>
+  <div class="video-summary">神編ガチャとダリオ前日の告知をチェック<br>神はシルクハット型で高難度適性高く強そう<br>ベントは槍でギュス編成に期待</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>神はシルクハット型で高難度適性が高く強そう</li><li>ベントは槍でギュスターブ編成の強化に期待</li><li>シングルでログボ3000ジュエルを確保しやすい</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>神がこの時期に来ると環境がガラッと変わる懸念</li><li>イベントはつぎ感のある周回のみ</li><li>予想は大敗北、神ミリアムベントは読めなかった</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">神編告知</span><span class="topic">ダリオ前日</span><span class="topic">シルクハット神</span><span class="topic">ベント槍</span><span class="topic">予想発表会</span></div>
+</div>
+
+<div class="video" data-channel="タマゴローRS">
+  <div>
+    <span class="video-channel">タマゴローRS</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=ChNIrzIhghs" target="_blank" rel="noopener">【ロマサガRS】性能最強説「ヴェント」待ってた!!と思ったら神様降臨で!?　#ロマサガRS</a></h3>
+  </div>
+  <div class="video-summary">ダリオ前日編とイベント情報を紹介<br>報酬はミリアム、英雄たちの争奪戦<br>20日から道場、来月本格化の予感</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>来月はロマサガをがっつりやれそうな予感</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><div class="empty-note">特になし</div></div>
+  </div>
+  <div class="topics"><span class="topic">ダリオ前日編</span><span class="topic">ミリアム</span><span class="topic">道場イベント</span><span class="topic">螺旋回廊</span></div>
+</div>
+
+<div class="video" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=VxMNqIS4fOs" target="_blank" rel="noopener">【GジェネET】SR アビゴル 武装アニメ ＃Shorts ＃ジージェネエターナル</a></h3>
+  </div>
+  <div class="video-summary">SRアビゴルの武装アニメーション紹介<br>セリフなしの武装演出ショート<br>（性能解説なし）</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><div class="empty-note">特になし</div></div>
+    <div class="neg"><div class="label">ネガ要素</div><div class="empty-note">特になし</div></div>
+  </div>
+  <div class="topics"><span class="topic">GジェネET</span><span class="topic">アビゴル</span><span class="topic">武装アニメ</span><span class="topic">Shorts</span></div>
+</div>
+
+<div class="video" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=__EDQEHHzK4" target="_blank" rel="noopener">【GジェネET】どっちも実質射程6！？リボガンとデュナメスの性能確認 『SDガンダムGジェネレーションエターナル』</a></h3>
+  </div>
+  <div class="video-summary">リボガン・デュナメス・サポーターの性能確認<br>両機とも実質射程6で一方的に強い<br>サポーターはリーダースキル微妙だがHP回復有用</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>リボーンズガンダムは射程1-5デバフで強力</li><li>デュナメスも実質射程6で一方的、EX武装演出が熱い</li><li>カティ&amp;マネキンはHP回復サポートで使いやすい</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>デュナメスの狙撃マップ兵器は強みを感じない</li><li>カティのリーダースキルは条件が狭く倍率控えめで微妙</li><li>投稿者は体調を崩していた</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">GジェネET</span><span class="topic">リボーンズガンダム</span><span class="topic">デュナメス</span><span class="topic">カティ&amp;マネキン</span><span class="topic">実質射程6</span></div>
+</div>
+
+<div class="video" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=340opgELUXs" target="_blank" rel="noopener">【GジェネET】めっちゃ強くね？リボーンズガンダムの性能確認 ＃Shorts ＃ジージェネエターナル</a></h3>
+  </div>
+  <div class="video-summary">リボーンズガンダムの性能を確認<br>支援型で射程1-5、攻撃力が自己上昇<br>リボンズは支援回数＋射程でかなり強い</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>リボーンズガンダムはEX武装射程1-5で使いやすい</li><li>リボンズは支援回数増＋射程延長でめちゃめちゃ強い</li><li>実質射程1-6のデバフが強力、初手MP満タンスタート</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><div class="empty-note">特になし</div></div>
+  </div>
+  <div class="topics"><span class="topic">GジェネET</span><span class="topic">リボーンズガンダム</span><span class="topic">支援型</span><span class="topic">実質射程6</span><span class="topic">リボンズ</span></div>
+</div>
+
+<div class="video" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=JtV1KBRVDEs" target="_blank" rel="noopener">【GジェネET】実質射程6の攻撃型!? ガンダムデュナメスの性能確認 ＃Shorts ＃ジージェネエターナル</a></h3>
+  </div>
+  <div class="video-summary">ガンダムデュナメスの性能を確認<br>攻撃型で実質射程6、防御減デバフ付き<br>はまれば一方的に攻撃できるが手数は少なめ</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>デュナメスは実質射程6で一方的に攻撃できる</li><li>敵の防御15%減少させた状態で攻撃できる</li><li>ロックオンで射程延長、初手からテンション＋MP確保</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>狙撃は単体マップ兵器で強みを感じない</li><li>攻撃型なので行動回数は多くできない</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">GジェネET</span><span class="topic">デュナメス</span><span class="topic">攻撃型</span><span class="topic">実質射程6</span><span class="topic">ロックオン</span></div>
+</div>
+
+<div class="video" data-channel="明星ch">
+  <div>
+    <span class="video-channel">明星ch</span>
+  </div>
+  <div class="video-head">
+    <h3 class="video-title"><a href="https://www.youtube.com/watch?v=UVCA3GBPq-s" target="_blank" rel="noopener">【ロマサガRS】やっぱシングルガチャだよね 10月16日更新情報まとめ【ロマンシング サガ リ・ユニバース】</a></h3>
+  </div>
+  <div class="video-summary">10月16日の更新情報をまとめ紹介<br>神編シングルガチャ、ベントは槍枠<br>ログボ3000、20日道場・螺旋更新</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素</div><ul><li>シングルガチャで回しやすくログボ3000ジュエル</li><li>神・ミディアムが欲しくベントは貴重な槍枠</li><li>螺旋回廊610階追加でお給料チャンス</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素</div><ul><li>ボリュームとしてはそこまで多くない</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">更新情報</span><span class="topic">神編ガチャ</span><span class="topic">ベント槍</span><span class="topic">螺旋回廊</span><span class="topic">短連道場</span></div>
+</div>
+
+<div class="x-card" data-channel="X (Twitter)">
+  <div><span class="x-badge">X (Twitter) ・ 132ツイート集約</span></div>
+  <h3>その日のXハイライト</h3>
+  <div class="x-summary">公式が一部スタイルの技不具合を告知、下旬メンテ修正＋お詫び100ジュエル全員配布<br>今日のお知らせ(新ガチャ・新イベント)待ちの空気一色、こよみ編後編やリベサガ2周年を予想<br>幻闘場の戦士が引き続き強いと好評、朝の魂アビ閃き報告会と無尽塔・長期継続報告も恒例</div>
+  <div class="pos-neg-grid">
+    <div class="pos"><div class="label">ポジ要素（X）</div><ul><li>公式のお詫び対応で100ジュエルが全員配布されること</li><li>幻闘場の戦士が引き続き強い(30連ゲットの喜び、シュウザー槍/ウンボルLv5クリア、聖王[厄]を単騎アビで突破、普通編成でも安定)</li><li>無尽塔39層ラゼムをやっと突破できた達成感</li><li>長期継続の実感(ログイン2870日超、モニカ様の魂Lv800到達)</li><li>今日のお知らせ・新ガチャ/新イベント告知への高い期待感</li></ul></div>
+    <div class="neg"><div class="label">ネガ要素（X）</div><ul><li>一部スタイルの技に不具合、修正が10月下旬メンテまでかかる点(ギラギラ系バグ疑いの声も)</li><li>アビサルで魂アビが閃かなくなった・確率が通常に戻った疑惑</li><li>無尽塔が厳しくキャラが揃わず先に進めない(新ルートを探すしかない)</li><li>狙いのガチャが来ない・様子見でジュエル温存せざるを得ない嘆き</li><li>魂Lv999までに必要なスタイルピースが膨大(800→999で約129000)</li></ul></div>
+  </div>
+  <div class="topics"><span class="topic">公式(@romasaga_rs)お知らせ: 一部スタイルの技に不具合を確認、2026年10月下旬のメンテで修正予定。お詫びに100ジュエルを全プレイヤーへ配布(126いいね)</span><span class="topic">本日のお知らせ更新への期待と予想。新ガチャ・新イベント(こよみ編後編、ダリオのメインストーリー絡み、シングルガチャでロックブーケ説)、リベサガ2周年記念説など当てずっぽう予想が多数</span><span class="topic">追憶の幻闘場で「戦士」の性能が引き続き高評価。30連でゲットの喜び、シュウザー槍Lv5・ウンボルLv5クリア、聖王[厄]を戦士単騎アビで突破、「普通に使っても強い・回復多くて安定」の声</span><span class="topic">戦士ガチャの確保検討。「今日のお知らせ/新ガチャ性能を見て確保を決める」様子見派と、ジュエルが貯まったので性能次第で引く派</span><span class="topic">朝恒例の魂アビ閃き報告会。トゥモアナ、ティシサック弓、アルベルトのテンションがアゲアゲ、ヴァッサール様など</span><span class="topic">無尽塔の攻略報告。39層ラゼムやっと勝利、16層到達、新ルート探しの模索</span><span class="topic">アビサルで魂アビが『閃かなくなった・確率が通常に戻った?』という体感報告</span><span class="topic">長期継続プレイ報告(ログイン2870/2871日目・2790日目、ミーティア育成2024日目、モニカ様の魂Lv800到達)</span><span class="topic">ガチャ結果報告(最近の選抜できてる引き)とイラスト・ネタ投稿(芋次郎『逃がさんもに…』、セフェル/戦士のジョジョ『無駄無駄』ネタ)</span><span class="topic">他サガ作品の話題(ミンサガ・リベサガのマイティヘルム/フェザーブーツ収集、エターニアリマスターやりたい)</span></div>
+  <div class="hot"><div class="hot-label">注目ツイート TOP3</div>
+<div class="tweet">
+  <div class="author">@romasaga_rs</div>
+  <div>現在、一部スタイルの技において、不具合を確認しております。<br>2026年10月下旬頃に実施予定のメンテナンスにて修正予定です。<br><br>本件のお詫びとして、100ジュエルを全てのプレイヤーの皆さまに配布予定です。<br>ご迷惑をおかけし、大変申し訳ございません。<br><br>▼お知らせ</div>
+  <div class="stats">♥126 ↻13 💬3 ・ <a href="https://x.com/romasaga_rs/status/2110294871059861846" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@imojirou_saigo</div>
+  <div>逃がさんもに…<br>お前だけは…<br>#ロマサガRS</div>
+  <div class="stats">♥82 ↻2 💬0 ・ <a href="https://x.com/imojirou_saigo/status/2110453604251529350" target="_blank" rel="noopener">原文</a></div>
+</div>
+<div class="tweet">
+  <div class="author">@NekoHarchan</div>
+  <div>最近のガチャ結果🎢🐈<br>なかなかに選抜できてる気がする🥳🎯<br>#ロマサガRS</div>
+  <div class="stats">♥40 ↻0 💬1 ・ <a href="https://x.com/NekoHarchan/status/2110373964384239941" target="_blank" rel="noopener">原文</a></div>
+</div></div>
+</div>
+</section>
+</main>
+<footer>generated by youtube-summary</footer>
+<script>
+function getActiveChannels() {
+  return new Set(
+    Array.from(document.querySelectorAll('.chip.active'))
+      .map(c => c.dataset.channel)
+  );
+}
+function applyFilter() {
+  const active = getActiveChannels();
+  // 各動画の表示/非表示
+  document.querySelectorAll('.video').forEach(v => {
+    const ch = v.dataset.channel;
+    v.classList.toggle('hidden', !active.has(ch));
+  });
+  // Xカードの表示/非表示
+  document.querySelectorAll('.x-card').forEach(v => {
+    const ch = v.dataset.channel;
+    v.classList.toggle('hidden', !active.has(ch));
+  });
+  // 日付セクションは、コンテンツが0なら非表示
+  document.querySelectorAll('.date-section').forEach(s => {
+    const visible = s.querySelectorAll('.video:not(.hidden), .x-card:not(.hidden)').length;
+    s.classList.toggle('hidden', visible === 0);
+  });
+  updateStats();
+}
+function updateStats() {
+  const totalCh = document.querySelectorAll('.chip').length;
+  const activeCh = document.querySelectorAll('.chip.active').length;
+  const visibleVideos = document.querySelectorAll('.video:not(.hidden)').length;
+  const visibleX = document.querySelectorAll('.x-card:not(.hidden)').length;
+  const visibleDays = document.querySelectorAll('.date-section:not(.hidden)').length;
+  document.getElementById('visibleStats').textContent =
+    `（${activeCh}/${totalCh} 選択中、動画${visibleVideos}本／X${visibleX}日／合計${visibleDays}日）`;
+}
+function toggleChannel(chip) {
+  chip.classList.toggle('active');
+  applyFilter();
+}
+function setAll(on) {
+  document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', on));
+  applyFilter();
+}
+document.querySelectorAll('.chip').forEach(c => {
+  c.addEventListener('click', () => toggleChannel(c));
+});
+updateStats();
+</script>
+</body>
+</html>
