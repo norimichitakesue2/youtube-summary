@@ -10,6 +10,8 @@ data/x_browser_profile/
 data/x_browser_profile.bak_chromium/
 data/x_browser_profile.bak*/
 data/tweets/
+data/carp_tweets/
+data/carp_summaries/
 data/x_fetch.log
 data/diag/
 .DS_Store

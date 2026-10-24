@@ -8,7 +8,11 @@ from pathlib import Path
 from typing import Any
 
 import yaml
-from dotenv import load_dotenv
+try:
+    from dotenv import load_dotenv
+except ModuleNotFoundError:  # dotenv 未インストール環境でも動くようにする
+    def load_dotenv(*args, **kwargs):  # type: ignore[misc]
+        return False
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"

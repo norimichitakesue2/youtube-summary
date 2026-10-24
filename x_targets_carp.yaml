@@ -1,0 +1,40 @@
+# カープトーク用：X（Twitter）で追跡する対象の定義
+# x_fetch.py --targets x_targets_carp.yaml --out-dir data/carp_tweets で使用
+#
+# tab: top（話題順）/ live（新着順・既定）
+# query 内の {since} は取得開始日（YYYY-MM-DD）に自動置換される
+
+defaults:
+  since_hours: 24
+  max_per_target: 100
+  lang: ja
+
+accounts:
+  - name: カープ公式PR
+    handle: Carpofficial_pr
+    enabled: true
+  - name: カープトーク（自アカウント・反応チェック用）
+    handle: Carptalk001
+    enabled: true
+
+hashtags:
+  - tag: "#カープ"
+    tab: live
+    enabled: true
+  - tag: "#carp"
+    tab: live
+    enabled: true
+
+keywords:
+  # 盛り上がっている投稿（いいね50以上・話題順）
+  - query: "カープ min_faves:50 since:{since}"
+    tab: top
+    enabled: true
+  # 中くらいの反応も拾う（いいね10以上）
+  - query: "カープ min_faves:10 since:{since}"
+    tab: top
+    enabled: true
+  # 新着の生の声
+  - query: "広島カープ"
+    tab: live
+    enabled: true

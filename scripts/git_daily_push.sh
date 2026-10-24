@@ -11,14 +11,26 @@ if [ ! -d .git ]; then
     exit 0
 fi
 
-# クラッシュ等で残ったロックファイルを掃除（10分以上前のもののみ削除して
-# 同時実行を踏まないようにする）
-STALE_LOCKS=$(find .git -name "*.lock" -mmin +10 2>/dev/null)
-if [ -n "$STALE_LOCKS" ]; then
-    echo "[git_daily_push] stale lock を削除:"
-    echo "$STALE_LOCKS" | sed 's/^/  - /'
-    echo "$STALE_LOCKS" | xargs -r rm -f
+# クラッシュ等で残った .git のロック/一時ファイルを掃除（10分以上前のもののみ、
+# 同時実行を踏まないように）。接続フォルダでは削除が禁止され rm が無言で失敗する
+# ことがあるため、消せない場合は退避(mv)して次回以降の commit を壊さないようにする。
+QUARANTINE=".git/_stale_quarantine"
+CRUFT=$(find .git \( -name "*.lock" -mmin +10 \) -o \( -name "tmp_obj_*" -mmin +10 \) 2>/dev/null)
+if [ -n "$CRUFT" ]; then
+    echo "[git_daily_push] stale lock/tmp を掃除:"
+    while IFS= read -r f; do
+        [ -z "$f" ] && continue
+        echo "  - $f"
+        rm -f "$f" 2>/dev/null
+        if [ -e "$f" ]; then
+            # 削除が禁止されている → 退避して無害化
+            mkdir -p "$QUARANTINE" 2>/dev/null
+            mv -f "$f" "$QUARANTINE/$(basename "$f").$(date +%s).$$" 2>/dev/null || true
+        fi
+    done <<< "$CRUFT"
 fi
+# 退避済みファイルは削除が可能になっていれば一掃（できなければ次回に持ち越し）
+rm -rf "$QUARANTINE" 2>/dev/null || true
 
 # 変更がなければ何もしない
 git add -A

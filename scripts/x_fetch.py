@@ -51,8 +51,8 @@ TARGETS_FILE = ROOT / "x_targets.yaml"
 ALL_TWEETS_JSONL = TWEETS_DIR / "all_tweets.jsonl"
 
 
-def load_targets() -> dict:
-    with TARGETS_FILE.open("r", encoding="utf-8") as f:
+def load_targets(path: Path = TARGETS_FILE) -> dict:
+    with Path(path).open("r", encoding="utf-8") as f:
         return yaml.safe_load(f) or {}
 
 
@@ -208,13 +208,21 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--hours", type=int, help="何時間前までの投稿を対象にするか")
     ap.add_argument("--headed", action="store_true", help="ブラウザを表示する")
+    ap.add_argument("--targets", default=str(TARGETS_FILE), help="対象定義YAML（既定: x_targets.yaml）")
+    ap.add_argument("--out-dir", default=str(TWEETS_DIR), help="保存先ディレクトリ（既定: data/tweets）")
     args = ap.parse_args()
+
+    out_dir = Path(args.out_dir)
+    if not out_dir.is_absolute():
+        out_dir = ROOT / out_dir
+    out_dir.mkdir(parents=True, exist_ok=True)
+    all_jsonl = out_dir / "all_tweets.jsonl"
 
     if not USER_DATA_DIR.exists() or not any(USER_DATA_DIR.iterdir()):
         print(f"先に scripts/x_login.py を実行してログインしてください")
         sys.exit(1)
 
-    cfg = load_targets()
+    cfg = load_targets(Path(args.targets) if Path(args.targets).is_absolute() else ROOT / args.targets)
     defaults = cfg.get("defaults", {}) or {}
     since_hours = args.hours or defaults.get("since_hours", 24)
     max_per_target = defaults.get("max_per_target", 100)
@@ -231,15 +239,19 @@ def main():
         if h.get("enabled", True):
             tag = h["tag"]
             q = urllib.parse.quote(tag)
-            url = f"https://x.com/search?q={q}&src=typed_query&f=live"
+            tab = h.get("tab", "live")
+            url = f"https://x.com/search?q={q}&src=typed_query&f={tab}"
             targets.append(("hashtag", tag, url))
     for k in cfg.get("keywords", []) or []:
         if k.get("enabled", True):
             qstr = k["query"]
+            # {since} を取得開始日(YYYY-MM-DD)に置換（Top検索で過去の定番ツイートを除外するため）
+            qstr = qstr.replace("{since}", cutoff.strftime("%Y-%m-%d"))
             if lang:
                 qstr += f" lang:{lang}"
             q = urllib.parse.quote(qstr)
-            url = f"https://x.com/search?q={q}&src=typed_query&f=live"
+            tab = k.get("tab", "live")
+            url = f"https://x.com/search?q={q}&src=typed_query&f={tab}"
             targets.append(("keyword", k["query"], url))
 
     if not targets:
@@ -319,21 +331,21 @@ def main():
     deduped = list(by_id.values())
 
     today = datetime.now().strftime("%Y-%m-%d")
-    out = TWEETS_DIR / f"{today}__fetch.json"
+    out = out_dir / f"{today}__fetch.json"
     with out.open("w", encoding="utf-8") as f:
         json.dump(deduped, f, ensure_ascii=False, indent=2)
 
     # 全期間jsonlにも追記
     existing_ids = set()
-    if ALL_TWEETS_JSONL.exists():
-        with ALL_TWEETS_JSONL.open("r", encoding="utf-8") as f:
+    if all_jsonl.exists():
+        with all_jsonl.open("r", encoding="utf-8") as f:
             for line in f:
                 try:
                     existing_ids.add(json.loads(line)["tweet_id"])
                 except Exception:
                     pass
     new_count = 0
-    with ALL_TWEETS_JSONL.open("a", encoding="utf-8") as f:
+    with all_jsonl.open("a", encoding="utf-8") as f:
         for t in deduped:
             if t["tweet_id"] not in existing_ids:
                 f.write(json.dumps(t, ensure_ascii=False) + "\n")
